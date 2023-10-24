@@ -51,6 +51,7 @@ namespace TurismoReal.Presentacion
                         this.Hide();
                         frm.ShowDialog();
 
+                        
                     }
                     else if (tipoUsuario == "cliente")
                     {

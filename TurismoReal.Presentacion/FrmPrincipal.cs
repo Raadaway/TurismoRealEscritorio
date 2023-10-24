@@ -21,6 +21,18 @@ namespace TurismoReal.Presentacion
             InitializeComponent();
             this.tipoUsuario = tipoUsuario;
             this.rut = rut;
+
+            // Verifica si el tipo de usuario es "funcionario"
+            if (tipoUsuario == "funcionario")
+            {
+                usuariosToolStripMenuItem.Visible = false;
+                MetroFramework.MetroMessageBox.Show(this, "Hola Funcionario", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Hola Administrador", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         private void ShowNewForm(object sender, EventArgs e)
