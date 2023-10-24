@@ -189,5 +189,24 @@ namespace TurismoReal.Presentacion
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            // Abre el formulario de inicio de sesión (FrmLogin)
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
+
+        }
+
+        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                FrmLogin frmLogin = new FrmLogin();
+                frmLogin.Show();
+            }
+        }
     }
 }

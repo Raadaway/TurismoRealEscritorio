@@ -50,7 +50,7 @@ namespace TurismoReal.Presentacion
                         FrmPrincipal frm = new FrmPrincipal(tipoUsuario, rut);
                         this.Hide();
                         frm.ShowDialog();
-                        this.Close();
+
                     }
                     else if (tipoUsuario == "cliente")
                     {
