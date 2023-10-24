@@ -76,7 +76,6 @@ namespace TurismoReal.Presentacion
             TxtCapacidad.Clear();
             TxtCantImagenes.Clear();
             TxtIdComuna.Clear();
-            TxtIdEstado.Clear();
             BtnAgregar.Visible = true;
             BtnModificar.Visible = false;
 
@@ -114,7 +113,6 @@ namespace TurismoReal.Presentacion
                 TxtLongitud.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Longitud"].Value);
                 TxtCapacidad.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Capacidad"].Value);
                 TxtIdComuna.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Comuna"].Value);
-                TxtIdEstado.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Estado"].Value);
                 TabGeneral.SelectedIndex = 1;     
         }
 
@@ -167,14 +165,10 @@ namespace TurismoReal.Presentacion
                     return; // Sal del evento si el ID de la comuna no es válido
                 }
 
-                if (!int.TryParse(TxtIdEstado.Text, out int idEstado))
-                {
-                    MetroFramework.MetroMessageBox.Show(this, "El valor del ID del estado no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Sal del evento si el ID del estado no es válido
-                }
+
 
                 // Llama al método de negocio para modificar el departamento
-                bool resultado = NDepartamento.ModificarDepartamento(id_departamento, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna, idEstado);
+                bool resultado = NDepartamento.ModificarDepartamento(id_departamento, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna, 1);
 
                 // Verifica el resultado y muestra un mensaje correspondiente
                 if (resultado)

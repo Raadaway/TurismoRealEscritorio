@@ -45,10 +45,8 @@ namespace TurismoReal.Presentacion
             this.LblIdDepartamento = new System.Windows.Forms.Label();
             this.TxtIdDepartamento = new System.Windows.Forms.TextBox();
             this.BtnModificar = new System.Windows.Forms.Button();
-            this.LblIdEstado = new System.Windows.Forms.Label();
             this.LblIdComuna = new System.Windows.Forms.Label();
             this.LblCantImagenes = new System.Windows.Forms.Label();
-            this.TxtIdEstado = new System.Windows.Forms.TextBox();
             this.TxtIdComuna = new System.Windows.Forms.TextBox();
             this.TxtCantImagenes = new System.Windows.Forms.TextBox();
             this.TxtCapacidad = new System.Windows.Forms.TextBox();
@@ -189,10 +187,8 @@ namespace TurismoReal.Presentacion
             this.Agregar.Controls.Add(this.LblIdDepartamento);
             this.Agregar.Controls.Add(this.TxtIdDepartamento);
             this.Agregar.Controls.Add(this.BtnModificar);
-            this.Agregar.Controls.Add(this.LblIdEstado);
             this.Agregar.Controls.Add(this.LblIdComuna);
             this.Agregar.Controls.Add(this.LblCantImagenes);
-            this.Agregar.Controls.Add(this.TxtIdEstado);
             this.Agregar.Controls.Add(this.TxtIdComuna);
             this.Agregar.Controls.Add(this.TxtCantImagenes);
             this.Agregar.Controls.Add(this.TxtCapacidad);
@@ -243,15 +239,6 @@ namespace TurismoReal.Presentacion
             this.BtnModificar.UseVisualStyleBackColor = true;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
-            // LblIdEstado
-            // 
-            this.LblIdEstado.AutoSize = true;
-            this.LblIdEstado.Location = new System.Drawing.Point(419, 198);
-            this.LblIdEstado.Name = "LblIdEstado";
-            this.LblIdEstado.Size = new System.Drawing.Size(54, 13);
-            this.LblIdEstado.TabIndex = 35;
-            this.LblIdEstado.Text = "ID Estado";
-            // 
             // LblIdComuna
             // 
             this.LblIdComuna.AutoSize = true;
@@ -269,13 +256,6 @@ namespace TurismoReal.Presentacion
             this.LblCantImagenes.Size = new System.Drawing.Size(81, 13);
             this.LblCantImagenes.TabIndex = 33;
             this.LblCantImagenes.Text = "Cant. Imagenes";
-            // 
-            // TxtIdEstado
-            // 
-            this.TxtIdEstado.Location = new System.Drawing.Point(479, 195);
-            this.TxtIdEstado.Name = "TxtIdEstado";
-            this.TxtIdEstado.Size = new System.Drawing.Size(178, 20);
-            this.TxtIdEstado.TabIndex = 32;
             // 
             // TxtIdComuna
             // 
@@ -452,10 +432,8 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.Label LblPrecio;
         private System.Windows.Forms.TextBox TxtPrecio;
         private System.Windows.Forms.TextBox TxtCapacidad;
-        private System.Windows.Forms.Label LblIdEstado;
         private System.Windows.Forms.Label LblIdComuna;
         private System.Windows.Forms.Label LblCantImagenes;
-        private System.Windows.Forms.TextBox TxtIdEstado;
         private System.Windows.Forms.TextBox TxtIdComuna;
         private System.Windows.Forms.TextBox TxtCantImagenes;
         private System.Windows.Forms.Button BtnModificar;

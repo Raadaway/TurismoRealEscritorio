@@ -54,6 +54,7 @@ namespace TurismoReal.Presentacion
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +66,8 @@ namespace TurismoReal.Presentacion
             this.departamentosToolStripMenuItem,
             this.reservasToolStripMenuItem,
             this.serviciosExtraToolStripMenuItem,
-            this.viewMenu});
+            this.viewMenu,
+            this.cerrarSesiónToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(20, 60);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(859, 24);
@@ -85,21 +87,21 @@ namespace TurismoReal.Presentacion
             // administradoresToolStripMenuItem
             // 
             this.administradoresToolStripMenuItem.Name = "administradoresToolStripMenuItem";
-            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.administradoresToolStripMenuItem.Text = "Administradores";
             this.administradoresToolStripMenuItem.Click += new System.EventHandler(this.administradoresToolStripMenuItem_Click);
             // 
             // funcionariosToolStripMenuItem
             // 
             this.funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
-            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.funcionariosToolStripMenuItem.Text = "Funcionarios";
             this.funcionariosToolStripMenuItem.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -241,6 +243,14 @@ namespace TurismoReal.Presentacion
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,6 +266,7 @@ namespace TurismoReal.Presentacion
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Turismo Real";
             this.TransparencyKey = System.Drawing.Color.Empty;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -291,6 +302,7 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem articulosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
     }
 }
 
