@@ -413,10 +413,16 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Presentacion.WSportafolio.listarTransporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Presentacion.WSportafolio.loginC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Presentacion.WSportafolio.loginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Presentacion.WSportafolio.mantenimiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Presentacion.WSportafolio.metodoLoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Presentacion.WSportafolio.modificarAdministradorResponse.datasource">
