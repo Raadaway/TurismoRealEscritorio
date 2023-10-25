@@ -82,6 +82,7 @@
     <Compile Include="NDepartamentoServicio.cs" />
     <Compile Include="NFuncionario.cs" />
     <Compile Include="NInventario.cs" />
+    <Compile Include="NTour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
