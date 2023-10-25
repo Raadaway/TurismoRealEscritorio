@@ -208,7 +208,8 @@ namespace TurismoReal.Presentacion
         {
             // Abre el formulario de inicio de sesión (FrmLogin)
             FrmLogin frmLogin = new FrmLogin();
-            frmLogin.Show();
+            this.Hide();
+            frmLogin.ShowDialog();
             this.Close();
         }
     }
