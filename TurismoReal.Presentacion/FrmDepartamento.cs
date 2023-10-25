@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TurismoReal.Entidades;
 using TurismoReal.Negocio;
 using TurismoReal.Presentacion.WSportafolio;
 
@@ -14,9 +15,29 @@ namespace TurismoReal.Presentacion
 {
     public partial class FrmDepartamento : MetroFramework.Forms.MetroForm
     {
+
+        private NComuna nComuna = new NComuna();
+
         public FrmDepartamento()
         {
             InitializeComponent();
+            CargarComunas();
+        }
+
+        private void CargarComunas()
+        {
+            try
+            {
+                List<Comuna> lista = nComuna.ListarComunas();
+
+                cBoxComuna.DisplayMember = "nombreComuna";
+                cBoxComuna.ValueMember = "idComuna";
+                cBoxComuna.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
+            }
         }
 
         private void ListarDepartamentos()
@@ -124,7 +145,7 @@ namespace TurismoReal.Presentacion
             TxtLongitud.Clear();
             TxtCapacidad.Clear();
             TxtCantImagenes.Clear();
-            TxtIdComuna.Clear();
+            cBoxComuna.SelectedIndex = 0;
             BtnAgregar.Visible = true;
             BtnModificar.Visible = false;
 
@@ -154,14 +175,13 @@ namespace TurismoReal.Presentacion
                 this.Limpiar();
                 BtnModificar.Visible = true;
                 BtnAgregar.Visible = false;
-                TxtIdDepartamento.Text = Convert.ToString(DGVListar.CurrentRow.Cells["ID"].Value);
                 TxtDireccion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Direccion"].Value);
                 TxtDescripcion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Descripcion"].Value);
                 TxtPrecio.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Precio"].Value);
                 TxtLatitud.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Latitud"].Value);
                 TxtLongitud.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Longitud"].Value);
                 TxtCapacidad.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Capacidad"].Value);
-                TxtIdComuna.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Comuna"].Value);
+                cBoxComuna.SelectedValue = Convert.ToInt32(DGVListar.CurrentRow.Cells["Comuna"].Value);
                 TabGeneral.SelectedIndex = 1;     
         }
 
@@ -169,13 +189,7 @@ namespace TurismoReal.Presentacion
         {
             try
             {
-                // Obtén el valor del ID del departamento desde el control TxtIdDepartamento
-                if (!int.TryParse(TxtIdDepartamento.Text, out int id_departamento))
-                {
-                    MetroFramework.MetroMessageBox.Show(this, "El valor del ID no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Sal del evento si el ID no es válido
-                }
-
+                int idComuna;
                 string direccion = TxtDireccion.Text;
                 string descripcion = TxtDescripcion.Text;
                 if (!int.TryParse(TxtPrecio.Text, out int precio))
@@ -208,7 +222,7 @@ namespace TurismoReal.Presentacion
                     return; // Sal del evento si la cantidad de imágenes no es válida
                 }
 
-                if (!int.TryParse(TxtIdComuna.Text, out int idComuna))
+                if (!int.TryParse(cBoxComuna.SelectedValue.ToString(), out idComuna))
                 {
                     MetroFramework.MetroMessageBox.Show(this, "El valor del ID de la comuna no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Sal del evento si el ID de la comuna no es válido
@@ -217,7 +231,7 @@ namespace TurismoReal.Presentacion
 
 
                 // Llama al método de negocio para modificar el departamento
-                bool resultado = NDepartamento.ModificarDepartamento(id_departamento, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna, 1);
+                bool resultado = NDepartamento.ModificarDepartamento(1, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna, 1);
 
                 // Verifica el resultado y muestra un mensaje correspondiente
                 if (resultado)
@@ -331,7 +345,7 @@ namespace TurismoReal.Presentacion
                 float longitud = float.Parse(TxtLongitud.Text);
                 int capacidadPersona = int.Parse(TxtCapacidad.Text);
                 int cantidadImagenes = int.Parse(TxtCantImagenes.Text);
-                int idComuna = int.Parse(TxtIdComuna.Text);
+                int idComuna = (int)cBoxComuna.SelectedValue;
 
                 bool resultado = NDepartamento.AgregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna);
 

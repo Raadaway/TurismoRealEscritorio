@@ -79,6 +79,7 @@
     <Compile Include="DDAdministrador.cs" />
     <Compile Include="DDArticulo.cs" />
     <Compile Include="DDCliente.cs" />
+    <Compile Include="DDComuna.cs" />
     <Compile Include="DDDepartamento.cs" />
     <Compile Include="DDDepartamentoServicio.cs" />
     <Compile Include="DDFuncionario.cs" />
@@ -161,6 +162,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.comuna.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.condicionDepa.datasource">
@@ -253,6 +257,9 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.listarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.listarComunaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -304,10 +311,16 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.listarTransporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.loginC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.loginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.mantenimiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.metodoLoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.modificarAdministradorResponse.datasource">
