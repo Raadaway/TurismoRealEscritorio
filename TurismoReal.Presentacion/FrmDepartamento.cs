@@ -231,7 +231,7 @@ namespace TurismoReal.Presentacion
 
 
                 // Llama al método de negocio para modificar el departamento
-                bool resultado = NDepartamento.ModificarDepartamento(1, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna, 1);
+                bool resultado = NDepartamento.ModificarDepartamento(1, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna);
 
                 // Verifica el resultado y muestra un mensaje correspondiente
                 if (resultado)

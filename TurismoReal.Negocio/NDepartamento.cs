@@ -36,10 +36,10 @@ namespace TurismoReal.Negocio
 
 
 
-        public static bool ModificarDepartamento(int id_departamento, string direccion, string descripcion, int precio, float latitud, float longitud, int capacidadPersona, int cantidadImagenes, int idComuna, int idEstado)
+        public static bool ModificarDepartamento(int id_departamento, string direccion, string descripcion, int precio, float latitud, float longitud, int capacidadPersona, int cantidadImagenes, int idComuna)
         {
             DDDepartamento datos = new DDDepartamento();
-            return datos.ModificarDepartamento(id_departamento, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna, idEstado);
+            return datos.ModificarDepartamento(id_departamento, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna);
         }
 
         public static bool EliminarDepartamento(int id_departamento)

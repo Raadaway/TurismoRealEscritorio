@@ -76,13 +76,17 @@
     </Compile>
     <Compile Include="NAdministrador.cs" />
     <Compile Include="NArticulo.cs" />
+    <Compile Include="NCheckIn.cs" />
+    <Compile Include="NCheckOut.cs" />
     <Compile Include="NCliente.cs" />
     <Compile Include="NComuna.cs" />
     <Compile Include="NDepartamento.cs" />
     <Compile Include="NDepartamentoServicio.cs" />
     <Compile Include="NFuncionario.cs" />
     <Compile Include="NInventario.cs" />
+    <Compile Include="NReserva.cs" />
     <Compile Include="NTour.cs" />
+    <Compile Include="NTransporte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +159,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.comuna.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.condicionDepa.datasource">
@@ -247,6 +254,9 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarComunaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarCondicionDepaPorParametroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -277,6 +287,9 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarMantenimientoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarReservaPorRutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarReservaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -298,10 +311,16 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarTransporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.loginC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.loginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.mantenimiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.metodoLoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.modificarAdministradorResponse.datasource">

@@ -41,12 +41,22 @@ namespace TurismoReal.Presentacion
             this.LblCantidadPersonas = new System.Windows.Forms.Label();
             this.LblTerminoReserva = new System.Windows.Forms.Label();
             this.LblInicioReserva = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.TxtMontoPagado = new System.Windows.Forms.TextBox();
+            this.TxtCantPersonas = new System.Windows.Forms.TextBox();
+            this.DTTerminoReserva = new MetroFramework.Controls.MetroDateTime();
+            this.DTInicioReserva = new MetroFramework.Controls.MetroDateTime();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
+            this.TxtIdReserva = new System.Windows.Forms.TextBox();
+            this.LblIdReserva = new System.Windows.Forms.Label();
+            this.TxtMontoAbonado = new System.Windows.Forms.TextBox();
+            this.TxtIdDepartamento = new System.Windows.Forms.TextBox();
+            this.TxtRutCliente = new System.Windows.Forms.TextBox();
+            this.TxtIdEstado = new System.Windows.Forms.TextBox();
+            this.LblAbonado = new System.Windows.Forms.Label();
+            this.LblIdDepartamento = new System.Windows.Forms.Label();
+            this.LblRutCliente = new System.Windows.Forms.Label();
+            this.LblIdEstado = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Listado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVListar)).BeginInit();
@@ -124,19 +134,29 @@ namespace TurismoReal.Presentacion
             // 
             // Agregar
             // 
+            this.Agregar.Controls.Add(this.LblIdEstado);
+            this.Agregar.Controls.Add(this.LblRutCliente);
+            this.Agregar.Controls.Add(this.LblIdDepartamento);
+            this.Agregar.Controls.Add(this.LblAbonado);
+            this.Agregar.Controls.Add(this.TxtIdEstado);
+            this.Agregar.Controls.Add(this.TxtRutCliente);
+            this.Agregar.Controls.Add(this.TxtIdDepartamento);
+            this.Agregar.Controls.Add(this.TxtMontoAbonado);
+            this.Agregar.Controls.Add(this.LblIdReserva);
+            this.Agregar.Controls.Add(this.TxtIdReserva);
             this.Agregar.Controls.Add(this.LblMontoPagado);
             this.Agregar.Controls.Add(this.LblCantidadPersonas);
             this.Agregar.Controls.Add(this.LblTerminoReserva);
             this.Agregar.Controls.Add(this.LblInicioReserva);
-            this.Agregar.Controls.Add(this.textBox2);
-            this.Agregar.Controls.Add(this.textBox1);
-            this.Agregar.Controls.Add(this.metroDateTime2);
-            this.Agregar.Controls.Add(this.metroDateTime1);
+            this.Agregar.Controls.Add(this.TxtMontoPagado);
+            this.Agregar.Controls.Add(this.TxtCantPersonas);
+            this.Agregar.Controls.Add(this.DTTerminoReserva);
+            this.Agregar.Controls.Add(this.DTInicioReserva);
             this.Agregar.Controls.Add(this.BtnCancelar);
             this.Agregar.Controls.Add(this.BtnAgregar);
             this.Agregar.Location = new System.Drawing.Point(4, 22);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Size = new System.Drawing.Size(766, 385);
+            this.Agregar.Size = new System.Drawing.Size(766, 431);
             this.Agregar.TabIndex = 1;
             this.Agregar.Text = "Agregar";
             this.Agregar.UseVisualStyleBackColor = true;
@@ -144,7 +164,7 @@ namespace TurismoReal.Presentacion
             // LblMontoPagado
             // 
             this.LblMontoPagado.AutoSize = true;
-            this.LblMontoPagado.Location = new System.Drawing.Point(73, 178);
+            this.LblMontoPagado.Location = new System.Drawing.Point(73, 213);
             this.LblMontoPagado.Name = "LblMontoPagado";
             this.LblMontoPagado.Size = new System.Drawing.Size(77, 13);
             this.LblMontoPagado.TabIndex = 27;
@@ -153,7 +173,7 @@ namespace TurismoReal.Presentacion
             // LblCantidadPersonas
             // 
             this.LblCantidadPersonas.AutoSize = true;
-            this.LblCantidadPersonas.Location = new System.Drawing.Point(54, 143);
+            this.LblCantidadPersonas.Location = new System.Drawing.Point(54, 178);
             this.LblCantidadPersonas.Name = "LblCantidadPersonas";
             this.LblCantidadPersonas.Size = new System.Drawing.Size(96, 13);
             this.LblCantidadPersonas.TabIndex = 26;
@@ -162,7 +182,7 @@ namespace TurismoReal.Presentacion
             // LblTerminoReserva
             // 
             this.LblTerminoReserva.AutoSize = true;
-            this.LblTerminoReserva.Location = new System.Drawing.Point(62, 106);
+            this.LblTerminoReserva.Location = new System.Drawing.Point(62, 143);
             this.LblTerminoReserva.Name = "LblTerminoReserva";
             this.LblTerminoReserva.Size = new System.Drawing.Size(88, 13);
             this.LblTerminoReserva.TabIndex = 25;
@@ -171,41 +191,42 @@ namespace TurismoReal.Presentacion
             // LblInicioReserva
             // 
             this.LblInicioReserva.AutoSize = true;
-            this.LblInicioReserva.Location = new System.Drawing.Point(75, 62);
+            this.LblInicioReserva.Location = new System.Drawing.Point(75, 100);
             this.LblInicioReserva.Name = "LblInicioReserva";
             this.LblInicioReserva.Size = new System.Drawing.Size(75, 13);
             this.LblInicioReserva.TabIndex = 24;
             this.LblInicioReserva.Text = "Inicio Reserva";
             // 
-            // textBox2
+            // TxtMontoPagado
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 20);
-            this.textBox2.TabIndex = 23;
+            this.TxtMontoPagado.Location = new System.Drawing.Point(156, 210);
+            this.TxtMontoPagado.Name = "TxtMontoPagado";
+            this.TxtMontoPagado.Size = new System.Drawing.Size(178, 20);
+            this.TxtMontoPagado.TabIndex = 23;
             // 
-            // textBox1
+            // TxtCantPersonas
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 20);
-            this.textBox1.TabIndex = 22;
+            this.TxtCantPersonas.Location = new System.Drawing.Point(156, 175);
+            this.TxtCantPersonas.Name = "TxtCantPersonas";
+            this.TxtCantPersonas.Size = new System.Drawing.Size(178, 20);
+            this.TxtCantPersonas.TabIndex = 22;
             // 
-            // metroDateTime2
+            // DTTerminoReserva
             // 
-            this.metroDateTime2.Location = new System.Drawing.Point(156, 96);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(4, 29);
-            this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(178, 29);
-            this.metroDateTime2.TabIndex = 21;
+            this.DTTerminoReserva.Location = new System.Drawing.Point(156, 133);
+            this.DTTerminoReserva.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DTTerminoReserva.Name = "DTTerminoReserva";
+            this.DTTerminoReserva.Size = new System.Drawing.Size(178, 29);
+            this.DTTerminoReserva.TabIndex = 21;
             // 
-            // metroDateTime1
+            // DTInicioReserva
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(156, 52);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(4, 29);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(178, 29);
-            this.metroDateTime1.TabIndex = 20;
+            this.DTInicioReserva.Location = new System.Drawing.Point(156, 90);
+            this.DTInicioReserva.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DTInicioReserva.Name = "DTInicioReserva";
+            this.DTInicioReserva.Size = new System.Drawing.Size(178, 29);
+            this.DTInicioReserva.TabIndex = 20;
+            this.DTInicioReserva.ValueChanged += new System.EventHandler(this.metroDateTime1_ValueChanged);
             // 
             // BtnCancelar
             // 
@@ -224,6 +245,86 @@ namespace TurismoReal.Presentacion
             this.BtnAgregar.TabIndex = 18;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // TxtIdReserva
+            // 
+            this.TxtIdReserva.Location = new System.Drawing.Point(156, 52);
+            this.TxtIdReserva.Name = "TxtIdReserva";
+            this.TxtIdReserva.Size = new System.Drawing.Size(178, 20);
+            this.TxtIdReserva.TabIndex = 28;
+            // 
+            // LblIdReserva
+            // 
+            this.LblIdReserva.AutoSize = true;
+            this.LblIdReserva.Location = new System.Drawing.Point(89, 55);
+            this.LblIdReserva.Name = "LblIdReserva";
+            this.LblIdReserva.Size = new System.Drawing.Size(61, 13);
+            this.LblIdReserva.TabIndex = 29;
+            this.LblIdReserva.Text = "ID Reserva";
+            // 
+            // TxtMontoAbonado
+            // 
+            this.TxtMontoAbonado.Location = new System.Drawing.Point(479, 52);
+            this.TxtMontoAbonado.Name = "TxtMontoAbonado";
+            this.TxtMontoAbonado.Size = new System.Drawing.Size(178, 20);
+            this.TxtMontoAbonado.TabIndex = 30;
+            // 
+            // TxtIdDepartamento
+            // 
+            this.TxtIdDepartamento.Location = new System.Drawing.Point(479, 93);
+            this.TxtIdDepartamento.Name = "TxtIdDepartamento";
+            this.TxtIdDepartamento.Size = new System.Drawing.Size(178, 20);
+            this.TxtIdDepartamento.TabIndex = 31;
+            // 
+            // TxtRutCliente
+            // 
+            this.TxtRutCliente.Location = new System.Drawing.Point(479, 132);
+            this.TxtRutCliente.Name = "TxtRutCliente";
+            this.TxtRutCliente.Size = new System.Drawing.Size(178, 20);
+            this.TxtRutCliente.TabIndex = 32;
+            // 
+            // TxtIdEstado
+            // 
+            this.TxtIdEstado.Location = new System.Drawing.Point(479, 175);
+            this.TxtIdEstado.Name = "TxtIdEstado";
+            this.TxtIdEstado.Size = new System.Drawing.Size(178, 20);
+            this.TxtIdEstado.TabIndex = 33;
+            // 
+            // LblAbonado
+            // 
+            this.LblAbonado.AutoSize = true;
+            this.LblAbonado.Location = new System.Drawing.Point(390, 55);
+            this.LblAbonado.Name = "LblAbonado";
+            this.LblAbonado.Size = new System.Drawing.Size(83, 13);
+            this.LblAbonado.TabIndex = 34;
+            this.LblAbonado.Text = "Monto Abonado";
+            // 
+            // LblIdDepartamento
+            // 
+            this.LblIdDepartamento.AutoSize = true;
+            this.LblIdDepartamento.Location = new System.Drawing.Point(385, 96);
+            this.LblIdDepartamento.Name = "LblIdDepartamento";
+            this.LblIdDepartamento.Size = new System.Drawing.Size(88, 13);
+            this.LblIdDepartamento.TabIndex = 35;
+            this.LblIdDepartamento.Text = "ID Departamento";
+            // 
+            // LblRutCliente
+            // 
+            this.LblRutCliente.AutoSize = true;
+            this.LblRutCliente.Location = new System.Drawing.Point(408, 135);
+            this.LblRutCliente.Name = "LblRutCliente";
+            this.LblRutCliente.Size = new System.Drawing.Size(65, 13);
+            this.LblRutCliente.TabIndex = 36;
+            this.LblRutCliente.Text = "RUT Cliente";
+            // 
+            // LblIdEstado
+            // 
+            this.LblIdEstado.AutoSize = true;
+            this.LblIdEstado.Location = new System.Drawing.Point(419, 178);
+            this.LblIdEstado.Name = "LblIdEstado";
+            this.LblIdEstado.Size = new System.Drawing.Size(54, 13);
+            this.LblIdEstado.TabIndex = 37;
+            this.LblIdEstado.Text = "ID Estado";
             // 
             // FrmReservas
             // 
@@ -258,13 +359,23 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.TabPage Agregar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnAgregar;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
-        private MetroFramework.Controls.MetroDateTime metroDateTime2;
-        private System.Windows.Forms.TextBox textBox1;
+        private MetroFramework.Controls.MetroDateTime DTInicioReserva;
+        private MetroFramework.Controls.MetroDateTime DTTerminoReserva;
+        private System.Windows.Forms.TextBox TxtCantPersonas;
         private System.Windows.Forms.Label LblMontoPagado;
         private System.Windows.Forms.Label LblCantidadPersonas;
         private System.Windows.Forms.Label LblTerminoReserva;
         private System.Windows.Forms.Label LblInicioReserva;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtMontoPagado;
+        private System.Windows.Forms.TextBox TxtIdReserva;
+        private System.Windows.Forms.Label LblIdReserva;
+        private System.Windows.Forms.TextBox TxtMontoAbonado;
+        private System.Windows.Forms.Label LblIdEstado;
+        private System.Windows.Forms.Label LblRutCliente;
+        private System.Windows.Forms.Label LblIdDepartamento;
+        private System.Windows.Forms.Label LblAbonado;
+        private System.Windows.Forms.TextBox TxtIdEstado;
+        private System.Windows.Forms.TextBox TxtRutCliente;
+        private System.Windows.Forms.TextBox TxtIdDepartamento;
     }
 }

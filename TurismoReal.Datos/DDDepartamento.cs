@@ -94,12 +94,12 @@ namespace TurismoReal.Datos
 
 
 
-        public bool ModificarDepartamento(int id_departamento, string direccion, string descripcion, int precio, float latitud, float longitud, int capacidadPersona, int cantidadImagenes, int idComuna, int idEstado)
+        public bool ModificarDepartamento(int id_departamento, string direccion, string descripcion, int precio, float latitud, float longitud, int capacidadPersona, int cantidadImagenes, int idComuna)
         {
             try
             {
                 WSPortafolioClient client = new WSPortafolioClient();
-                bool resultado = client.modificarDepartamento(id_departamento, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna, idEstado);
+                bool resultado = client.modificarDepartamento(id_departamento, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna);
                 client.Close();
                 return resultado;
             }
