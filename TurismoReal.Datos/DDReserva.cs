@@ -33,7 +33,7 @@ namespace TurismoReal.Datos
                             monto_abonado = reservaWebService.monto_abonado,
                             departamento_id_departamento = reservaWebService.id_departamento,
                             cliente_rut = reservaWebService.cliente_rut,
-                            estado_res_id_estado = reservaWebService.id_estado
+                            estado_reserva = reservaWebService.nom_estado
                         };
 
                         reservas.Add(reserva);
