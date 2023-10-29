@@ -295,6 +295,9 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.listarMantenimientoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.listarReservaPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Datos.WSportafolio.listarReservaPorRutResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

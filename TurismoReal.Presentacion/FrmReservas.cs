@@ -15,9 +15,17 @@ namespace TurismoReal.Presentacion
 {
     public partial class FrmReservas : MetroFramework.Forms.MetroForm
     {
+
+        private int RutUsuario;
+
         public FrmReservas()
         {
             InitializeComponent();
+        }
+
+        public FrmReservas(int rutUser) : this()
+        {
+            RutUsuario = rutUser;
         }
 
         private void FrmReservas_Load(object sender, EventArgs e)
@@ -125,6 +133,32 @@ namespace TurismoReal.Presentacion
                 BtnEliminar.Visible = false;
                 BtnCheckIn.Visible = false;
                 BtnCheckOut.Visible = false;
+            }
+        }
+
+        private void BtnCheckIn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Verificar si se ha seleccionado una fila en el DataGridView
+                if (DGVListar.SelectedRows.Count > 0)
+                {
+                    // Obtener el ID de reserva de la fila seleccionada
+                    int idReserva = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["id_reserva"].Value);
+
+                    // Abrir el formulario FrmCheckIn y pasar el ID de reserva como parámetro
+                    FrmCheckIn frmCheckIn = new FrmCheckIn(idReserva, RutUsuario);
+                    frmCheckIn.ShowDialog();
+                }
+                else
+                {
+                    // Mostrar un mensaje de error si no se ha seleccionado una reserva
+                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione una reserva para realizar el check-in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

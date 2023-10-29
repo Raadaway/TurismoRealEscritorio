@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4a866f2a-cbea-4ed9-b989-a8080177b8ef" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="4a866f2a-cbea-4ed9-b989-a8080177b8ef" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServicePortafolio/WSPortafolio?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WSPortafolio.wsdl" MetadataType="Wsdl" ID="52d8803c-dc44-43b0-bee7-901d6ca4a6c7" SourceId="1" SourceUrl="http://localhost:8080/WebServicePortafolio/WSPortafolio?WSDL" />
     <MetadataFile FileName="WSPortafolio.xsd" MetadataType="Schema" ID="d4ede156-31dc-47af-a78c-be30fff31fd4" SourceId="1" SourceUrl="http://localhost:8080/WebServicePortafolio/WSPortafolio?xsd=1" />
+    <MetadataFile FileName="WSPortafolio.wsdl" MetadataType="Wsdl" ID="52d8803c-dc44-43b0-bee7-901d6ca4a6c7" SourceId="1" SourceUrl="http://localhost:8080/WebServicePortafolio/WSPortafolio?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

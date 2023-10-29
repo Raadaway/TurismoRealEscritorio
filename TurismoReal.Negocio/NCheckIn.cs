@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using TurismoReal.Datos;
 using TurismoReal.Entidades;
+using System.Collections;
 
 namespace TurismoReal.Negocio
 {
@@ -51,6 +52,13 @@ namespace TurismoReal.Negocio
                 // Manejo de excepciones, registrar el error o mostrar un mensaje de error si es necesario.
                 return null; // Puedes devolver una lista vacía o null en caso de error.
             }
+        }
+
+        public static bool AgregarCheckIn(String firma, int pago, int idRes, int rutFunc)
+        {
+            DDCheckIn Datos = new DDCheckIn();
+            bool exito = Datos.AgregarCheckIn(firma, pago, idRes, rutFunc);
+            return exito;
         }
     }
 }

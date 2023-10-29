@@ -31,6 +31,7 @@ namespace TurismoReal.Presentacion
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Listado = new System.Windows.Forms.TabPage();
+            this.CbSeleccionar = new System.Windows.Forms.CheckBox();
             this.BtnCheckOut = new System.Windows.Forms.Button();
             this.BtnCheckIn = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@ namespace TurismoReal.Presentacion
             this.DTInicioReserva = new MetroFramework.Controls.MetroDateTime();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.CbSeleccionar = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.Listado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVListar)).BeginInit();
@@ -97,6 +97,17 @@ namespace TurismoReal.Presentacion
             this.Listado.Text = "Listar";
             this.Listado.UseVisualStyleBackColor = true;
             // 
+            // CbSeleccionar
+            // 
+            this.CbSeleccionar.AutoSize = true;
+            this.CbSeleccionar.Location = new System.Drawing.Point(9, 464);
+            this.CbSeleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.CbSeleccionar.Name = "CbSeleccionar";
+            this.CbSeleccionar.Size = new System.Drawing.Size(101, 20);
+            this.CbSeleccionar.TabIndex = 9;
+            this.CbSeleccionar.Text = "Seleccionar";
+            this.CbSeleccionar.UseVisualStyleBackColor = true;
+            // 
             // BtnCheckOut
             // 
             this.BtnCheckOut.Location = new System.Drawing.Point(867, 20);
@@ -114,6 +125,7 @@ namespace TurismoReal.Presentacion
             this.BtnCheckIn.TabIndex = 7;
             this.BtnCheckIn.Text = "Realizar Check-In";
             this.BtnCheckIn.UseVisualStyleBackColor = true;
+            this.BtnCheckIn.Click += new System.EventHandler(this.BtnCheckIn_Click);
             // 
             // BtnEliminar
             // 
@@ -390,17 +402,6 @@ namespace TurismoReal.Presentacion
             this.BtnAgregar.TabIndex = 18;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // CbSeleccionar
-            // 
-            this.CbSeleccionar.AutoSize = true;
-            this.CbSeleccionar.Location = new System.Drawing.Point(9, 464);
-            this.CbSeleccionar.Margin = new System.Windows.Forms.Padding(4);
-            this.CbSeleccionar.Name = "CbSeleccionar";
-            this.CbSeleccionar.Size = new System.Drawing.Size(101, 20);
-            this.CbSeleccionar.TabIndex = 9;
-            this.CbSeleccionar.Text = "Seleccionar";
-            this.CbSeleccionar.UseVisualStyleBackColor = true;
             // 
             // FrmReservas
             // 

@@ -4,6 +4,7 @@ using System.Data;
 using TurismoReal.Datos.WSportafolio;
 using TurismoReal.Entidades;
 using System.Linq;
+using TurismoReal.Entidades.WSportafolio;
 
 namespace TurismoReal.Datos
 {
@@ -11,12 +12,12 @@ namespace TurismoReal.Datos
     {
         public List<Reserva> ListarReservas()
         {
-            WSPortafolioClient client = null;
+            WSportafolio.WSPortafolioClient client = null;
             List<Reserva> reservas = new List<Reserva>();
 
             try
             {
-                client = new WSPortafolioClient();
+                client = new WSportafolio.WSPortafolioClient();
                 var reservasWebService = client.listarReserva();
 
                 if (reservasWebService != null)
@@ -54,6 +55,44 @@ namespace TurismoReal.Datos
             }
 
             return reservas;
+        }
+
+        public Reserva ListarReservaPorId(int idRes)
+        {
+            WSportafolio.WSPortafolioClient client = null;
+            Reserva res = new Reserva();
+            try
+            {
+                client = new WSportafolio.WSPortafolioClient();
+                var reservaWebService = client.listarReservaPorId(idRes);
+
+                if (reservaWebService != null)
+                {
+                    res.id_reserva = reservaWebService.id_reserva;
+                    res.inicio_reserva = reservaWebService.inicio_reserva;
+                    res.termino_reserva = reservaWebService.termino_reserva;
+                    res.cant_personas = reservaWebService.cant_personas;
+                    res.monto_total = reservaWebService.monto_total;
+                    res.monto_abonado = reservaWebService.monto_abonado;
+                    res.departamento_id_departamento = reservaWebService.id_departamento;
+                    res.cliente_rut = reservaWebService.cliente_rut;
+                    res.estado_reserva = reservaWebService.nom_estado;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones o registro de errores
+                throw ex;
+            }
+            finally
+            {
+                if (client != null)
+                {
+                    client.Close();
+                }
+            }
+
+            return res;
         }
 
         /*public bool AgregarReserva(Reserva reserva)

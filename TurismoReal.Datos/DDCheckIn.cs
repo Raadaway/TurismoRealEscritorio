@@ -67,5 +67,33 @@ namespace TurismoReal.Datos
             }
         }
 
+        public bool AgregarCheckIn(string firma, int pago, int idRes, int rutFunc)
+        {
+            bool ward = false;
+            WSPortafolioClient client = null; // Declaración del cliente proxy
+
+            try
+            {
+                client = new WSPortafolioClient(); // Crear instancia del cliente proxy
+
+                // Llamar al procedimiento agregarAdministrador del servicio web
+                ward = client.agregarCheckIn(firma, pago, idRes, rutFunc);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones o registro de errores
+                Console.WriteLine("Error al agregar Check-In: " + ex.Message);
+            }
+            finally
+            {
+                // Cerrar el cliente proxy
+                if (client != null)
+                {
+                    client.Close();
+                }
+            }
+            return ward;
+        }
+
     }
 }

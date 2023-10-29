@@ -26,5 +26,22 @@ namespace TurismoReal.Negocio
             }
         }
 
+        public static Reserva ListarReservaPorId(int idRes)
+        {
+            DDReserva Datos = new DDReserva(); // Suponiendo que tienes una clase de acceso a datos DDDatos
+
+            try
+            {
+                return Datos.ListarReservaPorId(idRes);
+            }
+            catch (Exception ex)
+            {
+                // Puedes manejar la excepción, registrar el error o mostrar un mensaje de error si es necesario
+                return null; // Puedes devolver una lista vacía o null en caso de error
+            }
+        }
+
     }
+
+    
 }

@@ -13,14 +13,14 @@ namespace TurismoReal.Presentacion
     public partial class FrmPrincipal : MetroFramework.Forms.MetroForm
     {
         private int childFormNumber = 0;
-        private String tipoUsuario;
-        private int rut;
+        private String TipoUsuario;
+        private int Rut;
 
         public FrmPrincipal(string tipoUsuario, int rut)
         {
             InitializeComponent();
-            this.tipoUsuario = tipoUsuario;
-            this.rut = rut;
+            TipoUsuario = tipoUsuario;
+            Rut = rut;
 
             // Verifica si el tipo de usuario es "funcionario"
             if (tipoUsuario == "funcionario")
@@ -164,9 +164,19 @@ namespace TurismoReal.Presentacion
 
         private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmReservas frm = new FrmReservas();
-            frm.MdiParent = this;
-            frm.Show();
+            if (TipoUsuario == "funcionario")
+            {
+                FrmReservas frm = new FrmReservas(Rut);
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                FrmReservas frm = new FrmReservas();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            
         }
 
         private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
