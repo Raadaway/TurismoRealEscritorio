@@ -29,9 +29,10 @@ namespace TurismoReal.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.TabGeneral = new System.Windows.Forms.TabControl();
             this.Listado = new System.Windows.Forms.TabPage();
+            this.BtnAgregarInventario = new System.Windows.Forms.Button();
+            this.BtnAgregarServicios = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.CbSeleccionar = new System.Windows.Forms.CheckBox();
             this.LblTotal = new System.Windows.Forms.Label();
@@ -39,8 +40,6 @@ namespace TurismoReal.Presentacion
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.DGVListar = new System.Windows.Forms.DataGridView();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.SMServicios = new System.Windows.Forms.ToolStripMenuItem();
             this.Agregar = new System.Windows.Forms.TabPage();
             this.cBoxComuna = new System.Windows.Forms.ComboBox();
             this.BtnModificar = new System.Windows.Forms.Button();
@@ -64,7 +63,6 @@ namespace TurismoReal.Presentacion
             this.TabGeneral.SuspendLayout();
             this.Listado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVListar)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.Agregar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +78,8 @@ namespace TurismoReal.Presentacion
             // 
             // Listado
             // 
+            this.Listado.Controls.Add(this.BtnAgregarInventario);
+            this.Listado.Controls.Add(this.BtnAgregarServicios);
             this.Listado.Controls.Add(this.BtnEliminar);
             this.Listado.Controls.Add(this.CbSeleccionar);
             this.Listado.Controls.Add(this.LblTotal);
@@ -88,11 +88,31 @@ namespace TurismoReal.Presentacion
             this.Listado.Controls.Add(this.DGVListar);
             this.Listado.Location = new System.Drawing.Point(4, 22);
             this.Listado.Name = "Listado";
-            this.Listado.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Listado.Padding = new System.Windows.Forms.Padding(3);
             this.Listado.Size = new System.Drawing.Size(766, 431);
             this.Listado.TabIndex = 0;
             this.Listado.Text = "Listar";
             this.Listado.UseVisualStyleBackColor = true;
+            // 
+            // BtnAgregarInventario
+            // 
+            this.BtnAgregarInventario.Location = new System.Drawing.Point(653, 16);
+            this.BtnAgregarInventario.Name = "BtnAgregarInventario";
+            this.BtnAgregarInventario.Size = new System.Drawing.Size(106, 26);
+            this.BtnAgregarInventario.TabIndex = 11;
+            this.BtnAgregarInventario.Text = "Agregar Inventario";
+            this.BtnAgregarInventario.UseVisualStyleBackColor = true;
+            this.BtnAgregarInventario.Click += new System.EventHandler(this.BtnAgregarInventario_Click);
+            // 
+            // BtnAgregarServicios
+            // 
+            this.BtnAgregarServicios.Location = new System.Drawing.Point(540, 16);
+            this.BtnAgregarServicios.Name = "BtnAgregarServicios";
+            this.BtnAgregarServicios.Size = new System.Drawing.Size(107, 26);
+            this.BtnAgregarServicios.TabIndex = 10;
+            this.BtnAgregarServicios.Text = "Agregar Servicios";
+            this.BtnAgregarServicios.UseVisualStyleBackColor = true;
+            this.BtnAgregarServicios.Click += new System.EventHandler(this.BtnAgregarServicios_Click);
             // 
             // BtnEliminar
             // 
@@ -152,7 +172,6 @@ namespace TurismoReal.Presentacion
             this.DGVListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVListar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seleccionar});
-            this.DGVListar.ContextMenuStrip = this.contextMenuStrip1;
             this.DGVListar.Location = new System.Drawing.Point(7, 54);
             this.DGVListar.Name = "DGVListar";
             this.DGVListar.ReadOnly = true;
@@ -167,21 +186,6 @@ namespace TurismoReal.Presentacion
             this.Seleccionar.HeaderText = "Seleccionar";
             this.Seleccionar.Name = "Seleccionar";
             this.Seleccionar.ReadOnly = true;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SMServicios});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(121, 26);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
-            // 
-            // SMServicios
-            // 
-            this.SMServicios.Name = "SMServicios";
-            this.SMServicios.Size = new System.Drawing.Size(120, 22);
-            this.SMServicios.Text = "Servicios";
-            this.SMServicios.Click += new System.EventHandler(this.SMServicios_Click);
             // 
             // Agregar
             // 
@@ -216,7 +220,7 @@ namespace TurismoReal.Presentacion
             this.cBoxComuna.FormattingEnabled = true;
             this.cBoxComuna.ItemHeight = 13;
             this.cBoxComuna.Location = new System.Drawing.Point(479, 158);
-            this.cBoxComuna.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cBoxComuna.Margin = new System.Windows.Forms.Padding(2);
             this.cBoxComuna.Name = "cBoxComuna";
             this.cBoxComuna.Size = new System.Drawing.Size(178, 21);
             this.cBoxComuna.TabIndex = 35;
@@ -386,7 +390,6 @@ namespace TurismoReal.Presentacion
             this.Listado.ResumeLayout(false);
             this.Listado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVListar)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.Agregar.ResumeLayout(false);
             this.Agregar.PerformLayout();
             this.ResumeLayout(false);
@@ -423,8 +426,8 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.CheckBox CbSeleccionar;
         private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem SMServicios;
         private System.Windows.Forms.ComboBox cBoxComuna;
+        private System.Windows.Forms.Button BtnAgregarInventario;
+        private System.Windows.Forms.Button BtnAgregarServicios;
     }
 }

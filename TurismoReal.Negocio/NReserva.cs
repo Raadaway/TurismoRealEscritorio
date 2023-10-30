@@ -11,6 +11,14 @@ namespace TurismoReal.Negocio
 {
     public class NReserva
     {
+
+        private DDReserva datosReserva; // Crear una instancia de la capa de datos
+
+        public NReserva()
+        {
+            datosReserva = new DDReserva(); // Inicializar la capa de datos
+        }
+
         public static List<Reserva> ListarReservas()
         {
             DDReserva Datos = new DDReserva(); // Suponiendo que tienes una clase de acceso a datos DDDatos
@@ -41,7 +49,35 @@ namespace TurismoReal.Negocio
             }
         }
 
+        public bool AgregarReserva(Reserva reserva)
+        {
+            try
+            {
+                // Puedes realizar validaciones adicionales aquí antes de llamar a la capa de datos
+                return datosReserva.AgregarReserva(reserva);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en capa de negocio al agregar reserva: " + ex.Message);
+                return false;
+            }
+        }
+
+        public static bool ModificarReserva(int idReserva, DateTime inicioReserva, DateTime terminoReserva, int cantPersonas, int montoTotal, int montoAbonado, int idDepartamento)
+        {
+            DDReserva datos = new DDReserva();
+            return datos.ModificarReserva(idReserva, inicioReserva, terminoReserva, cantPersonas, montoTotal, montoAbonado, idDepartamento);
+        }
+
+
+        public static bool EliminarReserva(int idReserva)
+        {
+            DDReserva datos = new DDReserva();
+            return datos.EliminarReserva(idReserva);
+        }
+
+
     }
 
-    
+
 }

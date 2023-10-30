@@ -151,6 +151,8 @@ namespace TurismoReal.Presentacion
 
             DGVListar.Columns[0].Visible = false;
             BtnEliminar.Visible = false;
+            BtnAgregarServicios.Visible = false;
+            BtnAgregarInventario.Visible = false;
             CbSeleccionar.Checked = false;
         }
 
@@ -258,11 +260,15 @@ namespace TurismoReal.Presentacion
             {
                 DGVListar.Columns[0].Visible = true;
                 BtnEliminar.Visible = true;
+                BtnAgregarServicios.Visible = true;
+                BtnAgregarInventario.Visible = true;
             }
             else
             {
                 DGVListar.Columns[0].Visible = false;
                 BtnEliminar.Visible = false;
+                BtnAgregarServicios.Visible = false;
+                BtnAgregarInventario.Visible = false;
             }
         }
 
@@ -328,11 +334,7 @@ namespace TurismoReal.Presentacion
 
         }
 
-        private void SMServicios_Click(object sender, EventArgs e)
-        {
-            FrmServicio frm = new FrmServicio();
-            frm.ShowDialog();
-        }
+        
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
@@ -361,6 +363,47 @@ namespace TurismoReal.Presentacion
             catch (Exception ex)
             {
                 MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnAgregarServicios_Click(object sender, EventArgs e)
+        {
+            if (DGVListar.SelectedRows.Count > 0)
+            {
+                int idDepartamento = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["ID"].Value);
+                // Crea una nueva instancia de FrmServicio
+                FrmServicio frmServicio = new FrmServicio(idDepartamento);
+                // Configura el valor del idDepartamento utilizando el método SetIdDepartamento
+                frmServicio.SetIdDepartamento(idDepartamento);
+                // Redirige a la ventana de Servicio
+                frmServicio.TabGeneral.SelectTab("Agregar");
+                frmServicio.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un registro antes de agregar un servicio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnAgregarInventario_Click(object sender, EventArgs e)
+        {
+            if (DGVListar.SelectedRows.Count > 0)
+            {
+                int idDepartamento = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["ID"].Value);
+
+                // Crea una nueva instancia de FrmInventario
+                FrmInventario frmInventario = new FrmInventario(idDepartamento);
+
+                // Configura el valor del idDepartamento utilizando el método SetIdDepartamento
+                frmInventario.SetIdDepartamento(idDepartamento);
+
+                // Redirige a la ventana de Inventario
+                frmInventario.TabGeneral.SelectTab("Agregar");
+                frmInventario.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un registro antes de agregar inventario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

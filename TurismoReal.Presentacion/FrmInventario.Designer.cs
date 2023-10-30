@@ -58,11 +58,10 @@ namespace TurismoReal.Presentacion
             // 
             this.TabGeneral.Controls.Add(this.Listado);
             this.TabGeneral.Controls.Add(this.Agregar);
-            this.TabGeneral.Location = new System.Drawing.Point(1, 66);
-            this.TabGeneral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TabGeneral.Location = new System.Drawing.Point(1, 54);
             this.TabGeneral.Name = "TabGeneral";
             this.TabGeneral.SelectedIndex = 0;
-            this.TabGeneral.Size = new System.Drawing.Size(1032, 562);
+            this.TabGeneral.Size = new System.Drawing.Size(774, 457);
             this.TabGeneral.TabIndex = 3;
             // 
             // Listado
@@ -73,21 +72,19 @@ namespace TurismoReal.Presentacion
             this.Listado.Controls.Add(this.BtnRefrescar);
             this.Listado.Controls.Add(this.TxtBuscar);
             this.Listado.Controls.Add(this.DGVListar);
-            this.Listado.Location = new System.Drawing.Point(4, 25);
-            this.Listado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Listado.Location = new System.Drawing.Point(4, 22);
             this.Listado.Name = "Listado";
-            this.Listado.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Listado.Size = new System.Drawing.Size(1024, 533);
+            this.Listado.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Listado.Size = new System.Drawing.Size(766, 431);
             this.Listado.TabIndex = 0;
             this.Listado.Text = "Listar";
             this.Listado.UseVisualStyleBackColor = true;
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(569, 20);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnEliminar.Location = new System.Drawing.Point(427, 16);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(143, 32);
+            this.BtnEliminar.Size = new System.Drawing.Size(107, 26);
             this.BtnEliminar.TabIndex = 11;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
@@ -96,10 +93,9 @@ namespace TurismoReal.Presentacion
             // CbSeleccionar
             // 
             this.CbSeleccionar.AutoSize = true;
-            this.CbSeleccionar.Location = new System.Drawing.Point(9, 464);
-            this.CbSeleccionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbSeleccionar.Location = new System.Drawing.Point(7, 377);
             this.CbSeleccionar.Name = "CbSeleccionar";
-            this.CbSeleccionar.Size = new System.Drawing.Size(98, 20);
+            this.CbSeleccionar.Size = new System.Drawing.Size(82, 17);
             this.CbSeleccionar.TabIndex = 10;
             this.CbSeleccionar.Text = "Seleccionar";
             this.CbSeleccionar.UseVisualStyleBackColor = true;
@@ -108,19 +104,17 @@ namespace TurismoReal.Presentacion
             // LblTotal
             // 
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(817, 473);
-            this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTotal.Location = new System.Drawing.Point(613, 384);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(41, 16);
+            this.LblTotal.Size = new System.Drawing.Size(34, 13);
             this.LblTotal.TabIndex = 5;
             this.LblTotal.Text = "Total:";
             // 
             // BtnRefrescar
             // 
-            this.BtnRefrescar.Location = new System.Drawing.Point(419, 20);
-            this.BtnRefrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnRefrescar.Location = new System.Drawing.Point(314, 16);
             this.BtnRefrescar.Name = "BtnRefrescar";
-            this.BtnRefrescar.Size = new System.Drawing.Size(143, 32);
+            this.BtnRefrescar.Size = new System.Drawing.Size(107, 26);
             this.BtnRefrescar.TabIndex = 4;
             this.BtnRefrescar.Text = "Refrescar";
             this.BtnRefrescar.UseVisualStyleBackColor = true;
@@ -128,10 +122,9 @@ namespace TurismoReal.Presentacion
             // 
             // TxtBuscar
             // 
-            this.TxtBuscar.Location = new System.Drawing.Point(9, 25);
-            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtBuscar.Location = new System.Drawing.Point(7, 20);
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(400, 22);
+            this.TxtBuscar.Size = new System.Drawing.Size(301, 20);
             this.TxtBuscar.TabIndex = 3;
             this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             this.TxtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtBuscar_KeyUp);
@@ -145,12 +138,11 @@ namespace TurismoReal.Presentacion
             this.DGVListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVListar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seleccionar});
-            this.DGVListar.Location = new System.Drawing.Point(9, 66);
-            this.DGVListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGVListar.Location = new System.Drawing.Point(7, 54);
             this.DGVListar.Name = "DGVListar";
             this.DGVListar.ReadOnly = true;
             this.DGVListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVListar.Size = new System.Drawing.Size(1004, 390);
+            this.DGVListar.Size = new System.Drawing.Size(753, 317);
             this.DGVListar.TabIndex = 0;
             this.DGVListar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVListar_CellClick);
             this.DGVListar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVListar_CellContentClick);
@@ -173,10 +165,9 @@ namespace TurismoReal.Presentacion
             this.Agregar.Controls.Add(this.LblCantidad);
             this.Agregar.Controls.Add(this.LblIdArticulo);
             this.Agregar.Controls.Add(this.LblIdDepto);
-            this.Agregar.Location = new System.Drawing.Point(4, 25);
-            this.Agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Agregar.Location = new System.Drawing.Point(4, 22);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Size = new System.Drawing.Size(1024, 533);
+            this.Agregar.Size = new System.Drawing.Size(766, 431);
             this.Agregar.TabIndex = 1;
             this.Agregar.Text = "Agregar";
             this.Agregar.UseVisualStyleBackColor = true;
@@ -184,18 +175,16 @@ namespace TurismoReal.Presentacion
             // ComboBoxArticulo
             // 
             this.ComboBoxArticulo.FormattingEnabled = true;
-            this.ComboBoxArticulo.Location = new System.Drawing.Point(208, 107);
-            this.ComboBoxArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboBoxArticulo.Location = new System.Drawing.Point(156, 87);
             this.ComboBoxArticulo.Name = "ComboBoxArticulo";
-            this.ComboBoxArticulo.Size = new System.Drawing.Size(236, 24);
+            this.ComboBoxArticulo.Size = new System.Drawing.Size(178, 21);
             this.ComboBoxArticulo.TabIndex = 21;
             // 
             // BtnModificar
             // 
-            this.BtnModificar.Location = new System.Drawing.Point(312, 320);
-            this.BtnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnModificar.Location = new System.Drawing.Point(234, 260);
             this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(163, 43);
+            this.BtnModificar.Size = new System.Drawing.Size(122, 35);
             this.BtnModificar.TabIndex = 20;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
@@ -203,20 +192,18 @@ namespace TurismoReal.Presentacion
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(559, 320);
-            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnCancelar.Location = new System.Drawing.Point(419, 260);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(163, 43);
+            this.BtnCancelar.Size = new System.Drawing.Size(122, 35);
             this.BtnCancelar.TabIndex = 19;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(312, 320);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnAgregar.Location = new System.Drawing.Point(234, 260);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(163, 43);
+            this.BtnAgregar.Size = new System.Drawing.Size(122, 35);
             this.BtnAgregar.TabIndex = 18;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
@@ -224,27 +211,24 @@ namespace TurismoReal.Presentacion
             // 
             // TxtCantidad
             // 
-            this.TxtCantidad.Location = new System.Drawing.Point(208, 151);
-            this.TxtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCantidad.Location = new System.Drawing.Point(156, 123);
             this.TxtCantidad.Name = "TxtCantidad";
-            this.TxtCantidad.Size = new System.Drawing.Size(236, 22);
+            this.TxtCantidad.Size = new System.Drawing.Size(178, 20);
             this.TxtCantidad.TabIndex = 11;
             // 
             // TxtIdDepartamento
             // 
-            this.TxtIdDepartamento.Location = new System.Drawing.Point(208, 64);
-            this.TxtIdDepartamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtIdDepartamento.Location = new System.Drawing.Point(156, 52);
             this.TxtIdDepartamento.Name = "TxtIdDepartamento";
-            this.TxtIdDepartamento.Size = new System.Drawing.Size(236, 22);
+            this.TxtIdDepartamento.Size = new System.Drawing.Size(178, 20);
             this.TxtIdDepartamento.TabIndex = 10;
             // 
             // LblCantidad
             // 
             this.LblCantidad.AutoSize = true;
-            this.LblCantidad.Location = new System.Drawing.Point(141, 155);
-            this.LblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCantidad.Location = new System.Drawing.Point(106, 126);
             this.LblCantidad.Name = "LblCantidad";
-            this.LblCantidad.Size = new System.Drawing.Size(61, 16);
+            this.LblCantidad.Size = new System.Drawing.Size(49, 13);
             this.LblCantidad.TabIndex = 2;
             this.LblCantidad.Text = "Cantidad";
             this.LblCantidad.Click += new System.EventHandler(this.LblStock_Click);
@@ -252,32 +236,28 @@ namespace TurismoReal.Presentacion
             // LblIdArticulo
             // 
             this.LblIdArticulo.AutoSize = true;
-            this.LblIdArticulo.Location = new System.Drawing.Point(135, 111);
-            this.LblIdArticulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblIdArticulo.Location = new System.Drawing.Point(101, 90);
             this.LblIdArticulo.Name = "LblIdArticulo";
-            this.LblIdArticulo.Size = new System.Drawing.Size(65, 16);
+            this.LblIdArticulo.Size = new System.Drawing.Size(54, 13);
             this.LblIdArticulo.TabIndex = 1;
             this.LblIdArticulo.Text = "Id Articulo";
             // 
             // LblIdDepto
             // 
             this.LblIdDepto.AutoSize = true;
-            this.LblIdDepto.Location = new System.Drawing.Point(139, 68);
-            this.LblIdDepto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblIdDepto.Location = new System.Drawing.Point(104, 55);
             this.LblIdDepto.Name = "LblIdDepto";
-            this.LblIdDepto.Size = new System.Drawing.Size(61, 16);
+            this.LblIdDepto.Size = new System.Drawing.Size(51, 13);
             this.LblIdDepto.TabIndex = 0;
             this.LblIdDepto.Text = "Id Depto.";
             // 
             // FrmInventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 657);
+            this.ClientSize = new System.Drawing.Size(777, 534);
             this.Controls.Add(this.TabGeneral);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmInventario";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Inventario";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
@@ -293,15 +273,11 @@ namespace TurismoReal.Presentacion
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl TabGeneral;
-        private System.Windows.Forms.TabPage Listado;
         private System.Windows.Forms.Label LblTotal;
         private System.Windows.Forms.Button BtnRefrescar;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.DataGridView DGVListar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
-        private System.Windows.Forms.TabPage Agregar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.TextBox TxtCantidad;
@@ -313,5 +289,8 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.CheckBox CbSeleccionar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.ComboBox ComboBoxArticulo;
+        public System.Windows.Forms.TabControl TabGeneral;
+        public System.Windows.Forms.TabPage Listado;
+        public System.Windows.Forms.TabPage Agregar;
     }
 }

@@ -16,15 +16,23 @@ namespace TurismoReal.Presentacion
     public partial class FrmServicio : MetroFramework.Forms.MetroForm
     {
 
-        public FrmServicio()
+        private int idDepartamento; // Campo para almacenar el ID del departamento
+
+        // Constructor que acepta el ID del departamento como argumento
+        public FrmServicio(int idDepartamento)
         {
             InitializeComponent();
-
+            this.idDepartamento = idDepartamento; // Almacena el ID del departamento
         }
 
         private void FrmServicio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void SetIdDepartamento(int idDepartamento)
+        {
+            TxtIdDepartamento.Text = idDepartamento.ToString();
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)

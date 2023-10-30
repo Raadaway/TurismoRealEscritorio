@@ -29,18 +29,19 @@ namespace TurismoReal.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.TabGeneral = new System.Windows.Forms.TabControl();
             this.Listado = new System.Windows.Forms.TabPage();
             this.CbSeleccionar = new System.Windows.Forms.CheckBox();
             this.BtnCheckOut = new System.Windows.Forms.Button();
             this.BtnCheckIn = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.LblTotal = new System.Windows.Forms.Label();
-            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnRefrescar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.DGVListar = new System.Windows.Forms.DataGridView();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Agregar = new System.Windows.Forms.TabPage();
+            this.BtnModificar = new System.Windows.Forms.Button();
             this.LblIdEstado = new System.Windows.Forms.Label();
             this.LblRutCliente = new System.Windows.Forms.Label();
             this.LblIdDepartamento = new System.Windows.Forms.Label();
@@ -61,22 +62,21 @@ namespace TurismoReal.Presentacion
             this.DTInicioReserva = new MetroFramework.Controls.MetroDateTime();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.TabGeneral.SuspendLayout();
             this.Listado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVListar)).BeginInit();
             this.Agregar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // TabGeneral
             // 
-            this.tabControl1.Controls.Add(this.Listado);
-            this.tabControl1.Controls.Add(this.Agregar);
-            this.tabControl1.Location = new System.Drawing.Point(1, 66);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1032, 562);
-            this.tabControl1.TabIndex = 4;
+            this.TabGeneral.Controls.Add(this.Listado);
+            this.TabGeneral.Controls.Add(this.Agregar);
+            this.TabGeneral.Location = new System.Drawing.Point(1, 54);
+            this.TabGeneral.Name = "TabGeneral";
+            this.TabGeneral.SelectedIndex = 0;
+            this.TabGeneral.Size = new System.Drawing.Size(774, 457);
+            this.TabGeneral.TabIndex = 4;
             // 
             // Listado
             // 
@@ -85,14 +85,13 @@ namespace TurismoReal.Presentacion
             this.Listado.Controls.Add(this.BtnCheckIn);
             this.Listado.Controls.Add(this.BtnEliminar);
             this.Listado.Controls.Add(this.LblTotal);
-            this.Listado.Controls.Add(this.BtnBuscar);
+            this.Listado.Controls.Add(this.BtnRefrescar);
             this.Listado.Controls.Add(this.TxtBuscar);
             this.Listado.Controls.Add(this.DGVListar);
-            this.Listado.Location = new System.Drawing.Point(4, 25);
-            this.Listado.Margin = new System.Windows.Forms.Padding(4);
+            this.Listado.Location = new System.Drawing.Point(4, 22);
             this.Listado.Name = "Listado";
-            this.Listado.Padding = new System.Windows.Forms.Padding(4);
-            this.Listado.Size = new System.Drawing.Size(1024, 533);
+            this.Listado.Padding = new System.Windows.Forms.Padding(3);
+            this.Listado.Size = new System.Drawing.Size(766, 431);
             this.Listado.TabIndex = 0;
             this.Listado.Text = "Listar";
             this.Listado.UseVisualStyleBackColor = true;
@@ -100,19 +99,19 @@ namespace TurismoReal.Presentacion
             // CbSeleccionar
             // 
             this.CbSeleccionar.AutoSize = true;
-            this.CbSeleccionar.Location = new System.Drawing.Point(9, 464);
-            this.CbSeleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.CbSeleccionar.Location = new System.Drawing.Point(7, 377);
             this.CbSeleccionar.Name = "CbSeleccionar";
-            this.CbSeleccionar.Size = new System.Drawing.Size(101, 20);
+            this.CbSeleccionar.Size = new System.Drawing.Size(82, 17);
             this.CbSeleccionar.TabIndex = 9;
             this.CbSeleccionar.Text = "Seleccionar";
             this.CbSeleccionar.UseVisualStyleBackColor = true;
             // 
             // BtnCheckOut
             // 
-            this.BtnCheckOut.Location = new System.Drawing.Point(867, 20);
+            this.BtnCheckOut.Location = new System.Drawing.Point(650, 16);
+            this.BtnCheckOut.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCheckOut.Name = "BtnCheckOut";
-            this.BtnCheckOut.Size = new System.Drawing.Size(143, 32);
+            this.BtnCheckOut.Size = new System.Drawing.Size(107, 26);
             this.BtnCheckOut.TabIndex = 8;
             this.BtnCheckOut.Text = "Realizar Check-Out";
             this.BtnCheckOut.UseVisualStyleBackColor = true;
@@ -120,9 +119,10 @@ namespace TurismoReal.Presentacion
             // 
             // BtnCheckIn
             // 
-            this.BtnCheckIn.Location = new System.Drawing.Point(718, 20);
+            this.BtnCheckIn.Location = new System.Drawing.Point(538, 16);
+            this.BtnCheckIn.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCheckIn.Name = "BtnCheckIn";
-            this.BtnCheckIn.Size = new System.Drawing.Size(143, 32);
+            this.BtnCheckIn.Size = new System.Drawing.Size(107, 26);
             this.BtnCheckIn.TabIndex = 7;
             this.BtnCheckIn.Text = "Realizar Check-In";
             this.BtnCheckIn.UseVisualStyleBackColor = true;
@@ -130,40 +130,41 @@ namespace TurismoReal.Presentacion
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(569, 20);
+            this.BtnEliminar.Location = new System.Drawing.Point(427, 16);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(143, 32);
+            this.BtnEliminar.Size = new System.Drawing.Size(107, 26);
             this.BtnEliminar.TabIndex = 6;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // LblTotal
             // 
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(817, 473);
-            this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTotal.Location = new System.Drawing.Point(613, 384);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(41, 16);
+            this.LblTotal.Size = new System.Drawing.Size(34, 13);
             this.LblTotal.TabIndex = 5;
             this.LblTotal.Text = "Total:";
             // 
-            // BtnBuscar
+            // BtnRefrescar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(419, 20);
-            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(143, 32);
-            this.BtnBuscar.TabIndex = 4;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnRefrescar.Location = new System.Drawing.Point(314, 16);
+            this.BtnRefrescar.Name = "BtnRefrescar";
+            this.BtnRefrescar.Size = new System.Drawing.Size(107, 26);
+            this.BtnRefrescar.TabIndex = 4;
+            this.BtnRefrescar.Text = "Refrescar";
+            this.BtnRefrescar.UseVisualStyleBackColor = true;
+            this.BtnRefrescar.Click += new System.EventHandler(this.BtnRefrescar_Click);
             // 
             // TxtBuscar
             // 
-            this.TxtBuscar.Location = new System.Drawing.Point(9, 25);
-            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtBuscar.Location = new System.Drawing.Point(7, 20);
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(400, 22);
+            this.TxtBuscar.Size = new System.Drawing.Size(301, 20);
             this.TxtBuscar.TabIndex = 3;
+            this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // DGVListar
             // 
@@ -173,13 +174,15 @@ namespace TurismoReal.Presentacion
             this.DGVListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVListar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seleccionar});
-            this.DGVListar.Location = new System.Drawing.Point(9, 66);
-            this.DGVListar.Margin = new System.Windows.Forms.Padding(4);
+            this.DGVListar.Location = new System.Drawing.Point(7, 54);
             this.DGVListar.Name = "DGVListar";
             this.DGVListar.ReadOnly = true;
             this.DGVListar.RowHeadersWidth = 51;
-            this.DGVListar.Size = new System.Drawing.Size(1004, 390);
+            this.DGVListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVListar.Size = new System.Drawing.Size(753, 317);
             this.DGVListar.TabIndex = 0;
+            this.DGVListar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVListar_CellContentClick);
+            this.DGVListar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVListar_CellDoubleClick);
             // 
             // Seleccionar
             // 
@@ -191,6 +194,7 @@ namespace TurismoReal.Presentacion
             // 
             // Agregar
             // 
+            this.Agregar.Controls.Add(this.BtnModificar);
             this.Agregar.Controls.Add(this.LblIdEstado);
             this.Agregar.Controls.Add(this.LblRutCliente);
             this.Agregar.Controls.Add(this.LblIdDepartamento);
@@ -211,213 +215,201 @@ namespace TurismoReal.Presentacion
             this.Agregar.Controls.Add(this.DTInicioReserva);
             this.Agregar.Controls.Add(this.BtnCancelar);
             this.Agregar.Controls.Add(this.BtnAgregar);
-            this.Agregar.Location = new System.Drawing.Point(4, 25);
-            this.Agregar.Margin = new System.Windows.Forms.Padding(4);
+            this.Agregar.Location = new System.Drawing.Point(4, 22);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Size = new System.Drawing.Size(1024, 533);
+            this.Agregar.Size = new System.Drawing.Size(766, 431);
             this.Agregar.TabIndex = 1;
             this.Agregar.Text = "Agregar";
             this.Agregar.UseVisualStyleBackColor = true;
             // 
+            // BtnModificar
+            // 
+            this.BtnModificar.Location = new System.Drawing.Point(234, 261);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(122, 34);
+            this.BtnModificar.TabIndex = 38;
+            this.BtnModificar.Text = "Modificar";
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            // 
             // LblIdEstado
             // 
             this.LblIdEstado.AutoSize = true;
-            this.LblIdEstado.Location = new System.Drawing.Point(559, 219);
-            this.LblIdEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblIdEstado.Location = new System.Drawing.Point(419, 178);
             this.LblIdEstado.Name = "LblIdEstado";
-            this.LblIdEstado.Size = new System.Drawing.Size(66, 16);
+            this.LblIdEstado.Size = new System.Drawing.Size(54, 13);
             this.LblIdEstado.TabIndex = 37;
             this.LblIdEstado.Text = "ID Estado";
             // 
             // LblRutCliente
             // 
             this.LblRutCliente.AutoSize = true;
-            this.LblRutCliente.Location = new System.Drawing.Point(544, 166);
-            this.LblRutCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblRutCliente.Location = new System.Drawing.Point(408, 135);
             this.LblRutCliente.Name = "LblRutCliente";
-            this.LblRutCliente.Size = new System.Drawing.Size(80, 16);
+            this.LblRutCliente.Size = new System.Drawing.Size(65, 13);
             this.LblRutCliente.TabIndex = 36;
             this.LblRutCliente.Text = "RUT Cliente";
             // 
             // LblIdDepartamento
             // 
             this.LblIdDepartamento.AutoSize = true;
-            this.LblIdDepartamento.Location = new System.Drawing.Point(513, 118);
-            this.LblIdDepartamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblIdDepartamento.Location = new System.Drawing.Point(385, 96);
             this.LblIdDepartamento.Name = "LblIdDepartamento";
-            this.LblIdDepartamento.Size = new System.Drawing.Size(109, 16);
+            this.LblIdDepartamento.Size = new System.Drawing.Size(88, 13);
             this.LblIdDepartamento.TabIndex = 35;
             this.LblIdDepartamento.Text = "ID Departamento";
             // 
             // LblAbonado
             // 
             this.LblAbonado.AutoSize = true;
-            this.LblAbonado.Location = new System.Drawing.Point(520, 68);
-            this.LblAbonado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblAbonado.Location = new System.Drawing.Point(390, 55);
             this.LblAbonado.Name = "LblAbonado";
-            this.LblAbonado.Size = new System.Drawing.Size(103, 16);
+            this.LblAbonado.Size = new System.Drawing.Size(83, 13);
             this.LblAbonado.TabIndex = 34;
             this.LblAbonado.Text = "Monto Abonado";
             // 
             // TxtIdEstado
             // 
-            this.TxtIdEstado.Location = new System.Drawing.Point(639, 215);
-            this.TxtIdEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtIdEstado.Location = new System.Drawing.Point(479, 175);
             this.TxtIdEstado.Name = "TxtIdEstado";
-            this.TxtIdEstado.Size = new System.Drawing.Size(236, 22);
+            this.TxtIdEstado.Size = new System.Drawing.Size(178, 20);
             this.TxtIdEstado.TabIndex = 33;
             // 
             // TxtRutCliente
             // 
-            this.TxtRutCliente.Location = new System.Drawing.Point(639, 162);
-            this.TxtRutCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtRutCliente.Location = new System.Drawing.Point(479, 132);
             this.TxtRutCliente.Name = "TxtRutCliente";
-            this.TxtRutCliente.Size = new System.Drawing.Size(236, 22);
+            this.TxtRutCliente.Size = new System.Drawing.Size(178, 20);
             this.TxtRutCliente.TabIndex = 32;
             // 
             // TxtIdDepartamento
             // 
-            this.TxtIdDepartamento.Location = new System.Drawing.Point(639, 114);
-            this.TxtIdDepartamento.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtIdDepartamento.Location = new System.Drawing.Point(479, 93);
             this.TxtIdDepartamento.Name = "TxtIdDepartamento";
-            this.TxtIdDepartamento.Size = new System.Drawing.Size(236, 22);
+            this.TxtIdDepartamento.Size = new System.Drawing.Size(178, 20);
             this.TxtIdDepartamento.TabIndex = 31;
             // 
             // TxtMontoAbonado
             // 
-            this.TxtMontoAbonado.Location = new System.Drawing.Point(639, 64);
-            this.TxtMontoAbonado.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtMontoAbonado.Location = new System.Drawing.Point(479, 52);
             this.TxtMontoAbonado.Name = "TxtMontoAbonado";
-            this.TxtMontoAbonado.Size = new System.Drawing.Size(236, 22);
+            this.TxtMontoAbonado.Size = new System.Drawing.Size(178, 20);
             this.TxtMontoAbonado.TabIndex = 30;
             // 
             // LblIdReserva
             // 
             this.LblIdReserva.AutoSize = true;
-            this.LblIdReserva.Location = new System.Drawing.Point(119, 68);
-            this.LblIdReserva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblIdReserva.Location = new System.Drawing.Point(89, 55);
             this.LblIdReserva.Name = "LblIdReserva";
-            this.LblIdReserva.Size = new System.Drawing.Size(75, 16);
+            this.LblIdReserva.Size = new System.Drawing.Size(61, 13);
             this.LblIdReserva.TabIndex = 29;
             this.LblIdReserva.Text = "ID Reserva";
             // 
             // TxtIdReserva
             // 
-            this.TxtIdReserva.Location = new System.Drawing.Point(208, 64);
-            this.TxtIdReserva.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtIdReserva.Location = new System.Drawing.Point(156, 52);
             this.TxtIdReserva.Name = "TxtIdReserva";
-            this.TxtIdReserva.Size = new System.Drawing.Size(236, 22);
+            this.TxtIdReserva.Size = new System.Drawing.Size(178, 20);
             this.TxtIdReserva.TabIndex = 28;
             // 
             // LblMontoPagado
             // 
             this.LblMontoPagado.AutoSize = true;
-            this.LblMontoPagado.Location = new System.Drawing.Point(97, 262);
-            this.LblMontoPagado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblMontoPagado.Location = new System.Drawing.Point(73, 213);
             this.LblMontoPagado.Name = "LblMontoPagado";
-            this.LblMontoPagado.Size = new System.Drawing.Size(96, 16);
+            this.LblMontoPagado.Size = new System.Drawing.Size(77, 13);
             this.LblMontoPagado.TabIndex = 27;
             this.LblMontoPagado.Text = "Monto Pagado";
             // 
             // LblCantidadPersonas
             // 
             this.LblCantidadPersonas.AutoSize = true;
-            this.LblCantidadPersonas.Location = new System.Drawing.Point(72, 219);
-            this.LblCantidadPersonas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCantidadPersonas.Location = new System.Drawing.Point(54, 178);
             this.LblCantidadPersonas.Name = "LblCantidadPersonas";
-            this.LblCantidadPersonas.Size = new System.Drawing.Size(122, 16);
+            this.LblCantidadPersonas.Size = new System.Drawing.Size(96, 13);
             this.LblCantidadPersonas.TabIndex = 26;
             this.LblCantidadPersonas.Text = "Cantidad Personas";
             // 
             // LblTerminoReserva
             // 
             this.LblTerminoReserva.AutoSize = true;
-            this.LblTerminoReserva.Location = new System.Drawing.Point(83, 176);
-            this.LblTerminoReserva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTerminoReserva.Location = new System.Drawing.Point(62, 143);
             this.LblTerminoReserva.Name = "LblTerminoReserva";
-            this.LblTerminoReserva.Size = new System.Drawing.Size(112, 16);
+            this.LblTerminoReserva.Size = new System.Drawing.Size(88, 13);
             this.LblTerminoReserva.TabIndex = 25;
             this.LblTerminoReserva.Text = "Termino Reserva";
             // 
             // LblInicioReserva
             // 
             this.LblInicioReserva.AutoSize = true;
-            this.LblInicioReserva.Location = new System.Drawing.Point(100, 123);
-            this.LblInicioReserva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblInicioReserva.Location = new System.Drawing.Point(75, 100);
             this.LblInicioReserva.Name = "LblInicioReserva";
-            this.LblInicioReserva.Size = new System.Drawing.Size(93, 16);
+            this.LblInicioReserva.Size = new System.Drawing.Size(75, 13);
             this.LblInicioReserva.TabIndex = 24;
             this.LblInicioReserva.Text = "Inicio Reserva";
             // 
             // TxtMontoPagado
             // 
-            this.TxtMontoPagado.Location = new System.Drawing.Point(208, 258);
-            this.TxtMontoPagado.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtMontoPagado.Location = new System.Drawing.Point(156, 210);
             this.TxtMontoPagado.Name = "TxtMontoPagado";
-            this.TxtMontoPagado.Size = new System.Drawing.Size(236, 22);
+            this.TxtMontoPagado.Size = new System.Drawing.Size(178, 20);
             this.TxtMontoPagado.TabIndex = 23;
             // 
             // TxtCantPersonas
             // 
-            this.TxtCantPersonas.Location = new System.Drawing.Point(208, 215);
-            this.TxtCantPersonas.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCantPersonas.Location = new System.Drawing.Point(156, 175);
             this.TxtCantPersonas.Name = "TxtCantPersonas";
-            this.TxtCantPersonas.Size = new System.Drawing.Size(236, 22);
+            this.TxtCantPersonas.Size = new System.Drawing.Size(178, 20);
             this.TxtCantPersonas.TabIndex = 22;
             // 
             // DTTerminoReserva
             // 
-            this.DTTerminoReserva.Location = new System.Drawing.Point(208, 164);
-            this.DTTerminoReserva.Margin = new System.Windows.Forms.Padding(4);
-            this.DTTerminoReserva.MinimumSize = new System.Drawing.Size(4, 30);
+            this.DTTerminoReserva.Location = new System.Drawing.Point(156, 133);
+            this.DTTerminoReserva.MinimumSize = new System.Drawing.Size(4, 29);
             this.DTTerminoReserva.Name = "DTTerminoReserva";
-            this.DTTerminoReserva.Size = new System.Drawing.Size(236, 30);
+            this.DTTerminoReserva.Size = new System.Drawing.Size(178, 29);
             this.DTTerminoReserva.TabIndex = 21;
             // 
             // DTInicioReserva
             // 
-            this.DTInicioReserva.Location = new System.Drawing.Point(208, 111);
-            this.DTInicioReserva.Margin = new System.Windows.Forms.Padding(4);
-            this.DTInicioReserva.MinimumSize = new System.Drawing.Size(4, 30);
+            this.DTInicioReserva.Location = new System.Drawing.Point(156, 90);
+            this.DTInicioReserva.MinimumSize = new System.Drawing.Size(4, 29);
             this.DTInicioReserva.Name = "DTInicioReserva";
-            this.DTInicioReserva.Size = new System.Drawing.Size(236, 30);
+            this.DTInicioReserva.Size = new System.Drawing.Size(178, 29);
             this.DTInicioReserva.TabIndex = 20;
             this.DTInicioReserva.ValueChanged += new System.EventHandler(this.metroDateTime1_ValueChanged);
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(559, 320);
-            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnCancelar.Location = new System.Drawing.Point(419, 260);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(163, 43);
+            this.BtnCancelar.Size = new System.Drawing.Size(122, 35);
             this.BtnCancelar.TabIndex = 19;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(312, 320);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnAgregar.Location = new System.Drawing.Point(234, 260);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(163, 43);
+            this.BtnAgregar.Size = new System.Drawing.Size(122, 35);
             this.BtnAgregar.TabIndex = 18;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // FrmReservas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 657);
-            this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.ClientSize = new System.Drawing.Size(777, 534);
+            this.Controls.Add(this.TabGeneral);
             this.Name = "FrmReservas";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Reservas";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.FrmReservas_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.TabGeneral.ResumeLayout(false);
             this.Listado.ResumeLayout(false);
             this.Listado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVListar)).EndInit();
@@ -429,10 +421,10 @@ namespace TurismoReal.Presentacion
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl TabGeneral;
         private System.Windows.Forms.TabPage Listado;
         private System.Windows.Forms.Label LblTotal;
-        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.Button BtnRefrescar;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.DataGridView DGVListar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
@@ -461,5 +453,6 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.Button BtnCheckIn;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.CheckBox CbSeleccionar;
+        private System.Windows.Forms.Button BtnModificar;
     }
 }

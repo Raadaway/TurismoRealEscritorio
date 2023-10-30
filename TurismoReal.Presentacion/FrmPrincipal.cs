@@ -155,12 +155,6 @@ namespace TurismoReal.Presentacion
             frm.Show();
         }
 
-        private void inventarioToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FrmInventario frm = new FrmInventario();
-            frm.MdiParent = this;
-            frm.Show();
-        }
 
         private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
         {

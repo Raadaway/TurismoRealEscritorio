@@ -39,16 +39,16 @@ namespace TurismoReal.Presentacion
             this.DGVListar = new System.Windows.Forms.DataGridView();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Agregar = new System.Windows.Forms.TabPage();
+            this.CheckBoxWifi = new System.Windows.Forms.CheckBox();
+            this.CheckBoxLavadora = new System.Windows.Forms.CheckBox();
+            this.CheckBoxParking = new System.Windows.Forms.CheckBox();
+            this.CheckBoxAire = new System.Windows.Forms.CheckBox();
+            this.CheckBoxPiscina = new System.Windows.Forms.CheckBox();
             this.LblIDDepartamento = new System.Windows.Forms.Label();
             this.TxtIdDepartamento = new System.Windows.Forms.TextBox();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.CheckBoxPiscina = new System.Windows.Forms.CheckBox();
-            this.CheckBoxAire = new System.Windows.Forms.CheckBox();
-            this.CheckBoxParking = new System.Windows.Forms.CheckBox();
-            this.CheckBoxLavadora = new System.Windows.Forms.CheckBox();
-            this.CheckBoxWifi = new System.Windows.Forms.CheckBox();
             this.TabGeneral.SuspendLayout();
             this.Listado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVListar)).BeginInit();
@@ -166,6 +166,56 @@ namespace TurismoReal.Presentacion
             this.Agregar.Text = "Agregar";
             this.Agregar.UseVisualStyleBackColor = true;
             // 
+            // CheckBoxWifi
+            // 
+            this.CheckBoxWifi.AutoSize = true;
+            this.CheckBoxWifi.Location = new System.Drawing.Point(156, 164);
+            this.CheckBoxWifi.Name = "CheckBoxWifi";
+            this.CheckBoxWifi.Size = new System.Drawing.Size(50, 17);
+            this.CheckBoxWifi.TabIndex = 28;
+            this.CheckBoxWifi.Text = "Wi-Fi";
+            this.CheckBoxWifi.UseVisualStyleBackColor = true;
+            // 
+            // CheckBoxLavadora
+            // 
+            this.CheckBoxLavadora.AutoSize = true;
+            this.CheckBoxLavadora.Location = new System.Drawing.Point(234, 130);
+            this.CheckBoxLavadora.Name = "CheckBoxLavadora";
+            this.CheckBoxLavadora.Size = new System.Drawing.Size(71, 17);
+            this.CheckBoxLavadora.TabIndex = 27;
+            this.CheckBoxLavadora.Text = "Lavadora";
+            this.CheckBoxLavadora.UseVisualStyleBackColor = true;
+            // 
+            // CheckBoxParking
+            // 
+            this.CheckBoxParking.AutoSize = true;
+            this.CheckBoxParking.Location = new System.Drawing.Point(156, 130);
+            this.CheckBoxParking.Name = "CheckBoxParking";
+            this.CheckBoxParking.Size = new System.Drawing.Size(62, 17);
+            this.CheckBoxParking.TabIndex = 26;
+            this.CheckBoxParking.Text = "Parking";
+            this.CheckBoxParking.UseVisualStyleBackColor = true;
+            // 
+            // CheckBoxAire
+            // 
+            this.CheckBoxAire.AutoSize = true;
+            this.CheckBoxAire.Location = new System.Drawing.Point(234, 96);
+            this.CheckBoxAire.Name = "CheckBoxAire";
+            this.CheckBoxAire.Size = new System.Drawing.Size(118, 17);
+            this.CheckBoxAire.TabIndex = 25;
+            this.CheckBoxAire.Text = "Aire Acondicionado";
+            this.CheckBoxAire.UseVisualStyleBackColor = true;
+            // 
+            // CheckBoxPiscina
+            // 
+            this.CheckBoxPiscina.AutoSize = true;
+            this.CheckBoxPiscina.Location = new System.Drawing.Point(156, 96);
+            this.CheckBoxPiscina.Name = "CheckBoxPiscina";
+            this.CheckBoxPiscina.Size = new System.Drawing.Size(60, 17);
+            this.CheckBoxPiscina.TabIndex = 24;
+            this.CheckBoxPiscina.Text = "Piscina";
+            this.CheckBoxPiscina.UseVisualStyleBackColor = true;
+            // 
             // LblIDDepartamento
             // 
             this.LblIDDepartamento.AutoSize = true;
@@ -210,56 +260,6 @@ namespace TurismoReal.Presentacion
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // CheckBoxPiscina
-            // 
-            this.CheckBoxPiscina.AutoSize = true;
-            this.CheckBoxPiscina.Location = new System.Drawing.Point(156, 96);
-            this.CheckBoxPiscina.Name = "CheckBoxPiscina";
-            this.CheckBoxPiscina.Size = new System.Drawing.Size(60, 17);
-            this.CheckBoxPiscina.TabIndex = 24;
-            this.CheckBoxPiscina.Text = "Piscina";
-            this.CheckBoxPiscina.UseVisualStyleBackColor = true;
-            // 
-            // CheckBoxAire
-            // 
-            this.CheckBoxAire.AutoSize = true;
-            this.CheckBoxAire.Location = new System.Drawing.Point(234, 96);
-            this.CheckBoxAire.Name = "CheckBoxAire";
-            this.CheckBoxAire.Size = new System.Drawing.Size(118, 17);
-            this.CheckBoxAire.TabIndex = 25;
-            this.CheckBoxAire.Text = "Aire Acondicionado";
-            this.CheckBoxAire.UseVisualStyleBackColor = true;
-            // 
-            // CheckBoxParking
-            // 
-            this.CheckBoxParking.AutoSize = true;
-            this.CheckBoxParking.Location = new System.Drawing.Point(156, 130);
-            this.CheckBoxParking.Name = "CheckBoxParking";
-            this.CheckBoxParking.Size = new System.Drawing.Size(62, 17);
-            this.CheckBoxParking.TabIndex = 26;
-            this.CheckBoxParking.Text = "Parking";
-            this.CheckBoxParking.UseVisualStyleBackColor = true;
-            // 
-            // CheckBoxLavadora
-            // 
-            this.CheckBoxLavadora.AutoSize = true;
-            this.CheckBoxLavadora.Location = new System.Drawing.Point(234, 130);
-            this.CheckBoxLavadora.Name = "CheckBoxLavadora";
-            this.CheckBoxLavadora.Size = new System.Drawing.Size(71, 17);
-            this.CheckBoxLavadora.TabIndex = 27;
-            this.CheckBoxLavadora.Text = "Lavadora";
-            this.CheckBoxLavadora.UseVisualStyleBackColor = true;
-            // 
-            // CheckBoxWifi
-            // 
-            this.CheckBoxWifi.AutoSize = true;
-            this.CheckBoxWifi.Location = new System.Drawing.Point(156, 164);
-            this.CheckBoxWifi.Name = "CheckBoxWifi";
-            this.CheckBoxWifi.Size = new System.Drawing.Size(50, 17);
-            this.CheckBoxWifi.TabIndex = 28;
-            this.CheckBoxWifi.Text = "Wi-Fi";
-            this.CheckBoxWifi.UseVisualStyleBackColor = true;
-            // 
             // FrmServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,9 +282,6 @@ namespace TurismoReal.Presentacion
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl TabGeneral;
-        private System.Windows.Forms.TabPage Listado;
         private System.Windows.Forms.CheckBox CbSeleccionar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label LblTotal;
@@ -292,7 +289,6 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.DataGridView DGVListar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
-        private System.Windows.Forms.TabPage Agregar;
         private System.Windows.Forms.Label LblIDDepartamento;
         private System.Windows.Forms.TextBox TxtIdDepartamento;
         private System.Windows.Forms.Button BtnModificar;
@@ -303,5 +299,8 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.CheckBox CheckBoxPiscina;
         private System.Windows.Forms.CheckBox CheckBoxLavadora;
         private System.Windows.Forms.CheckBox CheckBoxWifi;
+        public System.Windows.Forms.TabControl TabGeneral;
+        public System.Windows.Forms.TabPage Listado;
+        public System.Windows.Forms.TabPage Agregar;
     }
 }

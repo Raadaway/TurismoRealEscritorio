@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using TurismoReal.Datos.WSportafolio;
 using TurismoReal.Entidades;
 using System.Linq;
 using TurismoReal.Entidades.WSportafolio;
@@ -95,34 +94,35 @@ namespace TurismoReal.Datos
             return res;
         }
 
-        /*public bool AgregarReserva(Reserva reserva)
+        public bool AgregarReserva(Reserva reserva)
         {
             WSPortafolioClient client = null;
+            bool result = false;
 
             try
             {
                 client = new WSPortafolioClient();
 
-                // Mapea los datos de la entidad "Reserva" al objeto del servicio web
-                var reservaWebService = new WSportafolio.reserva
-                {
-                    inicio_reserva = reserva.inicio_reserva,
-                    termino_reserva = reserva.termino_reserva,
-                    cant_personas = reserva.cant_personas,
-                    monto_total = reserva.monto_total,
-                    monto_abonado = reserva.monto_abonado,
-                    id_departamento = reserva.departamento_id_departamento,
-                    cliente_rut = reserva.cliente_rut,
-                    id_estado = reserva.estado_res_id_estado
-                };
+                var inicioReservaStr = reserva.inicio_reserva.ToString("yyyy-MM-dd");
+                var terminoReservaStr = reserva.termino_reserva.ToString("yyyy-MM-dd");
 
-                // Llama al método del servicio web para agregar la reserva
-                return client.agregarReserva(reservaWebService);
+                result = client.agregarReserva(
+                    inicioReservaStr,
+                    terminoReservaStr,
+                    reserva.cant_personas,
+                    reserva.monto_total,
+                    reserva.monto_abonado,
+                    reserva.departamento_id_departamento,
+                    reserva.cliente_rut,
+                    reserva.id_reserva
+                );
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error en capa de datos al agregar reserva: " + ex.Message);
-                return false; // Indica que la operación no se realizó con éxito
+                // Registra el mensaje de error en un registro o archivo de registro
+                RegistrarError("Error en capa de datos al agregar reserva: " + ex.Message);
+                // Lanza la excepción nuevamente para que la capa de negocios pueda manejarla
+                throw;
             }
             finally
             {
@@ -131,7 +131,48 @@ namespace TurismoReal.Datos
                     client.Close();
                 }
             }
-        }*/
+
+            return result;
+        }
+
+        private void RegistrarError(string mensaje)
+        {
+
+            Console.WriteLine(mensaje);
+        }
+
+        public bool ModificarReserva(int idReserva, DateTime inicioReserva, DateTime terminoReserva, int cantPersonas, int montoTotal, int montoAbonado, int idDepartamento)
+        {
+            try
+            {
+                WSPortafolioClient client = new WSPortafolioClient();
+                bool resultado = client.modificarReserva(idReserva, inicioReserva.ToString("yyyy-MM-dd"), terminoReserva.ToString("yyyy-MM-dd"), cantPersonas, montoTotal, montoAbonado, idDepartamento);
+                client.Close();
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al modificar reserva a través del servicio web: " + ex.Message);
+                return false;
+            }
+        }
+
+
+        public bool EliminarReserva(int idReserva)
+        {
+            try
+            {
+                WSPortafolioClient client = new WSPortafolioClient();
+                bool resultado = client.eliminarReserva(idReserva);
+                client.Close();
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar reserva a través del servicio web: " + ex.Message);
+                return false;
+            }
+        }
 
 
 

@@ -15,9 +15,16 @@ namespace TurismoReal.Presentacion
 {
     public partial class FrmInventario : MetroFramework.Forms.MetroForm
     {
-        public FrmInventario()
+        private int idDepartamento; // Campo para almacenar el ID del departamento
+        public FrmInventario(int idDepartamento)
         {
             InitializeComponent();
+            this.idDepartamento = idDepartamento; // Almacena el ID del departamento
+        }
+
+        public void SetIdDepartamento(int idDepartamento)
+        {
+            TxtIdDepartamento.Text = idDepartamento.ToString();
         }
 
         private void ListarInventario()
