@@ -17,23 +17,24 @@ namespace TurismoReal.Presentacion
 
         private int IdReserva;
         private int RutUsuario;
+        private int IdDepartamento;
 
         public FrmCheckIn()
         {
             InitializeComponent();
         }
 
-        public FrmCheckIn(int idRes, int rut) : this()
+        public FrmCheckIn(int idRes, int rut, int idDepa) : this()
         {
             IdReserva = idRes;
             RutUsuario = rut;
+            IdDepartamento = idDepa;
             TabGeneral.SelectedIndex = 1;
 
             Reserva reserva = NReserva.ListarReservaPorId(idRes);
             if ( reserva != null )
             {
                 txtIdReserva.Text = idRes.ToString();
-                dtpFecha.Value = reserva.inicio_reserva;
                 txtPago.Text = (reserva.monto_total - reserva.monto_abonado).ToString();
             }
         }
@@ -132,8 +133,9 @@ namespace TurismoReal.Presentacion
                 int pago = int.Parse(txtPago.Text);
 
                 bool resultado = NCheckIn.AgregarCheckIn(firma, pago, IdReserva, RutUsuario);
+                bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaAOcupado(IdDepartamento);
 
-                if (resultado)
+                if (resultado && nuevoEstado)
                 {
                     MetroFramework.MetroMessageBox.Show(this, "Check-In realizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

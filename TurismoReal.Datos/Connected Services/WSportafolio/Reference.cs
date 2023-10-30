@@ -16,6 +16,24 @@ namespace TurismoReal.Datos.WSportafolio {
     public interface WSPortafolio {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaDisponibleTerminoReservaRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaDisponibleTerminoReservaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse estadoDepaDisponibleTerminoReserva(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaDisponibleTerminoReservaRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaDisponibleTerminoReservaResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse> estadoDepaDisponibleTerminoReservaAsync(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaDisponibleFinMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaDisponibleFinMantenimientoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse estadoDepaDisponibleFinMantenimiento(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaDisponibleFinMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaDisponibleFinMantenimientoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse> estadoDepaDisponibleFinMantenimientoAsync(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/loginRequest", ReplyAction="http://ws/WSPortafolio/loginResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -23,33 +41,6 @@ namespace TurismoReal.Datos.WSportafolio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/loginRequest", ReplyAction="http://ws/WSPortafolio/loginResponse")]
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.loginResponse> loginAsync(TurismoReal.Datos.WSportafolio.loginRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/agregarAdministradorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarAdministradorResponse agregarAdministrador(TurismoReal.Datos.WSportafolio.agregarAdministradorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/agregarAdministradorResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarAdministradorResponse> agregarAdministradorAsync(TurismoReal.Datos.WSportafolio.agregarAdministradorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/modificarAdministradorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarAdministradorResponse modificarAdministrador(TurismoReal.Datos.WSportafolio.modificarAdministradorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/modificarAdministradorResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarAdministradorResponse> modificarAdministradorAsync(TurismoReal.Datos.WSportafolio.modificarAdministradorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/eliminarAdministradorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse eliminarAdministrador(TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/eliminarAdministradorResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse> eliminarAdministradorAsync(TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarFuncionarioRequest", ReplyAction="http://ws/WSPortafolio/agregarFuncionarioResponse")]
@@ -61,67 +52,22 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarFuncionarioResponse> agregarFuncionarioAsync(TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaTourResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/eliminarDepartamentoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarReservaTourResponse modificarReservaTour(TurismoReal.Datos.WSportafolio.modificarReservaTourRequest request);
+        TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse eliminarDepartamento(TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaTourResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTourResponse> modificarReservaTourAsync(TurismoReal.Datos.WSportafolio.modificarReservaTourRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/eliminarDepartamentoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse> eliminarDepartamentoAsync(TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/eliminarMantenimientoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/modificarAdministradorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse eliminarMantenimiento(TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest request);
+        TurismoReal.Datos.WSportafolio.modificarAdministradorResponse modificarAdministrador(TurismoReal.Datos.WSportafolio.modificarAdministradorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/eliminarMantenimientoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse> eliminarMantenimientoAsync(TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/agregarReservaTransporteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse agregarReservaTransporte(TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/agregarReservaTransporteResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse> agregarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaTransporteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse modificarReservaTransporte(TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaTransporteResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse> modificarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/modificarDepartamentoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarDepartamentoResponse modificarDepartamento(TurismoReal.Datos.WSportafolio.modificarDepartamentoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/modificarDepartamentoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarDepartamentoResponse> modificarDepartamentoAsync(TurismoReal.Datos.WSportafolio.modificarDepartamentoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaTourResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse eliminarReservaTour(TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaTourResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse> eliminarReservaTourAsync(TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/agregarMantenimientoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse agregarMantenimiento(TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/agregarMantenimientoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse> agregarMantenimientoAsync(TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/modificarAdministradorResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarAdministradorResponse> modificarAdministradorAsync(TurismoReal.Datos.WSportafolio.modificarAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarFuncionarioRequest", ReplyAction="http://ws/WSPortafolio/modificarFuncionarioResponse")]
@@ -133,67 +79,31 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse> modificarFuncionarioAsync(TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarInventarioRequest", ReplyAction="http://ws/WSPortafolio/agregarInventarioResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/modificarDepartamentoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarInventarioResponse agregarInventario(TurismoReal.Datos.WSportafolio.agregarInventarioRequest request);
+        TurismoReal.Datos.WSportafolio.modificarDepartamentoResponse modificarDepartamento(TurismoReal.Datos.WSportafolio.modificarDepartamentoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarInventarioRequest", ReplyAction="http://ws/WSPortafolio/agregarInventarioResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarInventarioResponse> agregarInventarioAsync(TurismoReal.Datos.WSportafolio.agregarInventarioRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/modificarDepartamentoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarDepartamentoResponse> modificarDepartamentoAsync(TurismoReal.Datos.WSportafolio.modificarDepartamentoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/agregarDepartamentoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/agregarAdministradorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarDepartamentoResponse agregarDepartamento(TurismoReal.Datos.WSportafolio.agregarDepartamentoRequest request);
+        TurismoReal.Datos.WSportafolio.agregarAdministradorResponse agregarAdministrador(TurismoReal.Datos.WSportafolio.agregarAdministradorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/agregarDepartamentoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarDepartamentoResponse> agregarDepartamentoAsync(TurismoReal.Datos.WSportafolio.agregarDepartamentoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/agregarAdministradorResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarAdministradorResponse> agregarAdministradorAsync(TurismoReal.Datos.WSportafolio.agregarAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarDepaServicioRequest", ReplyAction="http://ws/WSPortafolio/agregarDepaServicioResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/eliminarAdministradorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarDepaServicioResponse agregarDepaServicio(TurismoReal.Datos.WSportafolio.agregarDepaServicioRequest request);
+        TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse eliminarAdministrador(TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarDepaServicioRequest", ReplyAction="http://ws/WSPortafolio/agregarDepaServicioResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarDepaServicioResponse> agregarDepaServicioAsync(TurismoReal.Datos.WSportafolio.agregarDepaServicioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarInventarioRequest", ReplyAction="http://ws/WSPortafolio/eliminarInventarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarInventarioResponse eliminarInventario(TurismoReal.Datos.WSportafolio.eliminarInventarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarInventarioRequest", ReplyAction="http://ws/WSPortafolio/eliminarInventarioResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarInventarioResponse> eliminarInventarioAsync(TurismoReal.Datos.WSportafolio.eliminarInventarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/modificarCheckOutResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarCheckOutResponse modificarCheckOut(TurismoReal.Datos.WSportafolio.modificarCheckOutRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/modificarCheckOutResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckOutResponse> modificarCheckOutAsync(TurismoReal.Datos.WSportafolio.modificarCheckOutRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/eliminarDepartamentoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse eliminarDepartamento(TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/eliminarDepartamentoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse> eliminarDepartamentoAsync(TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarInventarioRequest", ReplyAction="http://ws/WSPortafolio/modificarInventarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarInventarioResponse modificarInventario(TurismoReal.Datos.WSportafolio.modificarInventarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarInventarioRequest", ReplyAction="http://ws/WSPortafolio/modificarInventarioResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarInventarioResponse> modificarInventarioAsync(TurismoReal.Datos.WSportafolio.modificarInventarioRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/eliminarAdministradorResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse> eliminarAdministradorAsync(TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarFuncionarioRequest", ReplyAction="http://ws/WSPortafolio/eliminarFuncionarioResponse")]
@@ -205,103 +115,31 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarFuncionarioResponse> eliminarFuncionarioAsync(TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarArticuloRequest", ReplyAction="http://ws/WSPortafolio/modificarArticuloResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/agregarDepartamentoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarArticuloResponse modificarArticulo(TurismoReal.Datos.WSportafolio.modificarArticuloRequest request);
+        TurismoReal.Datos.WSportafolio.agregarDepartamentoResponse agregarDepartamento(TurismoReal.Datos.WSportafolio.agregarDepartamentoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarArticuloRequest", ReplyAction="http://ws/WSPortafolio/modificarArticuloResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarArticuloResponse> modificarArticuloAsync(TurismoReal.Datos.WSportafolio.modificarArticuloRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/agregarDepartamentoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarDepartamentoResponse> agregarDepartamentoAsync(TurismoReal.Datos.WSportafolio.agregarDepartamentoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/modificarMantenimientoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/agregarReservaTransporteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarMantenimientoResponse modificarMantenimiento(TurismoReal.Datos.WSportafolio.modificarMantenimientoRequest request);
+        TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse agregarReservaTransporte(TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/modificarMantenimientoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarMantenimientoResponse> modificarMantenimientoAsync(TurismoReal.Datos.WSportafolio.modificarMantenimientoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/agregarReservaTransporteResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse> agregarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/agregarReservaTourResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaTransporteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarReservaTourResponse agregarReservaTour(TurismoReal.Datos.WSportafolio.agregarReservaTourRequest request);
+        TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse eliminarReservaTransporte(TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/agregarReservaTourResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarReservaTourResponse> agregarReservaTourAsync(TurismoReal.Datos.WSportafolio.agregarReservaTourRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/listarAdministradorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarAdministradorResponse listarAdministrador(TurismoReal.Datos.WSportafolio.listarAdministradorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/listarAdministradorResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarAdministradorResponse> listarAdministradorAsync(TurismoReal.Datos.WSportafolio.listarAdministradorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTransporteIdReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTransporteIdReservaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse listarReservaTransporteIdReserva(TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTransporteIdReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTransporteIdReservaResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse> listarReservaTransporteIdReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/listarMantenimientoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarMantenimientoResponse listarMantenimiento(TurismoReal.Datos.WSportafolio.listarMantenimientoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/listarMantenimientoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarMantenimientoResponse> listarMantenimientoAsync(TurismoReal.Datos.WSportafolio.listarMantenimientoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTourResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarReservaTourResponse listarReservaTour(TurismoReal.Datos.WSportafolio.listarReservaTourRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTourResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourResponse> listarReservaTourAsync(TurismoReal.Datos.WSportafolio.listarReservaTourRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarAdministradorPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarAdministradorPorRutResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarAdministradorPorRutResponse listarAdministradorPorRut(TurismoReal.Datos.WSportafolio.listarAdministradorPorRutRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarAdministradorPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarAdministradorPorRutResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarAdministradorPorRutResponse> listarAdministradorPorRutAsync(TurismoReal.Datos.WSportafolio.listarAdministradorPorRutRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTransporteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse listarReservaTransporte(TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTransporteResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse> listarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarInventarioPorIdDepaRequest", ReplyAction="http://ws/WSPortafolio/listarInventarioPorIdDepaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse listarInventarioPorIdDepa(TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarInventarioPorIdDepaRequest", ReplyAction="http://ws/WSPortafolio/listarInventarioPorIdDepaResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse> listarInventarioPorIdDepaAsync(TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarFuncionarioPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarFuncionarioPorRutResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse listarFuncionarioPorRut(TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarFuncionarioPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarFuncionarioPorRutResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse> listarFuncionarioPorRutAsync(TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaTransporteResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse> eliminarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarCondicionDepaRequest", ReplyAction="http://ws/WSPortafolio/agregarCondicionDepaResponse")]
@@ -313,67 +151,94 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCondicionDepaResponse> agregarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarClientePorRutRequest", ReplyAction="http://ws/WSPortafolio/listarClientePorRutResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarDepaServicioRequest", ReplyAction="http://ws/WSPortafolio/agregarDepaServicioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarClientePorRutResponse listarClientePorRut(TurismoReal.Datos.WSportafolio.listarClientePorRutRequest request);
+        TurismoReal.Datos.WSportafolio.agregarDepaServicioResponse agregarDepaServicio(TurismoReal.Datos.WSportafolio.agregarDepaServicioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarClientePorRutRequest", ReplyAction="http://ws/WSPortafolio/listarClientePorRutResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClientePorRutResponse> listarClientePorRutAsync(TurismoReal.Datos.WSportafolio.listarClientePorRutRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarDepaServicioRequest", ReplyAction="http://ws/WSPortafolio/agregarDepaServicioResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarDepaServicioResponse> agregarDepaServicioAsync(TurismoReal.Datos.WSportafolio.agregarDepaServicioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaPorIdRequest", ReplyAction="http://ws/WSPortafolio/listarReservaPorIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/modificarMantenimientoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarReservaPorIdResponse listarReservaPorId(TurismoReal.Datos.WSportafolio.listarReservaPorIdRequest request);
+        TurismoReal.Datos.WSportafolio.modificarMantenimientoResponse modificarMantenimiento(TurismoReal.Datos.WSportafolio.modificarMantenimientoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaPorIdRequest", ReplyAction="http://ws/WSPortafolio/listarReservaPorIdResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaPorIdResponse> listarReservaPorIdAsync(TurismoReal.Datos.WSportafolio.listarReservaPorIdRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/modificarMantenimientoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarMantenimientoResponse> modificarMantenimientoAsync(TurismoReal.Datos.WSportafolio.modificarMantenimientoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarArticuloPorIdRequest", ReplyAction="http://ws/WSPortafolio/listarArticuloPorIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/eliminarMantenimientoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse listarArticuloPorId(TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest request);
+        TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse eliminarMantenimiento(TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarArticuloPorIdRequest", ReplyAction="http://ws/WSPortafolio/listarArticuloPorIdResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse> listarArticuloPorIdAsync(TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/eliminarMantenimientoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse> eliminarMantenimientoAsync(TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTourIdReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTourIdReservaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarInventarioRequest", ReplyAction="http://ws/WSPortafolio/modificarInventarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse listarReservaTourIdReserva(TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest request);
+        TurismoReal.Datos.WSportafolio.modificarInventarioResponse modificarInventario(TurismoReal.Datos.WSportafolio.modificarInventarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTourIdReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTourIdReservaResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse> listarReservaTourIdReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarInventarioRequest", ReplyAction="http://ws/WSPortafolio/modificarInventarioResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarInventarioResponse> modificarInventarioAsync(TurismoReal.Datos.WSportafolio.modificarInventarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarReservaPorRutResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaTourResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarReservaPorRutResponse listarReservaPorRut(TurismoReal.Datos.WSportafolio.listarReservaPorRutRequest request);
+        TurismoReal.Datos.WSportafolio.modificarReservaTourResponse modificarReservaTour(TurismoReal.Datos.WSportafolio.modificarReservaTourRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarReservaPorRutResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaPorRutResponse> listarReservaPorRutAsync(TurismoReal.Datos.WSportafolio.listarReservaPorRutRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaTourResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTourResponse> modificarReservaTourAsync(TurismoReal.Datos.WSportafolio.modificarReservaTourRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarCondicionDepaPorParametroRequest", ReplyAction="http://ws/WSPortafolio/listarCondicionDepaPorParametroResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarInventarioRequest", ReplyAction="http://ws/WSPortafolio/eliminarInventarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse listarCondicionDepaPorParametro(TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest request);
+        TurismoReal.Datos.WSportafolio.eliminarInventarioResponse eliminarInventario(TurismoReal.Datos.WSportafolio.eliminarInventarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarCondicionDepaPorParametroRequest", ReplyAction="http://ws/WSPortafolio/listarCondicionDepaPorParametroResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse> listarCondicionDepaPorParametroAsync(TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarInventarioRequest", ReplyAction="http://ws/WSPortafolio/eliminarInventarioResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarInventarioResponse> eliminarInventarioAsync(TurismoReal.Datos.WSportafolio.eliminarInventarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaMantenimientoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarArticuloRequest", ReplyAction="http://ws/WSPortafolio/modificarArticuloResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse estadoDepaMantenimiento(TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest request);
+        TurismoReal.Datos.WSportafolio.modificarArticuloResponse modificarArticulo(TurismoReal.Datos.WSportafolio.modificarArticuloRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaMantenimientoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse> estadoDepaMantenimientoAsync(TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarArticuloRequest", ReplyAction="http://ws/WSPortafolio/modificarArticuloResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarArticuloResponse> modificarArticuloAsync(TurismoReal.Datos.WSportafolio.modificarArticuloRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaTransporteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse modificarReservaTransporte(TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaTransporteResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse> modificarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCondicionDepaRequest", ReplyAction="http://ws/WSPortafolio/modificarCondicionDepaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse modificarCondicionDepa(TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCondicionDepaRequest", ReplyAction="http://ws/WSPortafolio/modificarCondicionDepaResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse> modificarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/agregarReservaTourResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.agregarReservaTourResponse agregarReservaTour(TurismoReal.Datos.WSportafolio.agregarReservaTourRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/agregarReservaTourResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarReservaTourResponse> agregarReservaTourAsync(TurismoReal.Datos.WSportafolio.agregarReservaTourRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarCondicionDepaRequest", ReplyAction="http://ws/WSPortafolio/eliminarCondicionDepaResponse")]
@@ -385,13 +250,40 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCondicionDepaResponse> eliminarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/listarDepartamentoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarInventarioRequest", ReplyAction="http://ws/WSPortafolio/agregarInventarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarDepartamentoResponse listarDepartamento(TurismoReal.Datos.WSportafolio.listarDepartamentoRequest request);
+        TurismoReal.Datos.WSportafolio.agregarInventarioResponse agregarInventario(TurismoReal.Datos.WSportafolio.agregarInventarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/listarDepartamentoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepartamentoResponse> listarDepartamentoAsync(TurismoReal.Datos.WSportafolio.listarDepartamentoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarInventarioRequest", ReplyAction="http://ws/WSPortafolio/agregarInventarioResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarInventarioResponse> agregarInventarioAsync(TurismoReal.Datos.WSportafolio.agregarInventarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/agregarMantenimientoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse agregarMantenimiento(TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/agregarMantenimientoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse> agregarMantenimientoAsync(TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaTourResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse eliminarReservaTour(TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaTourResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse> eliminarReservaTourAsync(TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/modificarCheckOutResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.modificarCheckOutResponse modificarCheckOut(TurismoReal.Datos.WSportafolio.modificarCheckOutRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/modificarCheckOutResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckOutResponse> modificarCheckOutAsync(TurismoReal.Datos.WSportafolio.modificarCheckOutRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarFuncionarioRequest", ReplyAction="http://ws/WSPortafolio/listarFuncionarioResponse")]
@@ -403,6 +295,105 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioResponse> listarFuncionarioAsync(TurismoReal.Datos.WSportafolio.listarFuncionarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarAdministradorPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarAdministradorPorRutResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarAdministradorPorRutResponse listarAdministradorPorRut(TurismoReal.Datos.WSportafolio.listarAdministradorPorRutRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarAdministradorPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarAdministradorPorRutResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarAdministradorPorRutResponse> listarAdministradorPorRutAsync(TurismoReal.Datos.WSportafolio.listarAdministradorPorRutRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarCondicionDepaPorParametroRequest", ReplyAction="http://ws/WSPortafolio/listarCondicionDepaPorParametroResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse listarCondicionDepaPorParametro(TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarCondicionDepaPorParametroRequest", ReplyAction="http://ws/WSPortafolio/listarCondicionDepaPorParametroResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse> listarCondicionDepaPorParametroAsync(TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaPorIdRequest", ReplyAction="http://ws/WSPortafolio/listarReservaPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarReservaPorIdResponse listarReservaPorId(TurismoReal.Datos.WSportafolio.listarReservaPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaPorIdRequest", ReplyAction="http://ws/WSPortafolio/listarReservaPorIdResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaPorIdResponse> listarReservaPorIdAsync(TurismoReal.Datos.WSportafolio.listarReservaPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/listarDepartamentoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarDepartamentoResponse listarDepartamento(TurismoReal.Datos.WSportafolio.listarDepartamentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarDepartamentoRequest", ReplyAction="http://ws/WSPortafolio/listarDepartamentoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepartamentoResponse> listarDepartamentoAsync(TurismoReal.Datos.WSportafolio.listarDepartamentoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTransporteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse listarReservaTransporte(TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTransporteResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse> listarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarClientePorRutRequest", ReplyAction="http://ws/WSPortafolio/listarClientePorRutResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarClientePorRutResponse listarClientePorRut(TurismoReal.Datos.WSportafolio.listarClientePorRutRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarClientePorRutRequest", ReplyAction="http://ws/WSPortafolio/listarClientePorRutResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClientePorRutResponse> listarClientePorRutAsync(TurismoReal.Datos.WSportafolio.listarClientePorRutRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/listarAdministradorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarAdministradorResponse listarAdministrador(TurismoReal.Datos.WSportafolio.listarAdministradorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarAdministradorRequest", ReplyAction="http://ws/WSPortafolio/listarAdministradorResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarAdministradorResponse> listarAdministradorAsync(TurismoReal.Datos.WSportafolio.listarAdministradorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarReservaPorRutResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarReservaPorRutResponse listarReservaPorRut(TurismoReal.Datos.WSportafolio.listarReservaPorRutRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarReservaPorRutResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaPorRutResponse> listarReservaPorRutAsync(TurismoReal.Datos.WSportafolio.listarReservaPorRutRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/listarMantenimientoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarMantenimientoResponse listarMantenimiento(TurismoReal.Datos.WSportafolio.listarMantenimientoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/listarMantenimientoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarMantenimientoResponse> listarMantenimientoAsync(TurismoReal.Datos.WSportafolio.listarMantenimientoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarArticuloPorIdRequest", ReplyAction="http://ws/WSPortafolio/listarArticuloPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse listarArticuloPorId(TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarArticuloPorIdRequest", ReplyAction="http://ws/WSPortafolio/listarArticuloPorIdResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse> listarArticuloPorIdAsync(TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTourResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarReservaTourResponse listarReservaTour(TurismoReal.Datos.WSportafolio.listarReservaTourRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTourRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTourResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourResponse> listarReservaTourAsync(TurismoReal.Datos.WSportafolio.listarReservaTourRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarDepaServicioRequest", ReplyAction="http://ws/WSPortafolio/listarDepaServicioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -410,6 +401,15 @@ namespace TurismoReal.Datos.WSportafolio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarDepaServicioRequest", ReplyAction="http://ws/WSPortafolio/listarDepaServicioResponse")]
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepaServicioResponse> listarDepaServicioAsync(TurismoReal.Datos.WSportafolio.listarDepaServicioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTransporteIdReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTransporteIdReservaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse listarReservaTransporteIdReserva(TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTransporteIdReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTransporteIdReservaResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse> listarReservaTransporteIdReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarCondicionDepaRequest", ReplyAction="http://ws/WSPortafolio/listarCondicionDepaResponse")]
@@ -430,85 +430,40 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaOcupadoResponse> estadoDepaOcupadoAsync(TurismoReal.Datos.WSportafolio.estadoDepaOcupadoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaTransporteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarInventarioPorIdDepaRequest", ReplyAction="http://ws/WSPortafolio/listarInventarioPorIdDepaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse eliminarReservaTransporte(TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest request);
+        TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse listarInventarioPorIdDepa(TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaTransporteRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaTransporteResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse> eliminarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarInventarioPorIdDepaRequest", ReplyAction="http://ws/WSPortafolio/listarInventarioPorIdDepaResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse> listarInventarioPorIdDepaAsync(TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCondicionDepaRequest", ReplyAction="http://ws/WSPortafolio/modificarCondicionDepaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTourIdReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTourIdReservaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse modificarCondicionDepa(TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest request);
+        TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse listarReservaTourIdReserva(TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCondicionDepaRequest", ReplyAction="http://ws/WSPortafolio/modificarCondicionDepaResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse> modificarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaTourIdReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaTourIdReservaResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse> listarReservaTourIdReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaDisponibleTerminoReservaRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaDisponibleTerminoReservaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarFuncionarioPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarFuncionarioPorRutResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse estadoDepaDisponibleTerminoReserva(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest request);
+        TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse listarFuncionarioPorRut(TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaDisponibleTerminoReservaRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaDisponibleTerminoReservaResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse> estadoDepaDisponibleTerminoReservaAsync(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarFuncionarioPorRutRequest", ReplyAction="http://ws/WSPortafolio/listarFuncionarioPorRutResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse> listarFuncionarioPorRutAsync(TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaDisponibleFinMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaDisponibleFinMantenimientoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaMantenimientoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse estadoDepaDisponibleFinMantenimiento(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest request);
+        TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse estadoDepaMantenimiento(TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaDisponibleFinMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaDisponibleFinMantenimientoResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse> estadoDepaDisponibleFinMantenimientoAsync(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarReservaResponse modificarReserva(TurismoReal.Datos.WSportafolio.modificarReservaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaResponse> modificarReservaAsync(TurismoReal.Datos.WSportafolio.modificarReservaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarClienteRequest", ReplyAction="http://ws/WSPortafolio/agregarClienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarClienteResponse agregarCliente(TurismoReal.Datos.WSportafolio.agregarClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarClienteRequest", ReplyAction="http://ws/WSPortafolio/agregarClienteResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarClienteResponse> agregarClienteAsync(TurismoReal.Datos.WSportafolio.agregarClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCheckInRequest", ReplyAction="http://ws/WSPortafolio/modificarCheckInResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.modificarCheckInResponse modificarCheckIn(TurismoReal.Datos.WSportafolio.modificarCheckInRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCheckInRequest", ReplyAction="http://ws/WSPortafolio/modificarCheckInResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckInResponse> modificarCheckInAsync(TurismoReal.Datos.WSportafolio.modificarCheckInRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarReservaResponse eliminarReserva(TurismoReal.Datos.WSportafolio.eliminarReservaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaResponse> eliminarReservaAsync(TurismoReal.Datos.WSportafolio.eliminarReservaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarCheckInRequest", ReplyAction="http://ws/WSPortafolio/agregarCheckInResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarCheckInResponse agregarCheckIn(TurismoReal.Datos.WSportafolio.agregarCheckInRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarCheckInRequest", ReplyAction="http://ws/WSPortafolio/agregarCheckInResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCheckInResponse> agregarCheckInAsync(TurismoReal.Datos.WSportafolio.agregarCheckInRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/estadoDepaMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/estadoDepaMantenimientoResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse> estadoDepaMantenimientoAsync(TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarClienteRequest", ReplyAction="http://ws/WSPortafolio/eliminarClienteResponse")]
@@ -529,13 +484,31 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarReservaResponse> agregarReservaAsync(TurismoReal.Datos.WSportafolio.agregarReservaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/metodoLoginRequest", ReplyAction="http://ws/WSPortafolio/metodoLoginResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.metodoLoginResponse metodoLogin(TurismoReal.Datos.WSportafolio.metodoLoginRequest request);
+        TurismoReal.Datos.WSportafolio.modificarReservaResponse modificarReserva(TurismoReal.Datos.WSportafolio.modificarReservaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/metodoLoginRequest", ReplyAction="http://ws/WSPortafolio/metodoLoginResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.metodoLoginResponse> metodoLoginAsync(TurismoReal.Datos.WSportafolio.metodoLoginRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarReservaRequest", ReplyAction="http://ws/WSPortafolio/modificarReservaResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaResponse> modificarReservaAsync(TurismoReal.Datos.WSportafolio.modificarReservaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.eliminarReservaResponse eliminarReserva(TurismoReal.Datos.WSportafolio.eliminarReservaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarReservaRequest", ReplyAction="http://ws/WSPortafolio/eliminarReservaResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaResponse> eliminarReservaAsync(TurismoReal.Datos.WSportafolio.eliminarReservaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarClienteRequest", ReplyAction="http://ws/WSPortafolio/agregarClienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.agregarClienteResponse agregarCliente(TurismoReal.Datos.WSportafolio.agregarClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarClienteRequest", ReplyAction="http://ws/WSPortafolio/agregarClienteResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarClienteResponse> agregarClienteAsync(TurismoReal.Datos.WSportafolio.agregarClienteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarClienteRequest", ReplyAction="http://ws/WSPortafolio/modificarClienteResponse")]
@@ -547,33 +520,6 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarClienteResponse> modificarClienteAsync(TurismoReal.Datos.WSportafolio.modificarClienteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/agregarCheckOutResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.agregarCheckOutResponse agregarCheckOut(TurismoReal.Datos.WSportafolio.agregarCheckOutRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/agregarCheckOutResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCheckOutResponse> agregarCheckOutAsync(TurismoReal.Datos.WSportafolio.agregarCheckOutRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarArticuloRequest", ReplyAction="http://ws/WSPortafolio/eliminarArticuloResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarArticuloResponse eliminarArticulo(TurismoReal.Datos.WSportafolio.eliminarArticuloRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarArticuloRequest", ReplyAction="http://ws/WSPortafolio/eliminarArticuloResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarArticuloResponse> eliminarArticuloAsync(TurismoReal.Datos.WSportafolio.eliminarArticuloRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarCheckInRequest", ReplyAction="http://ws/WSPortafolio/eliminarCheckInResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarCheckInResponse eliminarCheckIn(TurismoReal.Datos.WSportafolio.eliminarCheckInRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarCheckInRequest", ReplyAction="http://ws/WSPortafolio/eliminarCheckInResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCheckInResponse> eliminarCheckInAsync(TurismoReal.Datos.WSportafolio.eliminarCheckInRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarArticuloRequest", ReplyAction="http://ws/WSPortafolio/agregarArticuloResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -581,24 +527,6 @@ namespace TurismoReal.Datos.WSportafolio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarArticuloRequest", ReplyAction="http://ws/WSPortafolio/agregarArticuloResponse")]
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarArticuloResponse> agregarArticuloAsync(TurismoReal.Datos.WSportafolio.agregarArticuloRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarClienteRequest", ReplyAction="http://ws/WSPortafolio/listarClienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarClienteResponse listarCliente(TurismoReal.Datos.WSportafolio.listarClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarClienteRequest", ReplyAction="http://ws/WSPortafolio/listarClienteResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClienteResponse> listarClienteAsync(TurismoReal.Datos.WSportafolio.listarClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/eliminarCheckOutResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.eliminarCheckOutResponse eliminarCheckOut(TurismoReal.Datos.WSportafolio.eliminarCheckOutRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/eliminarCheckOutResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCheckOutResponse> eliminarCheckOutAsync(TurismoReal.Datos.WSportafolio.eliminarCheckOutRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarDepaPorIdRequest", ReplyAction="http://ws/WSPortafolio/listarDepaPorIdResponse")]
@@ -610,13 +538,76 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepaPorIdResponse> listarDepaPorIdAsync(TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarClienteRequest", ReplyAction="http://ws/WSPortafolio/listarClienteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarReservaResponse listarReserva(TurismoReal.Datos.WSportafolio.listarReservaRequest request);
+        TurismoReal.Datos.WSportafolio.listarClienteResponse listarCliente(TurismoReal.Datos.WSportafolio.listarClienteRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaResponse> listarReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarClienteRequest", ReplyAction="http://ws/WSPortafolio/listarClienteResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClienteResponse> listarClienteAsync(TurismoReal.Datos.WSportafolio.listarClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarCheckInRequest", ReplyAction="http://ws/WSPortafolio/eliminarCheckInResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.eliminarCheckInResponse eliminarCheckIn(TurismoReal.Datos.WSportafolio.eliminarCheckInRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarCheckInRequest", ReplyAction="http://ws/WSPortafolio/eliminarCheckInResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCheckInResponse> eliminarCheckInAsync(TurismoReal.Datos.WSportafolio.eliminarCheckInRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarArticuloRequest", ReplyAction="http://ws/WSPortafolio/eliminarArticuloResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.eliminarArticuloResponse eliminarArticulo(TurismoReal.Datos.WSportafolio.eliminarArticuloRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarArticuloRequest", ReplyAction="http://ws/WSPortafolio/eliminarArticuloResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarArticuloResponse> eliminarArticuloAsync(TurismoReal.Datos.WSportafolio.eliminarArticuloRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCheckInRequest", ReplyAction="http://ws/WSPortafolio/modificarCheckInResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.modificarCheckInResponse modificarCheckIn(TurismoReal.Datos.WSportafolio.modificarCheckInRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/modificarCheckInRequest", ReplyAction="http://ws/WSPortafolio/modificarCheckInResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckInResponse> modificarCheckInAsync(TurismoReal.Datos.WSportafolio.modificarCheckInRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarCheckInRequest", ReplyAction="http://ws/WSPortafolio/agregarCheckInResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.agregarCheckInResponse agregarCheckIn(TurismoReal.Datos.WSportafolio.agregarCheckInRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarCheckInRequest", ReplyAction="http://ws/WSPortafolio/agregarCheckInResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCheckInResponse> agregarCheckInAsync(TurismoReal.Datos.WSportafolio.agregarCheckInRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/agregarCheckOutResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.agregarCheckOutResponse agregarCheckOut(TurismoReal.Datos.WSportafolio.agregarCheckOutRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/agregarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/agregarCheckOutResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCheckOutResponse> agregarCheckOutAsync(TurismoReal.Datos.WSportafolio.agregarCheckOutRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/metodoLoginRequest", ReplyAction="http://ws/WSPortafolio/metodoLoginResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.metodoLoginResponse metodoLogin(TurismoReal.Datos.WSportafolio.metodoLoginRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/metodoLoginRequest", ReplyAction="http://ws/WSPortafolio/metodoLoginResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.metodoLoginResponse> metodoLoginAsync(TurismoReal.Datos.WSportafolio.metodoLoginRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/eliminarCheckOutResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.eliminarCheckOutResponse eliminarCheckOut(TurismoReal.Datos.WSportafolio.eliminarCheckOutRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/eliminarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/eliminarCheckOutResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCheckOutResponse> eliminarCheckOutAsync(TurismoReal.Datos.WSportafolio.eliminarCheckOutRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarCheckInRequest", ReplyAction="http://ws/WSPortafolio/listarCheckInResponse")]
@@ -626,6 +617,33 @@ namespace TurismoReal.Datos.WSportafolio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarCheckInRequest", ReplyAction="http://ws/WSPortafolio/listarCheckInResponse")]
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCheckInResponse> listarCheckInAsync(TurismoReal.Datos.WSportafolio.listarCheckInRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarReservaResponse listarReserva(TurismoReal.Datos.WSportafolio.listarReservaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarReservaRequest", ReplyAction="http://ws/WSPortafolio/listarReservaResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaResponse> listarReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarTransporteRequest", ReplyAction="http://ws/WSPortafolio/listarTransporteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarTransporteResponse listarTransporte(TurismoReal.Datos.WSportafolio.listarTransporteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarTransporteRequest", ReplyAction="http://ws/WSPortafolio/listarTransporteResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarTransporteResponse> listarTransporteAsync(TurismoReal.Datos.WSportafolio.listarTransporteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarInventarioRequest", ReplyAction="http://ws/WSPortafolio/listarInventarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.listarInventarioResponse listarInventario(TurismoReal.Datos.WSportafolio.listarInventarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarInventarioRequest", ReplyAction="http://ws/WSPortafolio/listarInventarioResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioResponse> listarInventarioAsync(TurismoReal.Datos.WSportafolio.listarInventarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarCheckOutRequest", ReplyAction="http://ws/WSPortafolio/listarCheckOutResponse")]
@@ -646,15 +664,6 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarComunaResponse> listarComunaAsync(TurismoReal.Datos.WSportafolio.listarComunaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarArticuloRequest", ReplyAction="http://ws/WSPortafolio/listarArticuloResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarArticuloResponse listarArticulo(TurismoReal.Datos.WSportafolio.listarArticuloRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarArticuloRequest", ReplyAction="http://ws/WSPortafolio/listarArticuloResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloResponse> listarArticuloAsync(TurismoReal.Datos.WSportafolio.listarArticuloRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarTourRequest", ReplyAction="http://ws/WSPortafolio/listarTourResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -664,22 +673,85 @@ namespace TurismoReal.Datos.WSportafolio {
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarTourResponse> listarTourAsync(TurismoReal.Datos.WSportafolio.listarTourRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarTransporteRequest", ReplyAction="http://ws/WSPortafolio/listarTransporteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarArticuloRequest", ReplyAction="http://ws/WSPortafolio/listarArticuloResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarTransporteResponse listarTransporte(TurismoReal.Datos.WSportafolio.listarTransporteRequest request);
+        TurismoReal.Datos.WSportafolio.listarArticuloResponse listarArticulo(TurismoReal.Datos.WSportafolio.listarArticuloRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarTransporteRequest", ReplyAction="http://ws/WSPortafolio/listarTransporteResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarTransporteResponse> listarTransporteAsync(TurismoReal.Datos.WSportafolio.listarTransporteRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarArticuloRequest", ReplyAction="http://ws/WSPortafolio/listarArticuloResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloResponse> listarArticuloAsync(TurismoReal.Datos.WSportafolio.listarArticuloRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaDisponibleTerminoReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class estadoDepaDisponibleTerminoReservaRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarInventarioRequest", ReplyAction="http://ws/WSPortafolio/listarInventarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TurismoReal.Datos.WSportafolio.listarInventarioResponse listarInventario(TurismoReal.Datos.WSportafolio.listarInventarioRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_depa;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarInventarioRequest", ReplyAction="http://ws/WSPortafolio/listarInventarioResponse")]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioResponse> listarInventarioAsync(TurismoReal.Datos.WSportafolio.listarInventarioRequest request);
+        public estadoDepaDisponibleTerminoReservaRequest() {
+        }
+        
+        public estadoDepaDisponibleTerminoReservaRequest(int id_depa) {
+            this.id_depa = id_depa;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaDisponibleTerminoReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class estadoDepaDisponibleTerminoReservaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public estadoDepaDisponibleTerminoReservaResponse() {
+        }
+        
+        public estadoDepaDisponibleTerminoReservaResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaDisponibleFinMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class estadoDepaDisponibleFinMantenimientoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_depa;
+        
+        public estadoDepaDisponibleFinMantenimientoRequest() {
+        }
+        
+        public estadoDepaDisponibleFinMantenimientoRequest(int id_depa) {
+            this.id_depa = id_depa;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaDisponibleFinMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class estadoDepaDisponibleFinMantenimientoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public estadoDepaDisponibleFinMantenimientoResponse() {
+        }
+        
+        public estadoDepaDisponibleFinMantenimientoResponse(bool @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -726,8 +798,8 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarAdministrador", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarAdministradorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarFuncionario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarFuncionarioRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -765,10 +837,10 @@ namespace TurismoReal.Datos.WSportafolio {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string telefono;
         
-        public agregarAdministradorRequest() {
+        public agregarFuncionarioRequest() {
         }
         
-        public agregarAdministradorRequest(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+        public agregarFuncionarioRequest(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
             this.rut = rut;
             this.dv = dv;
             this.nombre = nombre;
@@ -784,17 +856,53 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarAdministradorResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarAdministradorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarFuncionarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarFuncionarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
         
-        public agregarAdministradorResponse() {
+        public agregarFuncionarioResponse() {
         }
         
-        public agregarAdministradorResponse(bool @return) {
+        public agregarFuncionarioResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDepartamento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarDepartamentoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_dep;
+        
+        public eliminarDepartamentoRequest() {
+        }
+        
+        public eliminarDepartamentoRequest(int id_dep) {
+            this.id_dep = id_dep;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDepartamentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarDepartamentoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarDepartamentoResponse() {
+        }
+        
+        public eliminarDepartamentoResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -883,44 +991,8 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministrador", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarAdministradorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int rut;
-        
-        public eliminarAdministradorRequest() {
-        }
-        
-        public eliminarAdministradorRequest(int rut) {
-            this.rut = rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministradorResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarAdministradorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarAdministradorResponse() {
-        }
-        
-        public eliminarAdministradorResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarFuncionario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarFuncionarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarFuncionario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarFuncionarioRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -928,255 +1000,71 @@ namespace TurismoReal.Datos.WSportafolio {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dv;
+        public int nrut;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
+        public string ndv;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellido_paterno;
+        public string nnombre;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellido_materno;
+        public string napellido_paterno;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string correo;
+        public string napellido_materno;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string usuario;
+        public string ncorreo;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string contrasena;
+        public string nusuario;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=8)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string telefono;
+        public string ncontrasena;
         
-        public agregarFuncionarioRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string ntelefono;
+        
+        public modificarFuncionarioRequest() {
         }
         
-        public agregarFuncionarioRequest(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+        public modificarFuncionarioRequest(int rut, int nrut, string ndv, string nnombre, string napellido_paterno, string napellido_materno, string ncorreo, string nusuario, string ncontrasena, string ntelefono) {
             this.rut = rut;
-            this.dv = dv;
-            this.nombre = nombre;
-            this.apellido_paterno = apellido_paterno;
-            this.apellido_materno = apellido_materno;
-            this.correo = correo;
-            this.usuario = usuario;
-            this.contrasena = contrasena;
-            this.telefono = telefono;
+            this.nrut = nrut;
+            this.ndv = ndv;
+            this.nnombre = nnombre;
+            this.napellido_paterno = napellido_paterno;
+            this.napellido_materno = napellido_materno;
+            this.ncorreo = ncorreo;
+            this.nusuario = nusuario;
+            this.ncontrasena = ncontrasena;
+            this.ntelefono = ntelefono;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarFuncionarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarFuncionarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarFuncionarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarFuncionarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
         
-        public agregarFuncionarioResponse() {
+        public modificarFuncionarioResponse() {
         }
         
-        public agregarFuncionarioResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaTour", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarReservaTourRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_reserva;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nid_tour;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int ncantidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int npago_cliente;
-        
-        public modificarReservaTourRequest() {
-        }
-        
-        public modificarReservaTourRequest(int id_reserva, int nid_tour, int ncantidad, int npago_cliente) {
-            this.id_reserva = id_reserva;
-            this.nid_tour = nid_tour;
-            this.ncantidad = ncantidad;
-            this.npago_cliente = npago_cliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaTourResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarReservaTourResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public modificarReservaTourResponse() {
-        }
-        
-        public modificarReservaTourResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarMantenimientoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_mant;
-        
-        public eliminarMantenimientoRequest() {
-        }
-        
-        public eliminarMantenimientoRequest(int id_mant) {
-            this.id_mant = id_mant;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarMantenimientoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarMantenimientoResponse() {
-        }
-        
-        public eliminarMantenimientoResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarReservaTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarReservaTransporteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_transporte;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_reserva;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int cantidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pago_cliente;
-        
-        public agregarReservaTransporteRequest() {
-        }
-        
-        public agregarReservaTransporteRequest(int id_transporte, int id_reserva, int cantidad, int pago_cliente) {
-            this.id_transporte = id_transporte;
-            this.id_reserva = id_reserva;
-            this.cantidad = cantidad;
-            this.pago_cliente = pago_cliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarReservaTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarReservaTransporteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public agregarReservaTransporteResponse() {
-        }
-        
-        public agregarReservaTransporteResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarReservaTransporteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_reserva;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nid_transporte;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int ncantidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int npago_cliente;
-        
-        public modificarReservaTransporteRequest() {
-        }
-        
-        public modificarReservaTransporteRequest(int id_reserva, int nid_transporte, int ncantidad, int npago_cliente) {
-            this.id_reserva = id_reserva;
-            this.nid_transporte = nid_transporte;
-            this.ncantidad = ncantidad;
-            this.npago_cliente = npago_cliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarReservaTransporteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public modificarReservaTransporteResponse() {
-        }
-        
-        public modificarReservaTransporteResponse(bool @return) {
+        public modificarFuncionarioResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -1260,95 +1148,8 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaTour", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarReservaTourRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_reserva;
-        
-        public eliminarReservaTourRequest() {
-        }
-        
-        public eliminarReservaTourRequest(int id_reserva) {
-            this.id_reserva = id_reserva;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaTourResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarReservaTourResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarReservaTourResponse() {
-        }
-        
-        public eliminarReservaTourResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarMantenimientoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fecha_inicio_str;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fecha_termino_str;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_depa;
-        
-        public agregarMantenimientoRequest() {
-        }
-        
-        public agregarMantenimientoRequest(string descripcion, string fecha_inicio_str, string fecha_termino_str, int id_depa) {
-            this.descripcion = descripcion;
-            this.fecha_inicio_str = fecha_inicio_str;
-            this.fecha_termino_str = fecha_termino_str;
-            this.id_depa = id_depa;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarMantenimientoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public agregarMantenimientoResponse() {
-        }
-        
-        public agregarMantenimientoResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarFuncionario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarFuncionarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarAdministrador", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarAdministradorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -1356,71 +1157,66 @@ namespace TurismoReal.Datos.WSportafolio {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nrut;
+        public string dv;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ndv;
+        public string nombre;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nnombre;
+        public string apellido_paterno;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string napellido_paterno;
+        public string apellido_materno;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string napellido_materno;
+        public string correo;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ncorreo;
+        public string usuario;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nusuario;
+        public string contrasena;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=8)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ncontrasena;
+        public string telefono;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ntelefono;
-        
-        public modificarFuncionarioRequest() {
+        public agregarAdministradorRequest() {
         }
         
-        public modificarFuncionarioRequest(int rut, int nrut, string ndv, string nnombre, string napellido_paterno, string napellido_materno, string ncorreo, string nusuario, string ncontrasena, string ntelefono) {
+        public agregarAdministradorRequest(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
             this.rut = rut;
-            this.nrut = nrut;
-            this.ndv = ndv;
-            this.nnombre = nnombre;
-            this.napellido_paterno = napellido_paterno;
-            this.napellido_materno = napellido_materno;
-            this.ncorreo = ncorreo;
-            this.nusuario = nusuario;
-            this.ncontrasena = ncontrasena;
-            this.ntelefono = ntelefono;
+            this.dv = dv;
+            this.nombre = nombre;
+            this.apellido_paterno = apellido_paterno;
+            this.apellido_materno = apellido_materno;
+            this.correo = correo;
+            this.usuario = usuario;
+            this.contrasena = contrasena;
+            this.telefono = telefono;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarFuncionarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarFuncionarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarAdministradorResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarAdministradorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
         
-        public modificarFuncionarioResponse() {
+        public agregarAdministradorResponse() {
         }
         
-        public modificarFuncionarioResponse(bool @return) {
+        public agregarAdministradorResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -1428,45 +1224,71 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarInventario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarInventarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministrador", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarAdministradorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_articulo;
+        public int rut;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_departamento;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int cantidad;
-        
-        public agregarInventarioRequest() {
+        public eliminarAdministradorRequest() {
         }
         
-        public agregarInventarioRequest(int id_articulo, int id_departamento, int cantidad) {
-            this.id_articulo = id_articulo;
-            this.id_departamento = id_departamento;
-            this.cantidad = cantidad;
+        public eliminarAdministradorRequest(int rut) {
+            this.rut = rut;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarInventarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarInventarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministradorResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarAdministradorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
         
-        public agregarInventarioResponse() {
+        public eliminarAdministradorResponse() {
         }
         
-        public agregarInventarioResponse(bool @return) {
+        public eliminarAdministradorResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFuncionario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarFuncionarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int rut;
+        
+        public eliminarFuncionarioRequest() {
+        }
+        
+        public eliminarFuncionarioRequest(int rut) {
+            this.rut = rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFuncionarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarFuncionarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarFuncionarioResponse() {
+        }
+        
+        public eliminarFuncionarioResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -1542,6 +1364,139 @@ namespace TurismoReal.Datos.WSportafolio {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarReservaTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarReservaTransporteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_transporte;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_reserva;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int cantidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pago_cliente;
+        
+        public agregarReservaTransporteRequest() {
+        }
+        
+        public agregarReservaTransporteRequest(int id_transporte, int id_reserva, int cantidad, int pago_cliente) {
+            this.id_transporte = id_transporte;
+            this.id_reserva = id_reserva;
+            this.cantidad = cantidad;
+            this.pago_cliente = pago_cliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarReservaTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarReservaTransporteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public agregarReservaTransporteResponse() {
+        }
+        
+        public agregarReservaTransporteResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarReservaTransporteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_reserva;
+        
+        public eliminarReservaTransporteRequest() {
+        }
+        
+        public eliminarReservaTransporteRequest(int id_reserva) {
+            this.id_reserva = id_reserva;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarReservaTransporteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarReservaTransporteResponse() {
+        }
+        
+        public eliminarReservaTransporteResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCondicionDepa", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarCondicionDepaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string condicion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_check_out;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_check_in;
+        
+        public agregarCondicionDepaRequest() {
+        }
+        
+        public agregarCondicionDepaRequest(string condicion, int id_check_out, int id_check_in) {
+            this.condicion = condicion;
+            this.id_check_out = id_check_out;
+            this.id_check_in = id_check_in;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCondicionDepaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarCondicionDepaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public agregarCondicionDepaResponse() {
+        }
+        
+        public agregarCondicionDepaResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
@@ -1575,108 +1530,6 @@ namespace TurismoReal.Datos.WSportafolio {
             set {
                 this.id_servicioField = value;
                 this.RaisePropertyChanged("id_servicio");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class transporte : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string horarioField;
-        
-        private int id_transporteField;
-        
-        private string nom_empresaField;
-        
-        private string patenteField;
-        
-        private int rut_choferField;
-        
-        private int tarifa_adicionalField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string horario {
-            get {
-                return this.horarioField;
-            }
-            set {
-                this.horarioField = value;
-                this.RaisePropertyChanged("horario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_transporte {
-            get {
-                return this.id_transporteField;
-            }
-            set {
-                this.id_transporteField = value;
-                this.RaisePropertyChanged("id_transporte");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nom_empresa {
-            get {
-                return this.nom_empresaField;
-            }
-            set {
-                this.nom_empresaField = value;
-                this.RaisePropertyChanged("nom_empresa");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string patente {
-            get {
-                return this.patenteField;
-            }
-            set {
-                this.patenteField = value;
-                this.RaisePropertyChanged("patente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int rut_chofer {
-            get {
-                return this.rut_choferField;
-            }
-            set {
-                this.rut_choferField = value;
-                this.RaisePropertyChanged("rut_chofer");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int tarifa_adicional {
-            get {
-                return this.tarifa_adicionalField;
-            }
-            set {
-                this.tarifa_adicionalField = value;
-                this.RaisePropertyChanged("tarifa_adicional");
             }
         }
         
@@ -1988,6 +1841,108 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class transporte : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string horarioField;
+        
+        private int id_transporteField;
+        
+        private string nom_empresaField;
+        
+        private string patenteField;
+        
+        private int rut_choferField;
+        
+        private int tarifa_adicionalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string horario {
+            get {
+                return this.horarioField;
+            }
+            set {
+                this.horarioField = value;
+                this.RaisePropertyChanged("horario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_transporte {
+            get {
+                return this.id_transporteField;
+            }
+            set {
+                this.id_transporteField = value;
+                this.RaisePropertyChanged("id_transporte");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nom_empresa {
+            get {
+                return this.nom_empresaField;
+            }
+            set {
+                this.nom_empresaField = value;
+                this.RaisePropertyChanged("nom_empresa");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string patente {
+            get {
+                return this.patenteField;
+            }
+            set {
+                this.patenteField = value;
+                this.RaisePropertyChanged("patente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int rut_chofer {
+            get {
+                return this.rut_choferField;
+            }
+            set {
+                this.rut_choferField = value;
+                this.RaisePropertyChanged("rut_chofer");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int tarifa_adicional {
+            get {
+                return this.tarifa_adicionalField;
+            }
+            set {
+                this.tarifa_adicionalField = value;
+                this.RaisePropertyChanged("tarifa_adicional");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
     public partial class checkIn : object, System.ComponentModel.INotifyPropertyChanged {
         
         private System.DateTime fechaField;
@@ -2192,6 +2147,80 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class inventario : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int cantidadField;
+        
+        private int id_articuloField;
+        
+        private int id_departamentoField;
+        
+        private string nom_articuloField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int cantidad {
+            get {
+                return this.cantidadField;
+            }
+            set {
+                this.cantidadField = value;
+                this.RaisePropertyChanged("cantidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_articulo {
+            get {
+                return this.id_articuloField;
+            }
+            set {
+                this.id_articuloField = value;
+                this.RaisePropertyChanged("id_articulo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id_departamento {
+            get {
+                return this.id_departamentoField;
+            }
+            set {
+                this.id_departamentoField = value;
+                this.RaisePropertyChanged("id_departamento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nom_articulo {
+            get {
+                return this.nom_articuloField;
+            }
+            set {
+                this.nom_articuloField = value;
+                this.RaisePropertyChanged("nom_articulo");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
     public partial class depaServicio : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int id_depaField;
@@ -2233,6 +2262,488 @@ namespace TurismoReal.Datos.WSportafolio {
             set {
                 this.nom_servicioField = value;
                 this.RaisePropertyChanged("nom_servicio");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class reservaTour : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int cantidadField;
+        
+        private int id_reservaField;
+        
+        private int id_tourField;
+        
+        private int pago_clienteField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int cantidad {
+            get {
+                return this.cantidadField;
+            }
+            set {
+                this.cantidadField = value;
+                this.RaisePropertyChanged("cantidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_reserva {
+            get {
+                return this.id_reservaField;
+            }
+            set {
+                this.id_reservaField = value;
+                this.RaisePropertyChanged("id_reserva");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id_tour {
+            get {
+                return this.id_tourField;
+            }
+            set {
+                this.id_tourField = value;
+                this.RaisePropertyChanged("id_tour");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int pago_cliente {
+            get {
+                return this.pago_clienteField;
+            }
+            set {
+                this.pago_clienteField = value;
+                this.RaisePropertyChanged("pago_cliente");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class articulo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string descripcionField;
+        
+        private int id_articuloField;
+        
+        private int precioField;
+        
+        private int stockField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_articulo {
+            get {
+                return this.id_articuloField;
+            }
+            set {
+                this.id_articuloField = value;
+                this.RaisePropertyChanged("id_articulo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int precio {
+            get {
+                return this.precioField;
+            }
+            set {
+                this.precioField = value;
+                this.RaisePropertyChanged("precio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int stock {
+            get {
+                return this.stockField;
+            }
+            set {
+                this.stockField = value;
+                this.RaisePropertyChanged("stock");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class mantenimiento : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string desc_mantenimientoField;
+        
+        private System.DateTime fecha_inicioField;
+        
+        private bool fecha_inicioFieldSpecified;
+        
+        private System.DateTime fecha_terminoField;
+        
+        private bool fecha_terminoFieldSpecified;
+        
+        private int id_departamentoField;
+        
+        private int id_mantenimientoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string desc_mantenimiento {
+            get {
+                return this.desc_mantenimientoField;
+            }
+            set {
+                this.desc_mantenimientoField = value;
+                this.RaisePropertyChanged("desc_mantenimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime fecha_inicio {
+            get {
+                return this.fecha_inicioField;
+            }
+            set {
+                this.fecha_inicioField = value;
+                this.RaisePropertyChanged("fecha_inicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_inicioSpecified {
+            get {
+                return this.fecha_inicioFieldSpecified;
+            }
+            set {
+                this.fecha_inicioFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_inicioSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fecha_termino {
+            get {
+                return this.fecha_terminoField;
+            }
+            set {
+                this.fecha_terminoField = value;
+                this.RaisePropertyChanged("fecha_termino");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_terminoSpecified {
+            get {
+                return this.fecha_terminoFieldSpecified;
+            }
+            set {
+                this.fecha_terminoFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_terminoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id_departamento {
+            get {
+                return this.id_departamentoField;
+            }
+            set {
+                this.id_departamentoField = value;
+                this.RaisePropertyChanged("id_departamento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_mantenimiento {
+            get {
+                return this.id_mantenimientoField;
+            }
+            set {
+                this.id_mantenimientoField = value;
+                this.RaisePropertyChanged("id_mantenimiento");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class cliente : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string apellido_maternoField;
+        
+        private string apellido_paternoField;
+        
+        private string contrasenaField;
+        
+        private string correoField;
+        
+        private string dvField;
+        
+        private string nombreField;
+        
+        private int rutField;
+        
+        private string telefonoField;
+        
+        private string usuarioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string apellido_materno {
+            get {
+                return this.apellido_maternoField;
+            }
+            set {
+                this.apellido_maternoField = value;
+                this.RaisePropertyChanged("apellido_materno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string apellido_paterno {
+            get {
+                return this.apellido_paternoField;
+            }
+            set {
+                this.apellido_paternoField = value;
+                this.RaisePropertyChanged("apellido_paterno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string contrasena {
+            get {
+                return this.contrasenaField;
+            }
+            set {
+                this.contrasenaField = value;
+                this.RaisePropertyChanged("contrasena");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string dv {
+            get {
+                return this.dvField;
+            }
+            set {
+                this.dvField = value;
+                this.RaisePropertyChanged("dv");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int rut {
+            get {
+                return this.rutField;
+            }
+            set {
+                this.rutField = value;
+                this.RaisePropertyChanged("rut");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class reservaTrans : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int cantidadField;
+        
+        private int id_reservaField;
+        
+        private int id_transporteField;
+        
+        private int pago_clienteField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int cantidad {
+            get {
+                return this.cantidadField;
+            }
+            set {
+                this.cantidadField = value;
+                this.RaisePropertyChanged("cantidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_reserva {
+            get {
+                return this.id_reservaField;
+            }
+            set {
+                this.id_reservaField = value;
+                this.RaisePropertyChanged("id_reserva");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id_transporte {
+            get {
+                return this.id_transporteField;
+            }
+            set {
+                this.id_transporteField = value;
+                this.RaisePropertyChanged("id_transporte");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int pago_cliente {
+            get {
+                return this.pago_clienteField;
+            }
+            set {
+                this.pago_clienteField = value;
+                this.RaisePropertyChanged("pago_cliente");
             }
         }
         
@@ -2530,154 +3041,6 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class condicionDepa : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string condicionField;
-        
-        private int id_check_inField;
-        
-        private int id_check_outField;
-        
-        private int id_condicionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string condicion {
-            get {
-                return this.condicionField;
-            }
-            set {
-                this.condicionField = value;
-                this.RaisePropertyChanged("condicion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_check_in {
-            get {
-                return this.id_check_inField;
-            }
-            set {
-                this.id_check_inField = value;
-                this.RaisePropertyChanged("id_check_in");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_check_out {
-            get {
-                return this.id_check_outField;
-            }
-            set {
-                this.id_check_outField = value;
-                this.RaisePropertyChanged("id_check_out");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id_condicion {
-            get {
-                return this.id_condicionField;
-            }
-            set {
-                this.id_condicionField = value;
-                this.RaisePropertyChanged("id_condicion");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class articulo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string descripcionField;
-        
-        private int id_articuloField;
-        
-        private int precioField;
-        
-        private int stockField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_articulo {
-            get {
-                return this.id_articuloField;
-            }
-            set {
-                this.id_articuloField = value;
-                this.RaisePropertyChanged("id_articulo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int precio {
-            get {
-                return this.precioField;
-            }
-            set {
-                this.precioField = value;
-                this.RaisePropertyChanged("precio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int stock {
-            get {
-                return this.stockField;
-            }
-            set {
-                this.stockField = value;
-                this.RaisePropertyChanged("stock");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
     public partial class reserva : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int cant_personasField;
@@ -2864,7 +3227,81 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class cliente : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class condicionDepa : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string condicionField;
+        
+        private int id_check_inField;
+        
+        private int id_check_outField;
+        
+        private int id_condicionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string condicion {
+            get {
+                return this.condicionField;
+            }
+            set {
+                this.condicionField = value;
+                this.RaisePropertyChanged("condicion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_check_in {
+            get {
+                return this.id_check_inField;
+            }
+            set {
+                this.id_check_inField = value;
+                this.RaisePropertyChanged("id_check_in");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id_check_out {
+            get {
+                return this.id_check_outField;
+            }
+            set {
+                this.id_check_outField = value;
+                this.RaisePropertyChanged("id_check_out");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id_condicion {
+            get {
+                return this.id_condicionField;
+            }
+            set {
+                this.id_condicionField = value;
+                this.RaisePropertyChanged("id_condicion");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class administrador : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string apellido_maternoField;
         
@@ -3146,488 +3583,6 @@ namespace TurismoReal.Datos.WSportafolio {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class inventario : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int cantidadField;
-        
-        private int id_articuloField;
-        
-        private int id_departamentoField;
-        
-        private string nom_articuloField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int cantidad {
-            get {
-                return this.cantidadField;
-            }
-            set {
-                this.cantidadField = value;
-                this.RaisePropertyChanged("cantidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_articulo {
-            get {
-                return this.id_articuloField;
-            }
-            set {
-                this.id_articuloField = value;
-                this.RaisePropertyChanged("id_articulo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_departamento {
-            get {
-                return this.id_departamentoField;
-            }
-            set {
-                this.id_departamentoField = value;
-                this.RaisePropertyChanged("id_departamento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string nom_articulo {
-            get {
-                return this.nom_articuloField;
-            }
-            set {
-                this.nom_articuloField = value;
-                this.RaisePropertyChanged("nom_articulo");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class reservaTour : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int cantidadField;
-        
-        private int id_reservaField;
-        
-        private int id_tourField;
-        
-        private int pago_clienteField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int cantidad {
-            get {
-                return this.cantidadField;
-            }
-            set {
-                this.cantidadField = value;
-                this.RaisePropertyChanged("cantidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_reserva {
-            get {
-                return this.id_reservaField;
-            }
-            set {
-                this.id_reservaField = value;
-                this.RaisePropertyChanged("id_reserva");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_tour {
-            get {
-                return this.id_tourField;
-            }
-            set {
-                this.id_tourField = value;
-                this.RaisePropertyChanged("id_tour");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int pago_cliente {
-            get {
-                return this.pago_clienteField;
-            }
-            set {
-                this.pago_clienteField = value;
-                this.RaisePropertyChanged("pago_cliente");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class mantenimiento : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string desc_mantenimientoField;
-        
-        private System.DateTime fecha_inicioField;
-        
-        private bool fecha_inicioFieldSpecified;
-        
-        private System.DateTime fecha_terminoField;
-        
-        private bool fecha_terminoFieldSpecified;
-        
-        private int id_departamentoField;
-        
-        private int id_mantenimientoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string desc_mantenimiento {
-            get {
-                return this.desc_mantenimientoField;
-            }
-            set {
-                this.desc_mantenimientoField = value;
-                this.RaisePropertyChanged("desc_mantenimiento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fecha_inicio {
-            get {
-                return this.fecha_inicioField;
-            }
-            set {
-                this.fecha_inicioField = value;
-                this.RaisePropertyChanged("fecha_inicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_inicioSpecified {
-            get {
-                return this.fecha_inicioFieldSpecified;
-            }
-            set {
-                this.fecha_inicioFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_inicioSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fecha_termino {
-            get {
-                return this.fecha_terminoField;
-            }
-            set {
-                this.fecha_terminoField = value;
-                this.RaisePropertyChanged("fecha_termino");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_terminoSpecified {
-            get {
-                return this.fecha_terminoFieldSpecified;
-            }
-            set {
-                this.fecha_terminoFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_terminoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id_departamento {
-            get {
-                return this.id_departamentoField;
-            }
-            set {
-                this.id_departamentoField = value;
-                this.RaisePropertyChanged("id_departamento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_mantenimiento {
-            get {
-                return this.id_mantenimientoField;
-            }
-            set {
-                this.id_mantenimientoField = value;
-                this.RaisePropertyChanged("id_mantenimiento");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class reservaTrans : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int cantidadField;
-        
-        private int id_reservaField;
-        
-        private int id_transporteField;
-        
-        private int pago_clienteField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int cantidad {
-            get {
-                return this.cantidadField;
-            }
-            set {
-                this.cantidadField = value;
-                this.RaisePropertyChanged("cantidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_reserva {
-            get {
-                return this.id_reservaField;
-            }
-            set {
-                this.id_reservaField = value;
-                this.RaisePropertyChanged("id_reserva");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_transporte {
-            get {
-                return this.id_transporteField;
-            }
-            set {
-                this.id_transporteField = value;
-                this.RaisePropertyChanged("id_transporte");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int pago_cliente {
-            get {
-                return this.pago_clienteField;
-            }
-            set {
-                this.pago_clienteField = value;
-                this.RaisePropertyChanged("pago_cliente");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class administrador : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string apellido_maternoField;
-        
-        private string apellido_paternoField;
-        
-        private string contrasenaField;
-        
-        private string correoField;
-        
-        private string dvField;
-        
-        private string nombreField;
-        
-        private int rutField;
-        
-        private string telefonoField;
-        
-        private string usuarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string apellido_materno {
-            get {
-                return this.apellido_maternoField;
-            }
-            set {
-                this.apellido_maternoField = value;
-                this.RaisePropertyChanged("apellido_materno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string apellido_paterno {
-            get {
-                return this.apellido_paternoField;
-            }
-            set {
-                this.apellido_paternoField = value;
-                this.RaisePropertyChanged("apellido_paterno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string contrasena {
-            get {
-                return this.contrasenaField;
-            }
-            set {
-                this.contrasenaField = value;
-                this.RaisePropertyChanged("contrasena");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string dv {
-            get {
-                return this.dvField;
-            }
-            set {
-                this.dvField = value;
-                this.RaisePropertyChanged("dv");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int rut {
-            get {
-                return this.rutField;
-            }
-            set {
-                this.rutField = value;
-                this.RaisePropertyChanged("rut");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-                this.RaisePropertyChanged("usuario");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3660,267 +3615,6 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         public agregarDepaServicioResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInventario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarInventarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_departamento;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_articulo;
-        
-        public eliminarInventarioRequest() {
-        }
-        
-        public eliminarInventarioRequest(int id_departamento, int id_articulo) {
-            this.id_departamento = id_departamento;
-            this.id_articulo = id_articulo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInventarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarInventarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarInventarioResponse() {
-        }
-        
-        public eliminarInventarioResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCheckOut", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarCheckOutRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_cout;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nmulta;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int npago;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nfirma;
-        
-        public modificarCheckOutRequest() {
-        }
-        
-        public modificarCheckOutRequest(int id_cout, int nmulta, int npago, string nfirma) {
-            this.id_cout = id_cout;
-            this.nmulta = nmulta;
-            this.npago = npago;
-            this.nfirma = nfirma;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCheckOutResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarCheckOutResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public modificarCheckOutResponse() {
-        }
-        
-        public modificarCheckOutResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDepartamento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarDepartamentoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_dep;
-        
-        public eliminarDepartamentoRequest() {
-        }
-        
-        public eliminarDepartamentoRequest(int id_dep) {
-            this.id_dep = id_dep;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDepartamentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarDepartamentoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarDepartamentoResponse() {
-        }
-        
-        public eliminarDepartamentoResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInventario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarInventarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_depa;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nid_articulo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int ncantidad;
-        
-        public modificarInventarioRequest() {
-        }
-        
-        public modificarInventarioRequest(int id_depa, int nid_articulo, int ncantidad) {
-            this.id_depa = id_depa;
-            this.nid_articulo = nid_articulo;
-            this.ncantidad = ncantidad;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInventarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarInventarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public modificarInventarioResponse() {
-        }
-        
-        public modificarInventarioResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFuncionario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarFuncionarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int rut;
-        
-        public eliminarFuncionarioRequest() {
-        }
-        
-        public eliminarFuncionarioRequest(int rut) {
-            this.rut = rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFuncionarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarFuncionarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarFuncionarioResponse() {
-        }
-        
-        public eliminarFuncionarioResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarArticulo", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarArticuloRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_art;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ndescripcion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nstock;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nprecio;
-        
-        public modificarArticuloRequest() {
-        }
-        
-        public modificarArticuloRequest(int id_art, string ndescripcion, int nstock, int nprecio) {
-            this.id_art = id_art;
-            this.ndescripcion = ndescripcion;
-            this.nstock = nstock;
-            this.nprecio = nprecio;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarArticuloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarArticuloResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public modificarArticuloResponse() {
-        }
-        
-        public modificarArticuloResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -3979,6 +3673,333 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarMantenimientoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_mant;
+        
+        public eliminarMantenimientoRequest() {
+        }
+        
+        public eliminarMantenimientoRequest(int id_mant) {
+            this.id_mant = id_mant;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarMantenimientoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarMantenimientoResponse() {
+        }
+        
+        public eliminarMantenimientoResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInventario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarInventarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_depa;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nid_articulo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int ncantidad;
+        
+        public modificarInventarioRequest() {
+        }
+        
+        public modificarInventarioRequest(int id_depa, int nid_articulo, int ncantidad) {
+            this.id_depa = id_depa;
+            this.nid_articulo = nid_articulo;
+            this.ncantidad = ncantidad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInventarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarInventarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public modificarInventarioResponse() {
+        }
+        
+        public modificarInventarioResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaTour", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarReservaTourRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_reserva;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nid_tour;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int ncantidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int npago_cliente;
+        
+        public modificarReservaTourRequest() {
+        }
+        
+        public modificarReservaTourRequest(int id_reserva, int nid_tour, int ncantidad, int npago_cliente) {
+            this.id_reserva = id_reserva;
+            this.nid_tour = nid_tour;
+            this.ncantidad = ncantidad;
+            this.npago_cliente = npago_cliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaTourResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarReservaTourResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public modificarReservaTourResponse() {
+        }
+        
+        public modificarReservaTourResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInventario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarInventarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_departamento;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_articulo;
+        
+        public eliminarInventarioRequest() {
+        }
+        
+        public eliminarInventarioRequest(int id_departamento, int id_articulo) {
+            this.id_departamento = id_departamento;
+            this.id_articulo = id_articulo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInventarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarInventarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarInventarioResponse() {
+        }
+        
+        public eliminarInventarioResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarArticulo", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarArticuloRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_art;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string ndescripcion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nstock;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nprecio;
+        
+        public modificarArticuloRequest() {
+        }
+        
+        public modificarArticuloRequest(int id_art, string ndescripcion, int nstock, int nprecio) {
+            this.id_art = id_art;
+            this.ndescripcion = ndescripcion;
+            this.nstock = nstock;
+            this.nprecio = nprecio;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarArticuloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarArticuloResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public modificarArticuloResponse() {
+        }
+        
+        public modificarArticuloResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarReservaTransporteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_reserva;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nid_transporte;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int ncantidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int npago_cliente;
+        
+        public modificarReservaTransporteRequest() {
+        }
+        
+        public modificarReservaTransporteRequest(int id_reserva, int nid_transporte, int ncantidad, int npago_cliente) {
+            this.id_reserva = id_reserva;
+            this.nid_transporte = nid_transporte;
+            this.ncantidad = ncantidad;
+            this.npago_cliente = npago_cliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarReservaTransporteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public modificarReservaTransporteResponse() {
+        }
+        
+        public modificarReservaTransporteResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCondicionDepa", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarCondicionDepaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_condicion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string condicion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_check_out;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_check_in;
+        
+        public modificarCondicionDepaRequest() {
+        }
+        
+        public modificarCondicionDepaRequest(int id_condicion, string condicion, int id_check_out, int id_check_in) {
+            this.id_condicion = id_condicion;
+            this.condicion = condicion;
+            this.id_check_out = id_check_out;
+            this.id_check_in = id_check_in;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCondicionDepaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarCondicionDepaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public modificarCondicionDepaResponse() {
+        }
+        
+        public modificarCondicionDepaResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="agregarReservaTour", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class agregarReservaTourRequest {
         
@@ -4030,27 +4051,35 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAdministrador", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarAdministradorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCondicionDepa", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarCondicionDepaRequest {
         
-        public listarAdministradorRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_condicion;
+        
+        public eliminarCondicionDepaRequest() {
+        }
+        
+        public eliminarCondicionDepaRequest(int id_condicion) {
+            this.id_condicion = id_condicion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAdministradorResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarAdministradorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCondicionDepaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarCondicionDepaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.administrador[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
         
-        public listarAdministradorResponse() {
+        public eliminarCondicionDepaResponse() {
         }
         
-        public listarAdministradorResponse(TurismoReal.Datos.WSportafolio.administrador[] @return) {
+        public eliminarCondicionDepaResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -4058,17 +4087,114 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTransporteIdReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarReservaTransporteIdReservaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarInventario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarInventarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_articulo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_departamento;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int cantidad;
+        
+        public agregarInventarioRequest() {
+        }
+        
+        public agregarInventarioRequest(int id_articulo, int id_departamento, int cantidad) {
+            this.id_articulo = id_articulo;
+            this.id_departamento = id_departamento;
+            this.cantidad = cantidad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarInventarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarInventarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public agregarInventarioResponse() {
+        }
+        
+        public agregarInventarioResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarMantenimientoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string descripcion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fecha_inicio_str;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fecha_termino_str;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_depa;
+        
+        public agregarMantenimientoRequest() {
+        }
+        
+        public agregarMantenimientoRequest(string descripcion, string fecha_inicio_str, string fecha_termino_str, int id_depa) {
+            this.descripcion = descripcion;
+            this.fecha_inicio_str = fecha_inicio_str;
+            this.fecha_termino_str = fecha_termino_str;
+            this.id_depa = id_depa;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarMantenimientoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public agregarMantenimientoResponse() {
+        }
+        
+        public agregarMantenimientoResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaTour", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarReservaTourRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id_reserva;
         
-        public listarReservaTransporteIdReservaRequest() {
+        public eliminarReservaTourRequest() {
         }
         
-        public listarReservaTransporteIdReservaRequest(int id_reserva) {
+        public eliminarReservaTourRequest(int id_reserva) {
             this.id_reserva = id_reserva;
         }
     }
@@ -4076,17 +4202,17 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTransporteIdReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarReservaTransporteIdReservaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaTourResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarReservaTourResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.reservaTrans @return;
+        public bool @return;
         
-        public listarReservaTransporteIdReservaResponse() {
+        public eliminarReservaTourResponse() {
         }
         
-        public listarReservaTransporteIdReservaResponse(TurismoReal.Datos.WSportafolio.reservaTrans @return) {
+        public eliminarReservaTourResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -4094,27 +4220,50 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarMantenimientoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCheckOut", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarCheckOutRequest {
         
-        public listarMantenimientoRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_cout;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nmulta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int npago;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nfirma;
+        
+        public modificarCheckOutRequest() {
+        }
+        
+        public modificarCheckOutRequest(int id_cout, int nmulta, int npago, string nfirma) {
+            this.id_cout = id_cout;
+            this.nmulta = nmulta;
+            this.npago = npago;
+            this.nfirma = nfirma;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarMantenimientoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCheckOutResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarCheckOutResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.mantenimiento[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
         
-        public listarMantenimientoResponse() {
+        public modificarCheckOutResponse() {
         }
         
-        public listarMantenimientoResponse(TurismoReal.Datos.WSportafolio.mantenimiento[] @return) {
+        public modificarCheckOutResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -4122,27 +4271,27 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTour", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarReservaTourRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFuncionario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarFuncionarioRequest {
         
-        public listarReservaTourRequest() {
+        public listarFuncionarioRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTourResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarReservaTourResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFuncionarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarFuncionarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.reservaTour[] @return;
+        public TurismoReal.Datos.WSportafolio.funcionario[] @return;
         
-        public listarReservaTourResponse() {
+        public listarFuncionarioResponse() {
         }
         
-        public listarReservaTourResponse(TurismoReal.Datos.WSportafolio.reservaTour[] @return) {
+        public listarFuncionarioResponse(TurismoReal.Datos.WSportafolio.funcionario[] @return) {
             this.@return = @return;
         }
     }
@@ -4186,181 +4335,35 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarReservaTransporteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCondicionDepaPorParametro", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarCondicionDepaPorParametroRequest {
         
-        public listarReservaTransporteRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_condicion;
+        
+        public listarCondicionDepaPorParametroRequest() {
+        }
+        
+        public listarCondicionDepaPorParametroRequest(int id_condicion) {
+            this.id_condicion = id_condicion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarReservaTransporteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.reservaTrans[] @return;
-        
-        public listarReservaTransporteResponse() {
-        }
-        
-        public listarReservaTransporteResponse(TurismoReal.Datos.WSportafolio.reservaTrans[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInventarioPorIdDepa", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarInventarioPorIdDepaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCondicionDepaPorParametroResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarCondicionDepaPorParametroResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_departamento;
+        public TurismoReal.Datos.WSportafolio.condicionDepa @return;
         
-        public listarInventarioPorIdDepaRequest() {
+        public listarCondicionDepaPorParametroResponse() {
         }
         
-        public listarInventarioPorIdDepaRequest(int id_departamento) {
-            this.id_departamento = id_departamento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInventarioPorIdDepaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarInventarioPorIdDepaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.inventario[] @return;
-        
-        public listarInventarioPorIdDepaResponse() {
-        }
-        
-        public listarInventarioPorIdDepaResponse(TurismoReal.Datos.WSportafolio.inventario[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFuncionarioPorRut", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarFuncionarioPorRutRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int rut;
-        
-        public listarFuncionarioPorRutRequest() {
-        }
-        
-        public listarFuncionarioPorRutRequest(int rut) {
-            this.rut = rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFuncionarioPorRutResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarFuncionarioPorRutResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.funcionario @return;
-        
-        public listarFuncionarioPorRutResponse() {
-        }
-        
-        public listarFuncionarioPorRutResponse(TurismoReal.Datos.WSportafolio.funcionario @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCondicionDepa", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarCondicionDepaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string condicion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_check_out;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_check_in;
-        
-        public agregarCondicionDepaRequest() {
-        }
-        
-        public agregarCondicionDepaRequest(string condicion, int id_check_out, int id_check_in) {
-            this.condicion = condicion;
-            this.id_check_out = id_check_out;
-            this.id_check_in = id_check_in;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCondicionDepaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarCondicionDepaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public agregarCondicionDepaResponse() {
-        }
-        
-        public agregarCondicionDepaResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientePorRut", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarClientePorRutRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int rut;
-        
-        public listarClientePorRutRequest() {
-        }
-        
-        public listarClientePorRutRequest(int rut) {
-            this.rut = rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientePorRutResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarClientePorRutResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.cliente @return;
-        
-        public listarClientePorRutResponse() {
-        }
-        
-        public listarClientePorRutResponse(TurismoReal.Datos.WSportafolio.cliente @return) {
+        public listarCondicionDepaPorParametroResponse(TurismoReal.Datos.WSportafolio.condicionDepa @return) {
             this.@return = @return;
         }
     }
@@ -4404,35 +4407,27 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArticuloPorId", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarArticuloPorIdRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDepartamento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarDepartamentoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_art;
-        
-        public listarArticuloPorIdRequest() {
-        }
-        
-        public listarArticuloPorIdRequest(int id_art) {
-            this.id_art = id_art;
+        public listarDepartamentoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArticuloPorIdResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarArticuloPorIdResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDepartamentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarDepartamentoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.articulo @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.departamentoDetalle[] @return;
         
-        public listarArticuloPorIdResponse() {
+        public listarDepartamentoResponse() {
         }
         
-        public listarArticuloPorIdResponse(TurismoReal.Datos.WSportafolio.articulo @return) {
+        public listarDepartamentoResponse(TurismoReal.Datos.WSportafolio.departamentoDetalle[] @return) {
             this.@return = @return;
         }
     }
@@ -4440,35 +4435,91 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTourIdReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarReservaTourIdReservaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarReservaTransporteRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_reserva;
-        
-        public listarReservaTourIdReservaRequest() {
-        }
-        
-        public listarReservaTourIdReservaRequest(int id_reserva) {
-            this.id_reserva = id_reserva;
+        public listarReservaTransporteRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTourIdReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarReservaTourIdReservaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarReservaTransporteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.reservaTrans[] @return;
+        
+        public listarReservaTransporteResponse() {
+        }
+        
+        public listarReservaTransporteResponse(TurismoReal.Datos.WSportafolio.reservaTrans[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientePorRut", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarClientePorRutRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.reservaTour @return;
+        public int rut;
         
-        public listarReservaTourIdReservaResponse() {
+        public listarClientePorRutRequest() {
         }
         
-        public listarReservaTourIdReservaResponse(TurismoReal.Datos.WSportafolio.reservaTour @return) {
+        public listarClientePorRutRequest(int rut) {
+            this.rut = rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientePorRutResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarClientePorRutResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.cliente @return;
+        
+        public listarClientePorRutResponse() {
+        }
+        
+        public listarClientePorRutResponse(TurismoReal.Datos.WSportafolio.cliente @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAdministrador", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarAdministradorRequest {
+        
+        public listarAdministradorRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAdministradorResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarAdministradorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.administrador[] @return;
+        
+        public listarAdministradorResponse() {
+        }
+        
+        public listarAdministradorResponse(TurismoReal.Datos.WSportafolio.administrador[] @return) {
             this.@return = @return;
         }
     }
@@ -4512,135 +4563,27 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCondicionDepaPorParametro", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarCondicionDepaPorParametroRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarMantenimientoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_condicion;
-        
-        public listarCondicionDepaPorParametroRequest() {
-        }
-        
-        public listarCondicionDepaPorParametroRequest(int id_condicion) {
-            this.id_condicion = id_condicion;
+        public listarMantenimientoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCondicionDepaPorParametroResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarCondicionDepaPorParametroResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.condicionDepa @return;
-        
-        public listarCondicionDepaPorParametroResponse() {
-        }
-        
-        public listarCondicionDepaPorParametroResponse(TurismoReal.Datos.WSportafolio.condicionDepa @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class estadoDepaMantenimientoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_depa;
-        
-        public estadoDepaMantenimientoRequest() {
-        }
-        
-        public estadoDepaMantenimientoRequest(int id_depa) {
-            this.id_depa = id_depa;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class estadoDepaMantenimientoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public estadoDepaMantenimientoResponse() {
-        }
-        
-        public estadoDepaMantenimientoResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCondicionDepa", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarCondicionDepaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_condicion;
-        
-        public eliminarCondicionDepaRequest() {
-        }
-        
-        public eliminarCondicionDepaRequest(int id_condicion) {
-            this.id_condicion = id_condicion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCondicionDepaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarCondicionDepaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarCondicionDepaResponse() {
-        }
-        
-        public eliminarCondicionDepaResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDepartamento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarDepartamentoRequest {
-        
-        public listarDepartamentoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDepartamentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarDepartamentoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarMantenimientoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.departamentoDetalle[] @return;
+        public TurismoReal.Datos.WSportafolio.mantenimiento[] @return;
         
-        public listarDepartamentoResponse() {
+        public listarMantenimientoResponse() {
         }
         
-        public listarDepartamentoResponse(TurismoReal.Datos.WSportafolio.departamentoDetalle[] @return) {
+        public listarMantenimientoResponse(TurismoReal.Datos.WSportafolio.mantenimiento[] @return) {
             this.@return = @return;
         }
     }
@@ -4648,27 +4591,63 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFuncionario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarFuncionarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArticuloPorId", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarArticuloPorIdRequest {
         
-        public listarFuncionarioRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_art;
+        
+        public listarArticuloPorIdRequest() {
+        }
+        
+        public listarArticuloPorIdRequest(int id_art) {
+            this.id_art = id_art;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFuncionarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarFuncionarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArticuloPorIdResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarArticuloPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.articulo @return;
+        
+        public listarArticuloPorIdResponse() {
+        }
+        
+        public listarArticuloPorIdResponse(TurismoReal.Datos.WSportafolio.articulo @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTour", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarReservaTourRequest {
+        
+        public listarReservaTourRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTourResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarReservaTourResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.funcionario[] @return;
+        public TurismoReal.Datos.WSportafolio.reservaTour[] @return;
         
-        public listarFuncionarioResponse() {
+        public listarReservaTourResponse() {
         }
         
-        public listarFuncionarioResponse(TurismoReal.Datos.WSportafolio.funcionario[] @return) {
+        public listarReservaTourResponse(TurismoReal.Datos.WSportafolio.reservaTour[] @return) {
             this.@return = @return;
         }
     }
@@ -4697,6 +4676,42 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         public listarDepaServicioResponse(TurismoReal.Datos.WSportafolio.depaServicio[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTransporteIdReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarReservaTransporteIdReservaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_reserva;
+        
+        public listarReservaTransporteIdReservaRequest() {
+        }
+        
+        public listarReservaTransporteIdReservaRequest(int id_reserva) {
+            this.id_reserva = id_reserva;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTransporteIdReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarReservaTransporteIdReservaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.reservaTrans @return;
+        
+        public listarReservaTransporteIdReservaResponse() {
+        }
+        
+        public listarReservaTransporteIdReservaResponse(TurismoReal.Datos.WSportafolio.reservaTrans @return) {
             this.@return = @return;
         }
     }
@@ -4768,17 +4783,53 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarReservaTransporteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInventarioPorIdDepa", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarInventarioPorIdDepaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_departamento;
+        
+        public listarInventarioPorIdDepaRequest() {
+        }
+        
+        public listarInventarioPorIdDepaRequest(int id_departamento) {
+            this.id_departamento = id_departamento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInventarioPorIdDepaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarInventarioPorIdDepaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.inventario[] @return;
+        
+        public listarInventarioPorIdDepaResponse() {
+        }
+        
+        public listarInventarioPorIdDepaResponse(TurismoReal.Datos.WSportafolio.inventario[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTourIdReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarReservaTourIdReservaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id_reserva;
         
-        public eliminarReservaTransporteRequest() {
+        public listarReservaTourIdReservaRequest() {
         }
         
-        public eliminarReservaTransporteRequest(int id_reserva) {
+        public listarReservaTourIdReservaRequest(int id_reserva) {
             this.id_reserva = id_reserva;
         }
     }
@@ -4786,17 +4837,17 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarReservaTransporteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarReservaTourIdReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarReservaTourIdReservaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
+        public TurismoReal.Datos.WSportafolio.reservaTour @return;
         
-        public eliminarReservaTransporteResponse() {
+        public listarReservaTourIdReservaResponse() {
         }
         
-        public eliminarReservaTransporteResponse(bool @return) {
+        public listarReservaTourIdReservaResponse(TurismoReal.Datos.WSportafolio.reservaTour @return) {
             this.@return = @return;
         }
     }
@@ -4804,248 +4855,35 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCondicionDepa", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarCondicionDepaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_condicion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string condicion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_check_out;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_check_in;
-        
-        public modificarCondicionDepaRequest() {
-        }
-        
-        public modificarCondicionDepaRequest(int id_condicion, string condicion, int id_check_out, int id_check_in) {
-            this.id_condicion = id_condicion;
-            this.condicion = condicion;
-            this.id_check_out = id_check_out;
-            this.id_check_in = id_check_in;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCondicionDepaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarCondicionDepaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public modificarCondicionDepaResponse() {
-        }
-        
-        public modificarCondicionDepaResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaDisponibleTerminoReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class estadoDepaDisponibleTerminoReservaRequest {
-        
-        public estadoDepaDisponibleTerminoReservaRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaDisponibleTerminoReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class estadoDepaDisponibleTerminoReservaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public estadoDepaDisponibleTerminoReservaResponse() {
-        }
-        
-        public estadoDepaDisponibleTerminoReservaResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaDisponibleFinMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class estadoDepaDisponibleFinMantenimientoRequest {
-        
-        public estadoDepaDisponibleFinMantenimientoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaDisponibleFinMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class estadoDepaDisponibleFinMantenimientoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public estadoDepaDisponibleFinMantenimientoResponse() {
-        }
-        
-        public estadoDepaDisponibleFinMantenimientoResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarReservaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_reserva;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nini_res;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nter_res;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int ncant_pers;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nmont_total;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nmont_abonado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nid_dep;
-        
-        public modificarReservaRequest() {
-        }
-        
-        public modificarReservaRequest(int id_reserva, string nini_res, string nter_res, int ncant_pers, int nmont_total, int nmont_abonado, int nid_dep) {
-            this.id_reserva = id_reserva;
-            this.nini_res = nini_res;
-            this.nter_res = nter_res;
-            this.ncant_pers = ncant_pers;
-            this.nmont_total = nmont_total;
-            this.nmont_abonado = nmont_abonado;
-            this.nid_dep = nid_dep;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarReservaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public modificarReservaResponse() {
-        }
-        
-        public modificarReservaResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCliente", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarClienteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFuncionarioPorRut", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarFuncionarioPorRutRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int rut;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dv;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellido_paterno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellido_materno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string correo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string contrasena;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string telefono;
-        
-        public agregarClienteRequest() {
+        public listarFuncionarioPorRutRequest() {
         }
         
-        public agregarClienteRequest(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+        public listarFuncionarioPorRutRequest(int rut) {
             this.rut = rut;
-            this.dv = dv;
-            this.nombre = nombre;
-            this.apellido_paterno = apellido_paterno;
-            this.apellido_materno = apellido_materno;
-            this.correo = correo;
-            this.usuario = usuario;
-            this.contrasena = contrasena;
-            this.telefono = telefono;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarClienteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarClienteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFuncionarioPorRutResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarFuncionarioPorRutResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
+        public TurismoReal.Datos.WSportafolio.funcionario @return;
         
-        public agregarClienteResponse() {
+        public listarFuncionarioPorRutResponse() {
         }
         
-        public agregarClienteResponse(bool @return) {
+        public listarFuncionarioPorRutResponse(TurismoReal.Datos.WSportafolio.funcionario @return) {
             this.@return = @return;
         }
     }
@@ -5053,132 +4891,35 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCheckIn", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarCheckInRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaMantenimiento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class estadoDepaMantenimientoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_cin;
+        public int id_depa;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nfirma;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int npago;
-        
-        public modificarCheckInRequest() {
+        public estadoDepaMantenimientoRequest() {
         }
         
-        public modificarCheckInRequest(int id_cin, string nfirma, int npago) {
-            this.id_cin = id_cin;
-            this.nfirma = nfirma;
-            this.npago = npago;
+        public estadoDepaMantenimientoRequest(int id_depa) {
+            this.id_depa = id_depa;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCheckInResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class modificarCheckInResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="estadoDepaMantenimientoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class estadoDepaMantenimientoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
         
-        public modificarCheckInResponse() {
+        public estadoDepaMantenimientoResponse() {
         }
         
-        public modificarCheckInResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarReservaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_reserva;
-        
-        public eliminarReservaRequest() {
-        }
-        
-        public eliminarReservaRequest(int id_reserva) {
-            this.id_reserva = id_reserva;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarReservaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarReservaResponse() {
-        }
-        
-        public eliminarReservaResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCheckIn", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarCheckInRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string firma;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pago;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_reserva;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int funcionario_rut;
-        
-        public agregarCheckInRequest() {
-        }
-        
-        public agregarCheckInRequest(string firma, int pago, int id_reserva, int funcionario_rut) {
-            this.firma = firma;
-            this.pago = pago;
-            this.id_reserva = id_reserva;
-            this.funcionario_rut = funcionario_rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCheckInResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarCheckInResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public agregarCheckInResponse() {
-        }
-        
-        public agregarCheckInResponse(bool @return) {
+        public estadoDepaMantenimientoResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -5293,40 +5034,177 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="metodoLogin", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class metodoLoginRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarReservaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string usuario;
+        public int id_reserva;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string contrasena;
+        public string nini_res;
         
-        public metodoLoginRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nter_res;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int ncant_pers;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nmont_total;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nmont_abonado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nid_dep;
+        
+        public modificarReservaRequest() {
         }
         
-        public metodoLoginRequest(string usuario, string contrasena) {
-            this.usuario = usuario;
-            this.contrasena = contrasena;
+        public modificarReservaRequest(int id_reserva, string nini_res, string nter_res, int ncant_pers, int nmont_total, int nmont_abonado, int nid_dep) {
+            this.id_reserva = id_reserva;
+            this.nini_res = nini_res;
+            this.nter_res = nter_res;
+            this.ncant_pers = ncant_pers;
+            this.nmont_total = nmont_total;
+            this.nmont_abonado = nmont_abonado;
+            this.nid_dep = nid_dep;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="metodoLoginResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class metodoLoginResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarReservaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.loginC @return;
+        public bool @return;
         
-        public metodoLoginResponse() {
+        public modificarReservaResponse() {
         }
         
-        public metodoLoginResponse(TurismoReal.Datos.WSportafolio.loginC @return) {
+        public modificarReservaResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReserva", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarReservaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_reserva;
+        
+        public eliminarReservaRequest() {
+        }
+        
+        public eliminarReservaRequest(int id_reserva) {
+            this.id_reserva = id_reserva;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarReservaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarReservaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarReservaResponse() {
+        }
+        
+        public eliminarReservaResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCliente", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dv;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellido_paterno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellido_materno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string usuario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string contrasena;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string telefono;
+        
+        public agregarClienteRequest() {
+        }
+        
+        public agregarClienteRequest(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+            this.rut = rut;
+            this.dv = dv;
+            this.nombre = nombre;
+            this.apellido_paterno = apellido_paterno;
+            this.apellido_materno = apellido_materno;
+            this.correo = correo;
+            this.usuario = usuario;
+            this.contrasena = contrasena;
+            this.telefono = telefono;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarClienteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public agregarClienteResponse() {
+        }
+        
+        public agregarClienteResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -5415,6 +5293,285 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarArticulo", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarArticuloRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string descripcion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int stock;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int precio;
+        
+        public agregarArticuloRequest() {
+        }
+        
+        public agregarArticuloRequest(string descripcion, int stock, int precio) {
+            this.descripcion = descripcion;
+            this.stock = stock;
+            this.precio = precio;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarArticuloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarArticuloResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public agregarArticuloResponse() {
+        }
+        
+        public agregarArticuloResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDepaPorId", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarDepaPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_dep;
+        
+        public listarDepaPorIdRequest() {
+        }
+        
+        public listarDepaPorIdRequest(int id_dep) {
+            this.id_dep = id_dep;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDepaPorIdResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarDepaPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.departamentoDetalle @return;
+        
+        public listarDepaPorIdResponse() {
+        }
+        
+        public listarDepaPorIdResponse(TurismoReal.Datos.WSportafolio.departamentoDetalle @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCliente", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarClienteRequest {
+        
+        public listarClienteRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClienteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.cliente[] @return;
+        
+        public listarClienteResponse() {
+        }
+        
+        public listarClienteResponse(TurismoReal.Datos.WSportafolio.cliente[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCheckIn", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarCheckInRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_check_in;
+        
+        public eliminarCheckInRequest() {
+        }
+        
+        public eliminarCheckInRequest(int id_check_in) {
+            this.id_check_in = id_check_in;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCheckInResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarCheckInResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarCheckInResponse() {
+        }
+        
+        public eliminarCheckInResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarArticulo", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarArticuloRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_art;
+        
+        public eliminarArticuloRequest() {
+        }
+        
+        public eliminarArticuloRequest(int id_art) {
+            this.id_art = id_art;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarArticuloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class eliminarArticuloResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarArticuloResponse() {
+        }
+        
+        public eliminarArticuloResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCheckIn", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarCheckInRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_cin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nfirma;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int npago;
+        
+        public modificarCheckInRequest() {
+        }
+        
+        public modificarCheckInRequest(int id_cin, string nfirma, int npago) {
+            this.id_cin = id_cin;
+            this.nfirma = nfirma;
+            this.npago = npago;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCheckInResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class modificarCheckInResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public modificarCheckInResponse() {
+        }
+        
+        public modificarCheckInResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCheckIn", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarCheckInRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string firma;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pago;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_reserva;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int funcionario_rut;
+        
+        public agregarCheckInRequest() {
+        }
+        
+        public agregarCheckInRequest(string firma, int pago, int id_reserva, int funcionario_rut) {
+            this.firma = firma;
+            this.pago = pago;
+            this.id_reserva = id_reserva;
+            this.funcionario_rut = funcionario_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCheckInResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class agregarCheckInResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public agregarCheckInResponse() {
+        }
+        
+        public agregarCheckInResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="agregarCheckOut", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class agregarCheckOutRequest {
         
@@ -5471,145 +5628,40 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarArticulo", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarArticuloRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="metodoLogin", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class metodoLoginRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_art;
-        
-        public eliminarArticuloRequest() {
-        }
-        
-        public eliminarArticuloRequest(int id_art) {
-            this.id_art = id_art;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarArticuloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarArticuloResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarArticuloResponse() {
-        }
-        
-        public eliminarArticuloResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCheckIn", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarCheckInRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_check_in;
-        
-        public eliminarCheckInRequest() {
-        }
-        
-        public eliminarCheckInRequest(int id_check_in) {
-            this.id_check_in = id_check_in;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCheckInResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class eliminarCheckInResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarCheckInResponse() {
-        }
-        
-        public eliminarCheckInResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarArticulo", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarArticuloRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcion;
+        public string usuario;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int stock;
+        public string contrasena;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int precio;
-        
-        public agregarArticuloRequest() {
+        public metodoLoginRequest() {
         }
         
-        public agregarArticuloRequest(string descripcion, int stock, int precio) {
-            this.descripcion = descripcion;
-            this.stock = stock;
-            this.precio = precio;
+        public metodoLoginRequest(string usuario, string contrasena) {
+            this.usuario = usuario;
+            this.contrasena = contrasena;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarArticuloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class agregarArticuloResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="metodoLoginResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class metodoLoginResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
+        public TurismoReal.Datos.WSportafolio.loginC @return;
         
-        public agregarArticuloResponse() {
+        public metodoLoginResponse() {
         }
         
-        public agregarArticuloResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCliente", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarClienteRequest {
-        
-        public listarClienteRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClienteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.cliente[] @return;
-        
-        public listarClienteResponse() {
-        }
-        
-        public listarClienteResponse(TurismoReal.Datos.WSportafolio.cliente[] @return) {
+        public metodoLoginResponse(TurismoReal.Datos.WSportafolio.loginC @return) {
             this.@return = @return;
         }
     }
@@ -5653,35 +5705,27 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDepaPorId", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarDepaPorIdRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCheckIn", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarCheckInRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_dep;
-        
-        public listarDepaPorIdRequest() {
-        }
-        
-        public listarDepaPorIdRequest(int id_dep) {
-            this.id_dep = id_dep;
+        public listarCheckInRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDepaPorIdResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarDepaPorIdResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCheckInResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarCheckInResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.departamentoDetalle @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.checkIn[] @return;
         
-        public listarDepaPorIdResponse() {
+        public listarCheckInResponse() {
         }
         
-        public listarDepaPorIdResponse(TurismoReal.Datos.WSportafolio.departamentoDetalle @return) {
+        public listarCheckInResponse(TurismoReal.Datos.WSportafolio.checkIn[] @return) {
             this.@return = @return;
         }
     }
@@ -5717,27 +5761,55 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCheckIn", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarCheckInRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarTransporteRequest {
         
-        public listarCheckInRequest() {
+        public listarTransporteRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCheckInResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarCheckInResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarTransporteResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.checkIn[] @return;
+        public TurismoReal.Datos.WSportafolio.transporte[] @return;
         
-        public listarCheckInResponse() {
+        public listarTransporteResponse() {
         }
         
-        public listarCheckInResponse(TurismoReal.Datos.WSportafolio.checkIn[] @return) {
+        public listarTransporteResponse(TurismoReal.Datos.WSportafolio.transporte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInventario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarInventarioRequest {
+        
+        public listarInventarioRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInventarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarInventarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TurismoReal.Datos.WSportafolio.inventario[] @return;
+        
+        public listarInventarioResponse() {
+        }
+        
+        public listarInventarioResponse(TurismoReal.Datos.WSportafolio.inventario[] @return) {
             this.@return = @return;
         }
     }
@@ -5801,34 +5873,6 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArticulo", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarArticuloRequest {
-        
-        public listarArticuloRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArticuloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarArticuloResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.articulo[] @return;
-        
-        public listarArticuloResponse() {
-        }
-        
-        public listarArticuloResponse(TurismoReal.Datos.WSportafolio.articulo[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarTour", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class listarTourRequest {
         
@@ -5857,55 +5901,27 @@ namespace TurismoReal.Datos.WSportafolio {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransporte", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarTransporteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArticulo", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarArticuloRequest {
         
-        public listarTransporteRequest() {
+        public listarArticuloRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransporteResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarTransporteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarArticuloResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class listarArticuloResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.transporte[] @return;
+        public TurismoReal.Datos.WSportafolio.articulo[] @return;
         
-        public listarTransporteResponse() {
+        public listarArticuloResponse() {
         }
         
-        public listarTransporteResponse(TurismoReal.Datos.WSportafolio.transporte[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInventario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarInventarioRequest {
-        
-        public listarInventarioRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInventarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class listarInventarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TurismoReal.Datos.WSportafolio.inventario[] @return;
-        
-        public listarInventarioResponse() {
-        }
-        
-        public listarInventarioResponse(TurismoReal.Datos.WSportafolio.inventario[] @return) {
+        public listarArticuloResponse(TurismoReal.Datos.WSportafolio.articulo[] @return) {
             this.@return = @return;
         }
     }
@@ -5938,6 +5954,52 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaDisponibleTerminoReserva(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest request) {
+            return base.Channel.estadoDepaDisponibleTerminoReserva(request);
+        }
+        
+        public bool estadoDepaDisponibleTerminoReserva(int id_depa) {
+            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest();
+            inValue.id_depa = id_depa;
+            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaDisponibleTerminoReserva(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaDisponibleTerminoReservaAsync(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest request) {
+            return base.Channel.estadoDepaDisponibleTerminoReservaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse> estadoDepaDisponibleTerminoReservaAsync(int id_depa) {
+            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest();
+            inValue.id_depa = id_depa;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaDisponibleTerminoReservaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaDisponibleFinMantenimiento(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest request) {
+            return base.Channel.estadoDepaDisponibleFinMantenimiento(request);
+        }
+        
+        public bool estadoDepaDisponibleFinMantenimiento(int id_depa) {
+            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest();
+            inValue.id_depa = id_depa;
+            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaDisponibleFinMantenimiento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaDisponibleFinMantenimientoAsync(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest request) {
+            return base.Channel.estadoDepaDisponibleFinMantenimientoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse> estadoDepaDisponibleFinMantenimientoAsync(int id_depa) {
+            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest();
+            inValue.id_depa = id_depa;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaDisponibleFinMantenimientoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TurismoReal.Datos.WSportafolio.loginResponse TurismoReal.Datos.WSportafolio.WSPortafolio.login(TurismoReal.Datos.WSportafolio.loginRequest request) {
             return base.Channel.login(request);
         }
@@ -5963,12 +6025,12 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.agregarAdministradorResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarAdministrador(TurismoReal.Datos.WSportafolio.agregarAdministradorRequest request) {
-            return base.Channel.agregarAdministrador(request);
+        TurismoReal.Datos.WSportafolio.agregarFuncionarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarFuncionario(TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest request) {
+            return base.Channel.agregarFuncionario(request);
         }
         
-        public bool agregarAdministrador(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
-            TurismoReal.Datos.WSportafolio.agregarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.agregarAdministradorRequest();
+        public bool agregarFuncionario(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+            TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest();
             inValue.rut = rut;
             inValue.dv = dv;
             inValue.nombre = nombre;
@@ -5978,17 +6040,17 @@ namespace TurismoReal.Datos.WSportafolio {
             inValue.usuario = usuario;
             inValue.contrasena = contrasena;
             inValue.telefono = telefono;
-            TurismoReal.Datos.WSportafolio.agregarAdministradorResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarAdministrador(inValue);
+            TurismoReal.Datos.WSportafolio.agregarFuncionarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarFuncionario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarAdministradorResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarAdministradorAsync(TurismoReal.Datos.WSportafolio.agregarAdministradorRequest request) {
-            return base.Channel.agregarAdministradorAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarFuncionarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarFuncionarioAsync(TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest request) {
+            return base.Channel.agregarFuncionarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarAdministradorResponse> agregarAdministradorAsync(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
-            TurismoReal.Datos.WSportafolio.agregarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.agregarAdministradorRequest();
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarFuncionarioResponse> agregarFuncionarioAsync(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+            TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest();
             inValue.rut = rut;
             inValue.dv = dv;
             inValue.nombre = nombre;
@@ -5998,7 +6060,30 @@ namespace TurismoReal.Datos.WSportafolio {
             inValue.usuario = usuario;
             inValue.contrasena = contrasena;
             inValue.telefono = telefono;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarAdministradorAsync(inValue);
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarFuncionarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarDepartamento(TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest request) {
+            return base.Channel.eliminarDepartamento(request);
+        }
+        
+        public bool eliminarDepartamento(int id_dep) {
+            TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest();
+            inValue.id_dep = id_dep;
+            TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarDepartamento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarDepartamentoAsync(TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest request) {
+            return base.Channel.eliminarDepartamentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse> eliminarDepartamentoAsync(int id_dep) {
+            TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest();
+            inValue.id_dep = id_dep;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarDepartamentoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6043,175 +6128,44 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarAdministrador(TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest request) {
-            return base.Channel.eliminarAdministrador(request);
+        TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarFuncionario(TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest request) {
+            return base.Channel.modificarFuncionario(request);
         }
         
-        public bool eliminarAdministrador(int rut) {
-            TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest();
+        public bool modificarFuncionario(int rut, int nrut, string ndv, string nnombre, string napellido_paterno, string napellido_materno, string ncorreo, string nusuario, string ncontrasena, string ntelefono) {
+            TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest();
             inValue.rut = rut;
-            TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarAdministrador(inValue);
+            inValue.nrut = nrut;
+            inValue.ndv = ndv;
+            inValue.nnombre = nnombre;
+            inValue.napellido_paterno = napellido_paterno;
+            inValue.napellido_materno = napellido_materno;
+            inValue.ncorreo = ncorreo;
+            inValue.nusuario = nusuario;
+            inValue.ncontrasena = ncontrasena;
+            inValue.ntelefono = ntelefono;
+            TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarFuncionario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarAdministradorAsync(TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest request) {
-            return base.Channel.eliminarAdministradorAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarFuncionarioAsync(TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest request) {
+            return base.Channel.modificarFuncionarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse> eliminarAdministradorAsync(int rut) {
-            TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest();
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse> modificarFuncionarioAsync(int rut, int nrut, string ndv, string nnombre, string napellido_paterno, string napellido_materno, string ncorreo, string nusuario, string ncontrasena, string ntelefono) {
+            TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest();
             inValue.rut = rut;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarAdministradorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.agregarFuncionarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarFuncionario(TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest request) {
-            return base.Channel.agregarFuncionario(request);
-        }
-        
-        public bool agregarFuncionario(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
-            TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest();
-            inValue.rut = rut;
-            inValue.dv = dv;
-            inValue.nombre = nombre;
-            inValue.apellido_paterno = apellido_paterno;
-            inValue.apellido_materno = apellido_materno;
-            inValue.correo = correo;
-            inValue.usuario = usuario;
-            inValue.contrasena = contrasena;
-            inValue.telefono = telefono;
-            TurismoReal.Datos.WSportafolio.agregarFuncionarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarFuncionario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarFuncionarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarFuncionarioAsync(TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest request) {
-            return base.Channel.agregarFuncionarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarFuncionarioResponse> agregarFuncionarioAsync(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
-            TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.agregarFuncionarioRequest();
-            inValue.rut = rut;
-            inValue.dv = dv;
-            inValue.nombre = nombre;
-            inValue.apellido_paterno = apellido_paterno;
-            inValue.apellido_materno = apellido_materno;
-            inValue.correo = correo;
-            inValue.usuario = usuario;
-            inValue.contrasena = contrasena;
-            inValue.telefono = telefono;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarFuncionarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.modificarReservaTourResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaTour(TurismoReal.Datos.WSportafolio.modificarReservaTourRequest request) {
-            return base.Channel.modificarReservaTour(request);
-        }
-        
-        public bool modificarReservaTour(int id_reserva, int nid_tour, int ncantidad, int npago_cliente) {
-            TurismoReal.Datos.WSportafolio.modificarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaTourRequest();
-            inValue.id_reserva = id_reserva;
-            inValue.nid_tour = nid_tour;
-            inValue.ncantidad = ncantidad;
-            inValue.npago_cliente = npago_cliente;
-            TurismoReal.Datos.WSportafolio.modificarReservaTourResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaTour(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTourResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaTourAsync(TurismoReal.Datos.WSportafolio.modificarReservaTourRequest request) {
-            return base.Channel.modificarReservaTourAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTourResponse> modificarReservaTourAsync(int id_reserva, int nid_tour, int ncantidad, int npago_cliente) {
-            TurismoReal.Datos.WSportafolio.modificarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaTourRequest();
-            inValue.id_reserva = id_reserva;
-            inValue.nid_tour = nid_tour;
-            inValue.ncantidad = ncantidad;
-            inValue.npago_cliente = npago_cliente;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaTourAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarMantenimiento(TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest request) {
-            return base.Channel.eliminarMantenimiento(request);
-        }
-        
-        public bool eliminarMantenimiento(int id_mant) {
-            TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest();
-            inValue.id_mant = id_mant;
-            TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarMantenimiento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarMantenimientoAsync(TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest request) {
-            return base.Channel.eliminarMantenimientoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse> eliminarMantenimientoAsync(int id_mant) {
-            TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest();
-            inValue.id_mant = id_mant;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarMantenimientoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarReservaTransporte(TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest request) {
-            return base.Channel.agregarReservaTransporte(request);
-        }
-        
-        public bool agregarReservaTransporte(int id_transporte, int id_reserva, int cantidad, int pago_cliente) {
-            TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest();
-            inValue.id_transporte = id_transporte;
-            inValue.id_reserva = id_reserva;
-            inValue.cantidad = cantidad;
-            inValue.pago_cliente = pago_cliente;
-            TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarReservaTransporte(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest request) {
-            return base.Channel.agregarReservaTransporteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse> agregarReservaTransporteAsync(int id_transporte, int id_reserva, int cantidad, int pago_cliente) {
-            TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest();
-            inValue.id_transporte = id_transporte;
-            inValue.id_reserva = id_reserva;
-            inValue.cantidad = cantidad;
-            inValue.pago_cliente = pago_cliente;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarReservaTransporteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaTransporte(TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest request) {
-            return base.Channel.modificarReservaTransporte(request);
-        }
-        
-        public bool modificarReservaTransporte(int id_reserva, int nid_transporte, int ncantidad, int npago_cliente) {
-            TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest();
-            inValue.id_reserva = id_reserva;
-            inValue.nid_transporte = nid_transporte;
-            inValue.ncantidad = ncantidad;
-            inValue.npago_cliente = npago_cliente;
-            TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaTransporte(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest request) {
-            return base.Channel.modificarReservaTransporteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse> modificarReservaTransporteAsync(int id_reserva, int nid_transporte, int ncantidad, int npago_cliente) {
-            TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest();
-            inValue.id_reserva = id_reserva;
-            inValue.nid_transporte = nid_transporte;
-            inValue.ncantidad = ncantidad;
-            inValue.npago_cliente = npago_cliente;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaTransporteAsync(inValue);
+            inValue.nrut = nrut;
+            inValue.ndv = ndv;
+            inValue.nnombre = nnombre;
+            inValue.napellido_paterno = napellido_paterno;
+            inValue.napellido_materno = napellido_materno;
+            inValue.ncorreo = ncorreo;
+            inValue.nusuario = nusuario;
+            inValue.ncontrasena = ncontrasena;
+            inValue.ntelefono = ntelefono;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarFuncionarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6254,123 +6208,88 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaTour(TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest request) {
-            return base.Channel.eliminarReservaTour(request);
+        TurismoReal.Datos.WSportafolio.agregarAdministradorResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarAdministrador(TurismoReal.Datos.WSportafolio.agregarAdministradorRequest request) {
+            return base.Channel.agregarAdministrador(request);
         }
         
-        public bool eliminarReservaTour(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest();
-            inValue.id_reserva = id_reserva;
-            TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaTour(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaTourAsync(TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest request) {
-            return base.Channel.eliminarReservaTourAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse> eliminarReservaTourAsync(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest();
-            inValue.id_reserva = id_reserva;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaTourAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarMantenimiento(TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest request) {
-            return base.Channel.agregarMantenimiento(request);
-        }
-        
-        public bool agregarMantenimiento(string descripcion, string fecha_inicio_str, string fecha_termino_str, int id_depa) {
-            TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest();
-            inValue.descripcion = descripcion;
-            inValue.fecha_inicio_str = fecha_inicio_str;
-            inValue.fecha_termino_str = fecha_termino_str;
-            inValue.id_depa = id_depa;
-            TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarMantenimiento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarMantenimientoAsync(TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest request) {
-            return base.Channel.agregarMantenimientoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse> agregarMantenimientoAsync(string descripcion, string fecha_inicio_str, string fecha_termino_str, int id_depa) {
-            TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest();
-            inValue.descripcion = descripcion;
-            inValue.fecha_inicio_str = fecha_inicio_str;
-            inValue.fecha_termino_str = fecha_termino_str;
-            inValue.id_depa = id_depa;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarMantenimientoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarFuncionario(TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest request) {
-            return base.Channel.modificarFuncionario(request);
-        }
-        
-        public bool modificarFuncionario(int rut, int nrut, string ndv, string nnombre, string napellido_paterno, string napellido_materno, string ncorreo, string nusuario, string ncontrasena, string ntelefono) {
-            TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest();
+        public bool agregarAdministrador(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+            TurismoReal.Datos.WSportafolio.agregarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.agregarAdministradorRequest();
             inValue.rut = rut;
-            inValue.nrut = nrut;
-            inValue.ndv = ndv;
-            inValue.nnombre = nnombre;
-            inValue.napellido_paterno = napellido_paterno;
-            inValue.napellido_materno = napellido_materno;
-            inValue.ncorreo = ncorreo;
-            inValue.nusuario = nusuario;
-            inValue.ncontrasena = ncontrasena;
-            inValue.ntelefono = ntelefono;
-            TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarFuncionario(inValue);
+            inValue.dv = dv;
+            inValue.nombre = nombre;
+            inValue.apellido_paterno = apellido_paterno;
+            inValue.apellido_materno = apellido_materno;
+            inValue.correo = correo;
+            inValue.usuario = usuario;
+            inValue.contrasena = contrasena;
+            inValue.telefono = telefono;
+            TurismoReal.Datos.WSportafolio.agregarAdministradorResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarAdministrador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarFuncionarioAsync(TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest request) {
-            return base.Channel.modificarFuncionarioAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarAdministradorResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarAdministradorAsync(TurismoReal.Datos.WSportafolio.agregarAdministradorRequest request) {
+            return base.Channel.agregarAdministradorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse> modificarFuncionarioAsync(int rut, int nrut, string ndv, string nnombre, string napellido_paterno, string napellido_materno, string ncorreo, string nusuario, string ncontrasena, string ntelefono) {
-            TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.modificarFuncionarioRequest();
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarAdministradorResponse> agregarAdministradorAsync(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+            TurismoReal.Datos.WSportafolio.agregarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.agregarAdministradorRequest();
             inValue.rut = rut;
-            inValue.nrut = nrut;
-            inValue.ndv = ndv;
-            inValue.nnombre = nnombre;
-            inValue.napellido_paterno = napellido_paterno;
-            inValue.napellido_materno = napellido_materno;
-            inValue.ncorreo = ncorreo;
-            inValue.nusuario = nusuario;
-            inValue.ncontrasena = ncontrasena;
-            inValue.ntelefono = ntelefono;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarFuncionarioAsync(inValue);
+            inValue.dv = dv;
+            inValue.nombre = nombre;
+            inValue.apellido_paterno = apellido_paterno;
+            inValue.apellido_materno = apellido_materno;
+            inValue.correo = correo;
+            inValue.usuario = usuario;
+            inValue.contrasena = contrasena;
+            inValue.telefono = telefono;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarAdministradorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.agregarInventarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarInventario(TurismoReal.Datos.WSportafolio.agregarInventarioRequest request) {
-            return base.Channel.agregarInventario(request);
+        TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarAdministrador(TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest request) {
+            return base.Channel.eliminarAdministrador(request);
         }
         
-        public bool agregarInventario(int id_articulo, int id_departamento, int cantidad) {
-            TurismoReal.Datos.WSportafolio.agregarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.agregarInventarioRequest();
-            inValue.id_articulo = id_articulo;
-            inValue.id_departamento = id_departamento;
-            inValue.cantidad = cantidad;
-            TurismoReal.Datos.WSportafolio.agregarInventarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarInventario(inValue);
+        public bool eliminarAdministrador(int rut) {
+            TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest();
+            inValue.rut = rut;
+            TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarAdministrador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarInventarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarInventarioAsync(TurismoReal.Datos.WSportafolio.agregarInventarioRequest request) {
-            return base.Channel.agregarInventarioAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarAdministradorAsync(TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest request) {
+            return base.Channel.eliminarAdministradorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarInventarioResponse> agregarInventarioAsync(int id_articulo, int id_departamento, int cantidad) {
-            TurismoReal.Datos.WSportafolio.agregarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.agregarInventarioRequest();
-            inValue.id_articulo = id_articulo;
-            inValue.id_departamento = id_departamento;
-            inValue.cantidad = cantidad;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarInventarioAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarAdministradorResponse> eliminarAdministradorAsync(int rut) {
+            TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarAdministradorRequest();
+            inValue.rut = rut;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarAdministradorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.eliminarFuncionarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarFuncionario(TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest request) {
+            return base.Channel.eliminarFuncionario(request);
+        }
+        
+        public bool eliminarFuncionario(int rut) {
+            TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest();
+            inValue.rut = rut;
+            TurismoReal.Datos.WSportafolio.eliminarFuncionarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarFuncionario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarFuncionarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarFuncionarioAsync(TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest request) {
+            return base.Channel.eliminarFuncionarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarFuncionarioResponse> eliminarFuncionarioAsync(int rut) {
+            TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest();
+            inValue.rut = rut;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarFuncionarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6411,6 +6330,85 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarReservaTransporte(TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest request) {
+            return base.Channel.agregarReservaTransporte(request);
+        }
+        
+        public bool agregarReservaTransporte(int id_transporte, int id_reserva, int cantidad, int pago_cliente) {
+            TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest();
+            inValue.id_transporte = id_transporte;
+            inValue.id_reserva = id_reserva;
+            inValue.cantidad = cantidad;
+            inValue.pago_cliente = pago_cliente;
+            TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarReservaTransporte(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest request) {
+            return base.Channel.agregarReservaTransporteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarReservaTransporteResponse> agregarReservaTransporteAsync(int id_transporte, int id_reserva, int cantidad, int pago_cliente) {
+            TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.agregarReservaTransporteRequest();
+            inValue.id_transporte = id_transporte;
+            inValue.id_reserva = id_reserva;
+            inValue.cantidad = cantidad;
+            inValue.pago_cliente = pago_cliente;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarReservaTransporteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaTransporte(TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest request) {
+            return base.Channel.eliminarReservaTransporte(request);
+        }
+        
+        public bool eliminarReservaTransporte(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest();
+            inValue.id_reserva = id_reserva;
+            TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaTransporte(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest request) {
+            return base.Channel.eliminarReservaTransporteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse> eliminarReservaTransporteAsync(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest();
+            inValue.id_reserva = id_reserva;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaTransporteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.agregarCondicionDepaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCondicionDepa(TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest request) {
+            return base.Channel.agregarCondicionDepa(request);
+        }
+        
+        public bool agregarCondicionDepa(string condicion, int id_check_out, int id_check_in) {
+            TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest();
+            inValue.condicion = condicion;
+            inValue.id_check_out = id_check_out;
+            inValue.id_check_in = id_check_in;
+            TurismoReal.Datos.WSportafolio.agregarCondicionDepaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCondicionDepa(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCondicionDepaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest request) {
+            return base.Channel.agregarCondicionDepaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCondicionDepaResponse> agregarCondicionDepaAsync(string condicion, int id_check_out, int id_check_in) {
+            TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest();
+            inValue.condicion = condicion;
+            inValue.id_check_out = id_check_out;
+            inValue.id_check_in = id_check_in;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCondicionDepaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TurismoReal.Datos.WSportafolio.agregarDepaServicioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarDepaServicio(TurismoReal.Datos.WSportafolio.agregarDepaServicioRequest request) {
             return base.Channel.agregarDepaServicio(request);
         }
@@ -6431,162 +6429,6 @@ namespace TurismoReal.Datos.WSportafolio {
             TurismoReal.Datos.WSportafolio.agregarDepaServicioRequest inValue = new TurismoReal.Datos.WSportafolio.agregarDepaServicioRequest();
             inValue.dep = dep;
             return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarDepaServicioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarInventarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarInventario(TurismoReal.Datos.WSportafolio.eliminarInventarioRequest request) {
-            return base.Channel.eliminarInventario(request);
-        }
-        
-        public bool eliminarInventario(int id_departamento, int id_articulo) {
-            TurismoReal.Datos.WSportafolio.eliminarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarInventarioRequest();
-            inValue.id_departamento = id_departamento;
-            inValue.id_articulo = id_articulo;
-            TurismoReal.Datos.WSportafolio.eliminarInventarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarInventario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarInventarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarInventarioAsync(TurismoReal.Datos.WSportafolio.eliminarInventarioRequest request) {
-            return base.Channel.eliminarInventarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarInventarioResponse> eliminarInventarioAsync(int id_departamento, int id_articulo) {
-            TurismoReal.Datos.WSportafolio.eliminarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarInventarioRequest();
-            inValue.id_departamento = id_departamento;
-            inValue.id_articulo = id_articulo;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarInventarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.modificarCheckOutResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCheckOut(TurismoReal.Datos.WSportafolio.modificarCheckOutRequest request) {
-            return base.Channel.modificarCheckOut(request);
-        }
-        
-        public bool modificarCheckOut(int id_cout, int nmulta, int npago, string nfirma) {
-            TurismoReal.Datos.WSportafolio.modificarCheckOutRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCheckOutRequest();
-            inValue.id_cout = id_cout;
-            inValue.nmulta = nmulta;
-            inValue.npago = npago;
-            inValue.nfirma = nfirma;
-            TurismoReal.Datos.WSportafolio.modificarCheckOutResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCheckOut(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckOutResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCheckOutAsync(TurismoReal.Datos.WSportafolio.modificarCheckOutRequest request) {
-            return base.Channel.modificarCheckOutAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckOutResponse> modificarCheckOutAsync(int id_cout, int nmulta, int npago, string nfirma) {
-            TurismoReal.Datos.WSportafolio.modificarCheckOutRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCheckOutRequest();
-            inValue.id_cout = id_cout;
-            inValue.nmulta = nmulta;
-            inValue.npago = npago;
-            inValue.nfirma = nfirma;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCheckOutAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarDepartamento(TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest request) {
-            return base.Channel.eliminarDepartamento(request);
-        }
-        
-        public bool eliminarDepartamento(int id_dep) {
-            TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest();
-            inValue.id_dep = id_dep;
-            TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarDepartamento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarDepartamentoAsync(TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest request) {
-            return base.Channel.eliminarDepartamentoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarDepartamentoResponse> eliminarDepartamentoAsync(int id_dep) {
-            TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarDepartamentoRequest();
-            inValue.id_dep = id_dep;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarDepartamentoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.modificarInventarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarInventario(TurismoReal.Datos.WSportafolio.modificarInventarioRequest request) {
-            return base.Channel.modificarInventario(request);
-        }
-        
-        public bool modificarInventario(int id_depa, int nid_articulo, int ncantidad) {
-            TurismoReal.Datos.WSportafolio.modificarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.modificarInventarioRequest();
-            inValue.id_depa = id_depa;
-            inValue.nid_articulo = nid_articulo;
-            inValue.ncantidad = ncantidad;
-            TurismoReal.Datos.WSportafolio.modificarInventarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarInventario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarInventarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarInventarioAsync(TurismoReal.Datos.WSportafolio.modificarInventarioRequest request) {
-            return base.Channel.modificarInventarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarInventarioResponse> modificarInventarioAsync(int id_depa, int nid_articulo, int ncantidad) {
-            TurismoReal.Datos.WSportafolio.modificarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.modificarInventarioRequest();
-            inValue.id_depa = id_depa;
-            inValue.nid_articulo = nid_articulo;
-            inValue.ncantidad = ncantidad;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarInventarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarFuncionarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarFuncionario(TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest request) {
-            return base.Channel.eliminarFuncionario(request);
-        }
-        
-        public bool eliminarFuncionario(int rut) {
-            TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest();
-            inValue.rut = rut;
-            TurismoReal.Datos.WSportafolio.eliminarFuncionarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarFuncionario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarFuncionarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarFuncionarioAsync(TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest request) {
-            return base.Channel.eliminarFuncionarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarFuncionarioResponse> eliminarFuncionarioAsync(int rut) {
-            TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarFuncionarioRequest();
-            inValue.rut = rut;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarFuncionarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.modificarArticuloResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarArticulo(TurismoReal.Datos.WSportafolio.modificarArticuloRequest request) {
-            return base.Channel.modificarArticulo(request);
-        }
-        
-        public bool modificarArticulo(int id_art, string ndescripcion, int nstock, int nprecio) {
-            TurismoReal.Datos.WSportafolio.modificarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.modificarArticuloRequest();
-            inValue.id_art = id_art;
-            inValue.ndescripcion = ndescripcion;
-            inValue.nstock = nstock;
-            inValue.nprecio = nprecio;
-            TurismoReal.Datos.WSportafolio.modificarArticuloResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarArticulo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarArticuloResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarArticuloAsync(TurismoReal.Datos.WSportafolio.modificarArticuloRequest request) {
-            return base.Channel.modificarArticuloAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarArticuloResponse> modificarArticuloAsync(int id_art, string ndescripcion, int nstock, int nprecio) {
-            TurismoReal.Datos.WSportafolio.modificarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.modificarArticuloRequest();
-            inValue.id_art = id_art;
-            inValue.ndescripcion = ndescripcion;
-            inValue.nstock = nstock;
-            inValue.nprecio = nprecio;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarArticuloAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6619,6 +6461,197 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarMantenimiento(TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest request) {
+            return base.Channel.eliminarMantenimiento(request);
+        }
+        
+        public bool eliminarMantenimiento(int id_mant) {
+            TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest();
+            inValue.id_mant = id_mant;
+            TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarMantenimiento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarMantenimientoAsync(TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest request) {
+            return base.Channel.eliminarMantenimientoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarMantenimientoResponse> eliminarMantenimientoAsync(int id_mant) {
+            TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarMantenimientoRequest();
+            inValue.id_mant = id_mant;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarMantenimientoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.modificarInventarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarInventario(TurismoReal.Datos.WSportafolio.modificarInventarioRequest request) {
+            return base.Channel.modificarInventario(request);
+        }
+        
+        public bool modificarInventario(int id_depa, int nid_articulo, int ncantidad) {
+            TurismoReal.Datos.WSportafolio.modificarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.modificarInventarioRequest();
+            inValue.id_depa = id_depa;
+            inValue.nid_articulo = nid_articulo;
+            inValue.ncantidad = ncantidad;
+            TurismoReal.Datos.WSportafolio.modificarInventarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarInventario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarInventarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarInventarioAsync(TurismoReal.Datos.WSportafolio.modificarInventarioRequest request) {
+            return base.Channel.modificarInventarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarInventarioResponse> modificarInventarioAsync(int id_depa, int nid_articulo, int ncantidad) {
+            TurismoReal.Datos.WSportafolio.modificarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.modificarInventarioRequest();
+            inValue.id_depa = id_depa;
+            inValue.nid_articulo = nid_articulo;
+            inValue.ncantidad = ncantidad;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarInventarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.modificarReservaTourResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaTour(TurismoReal.Datos.WSportafolio.modificarReservaTourRequest request) {
+            return base.Channel.modificarReservaTour(request);
+        }
+        
+        public bool modificarReservaTour(int id_reserva, int nid_tour, int ncantidad, int npago_cliente) {
+            TurismoReal.Datos.WSportafolio.modificarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaTourRequest();
+            inValue.id_reserva = id_reserva;
+            inValue.nid_tour = nid_tour;
+            inValue.ncantidad = ncantidad;
+            inValue.npago_cliente = npago_cliente;
+            TurismoReal.Datos.WSportafolio.modificarReservaTourResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaTour(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTourResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaTourAsync(TurismoReal.Datos.WSportafolio.modificarReservaTourRequest request) {
+            return base.Channel.modificarReservaTourAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTourResponse> modificarReservaTourAsync(int id_reserva, int nid_tour, int ncantidad, int npago_cliente) {
+            TurismoReal.Datos.WSportafolio.modificarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaTourRequest();
+            inValue.id_reserva = id_reserva;
+            inValue.nid_tour = nid_tour;
+            inValue.ncantidad = ncantidad;
+            inValue.npago_cliente = npago_cliente;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaTourAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.eliminarInventarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarInventario(TurismoReal.Datos.WSportafolio.eliminarInventarioRequest request) {
+            return base.Channel.eliminarInventario(request);
+        }
+        
+        public bool eliminarInventario(int id_departamento, int id_articulo) {
+            TurismoReal.Datos.WSportafolio.eliminarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarInventarioRequest();
+            inValue.id_departamento = id_departamento;
+            inValue.id_articulo = id_articulo;
+            TurismoReal.Datos.WSportafolio.eliminarInventarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarInventario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarInventarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarInventarioAsync(TurismoReal.Datos.WSportafolio.eliminarInventarioRequest request) {
+            return base.Channel.eliminarInventarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarInventarioResponse> eliminarInventarioAsync(int id_departamento, int id_articulo) {
+            TurismoReal.Datos.WSportafolio.eliminarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarInventarioRequest();
+            inValue.id_departamento = id_departamento;
+            inValue.id_articulo = id_articulo;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarInventarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.modificarArticuloResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarArticulo(TurismoReal.Datos.WSportafolio.modificarArticuloRequest request) {
+            return base.Channel.modificarArticulo(request);
+        }
+        
+        public bool modificarArticulo(int id_art, string ndescripcion, int nstock, int nprecio) {
+            TurismoReal.Datos.WSportafolio.modificarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.modificarArticuloRequest();
+            inValue.id_art = id_art;
+            inValue.ndescripcion = ndescripcion;
+            inValue.nstock = nstock;
+            inValue.nprecio = nprecio;
+            TurismoReal.Datos.WSportafolio.modificarArticuloResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarArticulo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarArticuloResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarArticuloAsync(TurismoReal.Datos.WSportafolio.modificarArticuloRequest request) {
+            return base.Channel.modificarArticuloAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarArticuloResponse> modificarArticuloAsync(int id_art, string ndescripcion, int nstock, int nprecio) {
+            TurismoReal.Datos.WSportafolio.modificarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.modificarArticuloRequest();
+            inValue.id_art = id_art;
+            inValue.ndescripcion = ndescripcion;
+            inValue.nstock = nstock;
+            inValue.nprecio = nprecio;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarArticuloAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaTransporte(TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest request) {
+            return base.Channel.modificarReservaTransporte(request);
+        }
+        
+        public bool modificarReservaTransporte(int id_reserva, int nid_transporte, int ncantidad, int npago_cliente) {
+            TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest();
+            inValue.id_reserva = id_reserva;
+            inValue.nid_transporte = nid_transporte;
+            inValue.ncantidad = ncantidad;
+            inValue.npago_cliente = npago_cliente;
+            TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaTransporte(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest request) {
+            return base.Channel.modificarReservaTransporteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaTransporteResponse> modificarReservaTransporteAsync(int id_reserva, int nid_transporte, int ncantidad, int npago_cliente) {
+            TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaTransporteRequest();
+            inValue.id_reserva = id_reserva;
+            inValue.nid_transporte = nid_transporte;
+            inValue.ncantidad = ncantidad;
+            inValue.npago_cliente = npago_cliente;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaTransporteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCondicionDepa(TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest request) {
+            return base.Channel.modificarCondicionDepa(request);
+        }
+        
+        public bool modificarCondicionDepa(int id_condicion, string condicion, int id_check_out, int id_check_in) {
+            TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest();
+            inValue.id_condicion = id_condicion;
+            inValue.condicion = condicion;
+            inValue.id_check_out = id_check_out;
+            inValue.id_check_in = id_check_in;
+            TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCondicionDepa(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest request) {
+            return base.Channel.modificarCondicionDepaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse> modificarCondicionDepaAsync(int id_condicion, string condicion, int id_check_out, int id_check_in) {
+            TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest();
+            inValue.id_condicion = id_condicion;
+            inValue.condicion = condicion;
+            inValue.id_check_out = id_check_out;
+            inValue.id_check_in = id_check_in;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCondicionDepaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TurismoReal.Datos.WSportafolio.agregarReservaTourResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarReservaTour(TurismoReal.Datos.WSportafolio.agregarReservaTourRequest request) {
             return base.Channel.agregarReservaTour(request);
         }
@@ -6648,89 +6681,155 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarAdministradorResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarAdministrador(TurismoReal.Datos.WSportafolio.listarAdministradorRequest request) {
-            return base.Channel.listarAdministrador(request);
+        TurismoReal.Datos.WSportafolio.eliminarCondicionDepaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarCondicionDepa(TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest request) {
+            return base.Channel.eliminarCondicionDepa(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.administrador[] listarAdministrador() {
-            TurismoReal.Datos.WSportafolio.listarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.listarAdministradorRequest();
-            TurismoReal.Datos.WSportafolio.listarAdministradorResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarAdministrador(inValue);
+        public bool eliminarCondicionDepa(int id_condicion) {
+            TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest();
+            inValue.id_condicion = id_condicion;
+            TurismoReal.Datos.WSportafolio.eliminarCondicionDepaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarCondicionDepa(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarAdministradorResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarAdministradorAsync(TurismoReal.Datos.WSportafolio.listarAdministradorRequest request) {
-            return base.Channel.listarAdministradorAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCondicionDepaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest request) {
+            return base.Channel.eliminarCondicionDepaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarAdministradorResponse> listarAdministradorAsync() {
-            TurismoReal.Datos.WSportafolio.listarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.listarAdministradorRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarAdministradorAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCondicionDepaResponse> eliminarCondicionDepaAsync(int id_condicion) {
+            TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest();
+            inValue.id_condicion = id_condicion;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarCondicionDepaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTransporteIdReserva(TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest request) {
-            return base.Channel.listarReservaTransporteIdReserva(request);
+        TurismoReal.Datos.WSportafolio.agregarInventarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarInventario(TurismoReal.Datos.WSportafolio.agregarInventarioRequest request) {
+            return base.Channel.agregarInventario(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.reservaTrans listarReservaTransporteIdReserva(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest();
+        public bool agregarInventario(int id_articulo, int id_departamento, int cantidad) {
+            TurismoReal.Datos.WSportafolio.agregarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.agregarInventarioRequest();
+            inValue.id_articulo = id_articulo;
+            inValue.id_departamento = id_departamento;
+            inValue.cantidad = cantidad;
+            TurismoReal.Datos.WSportafolio.agregarInventarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarInventario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarInventarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarInventarioAsync(TurismoReal.Datos.WSportafolio.agregarInventarioRequest request) {
+            return base.Channel.agregarInventarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarInventarioResponse> agregarInventarioAsync(int id_articulo, int id_departamento, int cantidad) {
+            TurismoReal.Datos.WSportafolio.agregarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.agregarInventarioRequest();
+            inValue.id_articulo = id_articulo;
+            inValue.id_departamento = id_departamento;
+            inValue.cantidad = cantidad;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarInventarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarMantenimiento(TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest request) {
+            return base.Channel.agregarMantenimiento(request);
+        }
+        
+        public bool agregarMantenimiento(string descripcion, string fecha_inicio_str, string fecha_termino_str, int id_depa) {
+            TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest();
+            inValue.descripcion = descripcion;
+            inValue.fecha_inicio_str = fecha_inicio_str;
+            inValue.fecha_termino_str = fecha_termino_str;
+            inValue.id_depa = id_depa;
+            TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarMantenimiento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarMantenimientoAsync(TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest request) {
+            return base.Channel.agregarMantenimientoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarMantenimientoResponse> agregarMantenimientoAsync(string descripcion, string fecha_inicio_str, string fecha_termino_str, int id_depa) {
+            TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.agregarMantenimientoRequest();
+            inValue.descripcion = descripcion;
+            inValue.fecha_inicio_str = fecha_inicio_str;
+            inValue.fecha_termino_str = fecha_termino_str;
+            inValue.id_depa = id_depa;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarMantenimientoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaTour(TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest request) {
+            return base.Channel.eliminarReservaTour(request);
+        }
+        
+        public bool eliminarReservaTour(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest();
             inValue.id_reserva = id_reserva;
-            TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTransporteIdReserva(inValue);
+            TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaTour(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTransporteIdReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest request) {
-            return base.Channel.listarReservaTransporteIdReservaAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaTourAsync(TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest request) {
+            return base.Channel.eliminarReservaTourAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse> listarReservaTransporteIdReservaAsync(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest();
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTourResponse> eliminarReservaTourAsync(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaTourRequest();
             inValue.id_reserva = id_reserva;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTransporteIdReservaAsync(inValue);
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaTourAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarMantenimiento(TurismoReal.Datos.WSportafolio.listarMantenimientoRequest request) {
-            return base.Channel.listarMantenimiento(request);
+        TurismoReal.Datos.WSportafolio.modificarCheckOutResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCheckOut(TurismoReal.Datos.WSportafolio.modificarCheckOutRequest request) {
+            return base.Channel.modificarCheckOut(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.mantenimiento[] listarMantenimiento() {
-            TurismoReal.Datos.WSportafolio.listarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.listarMantenimientoRequest();
-            TurismoReal.Datos.WSportafolio.listarMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarMantenimiento(inValue);
+        public bool modificarCheckOut(int id_cout, int nmulta, int npago, string nfirma) {
+            TurismoReal.Datos.WSportafolio.modificarCheckOutRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCheckOutRequest();
+            inValue.id_cout = id_cout;
+            inValue.nmulta = nmulta;
+            inValue.npago = npago;
+            inValue.nfirma = nfirma;
+            TurismoReal.Datos.WSportafolio.modificarCheckOutResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCheckOut(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarMantenimientoAsync(TurismoReal.Datos.WSportafolio.listarMantenimientoRequest request) {
-            return base.Channel.listarMantenimientoAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckOutResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCheckOutAsync(TurismoReal.Datos.WSportafolio.modificarCheckOutRequest request) {
+            return base.Channel.modificarCheckOutAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarMantenimientoResponse> listarMantenimientoAsync() {
-            TurismoReal.Datos.WSportafolio.listarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.listarMantenimientoRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarMantenimientoAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckOutResponse> modificarCheckOutAsync(int id_cout, int nmulta, int npago, string nfirma) {
+            TurismoReal.Datos.WSportafolio.modificarCheckOutRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCheckOutRequest();
+            inValue.id_cout = id_cout;
+            inValue.nmulta = nmulta;
+            inValue.npago = npago;
+            inValue.nfirma = nfirma;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCheckOutAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarReservaTourResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTour(TurismoReal.Datos.WSportafolio.listarReservaTourRequest request) {
-            return base.Channel.listarReservaTour(request);
+        TurismoReal.Datos.WSportafolio.listarFuncionarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarFuncionario(TurismoReal.Datos.WSportafolio.listarFuncionarioRequest request) {
+            return base.Channel.listarFuncionario(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.reservaTour[] listarReservaTour() {
-            TurismoReal.Datos.WSportafolio.listarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTourRequest();
-            TurismoReal.Datos.WSportafolio.listarReservaTourResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTour(inValue);
+        public TurismoReal.Datos.WSportafolio.funcionario[] listarFuncionario() {
+            TurismoReal.Datos.WSportafolio.listarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.listarFuncionarioRequest();
+            TurismoReal.Datos.WSportafolio.listarFuncionarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarFuncionario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTourAsync(TurismoReal.Datos.WSportafolio.listarReservaTourRequest request) {
-            return base.Channel.listarReservaTourAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarFuncionarioAsync(TurismoReal.Datos.WSportafolio.listarFuncionarioRequest request) {
+            return base.Channel.listarFuncionarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourResponse> listarReservaTourAsync() {
-            TurismoReal.Datos.WSportafolio.listarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTourRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTourAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioResponse> listarFuncionarioAsync() {
+            TurismoReal.Datos.WSportafolio.listarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.listarFuncionarioRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarFuncionarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6757,120 +6856,26 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTransporte(TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest request) {
-            return base.Channel.listarReservaTransporte(request);
+        TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarCondicionDepaPorParametro(TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest request) {
+            return base.Channel.listarCondicionDepaPorParametro(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.reservaTrans[] listarReservaTransporte() {
-            TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest();
-            TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTransporte(inValue);
+        public TurismoReal.Datos.WSportafolio.condicionDepa listarCondicionDepaPorParametro(int id_condicion) {
+            TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest inValue = new TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest();
+            inValue.id_condicion = id_condicion;
+            TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCondicionDepaPorParametro(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest request) {
-            return base.Channel.listarReservaTransporteAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarCondicionDepaPorParametroAsync(TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest request) {
+            return base.Channel.listarCondicionDepaPorParametroAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse> listarReservaTransporteAsync() {
-            TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTransporteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarInventarioPorIdDepa(TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest request) {
-            return base.Channel.listarInventarioPorIdDepa(request);
-        }
-        
-        public TurismoReal.Datos.WSportafolio.inventario[] listarInventarioPorIdDepa(int id_departamento) {
-            TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest inValue = new TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest();
-            inValue.id_departamento = id_departamento;
-            TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarInventarioPorIdDepa(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarInventarioPorIdDepaAsync(TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest request) {
-            return base.Channel.listarInventarioPorIdDepaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse> listarInventarioPorIdDepaAsync(int id_departamento) {
-            TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest inValue = new TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest();
-            inValue.id_departamento = id_departamento;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarInventarioPorIdDepaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarFuncionarioPorRut(TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest request) {
-            return base.Channel.listarFuncionarioPorRut(request);
-        }
-        
-        public TurismoReal.Datos.WSportafolio.funcionario listarFuncionarioPorRut(int rut) {
-            TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest inValue = new TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest();
-            inValue.rut = rut;
-            TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarFuncionarioPorRut(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarFuncionarioPorRutAsync(TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest request) {
-            return base.Channel.listarFuncionarioPorRutAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse> listarFuncionarioPorRutAsync(int rut) {
-            TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest inValue = new TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest();
-            inValue.rut = rut;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarFuncionarioPorRutAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.agregarCondicionDepaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCondicionDepa(TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest request) {
-            return base.Channel.agregarCondicionDepa(request);
-        }
-        
-        public bool agregarCondicionDepa(string condicion, int id_check_out, int id_check_in) {
-            TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest();
-            inValue.condicion = condicion;
-            inValue.id_check_out = id_check_out;
-            inValue.id_check_in = id_check_in;
-            TurismoReal.Datos.WSportafolio.agregarCondicionDepaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCondicionDepa(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCondicionDepaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest request) {
-            return base.Channel.agregarCondicionDepaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCondicionDepaResponse> agregarCondicionDepaAsync(string condicion, int id_check_out, int id_check_in) {
-            TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.agregarCondicionDepaRequest();
-            inValue.condicion = condicion;
-            inValue.id_check_out = id_check_out;
-            inValue.id_check_in = id_check_in;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCondicionDepaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarClientePorRutResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarClientePorRut(TurismoReal.Datos.WSportafolio.listarClientePorRutRequest request) {
-            return base.Channel.listarClientePorRut(request);
-        }
-        
-        public TurismoReal.Datos.WSportafolio.cliente listarClientePorRut(int rut) {
-            TurismoReal.Datos.WSportafolio.listarClientePorRutRequest inValue = new TurismoReal.Datos.WSportafolio.listarClientePorRutRequest();
-            inValue.rut = rut;
-            TurismoReal.Datos.WSportafolio.listarClientePorRutResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarClientePorRut(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClientePorRutResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarClientePorRutAsync(TurismoReal.Datos.WSportafolio.listarClientePorRutRequest request) {
-            return base.Channel.listarClientePorRutAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClientePorRutResponse> listarClientePorRutAsync(int rut) {
-            TurismoReal.Datos.WSportafolio.listarClientePorRutRequest inValue = new TurismoReal.Datos.WSportafolio.listarClientePorRutRequest();
-            inValue.rut = rut;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarClientePorRutAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse> listarCondicionDepaPorParametroAsync(int id_condicion) {
+            TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest inValue = new TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest();
+            inValue.id_condicion = id_condicion;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCondicionDepaPorParametroAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6897,49 +6902,89 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarArticuloPorId(TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest request) {
-            return base.Channel.listarArticuloPorId(request);
+        TurismoReal.Datos.WSportafolio.listarDepartamentoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarDepartamento(TurismoReal.Datos.WSportafolio.listarDepartamentoRequest request) {
+            return base.Channel.listarDepartamento(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.articulo listarArticuloPorId(int id_art) {
-            TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest inValue = new TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest();
-            inValue.id_art = id_art;
-            TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarArticuloPorId(inValue);
+        public TurismoReal.Datos.WSportafolio.departamentoDetalle[] listarDepartamento() {
+            TurismoReal.Datos.WSportafolio.listarDepartamentoRequest inValue = new TurismoReal.Datos.WSportafolio.listarDepartamentoRequest();
+            TurismoReal.Datos.WSportafolio.listarDepartamentoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarDepartamento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarArticuloPorIdAsync(TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest request) {
-            return base.Channel.listarArticuloPorIdAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepartamentoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarDepartamentoAsync(TurismoReal.Datos.WSportafolio.listarDepartamentoRequest request) {
+            return base.Channel.listarDepartamentoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse> listarArticuloPorIdAsync(int id_art) {
-            TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest inValue = new TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest();
-            inValue.id_art = id_art;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarArticuloPorIdAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepartamentoResponse> listarDepartamentoAsync() {
+            TurismoReal.Datos.WSportafolio.listarDepartamentoRequest inValue = new TurismoReal.Datos.WSportafolio.listarDepartamentoRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarDepartamentoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTourIdReserva(TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest request) {
-            return base.Channel.listarReservaTourIdReserva(request);
+        TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTransporte(TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest request) {
+            return base.Channel.listarReservaTransporte(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.reservaTour listarReservaTourIdReserva(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest();
-            inValue.id_reserva = id_reserva;
-            TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTourIdReserva(inValue);
+        public TurismoReal.Datos.WSportafolio.reservaTrans[] listarReservaTransporte() {
+            TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest();
+            TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTransporte(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTourIdReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest request) {
-            return base.Channel.listarReservaTourIdReservaAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest request) {
+            return base.Channel.listarReservaTransporteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse> listarReservaTourIdReservaAsync(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest();
-            inValue.id_reserva = id_reserva;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTourIdReservaAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteResponse> listarReservaTransporteAsync() {
+            TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTransporteRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTransporteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.listarClientePorRutResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarClientePorRut(TurismoReal.Datos.WSportafolio.listarClientePorRutRequest request) {
+            return base.Channel.listarClientePorRut(request);
+        }
+        
+        public TurismoReal.Datos.WSportafolio.cliente listarClientePorRut(int rut) {
+            TurismoReal.Datos.WSportafolio.listarClientePorRutRequest inValue = new TurismoReal.Datos.WSportafolio.listarClientePorRutRequest();
+            inValue.rut = rut;
+            TurismoReal.Datos.WSportafolio.listarClientePorRutResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarClientePorRut(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClientePorRutResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarClientePorRutAsync(TurismoReal.Datos.WSportafolio.listarClientePorRutRequest request) {
+            return base.Channel.listarClientePorRutAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClientePorRutResponse> listarClientePorRutAsync(int rut) {
+            TurismoReal.Datos.WSportafolio.listarClientePorRutRequest inValue = new TurismoReal.Datos.WSportafolio.listarClientePorRutRequest();
+            inValue.rut = rut;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarClientePorRutAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.listarAdministradorResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarAdministrador(TurismoReal.Datos.WSportafolio.listarAdministradorRequest request) {
+            return base.Channel.listarAdministrador(request);
+        }
+        
+        public TurismoReal.Datos.WSportafolio.administrador[] listarAdministrador() {
+            TurismoReal.Datos.WSportafolio.listarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.listarAdministradorRequest();
+            TurismoReal.Datos.WSportafolio.listarAdministradorResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarAdministrador(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarAdministradorResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarAdministradorAsync(TurismoReal.Datos.WSportafolio.listarAdministradorRequest request) {
+            return base.Channel.listarAdministradorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarAdministradorResponse> listarAdministradorAsync() {
+            TurismoReal.Datos.WSportafolio.listarAdministradorRequest inValue = new TurismoReal.Datos.WSportafolio.listarAdministradorRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarAdministradorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6966,114 +7011,68 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarCondicionDepaPorParametro(TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest request) {
-            return base.Channel.listarCondicionDepaPorParametro(request);
+        TurismoReal.Datos.WSportafolio.listarMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarMantenimiento(TurismoReal.Datos.WSportafolio.listarMantenimientoRequest request) {
+            return base.Channel.listarMantenimiento(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.condicionDepa listarCondicionDepaPorParametro(int id_condicion) {
-            TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest inValue = new TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest();
-            inValue.id_condicion = id_condicion;
-            TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCondicionDepaPorParametro(inValue);
+        public TurismoReal.Datos.WSportafolio.mantenimiento[] listarMantenimiento() {
+            TurismoReal.Datos.WSportafolio.listarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.listarMantenimientoRequest();
+            TurismoReal.Datos.WSportafolio.listarMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarMantenimiento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarCondicionDepaPorParametroAsync(TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest request) {
-            return base.Channel.listarCondicionDepaPorParametroAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarMantenimientoAsync(TurismoReal.Datos.WSportafolio.listarMantenimientoRequest request) {
+            return base.Channel.listarMantenimientoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroResponse> listarCondicionDepaPorParametroAsync(int id_condicion) {
-            TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest inValue = new TurismoReal.Datos.WSportafolio.listarCondicionDepaPorParametroRequest();
-            inValue.id_condicion = id_condicion;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCondicionDepaPorParametroAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarMantenimientoResponse> listarMantenimientoAsync() {
+            TurismoReal.Datos.WSportafolio.listarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.listarMantenimientoRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarMantenimientoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaMantenimiento(TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest request) {
-            return base.Channel.estadoDepaMantenimiento(request);
+        TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarArticuloPorId(TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest request) {
+            return base.Channel.listarArticuloPorId(request);
         }
         
-        public bool estadoDepaMantenimiento(int id_depa) {
-            TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest();
-            inValue.id_depa = id_depa;
-            TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaMantenimiento(inValue);
+        public TurismoReal.Datos.WSportafolio.articulo listarArticuloPorId(int id_art) {
+            TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest inValue = new TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest();
+            inValue.id_art = id_art;
+            TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarArticuloPorId(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaMantenimientoAsync(TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest request) {
-            return base.Channel.estadoDepaMantenimientoAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarArticuloPorIdAsync(TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest request) {
+            return base.Channel.listarArticuloPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse> estadoDepaMantenimientoAsync(int id_depa) {
-            TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest();
-            inValue.id_depa = id_depa;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaMantenimientoAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloPorIdResponse> listarArticuloPorIdAsync(int id_art) {
+            TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest inValue = new TurismoReal.Datos.WSportafolio.listarArticuloPorIdRequest();
+            inValue.id_art = id_art;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarArticuloPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarCondicionDepaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarCondicionDepa(TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest request) {
-            return base.Channel.eliminarCondicionDepa(request);
+        TurismoReal.Datos.WSportafolio.listarReservaTourResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTour(TurismoReal.Datos.WSportafolio.listarReservaTourRequest request) {
+            return base.Channel.listarReservaTour(request);
         }
         
-        public bool eliminarCondicionDepa(int id_condicion) {
-            TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest();
-            inValue.id_condicion = id_condicion;
-            TurismoReal.Datos.WSportafolio.eliminarCondicionDepaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarCondicionDepa(inValue);
+        public TurismoReal.Datos.WSportafolio.reservaTour[] listarReservaTour() {
+            TurismoReal.Datos.WSportafolio.listarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTourRequest();
+            TurismoReal.Datos.WSportafolio.listarReservaTourResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTour(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCondicionDepaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest request) {
-            return base.Channel.eliminarCondicionDepaAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTourAsync(TurismoReal.Datos.WSportafolio.listarReservaTourRequest request) {
+            return base.Channel.listarReservaTourAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCondicionDepaResponse> eliminarCondicionDepaAsync(int id_condicion) {
-            TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarCondicionDepaRequest();
-            inValue.id_condicion = id_condicion;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarCondicionDepaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarDepartamentoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarDepartamento(TurismoReal.Datos.WSportafolio.listarDepartamentoRequest request) {
-            return base.Channel.listarDepartamento(request);
-        }
-        
-        public TurismoReal.Datos.WSportafolio.departamentoDetalle[] listarDepartamento() {
-            TurismoReal.Datos.WSportafolio.listarDepartamentoRequest inValue = new TurismoReal.Datos.WSportafolio.listarDepartamentoRequest();
-            TurismoReal.Datos.WSportafolio.listarDepartamentoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarDepartamento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepartamentoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarDepartamentoAsync(TurismoReal.Datos.WSportafolio.listarDepartamentoRequest request) {
-            return base.Channel.listarDepartamentoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepartamentoResponse> listarDepartamentoAsync() {
-            TurismoReal.Datos.WSportafolio.listarDepartamentoRequest inValue = new TurismoReal.Datos.WSportafolio.listarDepartamentoRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarDepartamentoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarFuncionarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarFuncionario(TurismoReal.Datos.WSportafolio.listarFuncionarioRequest request) {
-            return base.Channel.listarFuncionario(request);
-        }
-        
-        public TurismoReal.Datos.WSportafolio.funcionario[] listarFuncionario() {
-            TurismoReal.Datos.WSportafolio.listarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.listarFuncionarioRequest();
-            TurismoReal.Datos.WSportafolio.listarFuncionarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarFuncionario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarFuncionarioAsync(TurismoReal.Datos.WSportafolio.listarFuncionarioRequest request) {
-            return base.Channel.listarFuncionarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioResponse> listarFuncionarioAsync() {
-            TurismoReal.Datos.WSportafolio.listarFuncionarioRequest inValue = new TurismoReal.Datos.WSportafolio.listarFuncionarioRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarFuncionarioAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourResponse> listarReservaTourAsync() {
+            TurismoReal.Datos.WSportafolio.listarReservaTourRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTourRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTourAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7095,6 +7094,29 @@ namespace TurismoReal.Datos.WSportafolio {
         public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepaServicioResponse> listarDepaServicioAsync() {
             TurismoReal.Datos.WSportafolio.listarDepaServicioRequest inValue = new TurismoReal.Datos.WSportafolio.listarDepaServicioRequest();
             return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarDepaServicioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTransporteIdReserva(TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest request) {
+            return base.Channel.listarReservaTransporteIdReserva(request);
+        }
+        
+        public TurismoReal.Datos.WSportafolio.reservaTrans listarReservaTransporteIdReserva(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest();
+            inValue.id_reserva = id_reserva;
+            TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTransporteIdReserva(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTransporteIdReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest request) {
+            return base.Channel.listarReservaTransporteIdReservaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaResponse> listarReservaTransporteIdReservaAsync(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTransporteIdReservaRequest();
+            inValue.id_reserva = id_reserva;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTransporteIdReservaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7142,250 +7164,95 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaTransporte(TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest request) {
-            return base.Channel.eliminarReservaTransporte(request);
+        TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarInventarioPorIdDepa(TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest request) {
+            return base.Channel.listarInventarioPorIdDepa(request);
         }
         
-        public bool eliminarReservaTransporte(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest();
+        public TurismoReal.Datos.WSportafolio.inventario[] listarInventarioPorIdDepa(int id_departamento) {
+            TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest inValue = new TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest();
+            inValue.id_departamento = id_departamento;
+            TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarInventarioPorIdDepa(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarInventarioPorIdDepaAsync(TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest request) {
+            return base.Channel.listarInventarioPorIdDepaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaResponse> listarInventarioPorIdDepaAsync(int id_departamento) {
+            TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest inValue = new TurismoReal.Datos.WSportafolio.listarInventarioPorIdDepaRequest();
+            inValue.id_departamento = id_departamento;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarInventarioPorIdDepaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTourIdReserva(TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest request) {
+            return base.Channel.listarReservaTourIdReserva(request);
+        }
+        
+        public TurismoReal.Datos.WSportafolio.reservaTour listarReservaTourIdReserva(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest();
             inValue.id_reserva = id_reserva;
-            TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaTransporte(inValue);
+            TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTourIdReserva(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaTransporteAsync(TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest request) {
-            return base.Channel.eliminarReservaTransporteAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarReservaTourIdReservaAsync(TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest request) {
+            return base.Channel.listarReservaTourIdReservaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaTransporteResponse> eliminarReservaTransporteAsync(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaTransporteRequest();
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaResponse> listarReservaTourIdReservaAsync(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest inValue = new TurismoReal.Datos.WSportafolio.listarReservaTourIdReservaRequest();
             inValue.id_reserva = id_reserva;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaTransporteAsync(inValue);
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarReservaTourIdReservaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCondicionDepa(TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest request) {
-            return base.Channel.modificarCondicionDepa(request);
+        TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarFuncionarioPorRut(TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest request) {
+            return base.Channel.listarFuncionarioPorRut(request);
         }
         
-        public bool modificarCondicionDepa(int id_condicion, string condicion, int id_check_out, int id_check_in) {
-            TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest();
-            inValue.id_condicion = id_condicion;
-            inValue.condicion = condicion;
-            inValue.id_check_out = id_check_out;
-            inValue.id_check_in = id_check_in;
-            TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCondicionDepa(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCondicionDepaAsync(TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest request) {
-            return base.Channel.modificarCondicionDepaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCondicionDepaResponse> modificarCondicionDepaAsync(int id_condicion, string condicion, int id_check_out, int id_check_in) {
-            TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCondicionDepaRequest();
-            inValue.id_condicion = id_condicion;
-            inValue.condicion = condicion;
-            inValue.id_check_out = id_check_out;
-            inValue.id_check_in = id_check_in;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCondicionDepaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaDisponibleTerminoReserva(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest request) {
-            return base.Channel.estadoDepaDisponibleTerminoReserva(request);
-        }
-        
-        public bool estadoDepaDisponibleTerminoReserva() {
-            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest();
-            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaDisponibleTerminoReserva(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaDisponibleTerminoReservaAsync(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest request) {
-            return base.Channel.estadoDepaDisponibleTerminoReservaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaResponse> estadoDepaDisponibleTerminoReservaAsync() {
-            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaDisponibleTerminoReservaRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaDisponibleTerminoReservaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaDisponibleFinMantenimiento(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest request) {
-            return base.Channel.estadoDepaDisponibleFinMantenimiento(request);
-        }
-        
-        public bool estadoDepaDisponibleFinMantenimiento() {
-            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest();
-            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaDisponibleFinMantenimiento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaDisponibleFinMantenimientoAsync(TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest request) {
-            return base.Channel.estadoDepaDisponibleFinMantenimientoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoResponse> estadoDepaDisponibleFinMantenimientoAsync() {
-            TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaDisponibleFinMantenimientoRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaDisponibleFinMantenimientoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.modificarReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReserva(TurismoReal.Datos.WSportafolio.modificarReservaRequest request) {
-            return base.Channel.modificarReserva(request);
-        }
-        
-        public bool modificarReserva(int id_reserva, string nini_res, string nter_res, int ncant_pers, int nmont_total, int nmont_abonado, int nid_dep) {
-            TurismoReal.Datos.WSportafolio.modificarReservaRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaRequest();
-            inValue.id_reserva = id_reserva;
-            inValue.nini_res = nini_res;
-            inValue.nter_res = nter_res;
-            inValue.ncant_pers = ncant_pers;
-            inValue.nmont_total = nmont_total;
-            inValue.nmont_abonado = nmont_abonado;
-            inValue.nid_dep = nid_dep;
-            TurismoReal.Datos.WSportafolio.modificarReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReserva(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaAsync(TurismoReal.Datos.WSportafolio.modificarReservaRequest request) {
-            return base.Channel.modificarReservaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaResponse> modificarReservaAsync(int id_reserva, string nini_res, string nter_res, int ncant_pers, int nmont_total, int nmont_abonado, int nid_dep) {
-            TurismoReal.Datos.WSportafolio.modificarReservaRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaRequest();
-            inValue.id_reserva = id_reserva;
-            inValue.nini_res = nini_res;
-            inValue.nter_res = nter_res;
-            inValue.ncant_pers = ncant_pers;
-            inValue.nmont_total = nmont_total;
-            inValue.nmont_abonado = nmont_abonado;
-            inValue.nid_dep = nid_dep;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.agregarClienteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCliente(TurismoReal.Datos.WSportafolio.agregarClienteRequest request) {
-            return base.Channel.agregarCliente(request);
-        }
-        
-        public bool agregarCliente(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
-            TurismoReal.Datos.WSportafolio.agregarClienteRequest inValue = new TurismoReal.Datos.WSportafolio.agregarClienteRequest();
+        public TurismoReal.Datos.WSportafolio.funcionario listarFuncionarioPorRut(int rut) {
+            TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest inValue = new TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest();
             inValue.rut = rut;
-            inValue.dv = dv;
-            inValue.nombre = nombre;
-            inValue.apellido_paterno = apellido_paterno;
-            inValue.apellido_materno = apellido_materno;
-            inValue.correo = correo;
-            inValue.usuario = usuario;
-            inValue.contrasena = contrasena;
-            inValue.telefono = telefono;
-            TurismoReal.Datos.WSportafolio.agregarClienteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCliente(inValue);
+            TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarFuncionarioPorRut(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarClienteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarClienteAsync(TurismoReal.Datos.WSportafolio.agregarClienteRequest request) {
-            return base.Channel.agregarClienteAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarFuncionarioPorRutAsync(TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest request) {
+            return base.Channel.listarFuncionarioPorRutAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarClienteResponse> agregarClienteAsync(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
-            TurismoReal.Datos.WSportafolio.agregarClienteRequest inValue = new TurismoReal.Datos.WSportafolio.agregarClienteRequest();
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutResponse> listarFuncionarioPorRutAsync(int rut) {
+            TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest inValue = new TurismoReal.Datos.WSportafolio.listarFuncionarioPorRutRequest();
             inValue.rut = rut;
-            inValue.dv = dv;
-            inValue.nombre = nombre;
-            inValue.apellido_paterno = apellido_paterno;
-            inValue.apellido_materno = apellido_materno;
-            inValue.correo = correo;
-            inValue.usuario = usuario;
-            inValue.contrasena = contrasena;
-            inValue.telefono = telefono;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarClienteAsync(inValue);
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarFuncionarioPorRutAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.modificarCheckInResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCheckIn(TurismoReal.Datos.WSportafolio.modificarCheckInRequest request) {
-            return base.Channel.modificarCheckIn(request);
+        TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaMantenimiento(TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest request) {
+            return base.Channel.estadoDepaMantenimiento(request);
         }
         
-        public bool modificarCheckIn(int id_cin, string nfirma, int npago) {
-            TurismoReal.Datos.WSportafolio.modificarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCheckInRequest();
-            inValue.id_cin = id_cin;
-            inValue.nfirma = nfirma;
-            inValue.npago = npago;
-            TurismoReal.Datos.WSportafolio.modificarCheckInResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCheckIn(inValue);
+        public bool estadoDepaMantenimiento(int id_depa) {
+            TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest();
+            inValue.id_depa = id_depa;
+            TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaMantenimiento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckInResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCheckInAsync(TurismoReal.Datos.WSportafolio.modificarCheckInRequest request) {
-            return base.Channel.modificarCheckInAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.estadoDepaMantenimientoAsync(TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest request) {
+            return base.Channel.estadoDepaMantenimientoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckInResponse> modificarCheckInAsync(int id_cin, string nfirma, int npago) {
-            TurismoReal.Datos.WSportafolio.modificarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCheckInRequest();
-            inValue.id_cin = id_cin;
-            inValue.nfirma = nfirma;
-            inValue.npago = npago;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCheckInAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReserva(TurismoReal.Datos.WSportafolio.eliminarReservaRequest request) {
-            return base.Channel.eliminarReserva(request);
-        }
-        
-        public bool eliminarReserva(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.eliminarReservaRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaRequest();
-            inValue.id_reserva = id_reserva;
-            TurismoReal.Datos.WSportafolio.eliminarReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReserva(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaAsync(TurismoReal.Datos.WSportafolio.eliminarReservaRequest request) {
-            return base.Channel.eliminarReservaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaResponse> eliminarReservaAsync(int id_reserva) {
-            TurismoReal.Datos.WSportafolio.eliminarReservaRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaRequest();
-            inValue.id_reserva = id_reserva;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.agregarCheckInResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCheckIn(TurismoReal.Datos.WSportafolio.agregarCheckInRequest request) {
-            return base.Channel.agregarCheckIn(request);
-        }
-        
-        public bool agregarCheckIn(string firma, int pago, int id_reserva, int funcionario_rut) {
-            TurismoReal.Datos.WSportafolio.agregarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.agregarCheckInRequest();
-            inValue.firma = firma;
-            inValue.pago = pago;
-            inValue.id_reserva = id_reserva;
-            inValue.funcionario_rut = funcionario_rut;
-            TurismoReal.Datos.WSportafolio.agregarCheckInResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCheckIn(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCheckInResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCheckInAsync(TurismoReal.Datos.WSportafolio.agregarCheckInRequest request) {
-            return base.Channel.agregarCheckInAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCheckInResponse> agregarCheckInAsync(string firma, int pago, int id_reserva, int funcionario_rut) {
-            TurismoReal.Datos.WSportafolio.agregarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.agregarCheckInRequest();
-            inValue.firma = firma;
-            inValue.pago = pago;
-            inValue.id_reserva = id_reserva;
-            inValue.funcionario_rut = funcionario_rut;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCheckInAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoResponse> estadoDepaMantenimientoAsync(int id_depa) {
+            TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.estadoDepaMantenimientoRequest();
+            inValue.id_depa = id_depa;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).estadoDepaMantenimientoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7449,28 +7316,100 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.metodoLoginResponse TurismoReal.Datos.WSportafolio.WSPortafolio.metodoLogin(TurismoReal.Datos.WSportafolio.metodoLoginRequest request) {
-            return base.Channel.metodoLogin(request);
+        TurismoReal.Datos.WSportafolio.modificarReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReserva(TurismoReal.Datos.WSportafolio.modificarReservaRequest request) {
+            return base.Channel.modificarReserva(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.loginC metodoLogin(string usuario, string contrasena) {
-            TurismoReal.Datos.WSportafolio.metodoLoginRequest inValue = new TurismoReal.Datos.WSportafolio.metodoLoginRequest();
-            inValue.usuario = usuario;
-            inValue.contrasena = contrasena;
-            TurismoReal.Datos.WSportafolio.metodoLoginResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).metodoLogin(inValue);
+        public bool modificarReserva(int id_reserva, string nini_res, string nter_res, int ncant_pers, int nmont_total, int nmont_abonado, int nid_dep) {
+            TurismoReal.Datos.WSportafolio.modificarReservaRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaRequest();
+            inValue.id_reserva = id_reserva;
+            inValue.nini_res = nini_res;
+            inValue.nter_res = nter_res;
+            inValue.ncant_pers = ncant_pers;
+            inValue.nmont_total = nmont_total;
+            inValue.nmont_abonado = nmont_abonado;
+            inValue.nid_dep = nid_dep;
+            TurismoReal.Datos.WSportafolio.modificarReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReserva(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.metodoLoginResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.metodoLoginAsync(TurismoReal.Datos.WSportafolio.metodoLoginRequest request) {
-            return base.Channel.metodoLoginAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarReservaAsync(TurismoReal.Datos.WSportafolio.modificarReservaRequest request) {
+            return base.Channel.modificarReservaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.metodoLoginResponse> metodoLoginAsync(string usuario, string contrasena) {
-            TurismoReal.Datos.WSportafolio.metodoLoginRequest inValue = new TurismoReal.Datos.WSportafolio.metodoLoginRequest();
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarReservaResponse> modificarReservaAsync(int id_reserva, string nini_res, string nter_res, int ncant_pers, int nmont_total, int nmont_abonado, int nid_dep) {
+            TurismoReal.Datos.WSportafolio.modificarReservaRequest inValue = new TurismoReal.Datos.WSportafolio.modificarReservaRequest();
+            inValue.id_reserva = id_reserva;
+            inValue.nini_res = nini_res;
+            inValue.nter_res = nter_res;
+            inValue.ncant_pers = ncant_pers;
+            inValue.nmont_total = nmont_total;
+            inValue.nmont_abonado = nmont_abonado;
+            inValue.nid_dep = nid_dep;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarReservaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.eliminarReservaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReserva(TurismoReal.Datos.WSportafolio.eliminarReservaRequest request) {
+            return base.Channel.eliminarReserva(request);
+        }
+        
+        public bool eliminarReserva(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.eliminarReservaRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaRequest();
+            inValue.id_reserva = id_reserva;
+            TurismoReal.Datos.WSportafolio.eliminarReservaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReserva(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarReservaAsync(TurismoReal.Datos.WSportafolio.eliminarReservaRequest request) {
+            return base.Channel.eliminarReservaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarReservaResponse> eliminarReservaAsync(int id_reserva) {
+            TurismoReal.Datos.WSportafolio.eliminarReservaRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarReservaRequest();
+            inValue.id_reserva = id_reserva;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarReservaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.agregarClienteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCliente(TurismoReal.Datos.WSportafolio.agregarClienteRequest request) {
+            return base.Channel.agregarCliente(request);
+        }
+        
+        public bool agregarCliente(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+            TurismoReal.Datos.WSportafolio.agregarClienteRequest inValue = new TurismoReal.Datos.WSportafolio.agregarClienteRequest();
+            inValue.rut = rut;
+            inValue.dv = dv;
+            inValue.nombre = nombre;
+            inValue.apellido_paterno = apellido_paterno;
+            inValue.apellido_materno = apellido_materno;
+            inValue.correo = correo;
             inValue.usuario = usuario;
             inValue.contrasena = contrasena;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).metodoLoginAsync(inValue);
+            inValue.telefono = telefono;
+            TurismoReal.Datos.WSportafolio.agregarClienteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarClienteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarClienteAsync(TurismoReal.Datos.WSportafolio.agregarClienteRequest request) {
+            return base.Channel.agregarClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarClienteResponse> agregarClienteAsync(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo, string usuario, string contrasena, string telefono) {
+            TurismoReal.Datos.WSportafolio.agregarClienteRequest inValue = new TurismoReal.Datos.WSportafolio.agregarClienteRequest();
+            inValue.rut = rut;
+            inValue.dv = dv;
+            inValue.nombre = nombre;
+            inValue.apellido_paterno = apellido_paterno;
+            inValue.apellido_materno = apellido_materno;
+            inValue.correo = correo;
+            inValue.usuario = usuario;
+            inValue.contrasena = contrasena;
+            inValue.telefono = telefono;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarClienteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7515,6 +7454,179 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.agregarArticuloResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarArticulo(TurismoReal.Datos.WSportafolio.agregarArticuloRequest request) {
+            return base.Channel.agregarArticulo(request);
+        }
+        
+        public bool agregarArticulo(string descripcion, int stock, int precio) {
+            TurismoReal.Datos.WSportafolio.agregarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.agregarArticuloRequest();
+            inValue.descripcion = descripcion;
+            inValue.stock = stock;
+            inValue.precio = precio;
+            TurismoReal.Datos.WSportafolio.agregarArticuloResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarArticulo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarArticuloResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarArticuloAsync(TurismoReal.Datos.WSportafolio.agregarArticuloRequest request) {
+            return base.Channel.agregarArticuloAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarArticuloResponse> agregarArticuloAsync(string descripcion, int stock, int precio) {
+            TurismoReal.Datos.WSportafolio.agregarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.agregarArticuloRequest();
+            inValue.descripcion = descripcion;
+            inValue.stock = stock;
+            inValue.precio = precio;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarArticuloAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.listarDepaPorIdResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarDepaPorId(TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest request) {
+            return base.Channel.listarDepaPorId(request);
+        }
+        
+        public TurismoReal.Datos.WSportafolio.departamentoDetalle listarDepaPorId(int id_dep) {
+            TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest inValue = new TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest();
+            inValue.id_dep = id_dep;
+            TurismoReal.Datos.WSportafolio.listarDepaPorIdResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarDepaPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepaPorIdResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarDepaPorIdAsync(TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest request) {
+            return base.Channel.listarDepaPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepaPorIdResponse> listarDepaPorIdAsync(int id_dep) {
+            TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest inValue = new TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest();
+            inValue.id_dep = id_dep;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarDepaPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.listarClienteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarCliente(TurismoReal.Datos.WSportafolio.listarClienteRequest request) {
+            return base.Channel.listarCliente(request);
+        }
+        
+        public TurismoReal.Datos.WSportafolio.cliente[] listarCliente() {
+            TurismoReal.Datos.WSportafolio.listarClienteRequest inValue = new TurismoReal.Datos.WSportafolio.listarClienteRequest();
+            TurismoReal.Datos.WSportafolio.listarClienteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClienteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarClienteAsync(TurismoReal.Datos.WSportafolio.listarClienteRequest request) {
+            return base.Channel.listarClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClienteResponse> listarClienteAsync() {
+            TurismoReal.Datos.WSportafolio.listarClienteRequest inValue = new TurismoReal.Datos.WSportafolio.listarClienteRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.eliminarCheckInResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarCheckIn(TurismoReal.Datos.WSportafolio.eliminarCheckInRequest request) {
+            return base.Channel.eliminarCheckIn(request);
+        }
+        
+        public bool eliminarCheckIn(int id_check_in) {
+            TurismoReal.Datos.WSportafolio.eliminarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarCheckInRequest();
+            inValue.id_check_in = id_check_in;
+            TurismoReal.Datos.WSportafolio.eliminarCheckInResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarCheckIn(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCheckInResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarCheckInAsync(TurismoReal.Datos.WSportafolio.eliminarCheckInRequest request) {
+            return base.Channel.eliminarCheckInAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCheckInResponse> eliminarCheckInAsync(int id_check_in) {
+            TurismoReal.Datos.WSportafolio.eliminarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarCheckInRequest();
+            inValue.id_check_in = id_check_in;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarCheckInAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.eliminarArticuloResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarArticulo(TurismoReal.Datos.WSportafolio.eliminarArticuloRequest request) {
+            return base.Channel.eliminarArticulo(request);
+        }
+        
+        public bool eliminarArticulo(int id_art) {
+            TurismoReal.Datos.WSportafolio.eliminarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarArticuloRequest();
+            inValue.id_art = id_art;
+            TurismoReal.Datos.WSportafolio.eliminarArticuloResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarArticulo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarArticuloResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarArticuloAsync(TurismoReal.Datos.WSportafolio.eliminarArticuloRequest request) {
+            return base.Channel.eliminarArticuloAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarArticuloResponse> eliminarArticuloAsync(int id_art) {
+            TurismoReal.Datos.WSportafolio.eliminarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarArticuloRequest();
+            inValue.id_art = id_art;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarArticuloAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.modificarCheckInResponse TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCheckIn(TurismoReal.Datos.WSportafolio.modificarCheckInRequest request) {
+            return base.Channel.modificarCheckIn(request);
+        }
+        
+        public bool modificarCheckIn(int id_cin, string nfirma, int npago) {
+            TurismoReal.Datos.WSportafolio.modificarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCheckInRequest();
+            inValue.id_cin = id_cin;
+            inValue.nfirma = nfirma;
+            inValue.npago = npago;
+            TurismoReal.Datos.WSportafolio.modificarCheckInResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCheckIn(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckInResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.modificarCheckInAsync(TurismoReal.Datos.WSportafolio.modificarCheckInRequest request) {
+            return base.Channel.modificarCheckInAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.modificarCheckInResponse> modificarCheckInAsync(int id_cin, string nfirma, int npago) {
+            TurismoReal.Datos.WSportafolio.modificarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.modificarCheckInRequest();
+            inValue.id_cin = id_cin;
+            inValue.nfirma = nfirma;
+            inValue.npago = npago;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).modificarCheckInAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.agregarCheckInResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCheckIn(TurismoReal.Datos.WSportafolio.agregarCheckInRequest request) {
+            return base.Channel.agregarCheckIn(request);
+        }
+        
+        public bool agregarCheckIn(string firma, int pago, int id_reserva, int funcionario_rut) {
+            TurismoReal.Datos.WSportafolio.agregarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.agregarCheckInRequest();
+            inValue.firma = firma;
+            inValue.pago = pago;
+            inValue.id_reserva = id_reserva;
+            inValue.funcionario_rut = funcionario_rut;
+            TurismoReal.Datos.WSportafolio.agregarCheckInResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCheckIn(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCheckInResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCheckInAsync(TurismoReal.Datos.WSportafolio.agregarCheckInRequest request) {
+            return base.Channel.agregarCheckInAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarCheckInResponse> agregarCheckInAsync(string firma, int pago, int id_reserva, int funcionario_rut) {
+            TurismoReal.Datos.WSportafolio.agregarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.agregarCheckInRequest();
+            inValue.firma = firma;
+            inValue.pago = pago;
+            inValue.id_reserva = id_reserva;
+            inValue.funcionario_rut = funcionario_rut;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarCheckInAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TurismoReal.Datos.WSportafolio.agregarCheckOutResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarCheckOut(TurismoReal.Datos.WSportafolio.agregarCheckOutRequest request) {
             return base.Channel.agregarCheckOut(request);
         }
@@ -7546,97 +7658,28 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarArticuloResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarArticulo(TurismoReal.Datos.WSportafolio.eliminarArticuloRequest request) {
-            return base.Channel.eliminarArticulo(request);
+        TurismoReal.Datos.WSportafolio.metodoLoginResponse TurismoReal.Datos.WSportafolio.WSPortafolio.metodoLogin(TurismoReal.Datos.WSportafolio.metodoLoginRequest request) {
+            return base.Channel.metodoLogin(request);
         }
         
-        public bool eliminarArticulo(int id_art) {
-            TurismoReal.Datos.WSportafolio.eliminarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarArticuloRequest();
-            inValue.id_art = id_art;
-            TurismoReal.Datos.WSportafolio.eliminarArticuloResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarArticulo(inValue);
+        public TurismoReal.Datos.WSportafolio.loginC metodoLogin(string usuario, string contrasena) {
+            TurismoReal.Datos.WSportafolio.metodoLoginRequest inValue = new TurismoReal.Datos.WSportafolio.metodoLoginRequest();
+            inValue.usuario = usuario;
+            inValue.contrasena = contrasena;
+            TurismoReal.Datos.WSportafolio.metodoLoginResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).metodoLogin(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarArticuloResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarArticuloAsync(TurismoReal.Datos.WSportafolio.eliminarArticuloRequest request) {
-            return base.Channel.eliminarArticuloAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.metodoLoginResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.metodoLoginAsync(TurismoReal.Datos.WSportafolio.metodoLoginRequest request) {
+            return base.Channel.metodoLoginAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarArticuloResponse> eliminarArticuloAsync(int id_art) {
-            TurismoReal.Datos.WSportafolio.eliminarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarArticuloRequest();
-            inValue.id_art = id_art;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarArticuloAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.eliminarCheckInResponse TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarCheckIn(TurismoReal.Datos.WSportafolio.eliminarCheckInRequest request) {
-            return base.Channel.eliminarCheckIn(request);
-        }
-        
-        public bool eliminarCheckIn(int id_check_in) {
-            TurismoReal.Datos.WSportafolio.eliminarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarCheckInRequest();
-            inValue.id_check_in = id_check_in;
-            TurismoReal.Datos.WSportafolio.eliminarCheckInResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarCheckIn(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCheckInResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.eliminarCheckInAsync(TurismoReal.Datos.WSportafolio.eliminarCheckInRequest request) {
-            return base.Channel.eliminarCheckInAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.eliminarCheckInResponse> eliminarCheckInAsync(int id_check_in) {
-            TurismoReal.Datos.WSportafolio.eliminarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.eliminarCheckInRequest();
-            inValue.id_check_in = id_check_in;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).eliminarCheckInAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.agregarArticuloResponse TurismoReal.Datos.WSportafolio.WSPortafolio.agregarArticulo(TurismoReal.Datos.WSportafolio.agregarArticuloRequest request) {
-            return base.Channel.agregarArticulo(request);
-        }
-        
-        public bool agregarArticulo(string descripcion, int stock, int precio) {
-            TurismoReal.Datos.WSportafolio.agregarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.agregarArticuloRequest();
-            inValue.descripcion = descripcion;
-            inValue.stock = stock;
-            inValue.precio = precio;
-            TurismoReal.Datos.WSportafolio.agregarArticuloResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarArticulo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarArticuloResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.agregarArticuloAsync(TurismoReal.Datos.WSportafolio.agregarArticuloRequest request) {
-            return base.Channel.agregarArticuloAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.agregarArticuloResponse> agregarArticuloAsync(string descripcion, int stock, int precio) {
-            TurismoReal.Datos.WSportafolio.agregarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.agregarArticuloRequest();
-            inValue.descripcion = descripcion;
-            inValue.stock = stock;
-            inValue.precio = precio;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).agregarArticuloAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarClienteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarCliente(TurismoReal.Datos.WSportafolio.listarClienteRequest request) {
-            return base.Channel.listarCliente(request);
-        }
-        
-        public TurismoReal.Datos.WSportafolio.cliente[] listarCliente() {
-            TurismoReal.Datos.WSportafolio.listarClienteRequest inValue = new TurismoReal.Datos.WSportafolio.listarClienteRequest();
-            TurismoReal.Datos.WSportafolio.listarClienteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCliente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClienteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarClienteAsync(TurismoReal.Datos.WSportafolio.listarClienteRequest request) {
-            return base.Channel.listarClienteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarClienteResponse> listarClienteAsync() {
-            TurismoReal.Datos.WSportafolio.listarClienteRequest inValue = new TurismoReal.Datos.WSportafolio.listarClienteRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarClienteAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.metodoLoginResponse> metodoLoginAsync(string usuario, string contrasena) {
+            TurismoReal.Datos.WSportafolio.metodoLoginRequest inValue = new TurismoReal.Datos.WSportafolio.metodoLoginRequest();
+            inValue.usuario = usuario;
+            inValue.contrasena = contrasena;
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).metodoLoginAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7663,26 +7706,24 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarDepaPorIdResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarDepaPorId(TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest request) {
-            return base.Channel.listarDepaPorId(request);
+        TurismoReal.Datos.WSportafolio.listarCheckInResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarCheckIn(TurismoReal.Datos.WSportafolio.listarCheckInRequest request) {
+            return base.Channel.listarCheckIn(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.departamentoDetalle listarDepaPorId(int id_dep) {
-            TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest inValue = new TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest();
-            inValue.id_dep = id_dep;
-            TurismoReal.Datos.WSportafolio.listarDepaPorIdResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarDepaPorId(inValue);
+        public TurismoReal.Datos.WSportafolio.checkIn[] listarCheckIn() {
+            TurismoReal.Datos.WSportafolio.listarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.listarCheckInRequest();
+            TurismoReal.Datos.WSportafolio.listarCheckInResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCheckIn(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepaPorIdResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarDepaPorIdAsync(TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest request) {
-            return base.Channel.listarDepaPorIdAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCheckInResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarCheckInAsync(TurismoReal.Datos.WSportafolio.listarCheckInRequest request) {
+            return base.Channel.listarCheckInAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarDepaPorIdResponse> listarDepaPorIdAsync(int id_dep) {
-            TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest inValue = new TurismoReal.Datos.WSportafolio.listarDepaPorIdRequest();
-            inValue.id_dep = id_dep;
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarDepaPorIdAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCheckInResponse> listarCheckInAsync() {
+            TurismoReal.Datos.WSportafolio.listarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.listarCheckInRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCheckInAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7707,24 +7748,45 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarCheckInResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarCheckIn(TurismoReal.Datos.WSportafolio.listarCheckInRequest request) {
-            return base.Channel.listarCheckIn(request);
+        TurismoReal.Datos.WSportafolio.listarTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarTransporte(TurismoReal.Datos.WSportafolio.listarTransporteRequest request) {
+            return base.Channel.listarTransporte(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.checkIn[] listarCheckIn() {
-            TurismoReal.Datos.WSportafolio.listarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.listarCheckInRequest();
-            TurismoReal.Datos.WSportafolio.listarCheckInResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCheckIn(inValue);
+        public TurismoReal.Datos.WSportafolio.transporte[] listarTransporte() {
+            TurismoReal.Datos.WSportafolio.listarTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.listarTransporteRequest();
+            TurismoReal.Datos.WSportafolio.listarTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarTransporte(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCheckInResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarCheckInAsync(TurismoReal.Datos.WSportafolio.listarCheckInRequest request) {
-            return base.Channel.listarCheckInAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarTransporteAsync(TurismoReal.Datos.WSportafolio.listarTransporteRequest request) {
+            return base.Channel.listarTransporteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarCheckInResponse> listarCheckInAsync() {
-            TurismoReal.Datos.WSportafolio.listarCheckInRequest inValue = new TurismoReal.Datos.WSportafolio.listarCheckInRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarCheckInAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarTransporteResponse> listarTransporteAsync() {
+            TurismoReal.Datos.WSportafolio.listarTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.listarTransporteRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarTransporteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.listarInventarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarInventario(TurismoReal.Datos.WSportafolio.listarInventarioRequest request) {
+            return base.Channel.listarInventario(request);
+        }
+        
+        public TurismoReal.Datos.WSportafolio.inventario[] listarInventario() {
+            TurismoReal.Datos.WSportafolio.listarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.listarInventarioRequest();
+            TurismoReal.Datos.WSportafolio.listarInventarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarInventario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarInventarioAsync(TurismoReal.Datos.WSportafolio.listarInventarioRequest request) {
+            return base.Channel.listarInventarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioResponse> listarInventarioAsync() {
+            TurismoReal.Datos.WSportafolio.listarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.listarInventarioRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarInventarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7770,27 +7832,6 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarArticuloResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarArticulo(TurismoReal.Datos.WSportafolio.listarArticuloRequest request) {
-            return base.Channel.listarArticulo(request);
-        }
-        
-        public TurismoReal.Datos.WSportafolio.articulo[] listarArticulo() {
-            TurismoReal.Datos.WSportafolio.listarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.listarArticuloRequest();
-            TurismoReal.Datos.WSportafolio.listarArticuloResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarArticulo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarArticuloAsync(TurismoReal.Datos.WSportafolio.listarArticuloRequest request) {
-            return base.Channel.listarArticuloAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloResponse> listarArticuloAsync() {
-            TurismoReal.Datos.WSportafolio.listarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.listarArticuloRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarArticuloAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TurismoReal.Datos.WSportafolio.listarTourResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarTour(TurismoReal.Datos.WSportafolio.listarTourRequest request) {
             return base.Channel.listarTour(request);
         }
@@ -7812,45 +7853,24 @@ namespace TurismoReal.Datos.WSportafolio {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarTransporteResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarTransporte(TurismoReal.Datos.WSportafolio.listarTransporteRequest request) {
-            return base.Channel.listarTransporte(request);
+        TurismoReal.Datos.WSportafolio.listarArticuloResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarArticulo(TurismoReal.Datos.WSportafolio.listarArticuloRequest request) {
+            return base.Channel.listarArticulo(request);
         }
         
-        public TurismoReal.Datos.WSportafolio.transporte[] listarTransporte() {
-            TurismoReal.Datos.WSportafolio.listarTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.listarTransporteRequest();
-            TurismoReal.Datos.WSportafolio.listarTransporteResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarTransporte(inValue);
+        public TurismoReal.Datos.WSportafolio.articulo[] listarArticulo() {
+            TurismoReal.Datos.WSportafolio.listarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.listarArticuloRequest();
+            TurismoReal.Datos.WSportafolio.listarArticuloResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarArticulo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarTransporteResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarTransporteAsync(TurismoReal.Datos.WSportafolio.listarTransporteRequest request) {
-            return base.Channel.listarTransporteAsync(request);
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarArticuloAsync(TurismoReal.Datos.WSportafolio.listarArticuloRequest request) {
+            return base.Channel.listarArticuloAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarTransporteResponse> listarTransporteAsync() {
-            TurismoReal.Datos.WSportafolio.listarTransporteRequest inValue = new TurismoReal.Datos.WSportafolio.listarTransporteRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarTransporteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TurismoReal.Datos.WSportafolio.listarInventarioResponse TurismoReal.Datos.WSportafolio.WSPortafolio.listarInventario(TurismoReal.Datos.WSportafolio.listarInventarioRequest request) {
-            return base.Channel.listarInventario(request);
-        }
-        
-        public TurismoReal.Datos.WSportafolio.inventario[] listarInventario() {
-            TurismoReal.Datos.WSportafolio.listarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.listarInventarioRequest();
-            TurismoReal.Datos.WSportafolio.listarInventarioResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarInventario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.listarInventarioAsync(TurismoReal.Datos.WSportafolio.listarInventarioRequest request) {
-            return base.Channel.listarInventarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarInventarioResponse> listarInventarioAsync() {
-            TurismoReal.Datos.WSportafolio.listarInventarioRequest inValue = new TurismoReal.Datos.WSportafolio.listarInventarioRequest();
-            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarInventarioAsync(inValue);
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarArticuloResponse> listarArticuloAsync() {
+            TurismoReal.Datos.WSportafolio.listarArticuloRequest inValue = new TurismoReal.Datos.WSportafolio.listarArticuloRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarArticuloAsync(inValue);
         }
     }
 }

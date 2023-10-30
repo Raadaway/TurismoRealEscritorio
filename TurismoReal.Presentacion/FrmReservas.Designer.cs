@@ -116,6 +116,7 @@ namespace TurismoReal.Presentacion
             this.BtnCheckOut.TabIndex = 8;
             this.BtnCheckOut.Text = "Realizar Check-Out";
             this.BtnCheckOut.UseVisualStyleBackColor = true;
+            this.BtnCheckOut.Click += new System.EventHandler(this.BtnCheckOut_Click);
             // 
             // BtnCheckIn
             // 

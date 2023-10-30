@@ -486,7 +486,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="estadoDepaDisponibleTerminoReserva">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element name="id_depa" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="estadoDepaDisponibleTerminoReservaResponse">
     <xs:sequence>
@@ -781,7 +783,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="estadoDepaDisponibleFinMantenimiento">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element name="id_depa" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="estadoDepaDisponibleFinMantenimientoResponse">
     <xs:sequence>
@@ -921,16 +925,6 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarMantenimiento">
-    <xs:sequence>
-      <xs:element name="id_mant" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarMantenimientoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarDepartamento">
     <xs:sequence>
       <xs:element name="id_dep" type="xs:int" />
@@ -941,12 +935,32 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarMantenimiento">
+    <xs:sequence>
+      <xs:element name="id_mant" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMantenimientoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarArticulo">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarArticuloResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:articulo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClientePorRut">
+    <xs:sequence>
+      <xs:element name="rut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClientePorRutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarAdministrador">
@@ -968,16 +982,6 @@
       <xs:element name="rut" type="xs:int" />
       <xs:element minOccurs="0" name="telefono" type="xs:string" />
       <xs:element minOccurs="0" name="usuario" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarClientePorRut">
-    <xs:sequence>
-      <xs:element name="rut" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarClientePorRutResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCheckOut">
@@ -1020,6 +1024,17 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarInventario">
+    <xs:sequence>
+      <xs:element name="id_departamento" type="xs:int" />
+      <xs:element name="id_articulo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarInventarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="agregarInventario">
     <xs:sequence>
       <xs:element name="id_articulo" type="xs:int" />
@@ -1028,17 +1043,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="agregarInventarioResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarInventario">
-    <xs:sequence>
-      <xs:element name="id_departamento" type="xs:int" />
-      <xs:element name="id_articulo" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarInventarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>

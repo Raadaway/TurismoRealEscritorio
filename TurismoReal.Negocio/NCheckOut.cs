@@ -53,5 +53,12 @@ namespace TurismoReal.Negocio
                 return null; // Puedes devolver una lista vacía o null en caso de error.
             }
         }
+
+        public static bool AgregarCheckOut(int multa, int pago, string firma, int idRes, int rutFunc)
+        {
+            DDCheckOut Datos = new DDCheckOut();
+            bool exito = Datos.AgregarCheckOut(multa, pago, firma, idRes, rutFunc);
+            return exito;
+        }
     }
 }

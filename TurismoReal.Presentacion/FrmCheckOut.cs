@@ -15,9 +15,33 @@ namespace TurismoReal.Presentacion
 {
     public partial class FrmCheckOut : MetroFramework.Forms.MetroForm
     {
+
+        private int IdReserva;
+        private int RutUsuario;
+        private int IdDepartamento;
+
         public FrmCheckOut()
         {
             InitializeComponent();
+        }
+
+        public FrmCheckOut(int idRes, int rut, int idDepa) : this ()
+        {
+            IdReserva = idRes;
+            RutUsuario = rut;
+            IdDepartamento = idDepa;
+            TabGeneral.SelectedIndex = 1;
+
+            Reserva reserva = NReserva.ListarReservaPorId(IdReserva);
+            if (reserva != null)
+            {
+                txtIdReserva.Text = IdReserva.ToString();
+            }
+        }
+
+        private void txtMulta_TextChanged(object sender, EventArgs e)
+        {
+            txtPago.Text = txtMulta.Text;
         }
 
         private void FrmCheckOut_Load(object sender, EventArgs e)
@@ -108,5 +132,38 @@ namespace TurismoReal.Presentacion
             return dataTable;
         }
 
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string firma = txtFirma.Text;
+                int multa = int.Parse(txtMulta.Text);
+                int pago = int.Parse(txtPago.Text);
+
+                Reserva reserva = NReserva.ListarReservaPorId(IdReserva);
+                if (reserva.termino_reserva == DateTime.Now.Date)
+                {
+                    bool resultado = NCheckOut.AgregarCheckOut(multa, pago, firma, IdReserva, RutUsuario);
+                    bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaADisponibleReserva(IdDepartamento);
+
+                    if (resultado && nuevoEstado)
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Check-Out realizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Error al realizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "La fecha de término de la reserva no coincide con la fecha de hoy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

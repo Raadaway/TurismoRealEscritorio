@@ -143,12 +143,64 @@ namespace TurismoReal.Presentacion
                 // Verificar si se ha seleccionado una fila en el DataGridView
                 if (DGVListar.SelectedRows.Count > 0)
                 {
-                    // Obtener el ID de reserva de la fila seleccionada
-                    int idReserva = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["id_reserva"].Value);
+                    String estReserva = Convert.ToString(DGVListar.SelectedRows[0].Cells["estado_reserva"].Value);
 
-                    // Abrir el formulario FrmCheckIn y pasar el ID de reserva como parámetro
-                    FrmCheckIn frmCheckIn = new FrmCheckIn(idReserva, RutUsuario);
-                    frmCheckIn.ShowDialog();
+                    if (estReserva == "Reservado")
+                    {
+                        int idReserva = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["id_reserva"].Value);
+                        int idDepa = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["departamento_id_departamento"].Value);
+
+                        FrmCheckIn frmCheckIn = new FrmCheckIn(idReserva, RutUsuario, idDepa);
+                        frmCheckIn.ShowDialog();
+                    }
+                    else if (estReserva == "En Proceso")
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "El check-In ya fué realizado para esta reserva, por favor seleccione una reserva válida.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Esta reserva ya se encuentra finalizada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
+                }
+                else
+                {
+                    // Mostrar un mensaje de error si no se ha seleccionado una reserva
+                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione una reserva para realizar el check-in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnCheckOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Verificar si se ha seleccionado una fila en el DataGridView
+                if (DGVListar.SelectedRows.Count > 0)
+                {
+                    String estReserva = Convert.ToString(DGVListar.SelectedRows[0].Cells["estado_reserva"].Value);
+
+                    if (estReserva == "Reservado")
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Esta reserva aún no ha pasado por el check-in", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (estReserva == "En Proceso")
+                    {
+                        int idReserva = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["id_reserva"].Value);
+                        int idDepa = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["departamento_id_departamento"].Value);
+
+                        FrmCheckOut frmCheckOut = new FrmCheckOut(idReserva, RutUsuario, idDepa);
+                        frmCheckOut.ShowDialog();
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, "Esta reserva ya se encuentra finalizada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
                 else
                 {

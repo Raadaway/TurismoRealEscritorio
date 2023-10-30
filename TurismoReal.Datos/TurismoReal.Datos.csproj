@@ -76,6 +76,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="DDActualizarEstados.cs" />
     <Compile Include="DDAdministrador.cs" />
     <Compile Include="DDArticulo.cs" />
     <Compile Include="DDCheckIn.cs" />

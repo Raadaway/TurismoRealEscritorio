@@ -74,6 +74,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="NActualizarEstados.cs" />
     <Compile Include="NAdministrador.cs" />
     <Compile Include="NArticulo.cs" />
     <Compile Include="NCheckIn.cs" />
