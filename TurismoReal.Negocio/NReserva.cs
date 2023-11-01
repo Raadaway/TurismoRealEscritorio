@@ -51,6 +51,7 @@ namespace TurismoReal.Negocio
 
         public bool AgregarReserva(Reserva reserva)
         {
+
             try
             {
                 // Puedes realizar validaciones adicionales aquí antes de llamar a la capa de datos

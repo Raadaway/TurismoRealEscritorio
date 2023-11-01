@@ -18,11 +18,17 @@ namespace TurismoReal.Presentacion
 
         private int idDepartamento; // Campo para almacenar el ID del departamento
 
-        // Constructor que acepta el ID del departamento como argumento
-        public FrmServicio(int idDepartamento)
+        public FrmServicio()
         {
             InitializeComponent();
+        }
+
+        // Constructor que acepta el ID del departamento como argumento
+        public FrmServicio(int idDepartamento) : this()
+        {
             this.idDepartamento = idDepartamento; // Almacena el ID del departamento
+            TabGeneral.SelectedIndex = 1;
+            SetIdDepartamento(idDepartamento);
         }
 
         private void FrmServicio_Load(object sender, EventArgs e)

@@ -373,10 +373,6 @@ namespace TurismoReal.Presentacion
                 int idDepartamento = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["ID"].Value);
                 // Crea una nueva instancia de FrmServicio
                 FrmServicio frmServicio = new FrmServicio(idDepartamento);
-                // Configura el valor del idDepartamento utilizando el método SetIdDepartamento
-                frmServicio.SetIdDepartamento(idDepartamento);
-                // Redirige a la ventana de Servicio
-                frmServicio.TabGeneral.SelectTab("Agregar");
                 frmServicio.ShowDialog();
             }
             else
@@ -393,12 +389,6 @@ namespace TurismoReal.Presentacion
 
                 // Crea una nueva instancia de FrmInventario
                 FrmInventario frmInventario = new FrmInventario(idDepartamento);
-
-                // Configura el valor del idDepartamento utilizando el método SetIdDepartamento
-                frmInventario.SetIdDepartamento(idDepartamento);
-
-                // Redirige a la ventana de Inventario
-                frmInventario.TabGeneral.SelectTab("Agregar");
                 frmInventario.ShowDialog();
             }
             else
