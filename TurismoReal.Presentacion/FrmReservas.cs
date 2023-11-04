@@ -128,11 +128,6 @@ namespace TurismoReal.Presentacion
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void metroDateTime1_ValueChanged(object sender, EventArgs e)
         {
 
@@ -171,7 +166,7 @@ namespace TurismoReal.Presentacion
                         int idDepa = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["departamento_id_departamento"].Value);
 
                         FrmCheckIn frmCheckIn = new FrmCheckIn(idReserva, RutUsuario, idDepa);
-                        frmCheckIn.ShowDialog();
+                        frmCheckIn.Show();
                     }
                     else if (estReserva == "En Proceso")
                     {
@@ -214,7 +209,7 @@ namespace TurismoReal.Presentacion
                         int idDepa = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["departamento_id_departamento"].Value);
 
                         FrmCheckOut frmCheckOut = new FrmCheckOut(idReserva, RutUsuario, idDepa);
-                        frmCheckOut.ShowDialog();
+                        frmCheckOut.Show();
                     }
                     else
                     {

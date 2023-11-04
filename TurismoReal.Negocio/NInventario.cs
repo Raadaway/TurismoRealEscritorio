@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using TurismoReal.Datos;
 using TurismoReal.Entidades;
+using System.CodeDom;
 
 namespace TurismoReal.Negocio
 {
@@ -23,6 +24,20 @@ namespace TurismoReal.Negocio
             {
                 // Puedes manejar la excepción, registrar el error o mostrar un mensaje de error si es necesario
                 return null; // Puedes devolver un DataTable vacío o null en caso de error
+            }
+        }
+
+        public static List<Inventario> ListarInventarioPorId(int idDepa)
+        {
+            DDInventario datos = new DDInventario();
+
+            try
+            {
+                return datos.ListarInventarioPorIdDepa(idDepa);
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
 

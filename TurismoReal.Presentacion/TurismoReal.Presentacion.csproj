@@ -95,6 +95,12 @@
     <Compile Include="FrmCheckIn.Designer.cs">
       <DependentUpon>FrmCheckIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmChecklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChecklist.Designer.cs">
+      <DependentUpon>FrmChecklist.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCheckOut.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCheckIn.resx">
       <DependentUpon>FrmCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChecklist.resx">
+      <DependentUpon>FrmChecklist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCheckOut.resx">
       <DependentUpon>FrmCheckOut.cs</DependentUpon>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using TurismoReal.Datos.WSportafolio;
 using TurismoReal.Entidades;
+using TurismoReal.Entidades.WSportafolio;
 
 namespace TurismoReal.Datos
 {
@@ -13,15 +14,15 @@ namespace TurismoReal.Datos
     {
         public DataTable ListarInventario()
         {
-            WSPortafolioClient client = null;
+            WSportafolio.WSPortafolioClient client = null;
             DataTable dataTable = new DataTable();
 
             try
             {
-                client = new WSPortafolioClient();
+                client = new WSportafolio.WSPortafolioClient();
 
                 // Llamamos al método del servicio web para obtener una lista de inventario
-                inventario[] lista = client.listarInventario();
+                WSportafolio.inventario[] lista = client.listarInventario();
 
                 // Verificar si hay registros antes de continuar
                 if (lista != null && lista.Length > 0)
@@ -62,12 +63,55 @@ namespace TurismoReal.Datos
             }
         }
 
+        public List<Inventario> ListarInventarioPorIdDepa(int idDepa)
+        {
+            WSportafolio.WSPortafolioClient client = null;
+            List<Inventario> lista = new List<Inventario>();
+
+            try
+            {
+                client = new WSportafolio.WSPortafolioClient();
+                var inventarioWS = client.listarInventarioPorIdDepa(idDepa);
+
+                if (inventarioWS != null)
+                {
+                    foreach (var invWS in inventarioWS)
+                    {
+                        Inventario inv = new Inventario
+                        {
+                            id_articulo = invWS.id_articulo,
+                            id_departamento = invWS.id_departamento,
+                            cantidad = invWS.cantidad,
+                            nombre = invWS.nom_articulo,
+                            precio = invWS.precio
+                        };
+
+                        lista.Add(inv);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones o registro de errores
+                throw ex;
+            }
+            finally
+            {
+                if (client != null)
+                {
+                    client.Close();
+                }
+            }
+
+            return lista;
+        }
+
 
         public bool AgregarInventario(int idArticulo, int idDepartamento, int cantidad)
         {
             try
             {
-                WSPortafolioClient client = new WSPortafolioClient(); // Suponiendo que tienes una instancia del cliente proxy
+                WSportafolio.WSPortafolioClient client = new WSportafolio.WSPortafolioClient(); // Suponiendo que tienes una instancia del cliente proxy
 
                 // Llamar al procedimiento agregarInventario del servicio web, pasando los IDs del artículo y departamento
                 return client.agregarInventario(idArticulo, idDepartamento, cantidad);
@@ -81,11 +125,11 @@ namespace TurismoReal.Datos
 
         public bool ModificarInventario(Inventario inv)
         {
-            WSPortafolioClient client = null;
+            WSportafolio.WSPortafolioClient client = null;
 
             try
             {
-                client = new WSPortafolioClient();
+                client = new WSportafolio.WSPortafolioClient();
 
                 // Llama al procedimiento para modificar el inventario
                 bool success = client.modificarInventario(inv.id_departamento, inv.id_articulo, inv.cantidad);
@@ -109,11 +153,11 @@ namespace TurismoReal.Datos
         public bool EliminarInventario(int id_depa, int id_art)
         {
             bool ward = false;
-            WSPortafolioClient client = null;
+            WSportafolio.WSPortafolioClient client = null;
 
             try
             {
-                client = new WSPortafolioClient();
+                client = new WSportafolio.WSPortafolioClient();
 
                 // Llama al procedimiento eliminarInventario del servicio web
                 ward = client.eliminarInventario(id_depa, id_art);
@@ -144,15 +188,15 @@ namespace TurismoReal.Datos
 
         public DataTable ListarArticulo()
         {
-            WSPortafolioClient client = null;
+            WSportafolio.WSPortafolioClient client = null;
             DataTable dataTable = new DataTable();
 
             try
             {
-                client = new WSPortafolioClient();
+                client = new WSportafolio.WSPortafolioClient();
 
                 // Llamamos al método del servicio web para obtener una lista de administradores
-                articulo[] lista = client.listarArticulo();
+                WSportafolio.articulo[] lista = client.listarArticulo();
 
                 // Verificar si hay registros antes de continuar
                 if (lista != null && lista.Length > 0)
