@@ -17,6 +17,8 @@ namespace TurismoReal.Presentacion
 
         private int IdDepartamento;
         private int Total;
+        private Dictionary<int, int> CantidadesIniciales = new Dictionary<int, int>();
+        private bool CheckIn;
 
         public FrmChecklist()
         {
@@ -24,9 +26,24 @@ namespace TurismoReal.Presentacion
             lblPrecio.Text = Total.ToString();
         }
 
-        public FrmChecklist(int idDepa) : this()
+        public FrmChecklist(int idDepa, bool checkIn) : this()
         {
             IdDepartamento = idDepa;
+            CheckIn = checkIn;
+            LblTotal.Visible = false;
+            lblPrecio.Visible = false;
+        }
+
+        private static FrmChecklist instance;
+
+        public static FrmChecklist GetInstance(int idDepa)
+        {
+            if (instance == null)
+            {
+                instance = new FrmChecklist();
+                instance.IdDepartamento = idDepa;
+            }
+            return instance;
         }
 
         private void ListarInventarioPorIdDepa(int idDepa)
@@ -40,6 +57,13 @@ namespace TurismoReal.Presentacion
                 {
                     dgvInventario.DataSource = inv;
                     Formato();
+
+                    CantidadesIniciales.Clear();
+                    foreach (DataGridViewRow row in dgvInventario.Rows)
+                    {
+                        int cantidadInicial = Convert.ToInt32(row.Cells["cantidad"].Value);
+                        CantidadesIniciales[row.Index] = cantidadInicial;
+                    }
                 }
                 else
                 {
@@ -97,18 +121,26 @@ namespace TurismoReal.Presentacion
 
             if (selectedRow != null)
             {
-                // Obtiene el valor actual de la columna "clmnCantidad" como entero
+                int rowIndex = selectedRow.Index;
                 int cantidad = Convert.ToInt32(selectedRow.Cells["cantidad"].Value);
-
-                // Suma 1 al valor actual
-                cantidad++;
-
-                // Actualiza el valor en la celda
-                selectedRow.Cells["cantidad"].Value = cantidad;
-
                 int precio = Convert.ToInt32(selectedRow.Cells["precio"].Value);
-                Total -= precio;
-                lblPrecio.Text = Total.ToString();
+
+                if (CheckIn)
+                {
+                    cantidad++;
+                    selectedRow.Cells["cantidad"].Value = cantidad;
+                }
+                else
+                {
+                    // Comprueba si el nuevo valor es menor o igual al valor inicial
+                    if (cantidad + 1 <= CantidadesIniciales[rowIndex])
+                    {
+                        cantidad++;
+                        selectedRow.Cells["cantidad"].Value = cantidad;
+                        Total -= precio;
+                        lblPrecio.Text = Total.ToString();
+                    }
+                }
             }
         }
 
@@ -118,18 +150,60 @@ namespace TurismoReal.Presentacion
 
             if (selectedRow != null)
             {
-                // Obtiene el valor actual de la columna "clmnCantidad" como entero
+                int rowIndex = selectedRow.Index;
                 int cantidad = Convert.ToInt32(selectedRow.Cells["cantidad"].Value);
-
-                // Suma 1 al valor actual
-                cantidad--;
-
-                // Actualiza el valor en la celda
-                selectedRow.Cells["cantidad"].Value = cantidad;
-
                 int precio = Convert.ToInt32(selectedRow.Cells["precio"].Value);
-                Total += precio;
-                lblPrecio.Text = Total.ToString();
+
+                if (CheckIn)
+                {
+                    cantidad--;
+                    selectedRow.Cells["cantidad"].Value = cantidad;
+                }
+                else
+                {
+                    // Comprueba si el nuevo valor es menor o igual al valor inicial
+                    if (cantidad - 1 <= CantidadesIniciales[rowIndex])
+                    {
+                        cantidad--;
+                        selectedRow.Cells["cantidad"].Value = cantidad;
+                        Total += precio;
+                        lblPrecio.Text = Total.ToString();
+                    }
+                }
+            }
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (CheckIn)
+            {
+                foreach (DataGridViewRow row in dgvInventario.Rows)
+                {
+                    int idArticulo = Convert.ToInt32(row.Cells["id_articulo"].Value);
+                    int cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
+
+                    NInventario.ModificarInventario(IdDepartamento, idArticulo, cantidad);
+                }
+                this.Close();
+            }
+            else
+            {
+                FrmCheckOut frmCheckOut = Application.OpenForms.OfType<FrmCheckOut>().FirstOrDefault();
+
+                if (frmCheckOut != null)
+                {
+                    foreach (DataGridViewRow row in dgvInventario.Rows)
+                    {
+                        int idArticulo = Convert.ToInt32(row.Cells["id_articulo"].Value);
+                        int cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
+
+                        NInventario.ModificarInventario(IdDepartamento, idArticulo, cantidad);
+
+                        int precio = Convert.ToInt32(lblPrecio.Text);
+                        frmCheckOut.ActualizarPrecio(precio);
+                    }
+                    this.Hide();
+                }
             }
         }
     }

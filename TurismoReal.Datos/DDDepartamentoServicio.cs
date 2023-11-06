@@ -43,31 +43,46 @@ namespace TurismoReal.Datos
             }
         }
 
-        /*public List<DepaServicioSimple> ListarDepaServicio()
+        public List<DepaServicioSimple> ListarDepaServicio()
         {
+            WSportafolio.WSPortafolioClient client = null;
+            List<DepaServicioSimple> lista = new List<DepaServicioSimple>();
+
             try
             {
-                WSPortafolioClient client = new WSPortafolioClient();
+                client = new WSportafolio.WSPortafolioClient();
+                var depServWebService = client.listarDepaServicio();
 
-                // Llamamos al método del servicio web para obtener una lista de servicios
-                depaServicioSimple[] lista = client.listarDepaServicio();
-
-                // Convierte el array de servicios del servicio web a una lista
-                List<DepaServicioSimple> listaServicios = lista.Select(s => new DepaServicioSimple
+                if (depServWebService != null)
                 {
-                    id_servicio = s.id_servicio,
-                    id_depa = s.id_depa,
-                    nom_servicio = s.nom_servicio
-                }).ToList();
+                    foreach (var DepServWS in depServWebService)
+                    {
+                        DepaServicioSimple DepServ = new DepaServicioSimple
+                        {
+                            id_servicio = DepServWS.id_servicio,
+                            id_depa = DepServWS.id_depa,
+                            nom_servicio = DepServWS.nom_servicio
+                        };
 
-                return listaServicios;
+                        lista.Add(DepServ);
+                    }
+                }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones o registro de errores
                 throw ex;
             }
-        }*/
+            finally
+            {
+                if (client != null)
+                {
+                    client.Close();
+                }
+            }
+
+            return lista;
+        }
     }
 }
 

@@ -34,7 +34,7 @@ namespace TurismoReal.Presentacion
             this.CbSeleccionar = new System.Windows.Forms.CheckBox();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.LblTotal = new System.Windows.Forms.Label();
-            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnRefrescar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.DGVListar = new System.Windows.Forms.DataGridView();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -70,7 +70,7 @@ namespace TurismoReal.Presentacion
             this.Listado.Controls.Add(this.CbSeleccionar);
             this.Listado.Controls.Add(this.BtnEliminar);
             this.Listado.Controls.Add(this.LblTotal);
-            this.Listado.Controls.Add(this.BtnBuscar);
+            this.Listado.Controls.Add(this.BtnRefrescar);
             this.Listado.Controls.Add(this.TxtBuscar);
             this.Listado.Controls.Add(this.DGVListar);
             this.Listado.Location = new System.Drawing.Point(4, 22);
@@ -109,14 +109,14 @@ namespace TurismoReal.Presentacion
             this.LblTotal.TabIndex = 5;
             this.LblTotal.Text = "Total:";
             // 
-            // BtnBuscar
+            // BtnRefrescar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(314, 16);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(107, 26);
-            this.BtnBuscar.TabIndex = 4;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnRefrescar.Location = new System.Drawing.Point(314, 16);
+            this.BtnRefrescar.Name = "BtnRefrescar";
+            this.BtnRefrescar.Size = new System.Drawing.Size(107, 26);
+            this.BtnRefrescar.TabIndex = 4;
+            this.BtnRefrescar.Text = "Refrescar";
+            this.BtnRefrescar.UseVisualStyleBackColor = true;
             // 
             // TxtBuscar
             // 
@@ -285,7 +285,7 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.CheckBox CbSeleccionar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label LblTotal;
-        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.Button BtnRefrescar;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.DataGridView DGVListar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;

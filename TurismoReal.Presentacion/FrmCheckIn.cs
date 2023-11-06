@@ -149,5 +149,11 @@ namespace TurismoReal.Presentacion
                 MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnChecklist_Click(object sender, EventArgs e)
+        {
+            FrmChecklist frmChecklist = new FrmChecklist(IdDepartamento, true);
+            frmChecklist.Show();
+        }
     }
 }

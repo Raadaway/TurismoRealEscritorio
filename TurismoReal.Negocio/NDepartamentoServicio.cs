@@ -24,5 +24,19 @@ namespace TurismoReal.Negocio
                 return false;
             }
         }
+
+        public static List<DepaServicioSimple> ListarDepaServicio()
+        {
+            DDDepartamentoServicio datos = new DDDepartamentoServicio();
+
+            try
+            {
+                return datos.ListarDepaServicio();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

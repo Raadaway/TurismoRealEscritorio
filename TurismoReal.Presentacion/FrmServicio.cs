@@ -31,14 +31,72 @@ namespace TurismoReal.Presentacion
             SetIdDepartamento(idDepartamento);
         }
 
+        private void ListarInventario()
+        {
+            try
+            {
+                List<DepaServicioSimple> lista = NDepartamentoServicio.ListarDepaServicio();
+
+                if (lista != null)
+                {
+                    DGVListar.DataSource = lista;
+                    LblTotal.Text = "Total de registros: " + Convert.ToString(DGVListar.Rows.Count);
+                }
+                else
+                {
+                    DGVListar.DataSource = null; // Limpiar el control DataGridView
+                    LblTotal.Text = "No hay registros para mostrar";
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
+            }
+        }
+
         private void FrmServicio_Load(object sender, EventArgs e)
         {
-
+            ListarInventario();
         }
 
         public void SetIdDepartamento(int idDepartamento)
         {
             TxtIdDepartamento.Text = idDepartamento.ToString();
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string filtroTexto = TxtBuscar.Text;
+
+            if (DGVListar.DataSource != null)
+            {
+                DataTable dataTable = (DataTable)DGVListar.DataSource;
+                DataView dataView = dataTable.DefaultView;
+
+                try
+                {
+                    if (!string.IsNullOrEmpty(filtroTexto))
+                    {
+                        dataView.RowFilter = $"Convert(Id Departamento, 'System.String') LIKE '%{filtroTexto}%' OR Articulo LIKE '%{filtroTexto}%'";
+                    }
+                    else
+                    {
+                        dataView.RowFilter = string.Empty;
+                    }
+
+                    DGVListar.DataSource = dataView.ToTable();
+                    LblTotal.Text = "Total de registros: " + Convert.ToString(dataView.Count);
+                }
+                catch (Exception ex)
+                {
+                    // Manejar la excepción (por ejemplo, mostrar un mensaje al usuario o restaurar la vista original)
+                    MetroFramework.MetroMessageBox.Show(this, "Error al aplicar el filtro: " + ex.Message);
+                }
+            }
+            else
+            {
+                ListarInventario();
+            }
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)

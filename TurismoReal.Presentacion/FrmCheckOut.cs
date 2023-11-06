@@ -132,6 +132,12 @@ namespace TurismoReal.Presentacion
             return dataTable;
         }
 
+        public void ActualizarPrecio(int precio)
+        {
+            // Actualiza el lblPrecio en FrmCheckOut con el nuevo valor
+            txtMulta.Text = precio.ToString();
+        }
+
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -139,6 +145,13 @@ namespace TurismoReal.Presentacion
                 string firma = txtFirma.Text;
                 int multa = int.Parse(txtMulta.Text);
                 int pago = int.Parse(txtPago.Text);
+
+                FrmChecklist frmChecklist = Application.OpenForms.OfType<FrmChecklist>().FirstOrDefault();
+                if (frmChecklist != null)
+                {
+                    // Puedes usar Close() para cerrar el formulario o Hide() para ocultarlo
+                    frmChecklist.Close(); // O frmChecklist.Hide();
+                }
 
                 Reserva reserva = NReserva.ListarReservaPorId(IdReserva);
                 if (reserva.termino_reserva == DateTime.Now.Date)
@@ -168,7 +181,7 @@ namespace TurismoReal.Presentacion
 
         private void BtnChecklist_Click(object sender, EventArgs e)
         {
-            FrmChecklist frmChecklist = new FrmChecklist(IdDepartamento);
+            FrmChecklist frmChecklist = FrmChecklist.GetInstance(IdDepartamento);
             frmChecklist.Show();
         }
     }

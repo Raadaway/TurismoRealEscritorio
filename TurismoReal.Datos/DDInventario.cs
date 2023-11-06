@@ -31,6 +31,7 @@ namespace TurismoReal.Datos
                     dataTable.Columns.Add("Id Articulo", typeof(int));
                     dataTable.Columns.Add("Id Departamento", typeof(int));
                     dataTable.Columns.Add("Cantidad", typeof(int));
+                    dataTable.Columns.Add("Articulo", typeof(string));
 
                     foreach (var inv in lista)
                     {
@@ -41,6 +42,7 @@ namespace TurismoReal.Datos
                         row["Id Articulo"] = inv.id_articulo;
                         row["Id Departamento"] = inv.id_departamento;
                         row["Cantidad"] = inv.cantidad;
+                        row["Articulo"] = inv.nom_articulo;
 
                         // Agregar la fila al DataTable
                         dataTable.Rows.Add(row);
@@ -123,7 +125,7 @@ namespace TurismoReal.Datos
             }
         }
 
-        public bool ModificarInventario(Inventario inv)
+        public bool ModificarInventario(int idDepartamento, int idArticulo, int cantidad)
         {
             WSportafolio.WSPortafolioClient client = null;
 
@@ -132,7 +134,7 @@ namespace TurismoReal.Datos
                 client = new WSportafolio.WSPortafolioClient();
 
                 // Llama al procedimiento para modificar el inventario
-                bool success = client.modificarInventario(inv.id_departamento, inv.id_articulo, inv.cantidad);
+                bool success = client.modificarInventario(idDepartamento, idArticulo, cantidad);
 
                 return success;
             }

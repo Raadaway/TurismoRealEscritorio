@@ -26,11 +26,6 @@ namespace TurismoReal.Presentacion
         {
             this.idDepartamento = idDepartamento; // Almacena el ID del departamento
             TabGeneral.SelectedIndex = 1;
-            SetIdDepartamento(idDepartamento);
-        }
-
-        public void SetIdDepartamento(int idDepartamento)
-        {
             TxtIdDepartamento.Text = idDepartamento.ToString();
         }
 
@@ -72,7 +67,7 @@ namespace TurismoReal.Presentacion
                 {
                     if (!string.IsNullOrEmpty(filtroTexto))
                     {
-                        dataView.RowFilter = $"Convert(Id Departamento, 'System.String') LIKE '%{filtroTexto}%' OR Convert(Id Articulo, 'System.String') LIKE '%{filtroTexto}%'";
+                        dataView.RowFilter = $"Convert(Id Departamento, 'System.String') LIKE '%{filtroTexto}%' OR Articulo LIKE '%{filtroTexto}%'";
                     }
                     else
                     {
@@ -252,7 +247,7 @@ namespace TurismoReal.Presentacion
                             };
 
                             // Llamar al método de negocio para modificar el inventario
-                            bool resultado = NInventario.ModificarInventario(inv);
+                            bool resultado = NInventario.ModificarInventario(inv.id_departamento, inv.id_articulo, inv.cantidad);
 
                             if (resultado)
                             {
