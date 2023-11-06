@@ -216,5 +216,19 @@ namespace TurismoReal.Presentacion
             frmLogin.ShowDialog();
             this.Close();
         }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmServicio frm = new FrmServicio();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void inventarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmInventario frm = new FrmInventario();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
