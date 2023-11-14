@@ -170,28 +170,46 @@ namespace TurismoReal.Presentacion
             }
         }
 
-        
+
 
         private void DGVListar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-                this.Limpiar();
-                BtnModificar.Visible = true;
-                BtnAgregar.Visible = false;
+            this.Limpiar();
+            BtnModificar.Visible = true;
+            BtnAgregar.Visible = false;
+
+            if (DGVListar.CurrentRow != null)
+            {
                 TxtDireccion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Direccion"].Value);
                 TxtDescripcion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Descripcion"].Value);
                 TxtPrecio.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Precio"].Value);
                 TxtLatitud.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Latitud"].Value);
                 TxtLongitud.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Longitud"].Value);
                 TxtCapacidad.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Capacidad"].Value);
-                cBoxComuna.SelectedValue = Convert.ToInt32(DGVListar.CurrentRow.Cells["Comuna"].Value);
-                TabGeneral.SelectedIndex = 1;     
+
+                // Verificar si la celda no está vacía o nula antes de convertir
+                if (DGVListar.CurrentRow.Cells["Comuna"].Value != null)
+                {
+                    int comunaValue;
+                    if (int.TryParse(Convert.ToString(DGVListar.CurrentRow.Cells["Comuna"].Value), out comunaValue))
+                    {
+                        cBoxComuna.SelectedValue = comunaValue;
+                    }
+                    else
+                    {
+                        // Manejo de error, ya que la conversión falló
+                    }
+                }
+
+                TabGeneral.SelectedIndex = 1;
+            }
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
             try
             {
-                int idComuna;
+                int idComuna = (int)cBoxComuna.SelectedValue;
                 string direccion = TxtDireccion.Text;
                 string descripcion = TxtDescripcion.Text;
                 if (!int.TryParse(TxtPrecio.Text, out int precio))
@@ -223,14 +241,6 @@ namespace TurismoReal.Presentacion
                     MetroFramework.MetroMessageBox.Show(this, "El valor de cantidad de imágenes no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Sal del evento si la cantidad de imágenes no es válida
                 }
-
-                if (!int.TryParse(cBoxComuna.SelectedValue.ToString(), out idComuna))
-                {
-                    MetroFramework.MetroMessageBox.Show(this, "El valor del ID de la comuna no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Sal del evento si el ID de la comuna no es válido
-                }
-
-
 
                 // Llama al método de negocio para modificar el departamento
                 bool resultado = NDepartamento.ModificarDepartamento(1, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna);
@@ -373,7 +383,8 @@ namespace TurismoReal.Presentacion
                 int idDepartamento = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["ID"].Value);
                 // Crea una nueva instancia de FrmServicio
                 FrmServicio frmServicio = new FrmServicio(idDepartamento);
-                frmServicio.ShowDialog();
+                frmServicio.MdiParent = this.MdiParent;
+                frmServicio.Show();
             }
             else
             {
@@ -389,7 +400,8 @@ namespace TurismoReal.Presentacion
 
                 // Crea una nueva instancia de FrmInventario
                 FrmInventario frmInventario = new FrmInventario(idDepartamento);
-                frmInventario.ShowDialog();
+                frmInventario.MdiParent = this.MdiParent;
+                frmInventario.Show();
             }
             else
             {

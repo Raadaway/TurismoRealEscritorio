@@ -219,11 +219,11 @@ namespace TurismoReal.Presentacion
             // 
             this.cBoxComuna.FormattingEnabled = true;
             this.cBoxComuna.ItemHeight = 13;
-            this.cBoxComuna.Location = new System.Drawing.Point(479, 158);
+            this.cBoxComuna.Location = new System.Drawing.Point(476, 123);
             this.cBoxComuna.Margin = new System.Windows.Forms.Padding(2);
             this.cBoxComuna.Name = "cBoxComuna";
             this.cBoxComuna.Size = new System.Drawing.Size(178, 21);
-            this.cBoxComuna.TabIndex = 35;
+            this.cBoxComuna.TabIndex = 6;
             // 
             // BtnModificar
             // 
@@ -238,7 +238,7 @@ namespace TurismoReal.Presentacion
             // LblIdComuna
             // 
             this.LblIdComuna.AutoSize = true;
-            this.LblIdComuna.Location = new System.Drawing.Point(413, 162);
+            this.LblIdComuna.Location = new System.Drawing.Point(410, 127);
             this.LblIdComuna.Name = "LblIdComuna";
             this.LblIdComuna.Size = new System.Drawing.Size(60, 13);
             this.LblIdComuna.TabIndex = 34;
@@ -247,7 +247,7 @@ namespace TurismoReal.Presentacion
             // LblCantImagenes
             // 
             this.LblCantImagenes.AutoSize = true;
-            this.LblCantImagenes.Location = new System.Drawing.Point(392, 126);
+            this.LblCantImagenes.Location = new System.Drawing.Point(389, 91);
             this.LblCantImagenes.Name = "LblCantImagenes";
             this.LblCantImagenes.Size = new System.Drawing.Size(81, 13);
             this.LblCantImagenes.TabIndex = 33;
@@ -255,22 +255,22 @@ namespace TurismoReal.Presentacion
             // 
             // TxtCantImagenes
             // 
-            this.TxtCantImagenes.Location = new System.Drawing.Point(479, 123);
+            this.TxtCantImagenes.Location = new System.Drawing.Point(476, 88);
             this.TxtCantImagenes.Name = "TxtCantImagenes";
             this.TxtCantImagenes.Size = new System.Drawing.Size(178, 20);
-            this.TxtCantImagenes.TabIndex = 6;
+            this.TxtCantImagenes.TabIndex = 5;
             // 
             // TxtCapacidad
             // 
-            this.TxtCapacidad.Location = new System.Drawing.Point(479, 87);
+            this.TxtCapacidad.Location = new System.Drawing.Point(476, 52);
             this.TxtCapacidad.Name = "TxtCapacidad";
             this.TxtCapacidad.Size = new System.Drawing.Size(178, 20);
-            this.TxtCapacidad.TabIndex = 5;
+            this.TxtCapacidad.TabIndex = 4;
             // 
             // LblPrecio
             // 
             this.LblPrecio.AutoSize = true;
-            this.LblPrecio.Location = new System.Drawing.Point(113, 126);
+            this.LblPrecio.Location = new System.Drawing.Point(113, 90);
             this.LblPrecio.Name = "LblPrecio";
             this.LblPrecio.Size = new System.Drawing.Size(37, 13);
             this.LblPrecio.TabIndex = 23;
@@ -278,10 +278,10 @@ namespace TurismoReal.Presentacion
             // 
             // TxtPrecio
             // 
-            this.TxtPrecio.Location = new System.Drawing.Point(156, 124);
+            this.TxtPrecio.Location = new System.Drawing.Point(156, 87);
             this.TxtPrecio.Name = "TxtPrecio";
             this.TxtPrecio.Size = new System.Drawing.Size(178, 20);
-            this.TxtPrecio.TabIndex = 2;
+            this.TxtPrecio.TabIndex = 1;
             // 
             // BtnCancelar
             // 
@@ -304,24 +304,25 @@ namespace TurismoReal.Presentacion
             // 
             // TxtLatitud
             // 
-            this.TxtLatitud.Location = new System.Drawing.Point(156, 159);
+            this.TxtLatitud.Location = new System.Drawing.Point(156, 123);
             this.TxtLatitud.Name = "TxtLatitud";
             this.TxtLatitud.Size = new System.Drawing.Size(178, 20);
-            this.TxtLatitud.TabIndex = 3;
+            this.TxtLatitud.TabIndex = 2;
             // 
             // TxtLongitud
             // 
-            this.TxtLongitud.Location = new System.Drawing.Point(479, 52);
+            this.TxtLongitud.Location = new System.Drawing.Point(156, 159);
             this.TxtLongitud.Name = "TxtLongitud";
             this.TxtLongitud.Size = new System.Drawing.Size(178, 20);
-            this.TxtLongitud.TabIndex = 4;
+            this.TxtLongitud.TabIndex = 3;
             // 
             // TxtDescripcion
             // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(156, 87);
+            this.TxtDescripcion.Location = new System.Drawing.Point(476, 159);
+            this.TxtDescripcion.Multiline = true;
             this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(178, 20);
-            this.TxtDescripcion.TabIndex = 1;
+            this.TxtDescripcion.Size = new System.Drawing.Size(178, 77);
+            this.TxtDescripcion.TabIndex = 7;
             // 
             // TxtDireccion
             // 
@@ -333,7 +334,7 @@ namespace TurismoReal.Presentacion
             // LblDescripcion
             // 
             this.LblDescripcion.AutoSize = true;
-            this.LblDescripcion.Location = new System.Drawing.Point(87, 90);
+            this.LblDescripcion.Location = new System.Drawing.Point(407, 162);
             this.LblDescripcion.Name = "LblDescripcion";
             this.LblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.LblDescripcion.TabIndex = 6;
@@ -342,7 +343,7 @@ namespace TurismoReal.Presentacion
             // LblCapacidad
             // 
             this.LblCapacidad.AutoSize = true;
-            this.LblCapacidad.Location = new System.Drawing.Point(412, 90);
+            this.LblCapacidad.Location = new System.Drawing.Point(409, 55);
             this.LblCapacidad.Name = "LblCapacidad";
             this.LblCapacidad.Size = new System.Drawing.Size(61, 13);
             this.LblCapacidad.TabIndex = 5;
@@ -351,7 +352,7 @@ namespace TurismoReal.Presentacion
             // LblLongitud
             // 
             this.LblLongitud.AutoSize = true;
-            this.LblLongitud.Location = new System.Drawing.Point(425, 55);
+            this.LblLongitud.Location = new System.Drawing.Point(102, 162);
             this.LblLongitud.Name = "LblLongitud";
             this.LblLongitud.Size = new System.Drawing.Size(48, 13);
             this.LblLongitud.TabIndex = 3;
@@ -360,7 +361,7 @@ namespace TurismoReal.Presentacion
             // LblLatitud
             // 
             this.LblLatitud.AutoSize = true;
-            this.LblLatitud.Location = new System.Drawing.Point(111, 162);
+            this.LblLatitud.Location = new System.Drawing.Point(111, 126);
             this.LblLatitud.Name = "LblLatitud";
             this.LblLatitud.Size = new System.Drawing.Size(39, 13);
             this.LblLatitud.TabIndex = 2;

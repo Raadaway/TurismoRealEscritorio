@@ -28,10 +28,12 @@ namespace TurismoReal.Presentacion
                 usuariosToolStripMenuItem.Visible = false;
                 serviciosExtraToolStripMenuItem.Visible = false;
                 departamentosToolStripMenuItem.Visible = false;
+                this.Focus();
                 MetroFramework.MetroMessageBox.Show(this, "Hola Funcionario", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                this.Focus();
                 MetroFramework.MetroMessageBox.Show(this, "Hola Administrador", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }

@@ -234,12 +234,13 @@ namespace TurismoReal.Presentacion
             // 
             // BtnModificar
             // 
-            this.BtnModificar.Location = new System.Drawing.Point(234, 301);
+            this.BtnModificar.Location = new System.Drawing.Point(234, 260);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(122, 35);
             this.BtnModificar.TabIndex = 21;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Visible = false;
             // 
             // BtnCancelar
             // 

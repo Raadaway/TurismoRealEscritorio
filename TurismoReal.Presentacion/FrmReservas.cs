@@ -166,6 +166,7 @@ namespace TurismoReal.Presentacion
                         int idDepa = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["departamento_id_departamento"].Value);
 
                         FrmCheckIn frmCheckIn = new FrmCheckIn(idReserva, RutUsuario, idDepa);
+                        frmCheckIn.MdiParent = this.MdiParent;
                         frmCheckIn.Show();
                     }
                     else if (estReserva == "En Proceso")
@@ -209,6 +210,7 @@ namespace TurismoReal.Presentacion
                         int idDepa = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["departamento_id_departamento"].Value);
 
                         FrmCheckOut frmCheckOut = new FrmCheckOut(idReserva, RutUsuario, idDepa);
+                        frmCheckOut.MdiParent = this.MdiParent;
                         frmCheckOut.Show();
                     }
                     else

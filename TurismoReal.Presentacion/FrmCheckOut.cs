@@ -39,11 +39,6 @@ namespace TurismoReal.Presentacion
             }
         }
 
-        private void txtMulta_TextChanged(object sender, EventArgs e)
-        {
-            txtPago.Text = txtMulta.Text;
-        }
-
         private void FrmCheckOut_Load(object sender, EventArgs e)
         {
             ListarCheckOut();
@@ -144,7 +139,6 @@ namespace TurismoReal.Presentacion
             {
                 string firma = txtFirma.Text;
                 int multa = int.Parse(txtMulta.Text);
-                int pago = int.Parse(txtPago.Text);
 
                 FrmChecklist frmChecklist = Application.OpenForms.OfType<FrmChecklist>().FirstOrDefault();
                 if (frmChecklist != null)
@@ -156,7 +150,7 @@ namespace TurismoReal.Presentacion
                 Reserva reserva = NReserva.ListarReservaPorId(IdReserva);
                 if (reserva.termino_reserva == DateTime.Now.Date)
                 {
-                    bool resultado = NCheckOut.AgregarCheckOut(multa, pago, firma, IdReserva, RutUsuario);
+                    bool resultado = NCheckOut.AgregarCheckOut(multa, multa, firma, IdReserva, RutUsuario);
                     bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaADisponibleReserva(IdDepartamento);
 
                     if (resultado && nuevoEstado)
@@ -182,6 +176,7 @@ namespace TurismoReal.Presentacion
         private void BtnChecklist_Click(object sender, EventArgs e)
         {
             FrmChecklist frmChecklist = FrmChecklist.GetInstance(IdDepartamento);
+            frmChecklist.MdiParent = this.MdiParent;
             frmChecklist.Show();
         }
     }

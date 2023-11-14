@@ -153,6 +153,7 @@ namespace TurismoReal.Presentacion
         private void btnChecklist_Click(object sender, EventArgs e)
         {
             FrmChecklist frmChecklist = new FrmChecklist(IdDepartamento, true);
+            frmChecklist.MdiParent = this.MdiParent;
             frmChecklist.Show();
         }
     }

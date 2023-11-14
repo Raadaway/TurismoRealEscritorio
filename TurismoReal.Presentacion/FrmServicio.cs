@@ -29,9 +29,10 @@ namespace TurismoReal.Presentacion
             this.idDepartamento = idDepartamento; // Almacena el ID del departamento
             TabGeneral.SelectedIndex = 1;
             SetIdDepartamento(idDepartamento);
+            TxtIdDepartamento.ReadOnly = true;
         }
 
-        private void ListarInventario()
+        private void ListarServicios()
         {
             try
             {
@@ -56,7 +57,7 @@ namespace TurismoReal.Presentacion
 
         private void FrmServicio_Load(object sender, EventArgs e)
         {
-            ListarInventario();
+            ListarServicios();
         }
 
         public void SetIdDepartamento(int idDepartamento)
@@ -95,7 +96,7 @@ namespace TurismoReal.Presentacion
             }
             else
             {
-                ListarInventario();
+                ListarServicios();
             }
         }
 
