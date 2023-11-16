@@ -539,9 +539,6 @@
     <WCFMetadataStorage Include="Connected Services\WSportafolio\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\WSportafolio\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -552,6 +549,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

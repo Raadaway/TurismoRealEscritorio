@@ -37,6 +37,7 @@ namespace TurismoReal.Presentacion
             this.DGVListar = new System.Windows.Forms.DataGridView();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Agregar = new System.Windows.Forms.TabPage();
+            this.btnChecklist = new System.Windows.Forms.Button();
             this.txtPago = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdReserva = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@ namespace TurismoReal.Presentacion
             this.LblFirmaCliente = new System.Windows.Forms.Label();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.btnChecklist = new System.Windows.Forms.Button();
             this.TabGeneral.SuspendLayout();
             this.Listado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVListar)).BeginInit();
@@ -70,7 +70,7 @@ namespace TurismoReal.Presentacion
             this.Listado.Controls.Add(this.DGVListar);
             this.Listado.Location = new System.Drawing.Point(4, 22);
             this.Listado.Name = "Listado";
-            this.Listado.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Listado.Padding = new System.Windows.Forms.Padding(3);
             this.Listado.Size = new System.Drawing.Size(766, 431);
             this.Listado.TabIndex = 0;
             this.Listado.Text = "Listar";
@@ -106,6 +106,9 @@ namespace TurismoReal.Presentacion
             this.DGVListar.AllowUserToAddRows = false;
             this.DGVListar.AllowUserToDeleteRows = false;
             this.DGVListar.AllowUserToOrderColumns = true;
+            this.DGVListar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVListar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seleccionar});
@@ -142,11 +145,21 @@ namespace TurismoReal.Presentacion
             this.Agregar.Text = "Agregar";
             this.Agregar.UseVisualStyleBackColor = true;
             // 
+            // btnChecklist
+            // 
+            this.btnChecklist.Location = new System.Drawing.Point(323, 62);
+            this.btnChecklist.Name = "btnChecklist";
+            this.btnChecklist.Size = new System.Drawing.Size(122, 35);
+            this.btnChecklist.TabIndex = 28;
+            this.btnChecklist.Text = "CheckList Artículos";
+            this.btnChecklist.UseVisualStyleBackColor = true;
+            this.btnChecklist.Click += new System.EventHandler(this.btnChecklist_Click);
+            // 
             // txtPago
             // 
             this.txtPago.Enabled = false;
             this.txtPago.Location = new System.Drawing.Point(462, 158);
-            this.txtPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPago.Margin = new System.Windows.Forms.Padding(2);
             this.txtPago.Name = "txtPago";
             this.txtPago.Size = new System.Drawing.Size(178, 20);
             this.txtPago.TabIndex = 27;
@@ -166,7 +179,7 @@ namespace TurismoReal.Presentacion
             // 
             this.txtIdReserva.Enabled = false;
             this.txtIdReserva.Location = new System.Drawing.Point(165, 158);
-            this.txtIdReserva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdReserva.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdReserva.Name = "txtIdReserva";
             this.txtIdReserva.Size = new System.Drawing.Size(178, 20);
             this.txtIdReserva.TabIndex = 25;
@@ -184,7 +197,7 @@ namespace TurismoReal.Presentacion
             // 
             // txtFirma
             // 
-            this.txtFirma.Location = new System.Drawing.Point(467, 219);
+            this.txtFirma.Location = new System.Drawing.Point(462, 219);
             this.txtFirma.Name = "txtFirma";
             this.txtFirma.Size = new System.Drawing.Size(178, 20);
             this.txtFirma.TabIndex = 22;
@@ -216,16 +229,6 @@ namespace TurismoReal.Presentacion
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // btnChecklist
-            // 
-            this.btnChecklist.Location = new System.Drawing.Point(323, 62);
-            this.btnChecklist.Name = "btnChecklist";
-            this.btnChecklist.Size = new System.Drawing.Size(122, 35);
-            this.btnChecklist.TabIndex = 28;
-            this.btnChecklist.Text = "CheckList Artículos";
-            this.btnChecklist.UseVisualStyleBackColor = true;
-            this.btnChecklist.Click += new System.EventHandler(this.btnChecklist_Click);
             // 
             // FrmCheckIn
             // 

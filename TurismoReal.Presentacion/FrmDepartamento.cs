@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -335,8 +336,7 @@ namespace TurismoReal.Presentacion
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            this.Limpiar();
-            TabGeneral.SelectedIndex = 0;
+
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -351,7 +351,7 @@ namespace TurismoReal.Presentacion
             try
             {
                 string direccion = TxtDireccion.Text;
-                string descripcion = TxtDescripcion.Text; // Asegúrate de obtener este valor desde tu interfaz de usuario
+                string descripcion = TxtDescripcion.Text;
                 int precio = int.Parse(TxtPrecio.Text);
                 float latitud = float.Parse(TxtLatitud.Text);
                 float longitud = float.Parse(TxtLongitud.Text);
@@ -407,6 +407,11 @@ namespace TurismoReal.Presentacion
             {
                 MessageBox.Show("Por favor, seleccione un registro antes de agregar inventario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cBoxComuna_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

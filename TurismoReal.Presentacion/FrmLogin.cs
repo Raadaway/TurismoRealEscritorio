@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using TurismoReal.Presentacion.WSportafolio;
 using TurismoReal.Entidades;
+using MetroFramework.Controls;
 
 namespace TurismoReal.Presentacion
 {
@@ -30,7 +31,30 @@ namespace TurismoReal.Presentacion
 
         }
 
-        private void BtnAcceder_Click(object sender, EventArgs e)
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Llamar al método de inicio de sesión cuando se presiona Enter
+                tileAcceder_Click(sender, e);
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Llamar al método de inicio de sesión cuando se presiona Enter
+                tileAcceder_Click(sender, e);
+            }
+        }
+
+        private void tileAcceder_Click(object sender, EventArgs e)
         {
             try
             {
@@ -42,20 +66,22 @@ namespace TurismoReal.Presentacion
                 loginC login = cliente.metodoLogin(user, pass);
                 String tipoUsuario = login.tipo_usuario;
                 int rut = login.rut;
+                string nomUsuario = login.usuario;
 
                 if (tipoUsuario != null)
                 {
                     if (tipoUsuario == "admin" || tipoUsuario == "funcionario")
                     {
+                        MetroFramework.MetroMessageBox.Show(this, "Bienvenido " + nomUsuario, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         FrmPrincipal frm = new FrmPrincipal(tipoUsuario, rut);
                         this.Hide();
                         frm.ShowDialog();
                         this.Close();
-                        
+
                     }
                     else if (tipoUsuario == "cliente")
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Usuario Cliente no tiene los permisos suficientes", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MetroFramework.MetroMessageBox.Show(this, "Usuario Cliente no tiene los permisos suficientes", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
@@ -70,29 +96,6 @@ namespace TurismoReal.Presentacion
             catch (Exception ex)
             {
                 MetroFramework.MetroMessageBox.Show(this, ex.Message, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void Cancelar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                // Llamar al método de inicio de sesión cuando se presiona Enter
-                BtnAcceder_Click(sender, e);
-            }
-        }
-
-        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                // Llamar al método de inicio de sesión cuando se presiona Enter
-                BtnAcceder_Click(sender, e);
             }
         }
     }

@@ -22,20 +22,11 @@ namespace TurismoReal.Presentacion
             TipoUsuario = tipoUsuario;
             Rut = rut;
 
-            // Verifica si el tipo de usuario es "funcionario"
             if (tipoUsuario == "funcionario")
             {
                 usuariosToolStripMenuItem.Visible = false;
                 serviciosExtraToolStripMenuItem.Visible = false;
                 departamentosToolStripMenuItem.Visible = false;
-                this.Focus();
-                MetroFramework.MetroMessageBox.Show(this, "Hola Funcionario", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                this.Focus();
-                MetroFramework.MetroMessageBox.Show(this, "Hola Administrador", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
         }
 
