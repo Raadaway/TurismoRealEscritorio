@@ -31,6 +31,7 @@ namespace TurismoReal.Datos
                     dataTable.Columns.Add("Latitud", typeof(float));
                     dataTable.Columns.Add("Longitud", typeof(float));
                     dataTable.Columns.Add("Capacidad", typeof(int));
+                    dataTable.Columns.Add("Habitaciones", typeof(int));
                     dataTable.Columns.Add("Comuna", typeof(string));
                     dataTable.Columns.Add("Estado", typeof(string));
 
@@ -44,6 +45,7 @@ namespace TurismoReal.Datos
                         row["Latitud"] = dep.latitud;
                         row["Longitud"] = dep.longitud;
                         row["Capacidad"] = dep.cap_personas;
+                        row["Habitaciones"] = dep.habitaciones;
                         row["Comuna"] = dep.nom_comuna;
                         row["Estado"] = dep.desc_estado;
                         dataTable.Rows.Add(row);
@@ -67,7 +69,7 @@ namespace TurismoReal.Datos
             return dataTable;
         }
 
-        public bool AgregarDepartamento(string direccion, string descripcion, int precio, float latitud, float longitud, int capacidad_persona, int cantidad_img, int id_comuna)
+        public bool AgregarDepartamento(string direccion, string descripcion, int precio, float latitud, float longitud, int capacidad_persona, int cantidad_img, int habitaciones, int id_comuna)
         {
             bool ward = false;
             WSPortafolioClient client = null;
@@ -75,7 +77,7 @@ namespace TurismoReal.Datos
             try
             {
                 client = new WSPortafolioClient();
-                ward = client.agregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidad_persona, cantidad_img, id_comuna);
+                ward = client.agregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidad_persona, cantidad_img, habitaciones, id_comuna);
             }
             catch (Exception ex)
             {
@@ -94,12 +96,12 @@ namespace TurismoReal.Datos
 
 
 
-        public bool ModificarDepartamento(int id_departamento, string direccion, string descripcion, int precio, float latitud, float longitud, int capacidadPersona, int cantidadImagenes, int idComuna)
+        public bool ModificarDepartamento(int id_departamento, string direccion, string descripcion, int precio, float latitud, float longitud, int capacidadPersona, int cantidadImagenes, int habitaciones, int idComuna)
         {
             try
             {
                 WSPortafolioClient client = new WSPortafolioClient();
-                bool resultado = client.modificarDepartamento(id_departamento, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna);
+                bool resultado = client.modificarDepartamento(id_departamento, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, habitaciones, idComuna);
                 client.Close();
                 return resultado;
             }
@@ -125,66 +127,6 @@ namespace TurismoReal.Datos
                 return false;
             }
         }
-        
-        /*public DataTable ListarAdministradorPorRut(int rut)
-        {
-            WSPortafolioClient client = null;
-            DataTable dataTable = new DataTable();
-
-            try
-            {
-                client = new WSPortafolioClient();
-
-                // Llamamos al método del servicio web para obtener una lista de todos los administradores
-                administrador[] lista = client.listarAdministrador();
-
-                // Crear un DataTable con las mismas columnas que en el método ListarAdministrador
-                dataTable.Columns.Add("RUT", typeof(int));
-                dataTable.Columns.Add("DV", typeof(string));
-                dataTable.Columns.Add("Nombre", typeof(string));
-                dataTable.Columns.Add("ApellidoPaterno", typeof(string));
-                dataTable.Columns.Add("ApellidoMaterno", typeof(string));
-                dataTable.Columns.Add("Correo", typeof(string));
-                dataTable.Columns.Add("Usuario", typeof(string));
-                dataTable.Columns.Add("Contrasena", typeof(string));
-                dataTable.Columns.Add("Telefono", typeof(string));
-
-                // Filtrar los administradores por el RUT
-                foreach (var adm in lista)
-                {
-                    if (adm.rut == rut)
-                    {
-                        DataRow row = dataTable.NewRow();
-                        row["RUT"] = adm.rut;
-                        row["DV"] = adm.dv;
-                        row["Nombre"] = adm.nombre;
-                        row["ApellidoPaterno"] = adm.apellido_paterno;
-                        row["ApellidoMaterno"] = adm.apellido_materno;
-                        row["Correo"] = adm.correo;
-                        row["Usuario"] = adm.usuario;
-                        row["Contrasena"] = adm.contrasena;
-                        row["Telefono"] = adm.telefono;
-                        dataTable.Rows.Add(row);
-                    }
-                }
-
-                return dataTable;
-            }
-            catch (Exception ex)
-            {
-                // Manejo de excepciones o registro de errores
-                throw ex;
-            }
-            finally
-            {
-                if (client != null)
-                {
-                    client.Close();
-                }
-            }
-        }*/
-
-
     }
 }
 

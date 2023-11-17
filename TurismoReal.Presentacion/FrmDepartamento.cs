@@ -181,6 +181,7 @@ namespace TurismoReal.Presentacion
 
             if (DGVListar.CurrentRow != null)
             {
+                TxtIdDepa.Text = Convert.ToString(DGVListar.CurrentRow.Cells["ID"].Value);
                 TxtDireccion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Direccion"].Value);
                 TxtDescripcion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Descripcion"].Value);
                 TxtPrecio.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Precio"].Value);
@@ -213,6 +214,7 @@ namespace TurismoReal.Presentacion
                 int idComuna = (int)cBoxComuna.SelectedValue;
                 string direccion = TxtDireccion.Text;
                 string descripcion = TxtDescripcion.Text;
+                int idDepa = int.Parse(TxtIdDepa.Text);
                 if (!int.TryParse(TxtPrecio.Text, out int precio))
                 {
                     MetroFramework.MetroMessageBox.Show(this, "El valor de precio no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -243,8 +245,14 @@ namespace TurismoReal.Presentacion
                     return; // Sal del evento si la cantidad de imágenes no es válida
                 }
 
+                if (!int.TryParse(TxtHabitaciones.Text, out int habitaciones))
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "El valor de cantidad de habitaciones no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Sal del evento si la cantidad de imágenes no es válida
+                }
+
                 // Llama al método de negocio para modificar el departamento
-                bool resultado = NDepartamento.ModificarDepartamento(1, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna);
+                bool resultado = NDepartamento.ModificarDepartamento(idDepa, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, habitaciones, idComuna);
 
                 // Verifica el resultado y muestra un mensaje correspondiente
                 if (resultado)
@@ -339,13 +347,6 @@ namespace TurismoReal.Presentacion
 
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        
-
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -357,9 +358,10 @@ namespace TurismoReal.Presentacion
                 float longitud = float.Parse(TxtLongitud.Text);
                 int capacidadPersona = int.Parse(TxtCapacidad.Text);
                 int cantidadImagenes = int.Parse(TxtCantImagenes.Text);
+                int habitaciones = int.Parse (TxtHabitaciones.Text);
                 int idComuna = (int)cBoxComuna.SelectedValue;
 
-                bool resultado = NDepartamento.AgregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, idComuna);
+                bool resultado = NDepartamento.AgregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, habitaciones, idComuna);
 
                 if (resultado)
                 {
@@ -407,11 +409,6 @@ namespace TurismoReal.Presentacion
             {
                 MessageBox.Show("Por favor, seleccione un registro antes de agregar inventario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void cBoxComuna_KeyUp(object sender, KeyEventArgs e)
-        {
-
         }
     }
 }

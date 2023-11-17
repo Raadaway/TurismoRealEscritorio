@@ -24,9 +24,9 @@ namespace TurismoReal.Presentacion
 
             if (tipoUsuario == "funcionario")
             {
-                usuariosToolStripMenuItem.Visible = false;
-                serviciosExtraToolStripMenuItem.Visible = false;
-                departamentosToolStripMenuItem.Visible = false;
+                metroTile1.Visible = false;
+                metroTile2.Visible = false;
+                metroTile4.Visible = false;
             }
         }
 
@@ -65,26 +65,12 @@ namespace TurismoReal.Presentacion
             this.Close();
         }
 
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }
 
         private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        }
-
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -141,7 +127,7 @@ namespace TurismoReal.Presentacion
             frm.Show();
         }
 
-        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDepartamento frm = new FrmDepartamento();
             frm.MdiParent = this;
@@ -149,7 +135,7 @@ namespace TurismoReal.Presentacion
         }
 
 
-        private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
+        private void reservaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (TipoUsuario == "funcionario")
             {
@@ -166,14 +152,14 @@ namespace TurismoReal.Presentacion
             
         }
 
-        private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCheckIn frm = new FrmCheckIn();
             frm.MdiParent = this;
             frm.Show();
         }
 
-        private void checkOutToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCheckOut frm = new FrmCheckOut();
             frm.MdiParent = this;
@@ -217,11 +203,31 @@ namespace TurismoReal.Presentacion
             frm.Show();
         }
 
-        private void inventarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmInventario frm = new FrmInventario();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            metroContextMenu1.Show(metroTile1, 0, metroTile1.Height);
+        }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            metroContextMenu2.Show(metroTile2, 0, metroTile2.Height);
+        }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            metroContextMenu3.Show(metroTile3, 0, metroTile3.Height);
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            metroContextMenu4.Show(metroTile4, 0, metroTile4.Height);
         }
     }
 }

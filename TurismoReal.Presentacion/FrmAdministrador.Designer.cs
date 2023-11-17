@@ -29,9 +29,9 @@ namespace TurismoReal.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabGeneral = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
@@ -79,10 +79,11 @@ namespace TurismoReal.Presentacion
             this.TabGeneral.Controls.Add(this.metroTabPage2);
             this.TabGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabGeneral.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
-            this.TabGeneral.Location = new System.Drawing.Point(20, 60);
+            this.TabGeneral.Location = new System.Drawing.Point(27, 74);
+            this.TabGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.TabGeneral.Name = "TabGeneral";
-            this.TabGeneral.SelectedIndex = 0;
-            this.TabGeneral.Size = new System.Drawing.Size(760, 470);
+            this.TabGeneral.SelectedIndex = 1;
+            this.TabGeneral.Size = new System.Drawing.Size(1013, 578);
             this.TabGeneral.Style = MetroFramework.MetroColorStyle.Orange;
             this.TabGeneral.TabIndex = 1;
             this.TabGeneral.UseSelectable = true;
@@ -94,15 +95,16 @@ namespace TurismoReal.Presentacion
             this.metroTabPage1.Controls.Add(this.DGVListar);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.HorizontalScrollbarSize = 12;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(752, 428);
+            this.metroTabPage1.Size = new System.Drawing.Size(1005, 536);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Lista";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.metroTabPage1.VerticalScrollbarSize = 13;
             // 
             // metroPanel2
             // 
@@ -112,23 +114,25 @@ namespace TurismoReal.Presentacion
             this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.HorizontalScrollbarSize = 12;
             this.metroPanel2.Location = new System.Drawing.Point(0, 0);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(752, 23);
+            this.metroPanel2.Size = new System.Drawing.Size(1005, 28);
             this.metroPanel2.TabIndex = 9;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
+            this.metroPanel2.VerticalScrollbarSize = 13;
             // 
             // BtnRefrescar
             // 
             this.BtnRefrescar.Dock = System.Windows.Forms.DockStyle.Left;
             this.BtnRefrescar.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.BtnRefrescar.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnRefrescar.Location = new System.Drawing.Point(289, 0);
+            this.BtnRefrescar.Location = new System.Drawing.Point(385, 0);
+            this.BtnRefrescar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnRefrescar.Name = "BtnRefrescar";
-            this.BtnRefrescar.Size = new System.Drawing.Size(75, 23);
+            this.BtnRefrescar.Size = new System.Drawing.Size(100, 28);
             this.BtnRefrescar.Style = MetroFramework.MetroColorStyle.Orange;
             this.BtnRefrescar.TabIndex = 6;
             this.BtnRefrescar.Text = "Refrescar";
@@ -140,9 +144,10 @@ namespace TurismoReal.Presentacion
             this.BtnEliminar.Dock = System.Windows.Forms.DockStyle.Left;
             this.BtnEliminar.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.BtnEliminar.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnEliminar.Location = new System.Drawing.Point(214, 0);
+            this.BtnEliminar.Location = new System.Drawing.Point(285, 0);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.BtnEliminar.Size = new System.Drawing.Size(100, 28);
             this.BtnEliminar.Style = MetroFramework.MetroColorStyle.Orange;
             this.BtnEliminar.TabIndex = 7;
             this.BtnEliminar.Text = "Eliminar";
@@ -155,9 +160,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtBuscar.CustomButton.Image = null;
-            this.TxtBuscar.CustomButton.Location = new System.Drawing.Point(192, 1);
+            this.TxtBuscar.CustomButton.Location = new System.Drawing.Point(259, 2);
+            this.TxtBuscar.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtBuscar.CustomButton.Name = "";
-            this.TxtBuscar.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtBuscar.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtBuscar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtBuscar.CustomButton.TabIndex = 1;
             this.TxtBuscar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -167,6 +173,7 @@ namespace TurismoReal.Presentacion
             this.TxtBuscar.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtBuscar.Lines = new string[0];
             this.TxtBuscar.Location = new System.Drawing.Point(0, 0);
+            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.TxtBuscar.MaxLength = 32767;
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.PasswordChar = '\0';
@@ -176,7 +183,7 @@ namespace TurismoReal.Presentacion
             this.TxtBuscar.SelectionLength = 0;
             this.TxtBuscar.SelectionStart = 0;
             this.TxtBuscar.ShortcutsEnabled = true;
-            this.TxtBuscar.Size = new System.Drawing.Size(214, 23);
+            this.TxtBuscar.Size = new System.Drawing.Size(285, 28);
             this.TxtBuscar.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtBuscar.TabIndex = 5;
             this.TxtBuscar.UseSelectable = true;
@@ -193,14 +200,15 @@ namespace TurismoReal.Presentacion
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 406);
+            this.metroPanel1.HorizontalScrollbarSize = 12;
+            this.metroPanel1.Location = new System.Drawing.Point(0, 509);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(752, 22);
+            this.metroPanel1.Size = new System.Drawing.Size(1005, 27);
             this.metroPanel1.TabIndex = 8;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.VerticalScrollbarSize = 13;
             // 
             // CbSeleccionar
             // 
@@ -208,8 +216,9 @@ namespace TurismoReal.Presentacion
             this.CbSeleccionar.Dock = System.Windows.Forms.DockStyle.Left;
             this.CbSeleccionar.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
             this.CbSeleccionar.Location = new System.Drawing.Point(0, 0);
+            this.CbSeleccionar.Margin = new System.Windows.Forms.Padding(4);
             this.CbSeleccionar.Name = "CbSeleccionar";
-            this.CbSeleccionar.Size = new System.Drawing.Size(92, 22);
+            this.CbSeleccionar.Size = new System.Drawing.Size(101, 27);
             this.CbSeleccionar.Style = MetroFramework.MetroColorStyle.Orange;
             this.CbSeleccionar.TabIndex = 3;
             this.CbSeleccionar.Text = "Seleccionar";
@@ -221,9 +230,10 @@ namespace TurismoReal.Presentacion
             this.LblTotal.AutoSize = true;
             this.LblTotal.Dock = System.Windows.Forms.DockStyle.Right;
             this.LblTotal.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblTotal.Location = new System.Drawing.Point(711, 0);
+            this.LblTotal.Location = new System.Drawing.Point(960, 0);
+            this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(41, 19);
+            this.LblTotal.Size = new System.Drawing.Size(45, 20);
             this.LblTotal.Style = MetroFramework.MetroColorStyle.Orange;
             this.LblTotal.TabIndex = 4;
             this.LblTotal.Text = "Total:";
@@ -241,43 +251,45 @@ namespace TurismoReal.Presentacion
             this.DGVListar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVListar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVListar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.DGVListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVListar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seleccionar});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVListar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVListar.DefaultCellStyle = dataGridViewCellStyle26;
             this.DGVListar.EnableHeadersVisualStyles = false;
             this.DGVListar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DGVListar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DGVListar.Location = new System.Drawing.Point(0, 29);
+            this.DGVListar.Location = new System.Drawing.Point(0, 36);
+            this.DGVListar.Margin = new System.Windows.Forms.Padding(4);
             this.DGVListar.Name = "DGVListar";
             this.DGVListar.ReadOnly = true;
             this.DGVListar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            this.DGVListar.RowHeadersWidth = 51;
             this.DGVListar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVListar.Size = new System.Drawing.Size(752, 371);
+            this.DGVListar.Size = new System.Drawing.Size(1003, 457);
             this.DGVListar.Style = MetroFramework.MetroColorStyle.Orange;
             this.DGVListar.TabIndex = 2;
             this.DGVListar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVListar_CellContentClick);
@@ -286,10 +298,12 @@ namespace TurismoReal.Presentacion
             // Seleccionar
             // 
             this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.MinimumWidth = 6;
             this.Seleccionar.Name = "Seleccionar";
             this.Seleccionar.ReadOnly = true;
             this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Seleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Seleccionar.Width = 125;
             // 
             // metroTabPage2
             // 
@@ -316,22 +330,24 @@ namespace TurismoReal.Presentacion
             this.metroTabPage2.Controls.Add(this.TxtRut);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.HorizontalScrollbarSize = 12;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(752, 428);
+            this.metroTabPage2.Size = new System.Drawing.Size(1005, 536);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Agregar";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
+            this.metroTabPage2.VerticalScrollbarSize = 13;
             // 
             // BtnModificar
             // 
             this.BtnModificar.ActiveControl = null;
-            this.BtnModificar.Location = new System.Drawing.Point(327, 294);
+            this.BtnModificar.Location = new System.Drawing.Point(436, 415);
+            this.BtnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(99, 44);
+            this.BtnModificar.Size = new System.Drawing.Size(132, 54);
             this.BtnModificar.Style = MetroFramework.MetroColorStyle.Orange;
             this.BtnModificar.TabIndex = 22;
             this.BtnModificar.Text = "Modificar";
@@ -344,9 +360,10 @@ namespace TurismoReal.Presentacion
             // BtnCancelar
             // 
             this.BtnCancelar.ActiveControl = null;
-            this.BtnCancelar.Location = new System.Drawing.Point(432, 294);
+            this.BtnCancelar.Location = new System.Drawing.Point(576, 415);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(99, 44);
+            this.BtnCancelar.Size = new System.Drawing.Size(132, 54);
             this.BtnCancelar.Style = MetroFramework.MetroColorStyle.Orange;
             this.BtnCancelar.TabIndex = 21;
             this.BtnCancelar.Text = "Cancelar";
@@ -359,9 +376,10 @@ namespace TurismoReal.Presentacion
             // BtnAgregar
             // 
             this.BtnAgregar.ActiveControl = null;
-            this.BtnAgregar.Location = new System.Drawing.Point(222, 294);
+            this.BtnAgregar.Location = new System.Drawing.Point(296, 415);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(99, 44);
+            this.BtnAgregar.Size = new System.Drawing.Size(132, 54);
             this.BtnAgregar.Style = MetroFramework.MetroColorStyle.Orange;
             this.BtnAgregar.TabIndex = 20;
             this.BtnAgregar.Text = "Agregar";
@@ -375,9 +393,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel10.Location = new System.Drawing.Point(418, 143);
+            this.metroLabel10.Location = new System.Drawing.Point(557, 176);
+            this.metroLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(79, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(83, 20);
             this.metroLabel10.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel10.TabIndex = 19;
             this.metroLabel10.Text = "Contraseña";
@@ -386,9 +405,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel9.Location = new System.Drawing.Point(441, 114);
+            this.metroLabel9.Location = new System.Drawing.Point(588, 140);
+            this.metroLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(59, 20);
             this.metroLabel9.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel9.TabIndex = 18;
             this.metroLabel9.Text = "Usuario";
@@ -397,9 +417,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel8.Location = new System.Drawing.Point(446, 85);
+            this.metroLabel8.Location = new System.Drawing.Point(595, 105);
+            this.metroLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(54, 20);
             this.metroLabel8.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel8.TabIndex = 17;
             this.metroLabel8.Text = "Correo";
@@ -408,9 +429,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.Location = new System.Drawing.Point(437, 56);
+            this.metroLabel7.Location = new System.Drawing.Point(583, 69);
+            this.metroLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(67, 20);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel7.TabIndex = 16;
             this.metroLabel7.Text = "Teléfono";
@@ -419,9 +441,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.Location = new System.Drawing.Point(48, 172);
+            this.metroLabel6.Location = new System.Drawing.Point(64, 212);
+            this.metroLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(115, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(126, 20);
             this.metroLabel6.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel6.TabIndex = 15;
             this.metroLabel6.Text = "Apellido Materno";
@@ -430,9 +453,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(53, 143);
+            this.metroLabel5.Location = new System.Drawing.Point(71, 176);
+            this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(110, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(120, 20);
             this.metroLabel5.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel5.TabIndex = 14;
             this.metroLabel5.Text = "Apellido Paterno";
@@ -441,9 +465,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(104, 114);
+            this.metroLabel4.Location = new System.Drawing.Point(139, 140);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(64, 20);
             this.metroLabel4.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel4.TabIndex = 13;
             this.metroLabel4.Text = "Nombre";
@@ -452,9 +477,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(50, 85);
+            this.metroLabel3.Location = new System.Drawing.Point(67, 105);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(113, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(126, 20);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel3.TabIndex = 12;
             this.metroLabel3.Text = "Dígito verificador";
@@ -463,9 +489,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(133, 56);
+            this.metroLabel2.Location = new System.Drawing.Point(186, 66);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(30, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(31, 20);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel2.TabIndex = 11;
             this.metroLabel2.Text = "Rut";
@@ -476,9 +503,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtContrasena.CustomButton.Image = null;
-            this.TxtContrasena.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.TxtContrasena.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtContrasena.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtContrasena.CustomButton.Name = "";
-            this.TxtContrasena.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtContrasena.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtContrasena.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtContrasena.CustomButton.TabIndex = 1;
             this.TxtContrasena.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -486,7 +514,8 @@ namespace TurismoReal.Presentacion
             this.TxtContrasena.CustomButton.Visible = false;
             this.TxtContrasena.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtContrasena.Lines = new string[0];
-            this.TxtContrasena.Location = new System.Drawing.Point(503, 139);
+            this.TxtContrasena.Location = new System.Drawing.Point(671, 171);
+            this.TxtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.TxtContrasena.MaxLength = 32767;
             this.TxtContrasena.Name = "TxtContrasena";
             this.TxtContrasena.PasswordChar = '\0';
@@ -496,7 +525,7 @@ namespace TurismoReal.Presentacion
             this.TxtContrasena.SelectionLength = 0;
             this.TxtContrasena.SelectionStart = 0;
             this.TxtContrasena.ShortcutsEnabled = true;
-            this.TxtContrasena.Size = new System.Drawing.Size(152, 23);
+            this.TxtContrasena.Size = new System.Drawing.Size(203, 28);
             this.TxtContrasena.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtContrasena.TabIndex = 10;
             this.TxtContrasena.UseSelectable = true;
@@ -510,9 +539,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtUsuario.CustomButton.Image = null;
-            this.TxtUsuario.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.TxtUsuario.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtUsuario.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtUsuario.CustomButton.Name = "";
-            this.TxtUsuario.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtUsuario.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtUsuario.CustomButton.TabIndex = 1;
             this.TxtUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -520,7 +550,8 @@ namespace TurismoReal.Presentacion
             this.TxtUsuario.CustomButton.Visible = false;
             this.TxtUsuario.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtUsuario.Lines = new string[0];
-            this.TxtUsuario.Location = new System.Drawing.Point(503, 110);
+            this.TxtUsuario.Location = new System.Drawing.Point(671, 135);
+            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUsuario.MaxLength = 32767;
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.PasswordChar = '\0';
@@ -530,7 +561,7 @@ namespace TurismoReal.Presentacion
             this.TxtUsuario.SelectionLength = 0;
             this.TxtUsuario.SelectionStart = 0;
             this.TxtUsuario.ShortcutsEnabled = true;
-            this.TxtUsuario.Size = new System.Drawing.Size(152, 23);
+            this.TxtUsuario.Size = new System.Drawing.Size(203, 28);
             this.TxtUsuario.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtUsuario.TabIndex = 9;
             this.TxtUsuario.UseSelectable = true;
@@ -544,9 +575,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtCorreo.CustomButton.Image = null;
-            this.TxtCorreo.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.TxtCorreo.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtCorreo.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtCorreo.CustomButton.Name = "";
-            this.TxtCorreo.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtCorreo.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtCorreo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtCorreo.CustomButton.TabIndex = 1;
             this.TxtCorreo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -554,7 +586,8 @@ namespace TurismoReal.Presentacion
             this.TxtCorreo.CustomButton.Visible = false;
             this.TxtCorreo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtCorreo.Lines = new string[0];
-            this.TxtCorreo.Location = new System.Drawing.Point(503, 81);
+            this.TxtCorreo.Location = new System.Drawing.Point(671, 100);
+            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCorreo.MaxLength = 32767;
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.PasswordChar = '\0';
@@ -564,7 +597,7 @@ namespace TurismoReal.Presentacion
             this.TxtCorreo.SelectionLength = 0;
             this.TxtCorreo.SelectionStart = 0;
             this.TxtCorreo.ShortcutsEnabled = true;
-            this.TxtCorreo.Size = new System.Drawing.Size(152, 23);
+            this.TxtCorreo.Size = new System.Drawing.Size(203, 28);
             this.TxtCorreo.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtCorreo.TabIndex = 8;
             this.TxtCorreo.UseSelectable = true;
@@ -578,9 +611,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtTelefono.CustomButton.Image = null;
-            this.TxtTelefono.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.TxtTelefono.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtTelefono.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtTelefono.CustomButton.Name = "";
-            this.TxtTelefono.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtTelefono.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtTelefono.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtTelefono.CustomButton.TabIndex = 1;
             this.TxtTelefono.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -588,7 +622,8 @@ namespace TurismoReal.Presentacion
             this.TxtTelefono.CustomButton.Visible = false;
             this.TxtTelefono.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtTelefono.Lines = new string[0];
-            this.TxtTelefono.Location = new System.Drawing.Point(503, 52);
+            this.TxtTelefono.Location = new System.Drawing.Point(671, 64);
+            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.TxtTelefono.MaxLength = 32767;
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.PasswordChar = '\0';
@@ -598,7 +633,7 @@ namespace TurismoReal.Presentacion
             this.TxtTelefono.SelectionLength = 0;
             this.TxtTelefono.SelectionStart = 0;
             this.TxtTelefono.ShortcutsEnabled = true;
-            this.TxtTelefono.Size = new System.Drawing.Size(152, 23);
+            this.TxtTelefono.Size = new System.Drawing.Size(203, 28);
             this.TxtTelefono.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtTelefono.TabIndex = 7;
             this.TxtTelefono.UseSelectable = true;
@@ -612,9 +647,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtApellidoM.CustomButton.Image = null;
-            this.TxtApellidoM.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.TxtApellidoM.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtApellidoM.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtApellidoM.CustomButton.Name = "";
-            this.TxtApellidoM.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtApellidoM.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtApellidoM.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtApellidoM.CustomButton.TabIndex = 1;
             this.TxtApellidoM.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -622,7 +658,8 @@ namespace TurismoReal.Presentacion
             this.TxtApellidoM.CustomButton.Visible = false;
             this.TxtApellidoM.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtApellidoM.Lines = new string[0];
-            this.TxtApellidoM.Location = new System.Drawing.Point(169, 168);
+            this.TxtApellidoM.Location = new System.Drawing.Point(225, 212);
+            this.TxtApellidoM.Margin = new System.Windows.Forms.Padding(4);
             this.TxtApellidoM.MaxLength = 32767;
             this.TxtApellidoM.Name = "TxtApellidoM";
             this.TxtApellidoM.PasswordChar = '\0';
@@ -632,7 +669,7 @@ namespace TurismoReal.Presentacion
             this.TxtApellidoM.SelectionLength = 0;
             this.TxtApellidoM.SelectionStart = 0;
             this.TxtApellidoM.ShortcutsEnabled = true;
-            this.TxtApellidoM.Size = new System.Drawing.Size(152, 23);
+            this.TxtApellidoM.Size = new System.Drawing.Size(203, 28);
             this.TxtApellidoM.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtApellidoM.TabIndex = 6;
             this.TxtApellidoM.UseSelectable = true;
@@ -646,9 +683,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtApellidoP.CustomButton.Image = null;
-            this.TxtApellidoP.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.TxtApellidoP.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtApellidoP.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtApellidoP.CustomButton.Name = "";
-            this.TxtApellidoP.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtApellidoP.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtApellidoP.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtApellidoP.CustomButton.TabIndex = 1;
             this.TxtApellidoP.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -656,7 +694,8 @@ namespace TurismoReal.Presentacion
             this.TxtApellidoP.CustomButton.Visible = false;
             this.TxtApellidoP.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtApellidoP.Lines = new string[0];
-            this.TxtApellidoP.Location = new System.Drawing.Point(169, 139);
+            this.TxtApellidoP.Location = new System.Drawing.Point(225, 171);
+            this.TxtApellidoP.Margin = new System.Windows.Forms.Padding(4);
             this.TxtApellidoP.MaxLength = 32767;
             this.TxtApellidoP.Name = "TxtApellidoP";
             this.TxtApellidoP.PasswordChar = '\0';
@@ -666,7 +705,7 @@ namespace TurismoReal.Presentacion
             this.TxtApellidoP.SelectionLength = 0;
             this.TxtApellidoP.SelectionStart = 0;
             this.TxtApellidoP.ShortcutsEnabled = true;
-            this.TxtApellidoP.Size = new System.Drawing.Size(152, 23);
+            this.TxtApellidoP.Size = new System.Drawing.Size(203, 28);
             this.TxtApellidoP.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtApellidoP.TabIndex = 5;
             this.TxtApellidoP.UseSelectable = true;
@@ -680,9 +719,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtNombre.CustomButton.Image = null;
-            this.TxtNombre.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.TxtNombre.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtNombre.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtNombre.CustomButton.Name = "";
-            this.TxtNombre.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtNombre.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtNombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtNombre.CustomButton.TabIndex = 1;
             this.TxtNombre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -690,7 +730,8 @@ namespace TurismoReal.Presentacion
             this.TxtNombre.CustomButton.Visible = false;
             this.TxtNombre.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtNombre.Lines = new string[0];
-            this.TxtNombre.Location = new System.Drawing.Point(169, 110);
+            this.TxtNombre.Location = new System.Drawing.Point(225, 135);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNombre.MaxLength = 32767;
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.PasswordChar = '\0';
@@ -700,7 +741,7 @@ namespace TurismoReal.Presentacion
             this.TxtNombre.SelectionLength = 0;
             this.TxtNombre.SelectionStart = 0;
             this.TxtNombre.ShortcutsEnabled = true;
-            this.TxtNombre.Size = new System.Drawing.Size(152, 23);
+            this.TxtNombre.Size = new System.Drawing.Size(203, 28);
             this.TxtNombre.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtNombre.TabIndex = 4;
             this.TxtNombre.UseSelectable = true;
@@ -714,9 +755,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtDv.CustomButton.Image = null;
-            this.TxtDv.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.TxtDv.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtDv.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtDv.CustomButton.Name = "";
-            this.TxtDv.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtDv.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtDv.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtDv.CustomButton.TabIndex = 1;
             this.TxtDv.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -724,7 +766,8 @@ namespace TurismoReal.Presentacion
             this.TxtDv.CustomButton.Visible = false;
             this.TxtDv.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtDv.Lines = new string[0];
-            this.TxtDv.Location = new System.Drawing.Point(169, 81);
+            this.TxtDv.Location = new System.Drawing.Point(225, 100);
+            this.TxtDv.Margin = new System.Windows.Forms.Padding(4);
             this.TxtDv.MaxLength = 32767;
             this.TxtDv.Name = "TxtDv";
             this.TxtDv.PasswordChar = '\0';
@@ -734,7 +777,7 @@ namespace TurismoReal.Presentacion
             this.TxtDv.SelectionLength = 0;
             this.TxtDv.SelectionStart = 0;
             this.TxtDv.ShortcutsEnabled = true;
-            this.TxtDv.Size = new System.Drawing.Size(152, 23);
+            this.TxtDv.Size = new System.Drawing.Size(203, 28);
             this.TxtDv.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtDv.TabIndex = 3;
             this.TxtDv.UseSelectable = true;
@@ -748,9 +791,10 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.TxtRut.CustomButton.Image = null;
-            this.TxtRut.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.TxtRut.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtRut.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TxtRut.CustomButton.Name = "";
-            this.TxtRut.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtRut.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtRut.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtRut.CustomButton.TabIndex = 1;
             this.TxtRut.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -758,7 +802,8 @@ namespace TurismoReal.Presentacion
             this.TxtRut.CustomButton.Visible = false;
             this.TxtRut.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtRut.Lines = new string[0];
-            this.TxtRut.Location = new System.Drawing.Point(169, 52);
+            this.TxtRut.Location = new System.Drawing.Point(225, 61);
+            this.TxtRut.Margin = new System.Windows.Forms.Padding(4);
             this.TxtRut.MaxLength = 32767;
             this.TxtRut.Name = "TxtRut";
             this.TxtRut.PasswordChar = '\0';
@@ -768,7 +813,7 @@ namespace TurismoReal.Presentacion
             this.TxtRut.SelectionLength = 0;
             this.TxtRut.SelectionStart = 0;
             this.TxtRut.ShortcutsEnabled = true;
-            this.TxtRut.Size = new System.Drawing.Size(152, 23);
+            this.TxtRut.Size = new System.Drawing.Size(203, 28);
             this.TxtRut.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtRut.TabIndex = 2;
             this.TxtRut.UseSelectable = true;
@@ -778,11 +823,13 @@ namespace TurismoReal.Presentacion
             // 
             // FrmAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.ClientSize = new System.Drawing.Size(1067, 677);
             this.Controls.Add(this.TabGeneral);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAdministrador";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Administradores";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

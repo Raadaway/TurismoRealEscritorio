@@ -15,6 +15,7 @@ namespace TurismoReal.Entidades
         public float Longitud { get; set; }
         public int Capacidad_persona { get; set; }
         public int Cantidad_img { get; set; }
+        public int habitaciones { get; set; }
         public int Id_comuna { get; set; }
     }
 }

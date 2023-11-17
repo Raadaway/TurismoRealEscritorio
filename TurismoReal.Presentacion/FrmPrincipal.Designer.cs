@@ -31,288 +31,369 @@ namespace TurismoReal.Presentacion
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.articulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviciosExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.menuStrip.SuspendLayout();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroTile5 = new MetroFramework.Controls.MetroTile();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.metroContextMenu2 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroContextMenu3 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroContextMenu4 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.transportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
+            this.metroContextMenu2.SuspendLayout();
+            this.metroContextMenu3.SuspendLayout();
+            this.metroContextMenu4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
+            this.metroContextMenu1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip
-            // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem,
-            this.departamentosToolStripMenuItem,
-            this.reservasToolStripMenuItem,
-            this.serviciosExtraToolStripMenuItem,
-            this.viewMenu,
-            this.cerrarSesiónToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(20, 60);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(859, 24);
-            this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "MenuStrip";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administradoresToolStripMenuItem,
-            this.funcionariosToolStripMenuItem,
-            this.clientesToolStripMenuItem});
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            // 
-            // administradoresToolStripMenuItem
-            // 
-            this.administradoresToolStripMenuItem.Name = "administradoresToolStripMenuItem";
-            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.administradoresToolStripMenuItem.Text = "Administradores";
-            this.administradoresToolStripMenuItem.Click += new System.EventHandler(this.administradoresToolStripMenuItem_Click);
-            // 
-            // funcionariosToolStripMenuItem
-            // 
-            this.funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
-            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.funcionariosToolStripMenuItem.Text = "Funcionarios";
-            this.funcionariosToolStripMenuItem.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // departamentosToolStripMenuItem
-            // 
-            this.departamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inventarioToolStripMenuItem,
-            this.articulosToolStripMenuItem,
-            this.serviciosToolStripMenuItem,
-            this.inventarioToolStripMenuItem1});
-            this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
-            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.departamentosToolStripMenuItem.Text = "Propiedades";
-            // 
-            // inventarioToolStripMenuItem
-            // 
-            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.inventarioToolStripMenuItem.Text = "Departamentos";
-            this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
-            // 
-            // articulosToolStripMenuItem
-            // 
-            this.articulosToolStripMenuItem.Name = "articulosToolStripMenuItem";
-            this.articulosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.articulosToolStripMenuItem.Text = "Articulos";
-            this.articulosToolStripMenuItem.Click += new System.EventHandler(this.articulosToolStripMenuItem_Click);
-            // 
-            // serviciosToolStripMenuItem
-            // 
-            this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.serviciosToolStripMenuItem.Text = "Servicios";
-            this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
-            // 
-            // inventarioToolStripMenuItem1
-            // 
-            this.inventarioToolStripMenuItem1.Name = "inventarioToolStripMenuItem1";
-            this.inventarioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.inventarioToolStripMenuItem1.Text = "Inventario";
-            this.inventarioToolStripMenuItem1.Click += new System.EventHandler(this.inventarioToolStripMenuItem1_Click);
-            // 
-            // reservasToolStripMenuItem
-            // 
-            this.reservasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkInToolStripMenuItem,
-            this.checkOutToolStripMenuItem,
-            this.checkOutToolStripMenuItem1});
-            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.reservasToolStripMenuItem.Text = "Reservación";
-            // 
-            // checkInToolStripMenuItem
-            // 
-            this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.checkInToolStripMenuItem.Text = "Reservas";
-            this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
-            // 
-            // checkOutToolStripMenuItem
-            // 
-            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.checkOutToolStripMenuItem.Text = "Check In";
-            this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
-            // 
-            // checkOutToolStripMenuItem1
-            // 
-            this.checkOutToolStripMenuItem1.Name = "checkOutToolStripMenuItem1";
-            this.checkOutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.checkOutToolStripMenuItem1.Text = "Check Out";
-            this.checkOutToolStripMenuItem1.Click += new System.EventHandler(this.checkOutToolStripMenuItem1_Click);
-            // 
-            // serviciosExtraToolStripMenuItem
-            // 
-            this.serviciosExtraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.transporteToolStripMenuItem,
-            this.tourToolStripMenuItem});
-            this.serviciosExtraToolStripMenuItem.Name = "serviciosExtraToolStripMenuItem";
-            this.serviciosExtraToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.serviciosExtraToolStripMenuItem.Text = "Servicios Extra";
-            // 
-            // transporteToolStripMenuItem
-            // 
-            this.transporteToolStripMenuItem.Name = "transporteToolStripMenuItem";
-            this.transporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.transporteToolStripMenuItem.Text = "Transporte";
-            this.transporteToolStripMenuItem.Click += new System.EventHandler(this.transporteToolStripMenuItem_Click);
-            // 
-            // tourToolStripMenuItem
-            // 
-            this.tourToolStripMenuItem.Name = "tourToolStripMenuItem";
-            this.tourToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tourToolStripMenuItem.Text = "Tour";
-            this.tourToolStripMenuItem.Click += new System.EventHandler(this.tourToolStripMenuItem_Click);
-            // 
-            // viewMenu
-            // 
-            this.viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolBarToolStripMenuItem,
-            this.statusBarToolStripMenuItem});
-            this.viewMenu.Name = "viewMenu";
-            this.viewMenu.Size = new System.Drawing.Size(35, 20);
-            this.viewMenu.Text = "&Ver";
-            // 
-            // toolBarToolStripMenuItem
-            // 
-            this.toolBarToolStripMenuItem.Checked = true;
-            this.toolBarToolStripMenuItem.CheckOnClick = true;
-            this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
-            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.toolBarToolStripMenuItem.Text = "&Barra de herramientas";
-            this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
-            // 
-            // statusBarToolStripMenuItem
-            // 
-            this.statusBarToolStripMenuItem.Checked = true;
-            this.statusBarToolStripMenuItem.CheckOnClick = true;
-            this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.statusBarToolStripMenuItem.Text = "&Barra de estado";
-            this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
-            // 
-            // cerrarSesiónToolStripMenuItem
-            // 
-            this.cerrarSesiónToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
-            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
-            // 
-            // toolStrip
-            // 
-            this.toolStrip.Location = new System.Drawing.Point(20, 84);
-            this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(859, 25);
-            this.toolStrip.TabIndex = 1;
-            this.toolStrip.Text = "ToolStrip";
             // 
             // statusStrip
             // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(20, 664);
+            this.statusStrip.Location = new System.Drawing.Point(27, 818);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(859, 22);
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip.Size = new System.Drawing.Size(1145, 26);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
             this.toolStripStatusLabel.Text = "Estado";
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Controls.Add(this.metroTile5);
+            this.metroPanel1.Controls.Add(this.metroTile4);
+            this.metroPanel1.Controls.Add(this.metroTile3);
+            this.metroPanel1.Controls.Add(this.metroTile2);
+            this.metroPanel1.Controls.Add(this.metroTile1);
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 12;
+            this.metroPanel1.Location = new System.Drawing.Point(27, 74);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(1145, 46);
+            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroPanel1.TabIndex = 9;
+            this.metroPanel1.UseStyleColors = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 13;
+            // 
+            // metroTile5
+            // 
+            this.metroTile5.ActiveControl = null;
+            this.metroTile5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroTile5.Location = new System.Drawing.Point(1010, 0);
+            this.metroTile5.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTile5.Name = "metroTile5";
+            this.metroTile5.Size = new System.Drawing.Size(135, 46);
+            this.metroTile5.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile5.TabIndex = 6;
+            this.metroTile5.Text = "Cerrar Sesión";
+            this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile5.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile5.UseSelectable = true;
+            this.metroTile5.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
+            // metroTile4
+            // 
+            this.metroTile4.ActiveControl = null;
+            this.metroTile4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.metroTile4.Location = new System.Drawing.Point(352, 0);
+            this.metroTile4.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTile4.Name = "metroTile4";
+            this.metroTile4.Size = new System.Drawing.Size(143, 46);
+            this.metroTile4.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile4.TabIndex = 5;
+            this.metroTile4.Text = "Servicios Extra";
+            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile4.UseSelectable = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
+            // 
+            // metroTile3
+            // 
+            this.metroTile3.ActiveControl = null;
+            this.metroTile3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.metroTile3.Location = new System.Drawing.Point(220, 0);
+            this.metroTile3.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(132, 46);
+            this.metroTile3.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile3.TabIndex = 4;
+            this.metroTile3.Text = "Reservación";
+            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile3.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile3.UseSelectable = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
+            // 
+            // metroTile2
+            // 
+            this.metroTile2.ActiveControl = null;
+            this.metroTile2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.metroTile2.Location = new System.Drawing.Point(92, 0);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(128, 46);
+            this.metroTile2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile2.TabIndex = 3;
+            this.metroTile2.Text = "Propiedades";
+            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile2.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile2.UseSelectable = true;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
+            // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.metroTile1.Location = new System.Drawing.Point(0, 0);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(92, 46);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile1.TabIndex = 2;
+            this.metroTile1.Text = "Usuarios";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
+            // metroContextMenu2
+            // 
+            this.metroContextMenu2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.metroContextMenu2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.metroContextMenu2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.departamentosToolStripMenuItem,
+            this.artículosToolStripMenuItem,
+            this.serviciosToolStripMenuItem,
+            this.inventarioToolStripMenuItem});
+            this.metroContextMenu2.Name = "metroContextMenu2";
+            this.metroContextMenu2.ShowImageMargin = false;
+            this.metroContextMenu2.ShowItemToolTips = false;
+            this.metroContextMenu2.Size = new System.Drawing.Size(157, 100);
+            this.metroContextMenu2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroContextMenu2.UseStyleColors = true;
+            // 
+            // departamentosToolStripMenuItem
+            // 
+            this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
+            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
+            this.departamentosToolStripMenuItem.Text = "Departamentos";
+            this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
+            // 
+            // artículosToolStripMenuItem
+            // 
+            this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
+            this.artículosToolStripMenuItem.Text = "Artículos";
+            this.artículosToolStripMenuItem.Click += new System.EventHandler(this.articulosToolStripMenuItem_Click);
+            // 
+            // serviciosToolStripMenuItem
+            // 
+            this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
+            this.serviciosToolStripMenuItem.Text = "Servicios";
+            this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
+            // 
+            // inventarioToolStripMenuItem
+            // 
+            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
+            this.inventarioToolStripMenuItem.Text = "Inventario";
+            this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
+            // 
+            // metroContextMenu3
+            // 
+            this.metroContextMenu3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.metroContextMenu3.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.metroContextMenu3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reservasToolStripMenuItem,
+            this.checkInToolStripMenuItem,
+            this.checkOutToolStripMenuItem});
+            this.metroContextMenu3.Name = "metroContextMenu3";
+            this.metroContextMenu3.ShowImageMargin = false;
+            this.metroContextMenu3.ShowItemToolTips = false;
+            this.metroContextMenu3.Size = new System.Drawing.Size(123, 76);
+            this.metroContextMenu3.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroContextMenu3.UseStyleColors = true;
+            // 
+            // reservasToolStripMenuItem
+            // 
+            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.reservasToolStripMenuItem.Text = "Reservas";
+            this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
+            // 
+            // checkInToolStripMenuItem
+            // 
+            this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.checkInToolStripMenuItem.Text = "Check-In";
+            this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
+            // 
+            // checkOutToolStripMenuItem
+            // 
+            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.checkOutToolStripMenuItem.Text = "Check-Out";
+            this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
+            // 
+            // metroContextMenu4
+            // 
+            this.metroContextMenu4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.metroContextMenu4.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.metroContextMenu4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.transportesToolStripMenuItem,
+            this.toursToolStripMenuItem});
+            this.metroContextMenu4.Name = "metroContextMenu4";
+            this.metroContextMenu4.ShowImageMargin = false;
+            this.metroContextMenu4.ShowItemToolTips = false;
+            this.metroContextMenu4.Size = new System.Drawing.Size(130, 52);
+            this.metroContextMenu4.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroContextMenu4.UseStyleColors = true;
+            // 
+            // transportesToolStripMenuItem
+            // 
+            this.transportesToolStripMenuItem.Name = "transportesToolStripMenuItem";
+            this.transportesToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
+            this.transportesToolStripMenuItem.Text = "Transportes";
+            this.transportesToolStripMenuItem.Click += new System.EventHandler(this.transporteToolStripMenuItem_Click);
+            // 
+            // toursToolStripMenuItem
+            // 
+            this.toursToolStripMenuItem.Name = "toursToolStripMenuItem";
+            this.toursToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
+            this.toursToolStripMenuItem.Text = "Tours";
+            this.toursToolStripMenuItem.Click += new System.EventHandler(this.tourToolStripMenuItem_Click);
+            // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = null;
+            // 
+            // metroContextMenu1
+            // 
+            this.metroContextMenu1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.metroContextMenu1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesToolStripMenuItem,
+            this.funcionariosToolStripMenuItem,
+            this.administradoresToolStripMenuItem});
+            this.metroContextMenu1.Name = "metroContextMenu1";
+            this.metroContextMenu1.ShowImageMargin = false;
+            this.metroContextMenu1.ShowItemToolTips = false;
+            this.metroContextMenu1.Size = new System.Drawing.Size(163, 76);
+            this.metroContextMenu1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroContextMenu1.UseStyleColors = true;
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
+            // funcionariosToolStripMenuItem
+            // 
+            this.funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
+            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.funcionariosToolStripMenuItem.Text = "Funcionarios";
+            this.funcionariosToolStripMenuItem.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
+            // 
+            // administradoresToolStripMenuItem
+            // 
+            this.administradoresToolStripMenuItem.Name = "administradoresToolStripMenuItem";
+            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.administradoresToolStripMenuItem.Text = "Administradores";
+            this.administradoresToolStripMenuItem.Click += new System.EventHandler(this.administradoresToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 706);
+            this.ClientSize = new System.Drawing.Size(1199, 869);
+            this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.statusStrip);
-            this.Controls.Add(this.toolStrip);
-            this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Orange;
-            this.BackColor = System.Drawing.Color.FromArgb(255, 246, 244);
             this.Text = "Turismo Real";
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
+            this.metroPanel1.ResumeLayout(false);
+            this.metroContextMenu2.ResumeLayout(false);
+            this.metroContextMenu3.ResumeLayout(false);
+            this.metroContextMenu4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
+            this.metroContextMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
         #endregion
-
-
-        private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
-        private System.Windows.Forms.ToolStripMenuItem viewMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolBarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statusBarToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administradoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroTile metroTile5;
+        private MetroFramework.Controls.MetroTile metroTile4;
+        private MetroFramework.Controls.MetroTile metroTile3;
+        private MetroFramework.Controls.MetroTile metroTile2;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu2;
         private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem artículosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu3;
         private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem serviciosExtraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transporteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tourToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem articulosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem1;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu4;
+        private System.Windows.Forms.ToolStripMenuItem transportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toursToolStripMenuItem;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administradoresToolStripMenuItem;
     }
 }
 
