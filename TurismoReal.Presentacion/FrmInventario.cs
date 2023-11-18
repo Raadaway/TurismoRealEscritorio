@@ -20,13 +20,16 @@ namespace TurismoReal.Presentacion
         public FrmInventario()
         {
             InitializeComponent();
+            ListarInventario();
+            ConfigurarComboBoxArticulo();
         }
 
-        public FrmInventario(int idDepartamento) : this()
+        public FrmInventario(int idDepa) : this()
         {
-            this.idDepartamento = idDepartamento; // Almacena el ID del departamento
+            this.idDepartamento = idDepa; // Almacena el ID del departamento
             TabGeneral.SelectedIndex = 1;
             TxtIdDepartamento.Text = idDepartamento.ToString();
+            TxtIdDepartamento.ReadOnly = true;
         }
 
         private void ListarInventario()
@@ -103,15 +106,6 @@ namespace TurismoReal.Presentacion
             ListarInventario(); // Recarga la lista completa
         }
 
-
-        private void FrmInventario_Load(object sender, EventArgs e)
-        {
-            ListarInventario();
-            ConfigurarComboBoxArticulo();
-        }
-
-        
-
         private void Formato()
         {
             // Verifica si hay suficientes columnas antes de intentar configurarlas
@@ -162,9 +156,6 @@ namespace TurismoReal.Presentacion
             }
         }
 
-
-
-
         private void MensajeOk(string mensaje)
         {
             MetroFramework.MetroMessageBox.Show(this, mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -214,11 +205,6 @@ namespace TurismoReal.Presentacion
             {
                 MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void LblStock_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
@@ -362,16 +348,10 @@ namespace TurismoReal.Presentacion
             }
         }
 
-        private void DGVListar_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            // Verifica si se hizo clic en una celda válida
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                // Obtiene el valor de la celda de la columna que muestra el ID
-                int id_art = Convert.ToInt32(DGVListar.Rows[e.RowIndex].Cells["Id Articulo"].Value);
-                // Asigna el valor a un campo oculto o bloqueado en tu formulario (por ejemplo, TxtId)
-                TxtIdDepartamento.Text = id_art.ToString();
-            }
+            TxtBuscar.Text = ""; // Borra el contenido del TextBox
+            ListarInventario(); // Recarga la lista completa
         }
     }
 }

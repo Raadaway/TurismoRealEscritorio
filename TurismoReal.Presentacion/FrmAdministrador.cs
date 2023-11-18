@@ -113,21 +113,6 @@ namespace TurismoReal.Presentacion
             BtnEliminar.Visible = false;
         }
 
-        /*private void Buscar()
-    {
-        try
-        {
-            DGVListar.DataSource = NAdministrador.Buscar(TxtBuscar.Text);
-            this.Formato();
-            LblTotal.Text = "Total de registros: " + Convert.ToString(DGVListar.Rows.Count);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show(ex.Message + ex.StackTrace);
-
-        }
-    }*/
-
         private void Formato()
         {
             // Verifica si hay suficientes columnas antes de intentar configurarlas
@@ -161,11 +146,6 @@ namespace TurismoReal.Presentacion
         private void FrmAdministrador_Load(object sender, EventArgs e)
         {
             this.Listar();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void DGVListar_CellContentClick(object sender, DataGridViewCellEventArgs e)

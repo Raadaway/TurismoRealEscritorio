@@ -51,10 +51,9 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(72, 116);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(42, 92);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(59, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(56, 19);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel1.TabIndex = 8;
             this.metroLabel1.Text = "Usuario";
@@ -63,10 +62,9 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(48, 162);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel2.Location = new System.Drawing.Point(19, 129);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(83, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(79, 19);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel2.TabIndex = 9;
             this.metroLabel2.Text = "Contraseña";
@@ -77,10 +75,9 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.txtUsuario.CustomButton.Image = null;
-            this.txtUsuario.CustomButton.Location = new System.Drawing.Point(202, 2);
-            this.txtUsuario.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.CustomButton.Location = new System.Drawing.Point(112, 1);
             this.txtUsuario.CustomButton.Name = "";
-            this.txtUsuario.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtUsuario.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.txtUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtUsuario.CustomButton.TabIndex = 1;
             this.txtUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -88,8 +85,7 @@ namespace TurismoReal.Presentacion
             this.txtUsuario.CustomButton.Visible = false;
             this.txtUsuario.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtUsuario.Lines = new string[0];
-            this.txtUsuario.Location = new System.Drawing.Point(139, 108);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Location = new System.Drawing.Point(104, 88);
             this.txtUsuario.MaxLength = 32767;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
@@ -99,7 +95,7 @@ namespace TurismoReal.Presentacion
             this.txtUsuario.SelectionLength = 0;
             this.txtUsuario.SelectionStart = 0;
             this.txtUsuario.ShortcutsEnabled = true;
-            this.txtUsuario.Size = new System.Drawing.Size(228, 28);
+            this.txtUsuario.Size = new System.Drawing.Size(171, 23);
             this.txtUsuario.Style = MetroFramework.MetroColorStyle.Orange;
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.UseSelectable = true;
@@ -114,10 +110,9 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.txtContrasena.CustomButton.Image = null;
-            this.txtContrasena.CustomButton.Location = new System.Drawing.Point(202, 2);
-            this.txtContrasena.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContrasena.CustomButton.Location = new System.Drawing.Point(112, 1);
             this.txtContrasena.CustomButton.Name = "";
-            this.txtContrasena.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtContrasena.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.txtContrasena.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtContrasena.CustomButton.TabIndex = 1;
             this.txtContrasena.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -125,8 +120,7 @@ namespace TurismoReal.Presentacion
             this.txtContrasena.CustomButton.Visible = false;
             this.txtContrasena.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtContrasena.Lines = new string[0];
-            this.txtContrasena.Location = new System.Drawing.Point(139, 154);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContrasena.Location = new System.Drawing.Point(104, 125);
             this.txtContrasena.MaxLength = 32767;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
@@ -136,7 +130,7 @@ namespace TurismoReal.Presentacion
             this.txtContrasena.SelectionLength = 0;
             this.txtContrasena.SelectionStart = 0;
             this.txtContrasena.ShortcutsEnabled = true;
-            this.txtContrasena.Size = new System.Drawing.Size(228, 28);
+            this.txtContrasena.Size = new System.Drawing.Size(171, 23);
             this.txtContrasena.Style = MetroFramework.MetroColorStyle.Orange;
             this.txtContrasena.TabIndex = 1;
             this.txtContrasena.UseSelectable = true;
@@ -148,10 +142,9 @@ namespace TurismoReal.Presentacion
             // btnCerrar
             // 
             this.btnCerrar.ActiveControl = null;
-            this.btnCerrar.Location = new System.Drawing.Point(267, 212);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar.Location = new System.Drawing.Point(200, 172);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(100, 43);
+            this.btnCerrar.Size = new System.Drawing.Size(75, 35);
             this.btnCerrar.Style = MetroFramework.MetroColorStyle.Orange;
             this.btnCerrar.TabIndex = 3;
             this.btnCerrar.Text = "Cerrar";
@@ -164,10 +157,9 @@ namespace TurismoReal.Presentacion
             // tileAcceder
             // 
             this.tileAcceder.ActiveControl = null;
-            this.tileAcceder.Location = new System.Drawing.Point(139, 212);
-            this.tileAcceder.Margin = new System.Windows.Forms.Padding(4);
+            this.tileAcceder.Location = new System.Drawing.Point(104, 172);
             this.tileAcceder.Name = "tileAcceder";
-            this.tileAcceder.Size = new System.Drawing.Size(100, 43);
+            this.tileAcceder.Size = new System.Drawing.Size(75, 35);
             this.tileAcceder.Style = MetroFramework.MetroColorStyle.Orange;
             this.tileAcceder.TabIndex = 2;
             this.tileAcceder.Text = "Acceder";
@@ -181,19 +173,18 @@ namespace TurismoReal.Presentacion
             // 
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::TurismoReal.Presentacion.Properties.Resources._2;
-            this.pictureBox1.Location = new System.Drawing.Point(408, 41);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(306, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(273, 255);
+            this.pictureBox1.Size = new System.Drawing.Size(205, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 310);
+            this.ClientSize = new System.Drawing.Size(520, 252);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.tileAcceder);
             this.Controls.Add(this.metroLabel1);
@@ -202,11 +193,9 @@ namespace TurismoReal.Presentacion
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(693, 310);
-            this.MinimumSize = new System.Drawing.Size(693, 310);
+            this.MaximumSize = new System.Drawing.Size(520, 252);
+            this.MinimumSize = new System.Drawing.Size(520, 252);
             this.Name = "FrmLogin";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Bienvenido/a!";
             this.Load += new System.EventHandler(this.FrmLogin_Load);

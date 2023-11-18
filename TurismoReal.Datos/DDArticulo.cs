@@ -28,7 +28,7 @@ namespace TurismoReal.Datos
                 {
                     // Configurar las columnas del DataTable
                     dataTable.Columns.Add("Id Articulo", typeof(int));
-                    dataTable.Columns.Add("Descripcion", typeof(string));
+                    dataTable.Columns.Add("Articulo", typeof(string));
                     dataTable.Columns.Add("Stock", typeof(int));
                     dataTable.Columns.Add("Precio", typeof(int));
 
@@ -39,7 +39,7 @@ namespace TurismoReal.Datos
 
                         // Asignar los valores del administrador a las columnas correspondientes
                         row["Id Articulo"] = art.id_articulo;
-                        row["Descripcion"] = art.descripcion;
+                        row["Articulo"] = art.descripcion;
                         row["Stock"] = art.stock;
                         row["Precio"] = art.precio;
 

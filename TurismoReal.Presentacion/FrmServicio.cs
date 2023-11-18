@@ -24,11 +24,11 @@ namespace TurismoReal.Presentacion
         }
 
         // Constructor que acepta el ID del departamento como argumento
-        public FrmServicio(int idDepartamento) : this()
+        public FrmServicio(int idDepa) : this()
         {
-            this.idDepartamento = idDepartamento; // Almacena el ID del departamento
+            this.idDepartamento = idDepa; // Almacena el ID del departamento
             TabGeneral.SelectedIndex = 1;
-            SetIdDepartamento(idDepartamento);
+            TxtIdDepartamento.Text = idDepa.ToString();
             TxtIdDepartamento.ReadOnly = true;
         }
 
@@ -60,11 +60,6 @@ namespace TurismoReal.Presentacion
             ListarServicios();
         }
 
-        public void SetIdDepartamento(int idDepartamento)
-        {
-            TxtIdDepartamento.Text = idDepartamento.ToString();
-        }
-
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
             string filtroTexto = TxtBuscar.Text;
@@ -78,7 +73,7 @@ namespace TurismoReal.Presentacion
                 {
                     if (!string.IsNullOrEmpty(filtroTexto))
                     {
-                        dataView.RowFilter = $"Convert(Id Departamento, 'System.String') LIKE '%{filtroTexto}%' OR Articulo LIKE '%{filtroTexto}%'";
+                        dataView.RowFilter = $"nom_servicio LIKE '%{filtroTexto}%' OR Convert(id_depa, 'System.String') LIKE '%{filtroTexto}%'";
                     }
                     else
                     {
@@ -150,6 +145,12 @@ namespace TurismoReal.Presentacion
             {
                 MessageBox.Show("ID de departamento no válido.");
             }
+        }
+
+        private void BtnRefrescar_Click(object sender, EventArgs e)
+        {
+            TxtBuscar.Text = ""; // Borra el contenido del TextBox
+            ListarServicios(); // Recarga la lista completa
         }
     }
 }

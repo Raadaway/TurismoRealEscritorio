@@ -281,6 +281,7 @@ namespace TurismoReal.Presentacion
                             if (resultado)
                             {
                                 this.MensajeOk("Se eliminó el registro " + Convert.ToString(row.Cells[2].Value));
+                                CbSeleccionar.Checked = false;
                             }
                             else
                             {

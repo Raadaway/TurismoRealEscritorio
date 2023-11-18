@@ -344,7 +344,8 @@ namespace TurismoReal.Presentacion
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Limpiar();
+            TabGeneral.SelectedIndex = 0;
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -399,7 +400,6 @@ namespace TurismoReal.Presentacion
             if (DGVListar.SelectedRows.Count > 0)
             {
                 int idDepartamento = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["ID"].Value);
-
                 // Crea una nueva instancia de FrmInventario
                 FrmInventario frmInventario = new FrmInventario(idDepartamento);
                 frmInventario.MdiParent = this.MdiParent;

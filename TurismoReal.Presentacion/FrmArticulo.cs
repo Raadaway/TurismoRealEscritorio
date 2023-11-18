@@ -211,9 +211,10 @@ namespace TurismoReal.Presentacion
                 this.Limpiar();
                 BtnModificar.Visible = true;
                 BtnAgregar.Visible = false;
-                TxtDescripcion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["descripcion"].Value);
-                TxtStock.Text = Convert.ToString(DGVListar.CurrentRow.Cells["stock"].Value);
-                TxtPrecio.Text = Convert.ToString(DGVListar.CurrentRow.Cells["precio"].Value);
+                TxtId.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Articulo"].Value);
+                TxtDescripcion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Articulo"].Value);
+                TxtStock.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Stock"].Value);
+                TxtPrecio.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Precio"].Value);
                 TabGeneral.SelectedIndex = 1;
             }
             catch (Exception)
@@ -274,18 +275,6 @@ namespace TurismoReal.Presentacion
                 MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void DGVListar_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-                // Verifica si se hizo clic en una celda válida
-                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-                {
-                    // Obtiene el valor de la celda de la columna que muestra el ID
-                    int id_art = Convert.ToInt32(DGVListar.Rows[e.RowIndex].Cells["Id Articulo"].Value);
-                    // Asigna el valor a un campo oculto o bloqueado en tu formulario (por ejemplo, TxtId)
-                    TxtId.Text = id_art.ToString();
-                }
-            }
 
         private void CbSeleccionar_CheckedChanged(object sender, EventArgs e)
         {

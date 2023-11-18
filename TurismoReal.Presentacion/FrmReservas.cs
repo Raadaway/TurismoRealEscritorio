@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using TurismoReal.Entidades;
 using TurismoReal.Negocio;
@@ -94,12 +96,13 @@ namespace TurismoReal.Presentacion
         {
             TxtBuscar.Clear();
             TxtIdReserva.Clear();
+            ((MetroDateTime)DTInicioReserva).Value = DateTime.Now;
+            ((MetroDateTime)DTTerminoReserva).Value = DateTime.Now.AddDays(1);
             TxtCantPersonas.Clear();
-            TxtMontoPagado.Clear();
+            TxtMontoTotal.Clear();
             TxtMontoAbonado.Clear();
             TxtIdDepartamento.Clear();
             TxtRutCliente.Clear();
-            TxtIdEstado.Clear();
             BtnAgregar.Visible = true;
             BtnModificar.Visible = false;
 
@@ -244,7 +247,7 @@ namespace TurismoReal.Presentacion
                     inicio_reserva = DTInicioReserva.Value,
                     termino_reserva = DTTerminoReserva.Value,
                     cant_personas = int.Parse(TxtCantPersonas.Text),
-                    monto_total = int.Parse(TxtMontoPagado.Text),
+                    monto_total = int.Parse(TxtMontoTotal.Text),
                     monto_abonado = int.Parse(TxtMontoAbonado.Text),
                     departamento_id_departamento = int.Parse(TxtIdDepartamento.Text),
                     cliente_rut = int.Parse(TxtRutCliente.Text)
@@ -285,7 +288,7 @@ namespace TurismoReal.Presentacion
                     int cantPersonas, montoTotal, montoAbonado, idDepartamento;
 
                     if (!int.TryParse(TxtCantPersonas.Text, out cantPersonas) ||
-                        !int.TryParse(TxtMontoPagado.Text, out montoTotal) ||
+                        !int.TryParse(TxtMontoTotal.Text, out montoTotal) ||
                         !int.TryParse(TxtMontoAbonado.Text, out montoAbonado) ||
                         !int.TryParse(TxtIdDepartamento.Text, out idDepartamento))
                     {
@@ -328,11 +331,10 @@ namespace TurismoReal.Presentacion
             BtnAgregar.Visible = false;
             TxtIdReserva.Text = Convert.ToString(DGVListar.CurrentRow.Cells["ID Reserva"].Value);
             TxtCantPersonas.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Cantidad Personas"].Value);
-            TxtMontoPagado.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Monto Pagado"].Value);
+            TxtMontoTotal.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Monto Pagado"].Value);
             TxtMontoAbonado.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Monto Abonado"].Value);
             TxtIdDepartamento.Text = Convert.ToString(DGVListar.CurrentRow.Cells["ID Departamento"].Value);
             TxtRutCliente.Text = Convert.ToString(DGVListar.CurrentRow.Cells["RUT Cliente"].Value);
-            TxtIdEstado.Text = Convert.ToString(DGVListar.CurrentRow.Cells["ID Estado"].Value);
             TabGeneral.SelectedIndex = 1;
         }
 
@@ -386,6 +388,12 @@ namespace TurismoReal.Presentacion
                 DataGridViewCheckBoxCell CbEliminar = (DataGridViewCheckBoxCell)DGVListar.Rows[e.RowIndex].Cells["Seleccionar"];
                 CbEliminar.Value = !Convert.ToBoolean(CbEliminar.Value);
             }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Limpiar();
+            TabGeneral.SelectedIndex = 0;
         }
     }
 }
