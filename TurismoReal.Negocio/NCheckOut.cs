@@ -11,53 +11,65 @@ namespace TurismoReal.Negocio
 {
     public class NCheckOut
     {
-        public static List<CheckOut> ListarCheckOut()
+        public static DataTable ListarCheckOut()
         {
-            DDCheckOut datosCheckOut = new DDCheckOut();
+            DDCheckOut datos = new DDCheckOut();
 
             try
             {
-                DataTable dataTable = datosCheckOut.ListarCheckOutDesdeWebService();
-
-                if (dataTable != null && dataTable.Rows.Count > 0)
-                {
-                    List<CheckOut> checkOuts = new List<CheckOut>();
-
-                    foreach (DataRow row in dataTable.Rows)
-                    {
-                        CheckOut checkOut = new CheckOut
-                        {
-                            IdCheckOut = Convert.ToInt32(row["IdCheckOut"]),
-                            Hora = row["Hora"].ToString(),
-                            Fecha = Convert.ToDateTime(row["Fecha"]),
-                            Multas = Convert.ToInt32(row["Multas"]),
-                            PagoCliente = Convert.ToInt32(row["PagoCliente"]),
-                            FirmaCliente = row["FirmaCliente"].ToString(),
-                            IdReserva = Convert.ToInt32(row["IdReserva"]),
-                            FuncionarioRut = Convert.ToInt32(row["FuncionarioRut"])
-                        };
-
-                        checkOuts.Add(checkOut);
-                    }
-
-                    return checkOuts;
-                }
-                else
-                {
-                    return new List<CheckOut>();
-                }
+                return datos.ListarCheckOutDesdeWebService();
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones, registrar el error o mostrar un mensaje de error si es necesario.
-                return null; // Puedes devolver una lista vacía o null en caso de error.
+                // Puedes manejar la excepción, registrar el error o mostrar un mensaje de error si es necesario
+                return null; // Puedes devolver un DataTable vacío o null en caso de error
             }
         }
 
         public static bool AgregarCheckOut(int multa, int pago, string firma, int idRes, int rutFunc)
         {
             DDCheckOut Datos = new DDCheckOut();
-            bool exito = Datos.AgregarCheckOut(multa, pago, firma, idRes, rutFunc);
+            bool exito = false;
+
+            try
+            {
+                exito = Datos.AgregarCheckOut(multa, pago, firma, idRes, rutFunc);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                exito = true;
+            }
+            return exito;
+        }
+
+        public static bool ModificarCheckOut(int idCheckOut, int multa, int pago, string firma)
+        {
+            bool exito = false;
+            DDCheckOut datos = new DDCheckOut();
+            try
+            {
+                exito = datos.ModificarCheckOut(idCheckOut, multa, pago, firma);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return exito;
+        }
+
+        public static bool EliminarCheckOut(int idCheckOut)
+        {
+            bool exito = false;
+            DDCheckOut datos = new DDCheckOut();
+            try
+            {
+                exito = datos.EliminarCheckOut(idCheckOut);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             return exito;
         }
     }

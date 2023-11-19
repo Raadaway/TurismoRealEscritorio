@@ -24,11 +24,11 @@ namespace TurismoReal.Datos
                 if (listaTours != null && listaTours.Length > 0)
                 {
                     // Configurar las columnas del DataTable
-                    dataTable.Columns.Add("IdServicio", typeof(int));
-                    dataTable.Columns.Add("NombreServicio", typeof(string));
+                    dataTable.Columns.Add("Id Servicio", typeof(int));
+                    dataTable.Columns.Add("Nombre Servicio", typeof(string));
                     dataTable.Columns.Add("Descripcion", typeof(string));
                     dataTable.Columns.Add("Destino", typeof(string));
-                    dataTable.Columns.Add("TarifaAdicional", typeof(int));
+                    dataTable.Columns.Add("Tarifa Adicional", typeof(int));
 
 
                     // Agrega más propiedades según las columnas que hayas definido en tu entidad Tour.
@@ -39,19 +39,17 @@ namespace TurismoReal.Datos
                         DataRow row = dataTable.NewRow();
 
                         // Asignar los valores del tour a las columnas correspondientes
-                        row["IdServicio"] = tour.id_tour;
-                        row["NombreServicio"] = tour.nombre_servicio;
+                        row["Id Servicio"] = tour.id_tour;
+                        row["Nombre Servicio"] = tour.nombre_servicio;
                         row["Descripcion"] = tour.descripcion;
                         row["Destino"] = tour.destino;
-                        row["TarifaAdicional"] = tour.tarifa_adicional;
+                        row["Tarifa Adicional"] = tour.tarifa_adicional;
                         // Agregar más propiedades según las columnas que hayas definido en tu entidad Tour.
 
                         // Agregar la fila al DataTable
                         dataTable.Rows.Add(row);
                     }
                 }
-
-                return dataTable;
             }
             catch (Exception ex)
             {
@@ -65,8 +63,7 @@ namespace TurismoReal.Datos
                     client.Close();
                 }
             }
+            return dataTable;
         }
-
-
     }
 }

@@ -51,7 +51,7 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(42, 92);
+            this.metroLabel1.Location = new System.Drawing.Point(42, 90);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(56, 19);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Orange;
@@ -62,7 +62,7 @@ namespace TurismoReal.Presentacion
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(19, 129);
+            this.metroLabel2.Location = new System.Drawing.Point(19, 142);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(79, 19);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Orange;
@@ -75,9 +75,9 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.txtUsuario.CustomButton.Image = null;
-            this.txtUsuario.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.txtUsuario.CustomButton.Location = new System.Drawing.Point(149, 1);
             this.txtUsuario.CustomButton.Name = "";
-            this.txtUsuario.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtUsuario.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtUsuario.CustomButton.TabIndex = 1;
             this.txtUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -110,9 +110,9 @@ namespace TurismoReal.Presentacion
             // 
             // 
             this.txtContrasena.CustomButton.Image = null;
-            this.txtContrasena.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.txtContrasena.CustomButton.Location = new System.Drawing.Point(149, 1);
             this.txtContrasena.CustomButton.Name = "";
-            this.txtContrasena.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtContrasena.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtContrasena.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtContrasena.CustomButton.TabIndex = 1;
             this.txtContrasena.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -120,7 +120,7 @@ namespace TurismoReal.Presentacion
             this.txtContrasena.CustomButton.Visible = false;
             this.txtContrasena.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtContrasena.Lines = new string[0];
-            this.txtContrasena.Location = new System.Drawing.Point(104, 125);
+            this.txtContrasena.Location = new System.Drawing.Point(104, 140);
             this.txtContrasena.MaxLength = 32767;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
@@ -142,7 +142,7 @@ namespace TurismoReal.Presentacion
             // btnCerrar
             // 
             this.btnCerrar.ActiveControl = null;
-            this.btnCerrar.Location = new System.Drawing.Point(200, 172);
+            this.btnCerrar.Location = new System.Drawing.Point(200, 194);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 35);
             this.btnCerrar.Style = MetroFramework.MetroColorStyle.Orange;
@@ -157,7 +157,7 @@ namespace TurismoReal.Presentacion
             // tileAcceder
             // 
             this.tileAcceder.ActiveControl = null;
-            this.tileAcceder.Location = new System.Drawing.Point(104, 172);
+            this.tileAcceder.Location = new System.Drawing.Point(104, 194);
             this.tileAcceder.Name = "tileAcceder";
             this.tileAcceder.Size = new System.Drawing.Size(75, 35);
             this.tileAcceder.Style = MetroFramework.MetroColorStyle.Orange;

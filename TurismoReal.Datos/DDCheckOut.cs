@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using TurismoReal.Datos.WSportafolio;
 using TurismoReal.Entidades;
 using System.Linq;
+using TurismoReal.Entidades.WSportafolio;
 
 namespace TurismoReal.Datos
 {
@@ -24,14 +24,14 @@ namespace TurismoReal.Datos
                 if (listaCheckOut != null && listaCheckOut.Length > 0)
                 {
                     // Configurar las columnas del DataTable
-                    dataTable.Columns.Add("IdCheckOut", typeof(int));
+                    dataTable.Columns.Add("Id Check-Out", typeof(int));
                     dataTable.Columns.Add("Hora", typeof(string));
                     dataTable.Columns.Add("Fecha", typeof(DateTime));
                     dataTable.Columns.Add("Multas", typeof(int));
-                    dataTable.Columns.Add("PagoCliente", typeof(int));
-                    dataTable.Columns.Add("FirmaCliente", typeof(string));
-                    dataTable.Columns.Add("IdReserva", typeof(int));
-                    dataTable.Columns.Add("FuncionarioRut", typeof(int));
+                    dataTable.Columns.Add("Pago Cliente", typeof(int));
+                    dataTable.Columns.Add("Firma Cliente", typeof(string));
+                    dataTable.Columns.Add("Id Reserva", typeof(int));
+                    dataTable.Columns.Add("Rut Funcionario", typeof(int));
 
                     foreach (var checkOut in listaCheckOut)
                     {
@@ -39,21 +39,19 @@ namespace TurismoReal.Datos
                         DataRow row = dataTable.NewRow();
 
                         // Asignar los valores del Check-Out a las columnas correspondientes
-                        row["IdCheckOut"] = checkOut.id_check_out;
+                        row["Id Check-Out"] = checkOut.id_check_out;
                         row["Hora"] = checkOut.hora;
                         row["Fecha"] = checkOut.fecha;
                         row["Multas"] = checkOut.multas;
-                        row["PagoCliente"] = checkOut.pago_cliente;
-                        row["FirmaCliente"] = checkOut.firma_cliente;
-                        row["IdReserva"] = checkOut.id_reserva;
-                        row["FuncionarioRut"] = checkOut.funcionario_rut;
+                        row["Pago Cliente"] = checkOut.pago_cliente;
+                        row["Firma Cliente"] = checkOut.firma_cliente;
+                        row["Id Reserva"] = checkOut.id_reserva;
+                        row["Rut Funcionario"] = checkOut.funcionario_rut;
 
                         // Agregar la fila al DataTable
                         dataTable.Rows.Add(row);
                     }
                 }
-
-                return dataTable;
             }
             catch (Exception ex)
             {
@@ -67,6 +65,7 @@ namespace TurismoReal.Datos
                     client.Close();
                 }
             }
+            return dataTable;
         }
 
         public bool AgregarCheckOut(int multa, int pago, string firma, int idRes, int rutFunc)
@@ -89,6 +88,66 @@ namespace TurismoReal.Datos
             finally
             {
                 // Cerrar el cliente proxy
+                if (client != null)
+                {
+                    client.Close();
+                }
+            }
+            return ward;
+        }
+
+        public bool ModificarCheckOut(int idCheckOut, int multa, int pago, string firma)
+        {
+            bool ward = false;
+            WSPortafolioClient client = null;
+
+            try
+            {
+                client = new WSPortafolioClient();
+
+                // Llama al procedimiento modificarAdministrador del servicio web con dos valores de rut
+                ward = client.modificarCheckOut(idCheckOut, multa, pago, firma);
+
+
+                if (ward)
+                {
+                    Console.WriteLine("Check-Out actualizado correctamente.");
+                }
+                else
+                {
+                    Console.WriteLine("Error al actualizar Check-Out.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar Check-Out: " + ex.Message);
+            }
+            finally
+            {
+                if (client != null)
+                {
+                    client.Close();
+                }
+            }
+            return ward;
+        }
+
+        public bool EliminarCheckOut(int idCheckOut)
+        {
+            bool ward = false;
+            WSPortafolioClient client = null;
+
+            try
+            {
+                client = new WSPortafolioClient();
+                ward = client.eliminarCheckOut(idCheckOut);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar Check-Out: " + ex.Message);
+            }
+            finally
+            {
                 if (client != null)
                 {
                     client.Close();

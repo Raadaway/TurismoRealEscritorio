@@ -22,12 +22,12 @@ namespace TurismoReal.Datos
                 transporte[] listaTransportes = client.listarTransporte();
 
                 // Configurar las columnas del DataTable
-                dataTable.Columns.Add("IdTransporte", typeof(int));
-                dataTable.Columns.Add("NombreEmpresa", typeof(string));
+                dataTable.Columns.Add("Id Transporte", typeof(int));
+                dataTable.Columns.Add("Nombre Empresa", typeof(string));
                 dataTable.Columns.Add("Horario", typeof(string));
                 dataTable.Columns.Add("Patente", typeof(string));
-                dataTable.Columns.Add("TarifaAdicional", typeof(int));
-                dataTable.Columns.Add("RutChofer", typeof(int));
+                dataTable.Columns.Add("Tarifa Adicional", typeof(int));
+                dataTable.Columns.Add("Rut Chofer", typeof(int));
 
                 foreach (var transporte in listaTransportes)
                 {
@@ -35,18 +35,16 @@ namespace TurismoReal.Datos
                     DataRow row = dataTable.NewRow();
 
                     // Asignar los valores del transporte a las columnas correspondientes
-                    row["IdTransporte"] = transporte.id_transporte;
-                    row["NombreEmpresa"] = transporte.nom_empresa;
+                    row["Id Transporte"] = transporte.id_transporte;
+                    row["Nombre Empresa"] = transporte.nom_empresa;
                     row["Horario"] = transporte.horario;
                     row["Patente"] = transporte.patente;
-                    row["TarifaAdicional"] = transporte.tarifa_adicional;
-                    row["RutChofer"] = transporte.rut_chofer;
+                    row["Tarifa Adicional"] = transporte.tarifa_adicional;
+                    row["Rut Chofer"] = transporte.rut_chofer;
 
                     // Agregar la fila al DataTable
                     dataTable.Rows.Add(row);
                 }
-
-                return dataTable;
             }
             catch (Exception ex)
             {
@@ -60,6 +58,7 @@ namespace TurismoReal.Datos
                     client.Close();
                 }
             }
+            return dataTable;
         }
     }
 }

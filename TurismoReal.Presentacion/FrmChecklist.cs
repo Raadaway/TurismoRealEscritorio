@@ -23,7 +23,10 @@ namespace TurismoReal.Presentacion
         public FrmChecklist()
         {
             InitializeComponent();
+            Formato();
+            ListarInventarioPorIdDepa(IdDepartamento);
             lblPrecio.Text = Total.ToString();
+            
         }
 
         public FrmChecklist(int idDepa, bool checkIn) : this()
@@ -74,11 +77,6 @@ namespace TurismoReal.Presentacion
             {
                 MetroFramework.MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void FrmChecklist_Load(object sender, EventArgs e)
-        {
-            ListarInventarioPorIdDepa(IdDepartamento);
         }
 
         private void Formato()

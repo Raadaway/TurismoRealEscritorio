@@ -29,7 +29,7 @@ namespace TurismoReal.Presentacion
         {
             try
             {
-                DataTable dataTable = NTour.ListarToursDataTable(); // Utiliza el nuevo método para obtener un DataTable
+                DataTable dataTable = NTour.ListarTours(); // Utiliza el nuevo método para obtener un DataTable
 
                 if (dataTable != null && dataTable.Rows.Count > 0)
                 {
@@ -63,6 +63,12 @@ namespace TurismoReal.Presentacion
                 DGVListar.Columns[4].Width = 100;
                 DGVListar.Columns[5].Width = 100;
             }
+        }
+
+        private void BtnRefrescar_Click(object sender, EventArgs e)
+        {
+            TxtBuscar.Text = ""; // Borra el contenido del TextBox
+            ListarTours(); // Recarga la lista completa
         }
 
     }
