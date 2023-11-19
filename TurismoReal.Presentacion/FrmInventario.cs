@@ -21,7 +21,7 @@ namespace TurismoReal.Presentacion
         {
             InitializeComponent();
             ListarInventario();
-            ConfigurarComboBoxArticulo();
+            CargarArticulos();
         }
 
         public FrmInventario(int idDepa) : this()
@@ -132,27 +132,19 @@ namespace TurismoReal.Presentacion
             CbSeleccionar.Checked = false;
         }
 
-        private void ConfigurarComboBoxArticulo()
+        private void CargarArticulos()
         {
             try
             {
-                // Obtén la lista de Articulos desde la capa de negocio de Articulo
-                List<Articulo> listaArticulos = NArticulo.ListarArticulos();
+                List<Articulo> lista = NArticulo.ListarArticuloCB();
 
-                // Configura el ComboBox de Articulo para mostrar la propiedad "descripcion"
-                // de los objetos Articulo
                 ComboBoxArticulo.DisplayMember = "descripcion";
-
-                // Configura el ComboBox de Articulo para usar la propiedad "id_articulo"
-                // como el valor de cada elemento
                 ComboBoxArticulo.ValueMember = "id_articulo";
-
-                // Asigna la lista de Articulos al ComboBox de Articulo
-                ComboBoxArticulo.DataSource = listaArticulos;
+                ComboBoxArticulo.DataSource = lista;
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Error al cargar los datos del ComboBox de Articulo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
             }
         }
 

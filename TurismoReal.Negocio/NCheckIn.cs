@@ -12,45 +12,18 @@ namespace TurismoReal.Negocio
 {
     public class NCheckIn
     {
-        public static List<CheckIn> ListarCheckIn()
+        public static DataTable ListarCheckIn()
         {
-            DDCheckIn datosCheckIn = new DDCheckIn();
+            DDCheckIn datos = new DDCheckIn();
 
             try
             {
-                DataTable dataTable = datosCheckIn.ListarCheckInDesdeWebService();
-
-                if (dataTable != null && dataTable.Rows.Count > 0)
-                {
-                    List<CheckIn> checkIns = new List<CheckIn>();
-
-                    foreach (DataRow row in dataTable.Rows)
-                    {
-                        CheckIn checkIn = new CheckIn
-                        {
-                            IdCheckIn = Convert.ToInt32(row["IdCheckIn"]),
-                            Hora = row["Hora"].ToString(),
-                            Fecha = Convert.ToDateTime(row["Fecha"]),
-                            FirmaCliente = row["FirmaCliente"].ToString(),
-                            PagoCliente = Convert.ToInt32(row["PagoCliente"]),
-                            IdReserva = Convert.ToInt32(row["IdReserva"]),
-                            FuncionarioRut = Convert.ToInt32(row["FuncionarioRut"])
-                        };
-
-                        checkIns.Add(checkIn);
-                    }
-
-                    return checkIns;
-                }
-                else
-                {
-                    return new List<CheckIn>();
-                }
+                return datos.ListarCheckInDesdeWebService();
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones, registrar el error o mostrar un mensaje de error si es necesario.
-                return null; // Puedes devolver una lista vacía o null en caso de error.
+                // Puedes manejar la excepción, registrar el error o mostrar un mensaje de error si es necesario
+                return null; // Puedes devolver un DataTable vacío o null en caso de error
             }
         }
 
@@ -58,6 +31,36 @@ namespace TurismoReal.Negocio
         {
             DDCheckIn Datos = new DDCheckIn();
             bool exito = Datos.AgregarCheckIn(firma, pago, idRes, rutFunc);
+            return exito;
+        }
+
+        public static bool ModificarCheckIn(int idCheckIn, string firma, int pago)
+        {
+            bool exito = false;
+            DDCheckIn datos = new DDCheckIn();
+            try
+            {
+                exito = datos.ModificarCheckIn(idCheckIn, firma, pago);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return exito;
+        }
+
+        public static bool EliminarCheckIn(int idCheckIn)
+        {
+            bool exito = false;
+            DDCheckIn datos = new DDCheckIn();
+            try
+            {
+                exito = datos.EliminarCheckIn(idCheckIn);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             return exito;
         }
     }

@@ -196,7 +196,6 @@ namespace TurismoReal.Presentacion
 
         private void DGVListar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
                 this.Limpiar();
                 BtnModificar.Visible = true;
                 BtnAgregar.Visible = false;
@@ -210,7 +209,6 @@ namespace TurismoReal.Presentacion
                 TxtUsuario.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Usuario"].Value);
                 TxtContrasena.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Contrasena"].Value);
                 TabGeneral.SelectedIndex = 1;
-            
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)

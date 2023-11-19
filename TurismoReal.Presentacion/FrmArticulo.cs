@@ -24,33 +24,14 @@ namespace TurismoReal.Presentacion
         {
             try
             {
-                List<Articulo> listaArticulos = NArticulo.ListarArticulos();
+                DataTable dataTable = NArticulo.ListarArticulo();
 
-                if (listaArticulos != null && listaArticulos.Count > 0)
+                if (dataTable != null)
                 {
-                    // Crear un DataTable a partir de la lista de Articulos
-                    DataTable dataTable = new DataTable();
-                    dataTable.Columns.Add("Id Articulo", typeof(int));
-                    dataTable.Columns.Add("Descripcion", typeof(string));
-                    dataTable.Columns.Add("Stock", typeof(int));
-                    dataTable.Columns.Add("Precio", typeof(int));
-
-                    foreach (Articulo art in listaArticulos)
-                    {
-                        DataRow row = dataTable.NewRow();
-                        row["Id Articulo"] = art.id_articulo;
-                        row["Descripcion"] = art.descripcion;
-                        row["Stock"] = art.stock;
-                        row["Precio"] = art.precio_articulo;
-
-                        dataTable.Rows.Add(row);
-                    }
-
                     DGVListar.DataSource = dataTable;
-
-                    // Llamada a los métodos de formato y limpieza
-                    Formato();
-                    Limpiar();
+                    this.Formato();
+                    this.Limpiar();
+                    LblTotal.Text = "Total de registros: " + Convert.ToString(DGVListar.Rows.Count);
                 }
                 else
                 {

@@ -29,12 +29,14 @@ namespace TurismoReal.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabGeneral = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.BtnCheckOut = new MetroFramework.Controls.MetroButton();
+            this.BtnCheckIn = new MetroFramework.Controls.MetroButton();
             this.BtnRefrescar = new MetroFramework.Controls.MetroButton();
             this.BtnEliminar = new MetroFramework.Controls.MetroButton();
             this.TxtBuscar = new MetroFramework.Controls.MetroTextBox();
@@ -44,7 +46,10 @@ namespace TurismoReal.Presentacion
             this.DGVListar = new MetroFramework.Controls.MetroGrid();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.DTTerminoReserva = new MetroFramework.Controls.MetroDateTime();
+            this.DTInicioReserva = new MetroFramework.Controls.MetroDateTime();
             this.TxtMontoAbonado = new MetroFramework.Controls.MetroTextBox();
+            this.TxtIdDepartamento = new MetroFramework.Controls.MetroTextBox();
             this.TxtRutCliente = new MetroFramework.Controls.MetroTextBox();
             this.BtnModificar = new MetroFramework.Controls.MetroTile();
             this.BtnCancelar = new MetroFramework.Controls.MetroTile();
@@ -59,11 +64,6 @@ namespace TurismoReal.Presentacion
             this.TxtMontoTotal = new MetroFramework.Controls.MetroTextBox();
             this.TxtCantPersonas = new MetroFramework.Controls.MetroTextBox();
             this.TxtIdReserva = new MetroFramework.Controls.MetroTextBox();
-            this.DTInicioReserva = new MetroFramework.Controls.MetroDateTime();
-            this.DTTerminoReserva = new MetroFramework.Controls.MetroDateTime();
-            this.BtnCheckIn = new MetroFramework.Controls.MetroButton();
-            this.BtnCheckOut = new MetroFramework.Controls.MetroButton();
-            this.TxtIdDepartamento = new MetroFramework.Controls.MetroTextBox();
             this.TabGeneral.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -121,6 +121,34 @@ namespace TurismoReal.Presentacion
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // BtnCheckOut
+            // 
+            this.BtnCheckOut.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnCheckOut.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.BtnCheckOut.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.BtnCheckOut.Location = new System.Drawing.Point(475, 0);
+            this.BtnCheckOut.Name = "BtnCheckOut";
+            this.BtnCheckOut.Size = new System.Drawing.Size(125, 23);
+            this.BtnCheckOut.Style = MetroFramework.MetroColorStyle.Orange;
+            this.BtnCheckOut.TabIndex = 9;
+            this.BtnCheckOut.Text = "Realizar Check-Out";
+            this.BtnCheckOut.UseSelectable = true;
+            this.BtnCheckOut.Click += new System.EventHandler(this.BtnCheckOut_Click);
+            // 
+            // BtnCheckIn
+            // 
+            this.BtnCheckIn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnCheckIn.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.BtnCheckIn.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.BtnCheckIn.Location = new System.Drawing.Point(364, 0);
+            this.BtnCheckIn.Name = "BtnCheckIn";
+            this.BtnCheckIn.Size = new System.Drawing.Size(111, 23);
+            this.BtnCheckIn.Style = MetroFramework.MetroColorStyle.Orange;
+            this.BtnCheckIn.TabIndex = 8;
+            this.BtnCheckIn.Text = "Realizar Check-In";
+            this.BtnCheckIn.UseSelectable = true;
+            this.BtnCheckIn.Click += new System.EventHandler(this.BtnCheckIn_Click);
             // 
             // BtnRefrescar
             // 
@@ -241,25 +269,25 @@ namespace TurismoReal.Presentacion
             this.DGVListar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVListar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVListar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.DGVListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVListar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seleccionar});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVListar.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVListar.DefaultCellStyle = dataGridViewCellStyle20;
             this.DGVListar.EnableHeadersVisualStyles = false;
             this.DGVListar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DGVListar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -268,14 +296,14 @@ namespace TurismoReal.Presentacion
             this.DGVListar.Name = "DGVListar";
             this.DGVListar.ReadOnly = true;
             this.DGVListar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.DGVListar.RowHeadersWidth = 50;
             this.DGVListar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -327,6 +355,26 @@ namespace TurismoReal.Presentacion
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
+            // DTTerminoReserva
+            // 
+            this.DTTerminoReserva.Location = new System.Drawing.Point(140, 112);
+            this.DTTerminoReserva.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
+            this.DTTerminoReserva.MinimumSize = new System.Drawing.Size(4, 29);
+            this.DTTerminoReserva.Name = "DTTerminoReserva";
+            this.DTTerminoReserva.Size = new System.Drawing.Size(212, 29);
+            this.DTTerminoReserva.Style = MetroFramework.MetroColorStyle.Orange;
+            this.DTTerminoReserva.TabIndex = 24;
+            // 
+            // DTInicioReserva
+            // 
+            this.DTInicioReserva.Location = new System.Drawing.Point(140, 54);
+            this.DTInicioReserva.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
+            this.DTInicioReserva.MinimumSize = new System.Drawing.Size(4, 29);
+            this.DTInicioReserva.Name = "DTInicioReserva";
+            this.DTInicioReserva.Size = new System.Drawing.Size(212, 29);
+            this.DTInicioReserva.Style = MetroFramework.MetroColorStyle.Orange;
+            this.DTInicioReserva.TabIndex = 23;
+            // 
             // TxtMontoAbonado
             // 
             // 
@@ -360,6 +408,40 @@ namespace TurismoReal.Presentacion
             this.TxtMontoAbonado.WaterMark = "Monto abonado por el cliente";
             this.TxtMontoAbonado.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtMontoAbonado.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // TxtIdDepartamento
+            // 
+            // 
+            // 
+            // 
+            this.TxtIdDepartamento.CustomButton.Image = null;
+            this.TxtIdDepartamento.CustomButton.Location = new System.Drawing.Point(190, 1);
+            this.TxtIdDepartamento.CustomButton.Name = "";
+            this.TxtIdDepartamento.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtIdDepartamento.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtIdDepartamento.CustomButton.TabIndex = 1;
+            this.TxtIdDepartamento.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtIdDepartamento.CustomButton.UseSelectable = true;
+            this.TxtIdDepartamento.CustomButton.Visible = false;
+            this.TxtIdDepartamento.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.TxtIdDepartamento.Lines = new string[0];
+            this.TxtIdDepartamento.Location = new System.Drawing.Point(510, 115);
+            this.TxtIdDepartamento.MaxLength = 32767;
+            this.TxtIdDepartamento.Name = "TxtIdDepartamento";
+            this.TxtIdDepartamento.PasswordChar = '\0';
+            this.TxtIdDepartamento.PromptText = "Ingresar correo electrónico";
+            this.TxtIdDepartamento.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtIdDepartamento.SelectedText = "";
+            this.TxtIdDepartamento.SelectionLength = 0;
+            this.TxtIdDepartamento.SelectionStart = 0;
+            this.TxtIdDepartamento.ShortcutsEnabled = true;
+            this.TxtIdDepartamento.Size = new System.Drawing.Size(212, 23);
+            this.TxtIdDepartamento.Style = MetroFramework.MetroColorStyle.Orange;
+            this.TxtIdDepartamento.TabIndex = 8;
+            this.TxtIdDepartamento.UseSelectable = true;
+            this.TxtIdDepartamento.WaterMark = "Ingresar correo electrónico";
+            this.TxtIdDepartamento.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtIdDepartamento.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // TxtRutCliente
             // 
@@ -606,7 +688,7 @@ namespace TurismoReal.Presentacion
             this.TxtIdReserva.Enabled = false;
             this.TxtIdReserva.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtIdReserva.Lines = new string[0];
-            this.TxtIdReserva.Location = new System.Drawing.Point(451, 222);
+            this.TxtIdReserva.Location = new System.Drawing.Point(384, 387);
             this.TxtIdReserva.MaxLength = 32767;
             this.TxtIdReserva.Name = "TxtIdReserva";
             this.TxtIdReserva.PasswordChar = '\0';
@@ -617,7 +699,7 @@ namespace TurismoReal.Presentacion
             this.TxtIdReserva.SelectionLength = 0;
             this.TxtIdReserva.SelectionStart = 0;
             this.TxtIdReserva.ShortcutsEnabled = true;
-            this.TxtIdReserva.Size = new System.Drawing.Size(212, 23);
+            this.TxtIdReserva.Size = new System.Drawing.Size(147, 23);
             this.TxtIdReserva.Style = MetroFramework.MetroColorStyle.Orange;
             this.TxtIdReserva.TabIndex = 2;
             this.TxtIdReserva.UseSelectable = true;
@@ -625,88 +707,6 @@ namespace TurismoReal.Presentacion
             this.TxtIdReserva.WaterMark = "ID Reserva invisible";
             this.TxtIdReserva.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtIdReserva.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // DTInicioReserva
-            // 
-            this.DTInicioReserva.Location = new System.Drawing.Point(140, 54);
-            this.DTInicioReserva.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
-            this.DTInicioReserva.MinimumSize = new System.Drawing.Size(0, 29);
-            this.DTInicioReserva.Name = "DTInicioReserva";
-            this.DTInicioReserva.Size = new System.Drawing.Size(212, 29);
-            this.DTInicioReserva.Style = MetroFramework.MetroColorStyle.Orange;
-            this.DTInicioReserva.TabIndex = 23;
-            // 
-            // DTTerminoReserva
-            // 
-            this.DTTerminoReserva.Location = new System.Drawing.Point(140, 112);
-            this.DTTerminoReserva.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
-            this.DTTerminoReserva.MinimumSize = new System.Drawing.Size(0, 29);
-            this.DTTerminoReserva.Name = "DTTerminoReserva";
-            this.DTTerminoReserva.Size = new System.Drawing.Size(212, 29);
-            this.DTTerminoReserva.Style = MetroFramework.MetroColorStyle.Orange;
-            this.DTTerminoReserva.TabIndex = 24;
-            // 
-            // BtnCheckIn
-            // 
-            this.BtnCheckIn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtnCheckIn.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.BtnCheckIn.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnCheckIn.Location = new System.Drawing.Point(364, 0);
-            this.BtnCheckIn.Name = "BtnCheckIn";
-            this.BtnCheckIn.Size = new System.Drawing.Size(111, 23);
-            this.BtnCheckIn.Style = MetroFramework.MetroColorStyle.Orange;
-            this.BtnCheckIn.TabIndex = 8;
-            this.BtnCheckIn.Text = "Realizar Check-In";
-            this.BtnCheckIn.UseSelectable = true;
-            this.BtnCheckIn.Click += new System.EventHandler(this.BtnCheckIn_Click);
-            // 
-            // BtnCheckOut
-            // 
-            this.BtnCheckOut.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtnCheckOut.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.BtnCheckOut.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnCheckOut.Location = new System.Drawing.Point(475, 0);
-            this.BtnCheckOut.Name = "BtnCheckOut";
-            this.BtnCheckOut.Size = new System.Drawing.Size(125, 23);
-            this.BtnCheckOut.Style = MetroFramework.MetroColorStyle.Orange;
-            this.BtnCheckOut.TabIndex = 9;
-            this.BtnCheckOut.Text = "Realizar Check-Out";
-            this.BtnCheckOut.UseSelectable = true;
-            this.BtnCheckOut.Click += new System.EventHandler(this.BtnCheckOut_Click);
-            // 
-            // TxtIdDepartamento
-            // 
-            // 
-            // 
-            // 
-            this.TxtIdDepartamento.CustomButton.Image = null;
-            this.TxtIdDepartamento.CustomButton.Location = new System.Drawing.Point(190, 1);
-            this.TxtIdDepartamento.CustomButton.Name = "";
-            this.TxtIdDepartamento.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtIdDepartamento.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtIdDepartamento.CustomButton.TabIndex = 1;
-            this.TxtIdDepartamento.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtIdDepartamento.CustomButton.UseSelectable = true;
-            this.TxtIdDepartamento.CustomButton.Visible = false;
-            this.TxtIdDepartamento.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.TxtIdDepartamento.Lines = new string[0];
-            this.TxtIdDepartamento.Location = new System.Drawing.Point(510, 115);
-            this.TxtIdDepartamento.MaxLength = 32767;
-            this.TxtIdDepartamento.Name = "TxtIdDepartamento";
-            this.TxtIdDepartamento.PasswordChar = '\0';
-            this.TxtIdDepartamento.PromptText = "Ingresar correo electrónico";
-            this.TxtIdDepartamento.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtIdDepartamento.SelectedText = "";
-            this.TxtIdDepartamento.SelectionLength = 0;
-            this.TxtIdDepartamento.SelectionStart = 0;
-            this.TxtIdDepartamento.ShortcutsEnabled = true;
-            this.TxtIdDepartamento.Size = new System.Drawing.Size(212, 23);
-            this.TxtIdDepartamento.Style = MetroFramework.MetroColorStyle.Orange;
-            this.TxtIdDepartamento.TabIndex = 8;
-            this.TxtIdDepartamento.UseSelectable = true;
-            this.TxtIdDepartamento.WaterMark = "Ingresar correo electrónico";
-            this.TxtIdDepartamento.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtIdDepartamento.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // FrmReservas
             // 

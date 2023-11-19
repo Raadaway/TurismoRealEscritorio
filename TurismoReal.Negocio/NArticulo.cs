@@ -11,39 +11,35 @@ namespace TurismoReal.Negocio
 {
     public class NArticulo
     {
-        public static List<Articulo> ListarArticulos()
+        public static DataTable ListarArticulo()
         {
+            DDArticulo Datos = new DDArticulo();
+
             try
             {
-                DDArticulo datosArticulo = new DDArticulo();
-                DataTable dataTable = datosArticulo.ListarArticulo();
-
-                List<Articulo> listaArticulos = new List<Articulo>();
-
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    Articulo articulo = new Articulo
-                    {
-                        id_articulo = Convert.ToInt32(row["Id Articulo"]),
-                        descripcion = row["Descripcion"].ToString(),
-                        stock = Convert.ToInt32(row["Stock"]),
-                        precio_articulo = Convert.ToInt32(row["Precio"])
-                    };
-
-                    listaArticulos.Add(articulo);
-                }
-
-                return listaArticulos;
+                return Datos.ListarArticulo();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error en capa de negocios al listar artículos: " + ex.Message);
-                return null;
+                // Puedes manejar la excepción, registrar el error o mostrar un mensaje de error si es necesario
+                return null; // Puedes devolver un DataTable vacío o null en caso de error
             }
         }
 
+        public static List<Articulo> ListarArticuloCB()
+        {
+            DDArticulo Datos = new DDArticulo();
 
-
+            try
+            {
+                return Datos.ListarArticuloCB();
+            }
+            catch (Exception ex)
+            {
+                // Puedes manejar la excepción, registrar el error o mostrar un mensaje de error si es necesario
+                return null; // Puedes devolver un DataTable vacío o null en caso de error
+            }
+        }
 
         public static bool Insertar(string descripcion,int stock,int precio)
         {

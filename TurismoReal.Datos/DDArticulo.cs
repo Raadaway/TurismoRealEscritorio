@@ -49,8 +49,6 @@ namespace TurismoReal.Datos
                         dataTable.Rows.Add(row);
                     }
                 }
-
-                return dataTable;
             }
             catch (Exception ex)
             {
@@ -64,6 +62,49 @@ namespace TurismoReal.Datos
                     client.Close();
                 }
             }
+            return dataTable;
+        }
+
+        public List<Articulo> ListarArticuloCB()
+        {
+            WSportafolio.WSPortafolioClient client = null;
+            List<Articulo> lista = new List<Articulo>();
+
+            try
+            {
+                client = new WSportafolio.WSPortafolioClient();
+                var artWebService = client.listarArticulo();
+
+                if (artWebService != null)
+                {
+                    foreach (var artWS in artWebService)
+                    {
+                        Articulo articulo = new Articulo
+                        {
+                            id_articulo = artWS.id_articulo,
+                            descripcion = artWS.descripcion,
+                            stock = artWS.stock,
+                            precio_articulo = artWS.precio,
+                        };
+
+                        lista.Add(articulo);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones o registro de errores
+                throw ex;
+            }
+            finally
+            {
+                if (client != null)
+                {
+                    client.Close();
+                }
+            }
+
+            return lista;
         }
 
         public bool AgregarArticulo(string descripcion, int stock, int precio)

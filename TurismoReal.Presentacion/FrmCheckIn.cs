@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using TurismoReal.Negocio;
 using TurismoReal.Presentacion.WSportafolio;
 using TurismoReal.Entidades;
+using System.Windows.Media.TextFormatting;
+using System.ServiceModel.Channels;
+
 namespace TurismoReal.Presentacion
 {
     public partial class FrmCheckIn : MetroFramework.Forms.MetroForm
@@ -22,6 +25,8 @@ namespace TurismoReal.Presentacion
         public FrmCheckIn()
         {
             InitializeComponent();
+            Limpiar();
+            ListarCheckIns();
         }
 
         public FrmCheckIn(int idRes, int rut, int idDepa) : this()
@@ -36,93 +41,45 @@ namespace TurismoReal.Presentacion
             {
                 txtIdReserva.Text = idRes.ToString();
                 txtPago.Text = (reserva.monto_total - reserva.monto_abonado).ToString();
+                TxtRutFunc.Text = RutUsuario.ToString();
             }
-        }
-
-        private void FrmCheckIn_Load(object sender, EventArgs e)
-        {
-            ListarCheckIns();
-        }
-
-        private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void ListarCheckIns()
         {
             try
             {
-                List<CheckIn> checkIns = NCheckIn.ListarCheckIn(); // Utiliza el método para obtener una lista de Check-In
+                DataTable dataTable = NCheckIn.ListarCheckIn();
 
-                if (checkIns != null && checkIns.Count > 0)
+                if (dataTable != null)
                 {
-                    DGVListar.DataSource = ConvertToDataTable(checkIns);
-                    Formato(DGVListar);
+                    DGVListar.DataSource = dataTable;
                     LblTotal.Text = "Total de registros: " + Convert.ToString(DGVListar.Rows.Count);
                 }
                 else
                 {
-                    DGVListar.DataSource = null;
+                    DGVListar.DataSource = null; // Limpiar el control DataGridView
                     LblTotal.Text = "No hay registros para mostrar";
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this, ex.Message + ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
             }
         }
 
-        private void Formato(DataGridView dataGridView)
+        private void Limpiar()
         {
-            // Verifica si hay suficientes columnas antes de intentar configurarlas
-            if (dataGridView.Columns.Count > 0)
-            {
-                dataGridView.Columns[0].Visible = false; // IdCheckIn
-                dataGridView.Columns[1].HeaderText = "Hora";
-                dataGridView.Columns[2].HeaderText = "Fecha";
-                dataGridView.Columns[3].HeaderText = "Firma del Cliente";
-                dataGridView.Columns[4].HeaderText = "Pago del Cliente";
-                dataGridView.Columns[5].HeaderText = "ID de Reserva";
-                dataGridView.Columns[6].HeaderText = "RUT del Funcionario";
+            TxtBuscar.Clear();
+            txtIdReserva.Clear();
+            txtPago.Clear();
+            txtFirma.Clear();
+            TxtRutFunc.Clear();
+            BtnAgregar.Visible = true;
+            BtnModificar.Visible = false;
 
-                dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                dataGridView.Columns[2].Width = 100;
-                dataGridView.Columns[3].Width = 150;
-                dataGridView.Columns[4].Width = 100;
-                dataGridView.Columns[5].Width = 100;
-                dataGridView.Columns[6].Width = 100;
-            }
-        }
-
-        private DataTable ConvertToDataTable(List<CheckIn> checkIns)
-        {
-            DataTable dataTable = new DataTable();
-
-            dataTable.Columns.Add("IdCheckIn", typeof(int));
-            dataTable.Columns.Add("Hora", typeof(string));
-            dataTable.Columns.Add("Fecha", typeof(DateTime));
-            dataTable.Columns.Add("FirmaCliente", typeof(string));
-            dataTable.Columns.Add("PagoCliente", typeof(int));
-            dataTable.Columns.Add("IdReserva", typeof(int));
-            dataTable.Columns.Add("FuncionarioRut", typeof(int));
-
-            foreach (var checkIn in checkIns)
-            {
-                DataRow row = dataTable.NewRow();
-
-                row["IdCheckIn"] = checkIn.IdCheckIn;
-                row["Hora"] = checkIn.Hora;
-                row["Fecha"] = checkIn.Fecha;
-                row["FirmaCliente"] = checkIn.FirmaCliente;
-                row["PagoCliente"] = checkIn.PagoCliente;
-                row["IdReserva"] = checkIn.IdReserva;
-                row["FuncionarioRut"] = checkIn.FuncionarioRut;
-
-                dataTable.Rows.Add(row);
-            }
-
-            return dataTable;
+            DGVListar.Columns[0].Visible = false;
+            BtnEliminar.Visible = false;
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -155,6 +112,132 @@ namespace TurismoReal.Presentacion
             FrmChecklist frmChecklist = new FrmChecklist(IdDepartamento, true);
             frmChecklist.MdiParent = this.MdiParent;
             frmChecklist.Show();
+        }
+
+        private void BtnRefrescar_Click(object sender, EventArgs e)
+        {
+            TxtBuscar.Text = ""; // Borra el contenido del TextBox
+            ListarCheckIns(); // Recarga la lista completa
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Limpiar();
+            TabGeneral.SelectedIndex = 0;
+        }
+
+        private void CbSeleccionar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CbSeleccionar.Checked)
+            {
+                DGVListar.Columns[0].Visible = true;
+                BtnEliminar.Visible = true;
+            }
+            else
+            {
+                DGVListar.Columns[0].Visible = false;
+                BtnEliminar.Visible = false;
+            }
+        }
+
+        private void DGVListar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == DGVListar.Columns["Seleccionar"].Index)
+            {
+                DataGridViewCheckBoxCell CbEliminar = (DataGridViewCheckBoxCell)DGVListar.Rows[e.RowIndex].Cells["Seleccionar"];
+                CbEliminar.Value = !Convert.ToBoolean(CbEliminar.Value);
+            }
+        }
+
+        private void DGVListar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.Limpiar();
+            BtnModificar.Visible = true;
+            BtnAgregar.Visible = false;
+            txtIdCheckIn.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Check-In"].Value);
+            txtIdReserva.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Reserva"].Value);
+            txtPago.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Pago Cliente"].Value);
+            txtFirma.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Firma Cliente"].Value);
+            TxtRutFunc.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Rut Funcionario"].Value);
+            TabGeneral.SelectedIndex = 1;
+            txtIdReserva.ReadOnly = true;
+            txtPago.ReadOnly = false;
+            txtPago.Enabled = true;
+            TxtRutFunc.ReadOnly = true;
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Obtén el valor del rut desde el control TxtRut
+                int idCheckIn = int.Parse(txtIdCheckIn.Text);
+                string firma = txtFirma.Text;
+                int pago = int.Parse(txtPago.Text);
+
+                // Llama al método de negocio para actualizar el administrador
+                bool resultado = NCheckIn.ModificarCheckIn(idCheckIn, firma, pago);
+
+                // Verifica el resultado y muestra un mensaje correspondiente
+                if (resultado)
+                {
+                    // Operación exitosa
+                    MetroFramework.MetroMessageBox.Show(this, "Check-In actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Error
+                    MetroFramework.MetroMessageBox.Show(this, "Error al actualizar Check-In", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult opcion;
+                opcion = MetroFramework.MetroMessageBox.Show(this, "¿Desea eliminar el Check-In?", "Turismo Real", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (opcion == DialogResult.OK)
+                {
+                    int codigo;
+
+
+                    foreach (DataGridViewRow row in DGVListar.Rows)
+                    {
+                        if (Convert.ToBoolean(DGVListar.CurrentRow.Cells["Seleccionar"].Value))
+                        {
+                            codigo = Convert.ToInt32(DGVListar.CurrentRow.Cells["Id Check-In"].Value);
+
+                            // Llamar al método de negocio para eliminar al administrador
+                            bool resultado = NCheckIn.EliminarCheckIn(codigo);
+
+                            if (resultado)
+                            {
+                                MetroFramework.MetroMessageBox.Show(this, "Se eliminó el registro " + Convert.ToString(DGVListar.CurrentRow.Cells["Id Check-In"].Value), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MetroFramework.MetroMessageBox.Show(this, "Error al eliminar el registro " + Convert.ToString(DGVListar.CurrentRow.Cells["Id Check-In"].Value), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+
+                    // Actualizar la lista después de la eliminación
+                    this.ListarCheckIns();
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

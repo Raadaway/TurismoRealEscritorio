@@ -26,11 +26,6 @@ namespace TurismoReal.Negocio
             }
         }
 
-        /*public static DataTable Buscar(string valor)
-        {
-
-        }*/
-
         public static bool Insertar(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo,
                               string usuario, string contrasena, string telefono)
         {
@@ -78,23 +73,6 @@ namespace TurismoReal.Negocio
                 return null;
             }
         }
-
-        /*public DataTable ListarPorRut(int rut)
-        {
-            try
-            {
-                return datosAdministrador.ListarAdministrador(rut);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error en capa de negocios al listar administradores: " + ex.Message);
-                return null;
-            }
-        }*/
-
-
-
-
 
     }
 }
