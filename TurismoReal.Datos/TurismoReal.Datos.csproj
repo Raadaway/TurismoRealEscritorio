@@ -87,6 +87,7 @@
     <Compile Include="DDDepartamentoServicio.cs" />
     <Compile Include="DDFuncionario.cs" />
     <Compile Include="DDInventario.cs" />
+    <Compile Include="DDMantenimiento.cs" />
     <Compile Include="DDReserva.cs" />
     <Compile Include="DDTour.cs" />
     <Compile Include="DDTransporte.cs" />
