@@ -30,7 +30,7 @@ namespace TurismoReal.Presentacion
         {
             try
             {
-                DataTable dataTable = NAdministrador.Listar();
+                DataTable dataTable = NMantenimiento.ListarMantenimiento();
 
                 if (dataTable != null)
                 {

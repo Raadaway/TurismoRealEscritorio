@@ -210,6 +210,13 @@ namespace TurismoReal.Presentacion
             frm.Show();
         }
 
+        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMantenimiento frm = new FrmMantenimiento();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
         private void metroTile1_Click(object sender, EventArgs e)
         {
             metroContextMenu1.Show(metroTile1, 0, metroTile1.Height);
@@ -229,5 +236,7 @@ namespace TurismoReal.Presentacion
         {
             metroContextMenu4.Show(metroTile4, 0, metroTile4.Height);
         }
+
+        
     }
 }
