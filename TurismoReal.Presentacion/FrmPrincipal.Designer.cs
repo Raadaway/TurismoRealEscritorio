@@ -71,16 +71,17 @@ namespace TurismoReal.Presentacion
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(20, 664);
+            this.statusStrip.Location = new System.Drawing.Point(27, 818);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(859, 22);
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip.Size = new System.Drawing.Size(1145, 26);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
             this.toolStripStatusLabel.Text = "Estado";
             // 
             // metroPanel1
@@ -93,24 +94,26 @@ namespace TurismoReal.Presentacion
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(20, 60);
+            this.metroPanel1.HorizontalScrollbarSize = 12;
+            this.metroPanel1.Location = new System.Drawing.Point(27, 74);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(859, 37);
+            this.metroPanel1.Size = new System.Drawing.Size(1145, 46);
             this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroPanel1.TabIndex = 9;
             this.metroPanel1.UseStyleColors = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.VerticalScrollbarSize = 13;
             // 
             // metroTile5
             // 
             this.metroTile5.ActiveControl = null;
             this.metroTile5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.metroTile5.Location = new System.Drawing.Point(758, 0);
+            this.metroTile5.Location = new System.Drawing.Point(1010, 0);
+            this.metroTile5.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(101, 37);
+            this.metroTile5.Size = new System.Drawing.Size(135, 46);
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTile5.TabIndex = 6;
             this.metroTile5.Text = "Cerrar Sesión";
@@ -124,9 +127,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroTile4.ActiveControl = null;
             this.metroTile4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroTile4.Location = new System.Drawing.Point(264, 0);
+            this.metroTile4.Location = new System.Drawing.Point(352, 0);
+            this.metroTile4.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(107, 37);
+            this.metroTile4.Size = new System.Drawing.Size(143, 46);
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTile4.TabIndex = 5;
             this.metroTile4.Text = "Servicios Extra";
@@ -140,9 +144,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroTile3.ActiveControl = null;
             this.metroTile3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroTile3.Location = new System.Drawing.Point(165, 0);
+            this.metroTile3.Location = new System.Drawing.Point(220, 0);
+            this.metroTile3.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(99, 37);
+            this.metroTile3.Size = new System.Drawing.Size(132, 46);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTile3.TabIndex = 4;
             this.metroTile3.Text = "Reservación";
@@ -156,9 +161,10 @@ namespace TurismoReal.Presentacion
             // 
             this.metroTile2.ActiveControl = null;
             this.metroTile2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroTile2.Location = new System.Drawing.Point(69, 0);
+            this.metroTile2.Location = new System.Drawing.Point(92, 0);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(96, 37);
+            this.metroTile2.Size = new System.Drawing.Size(128, 46);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTile2.TabIndex = 3;
             this.metroTile2.Text = "Propiedades";
@@ -173,8 +179,9 @@ namespace TurismoReal.Presentacion
             this.metroTile1.ActiveControl = null;
             this.metroTile1.Dock = System.Windows.Forms.DockStyle.Left;
             this.metroTile1.Location = new System.Drawing.Point(0, 0);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(69, 37);
+            this.metroTile1.Size = new System.Drawing.Size(92, 46);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTile1.TabIndex = 2;
             this.metroTile1.Text = "Usuarios";
@@ -196,35 +203,35 @@ namespace TurismoReal.Presentacion
             this.metroContextMenu2.Name = "metroContextMenu2";
             this.metroContextMenu2.ShowImageMargin = false;
             this.metroContextMenu2.ShowItemToolTips = false;
-            this.metroContextMenu2.Size = new System.Drawing.Size(156, 114);
+            this.metroContextMenu2.Size = new System.Drawing.Size(157, 100);
             this.metroContextMenu2.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroContextMenu2.UseStyleColors = true;
             // 
             // departamentosToolStripMenuItem
             // 
             this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
-            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             this.departamentosToolStripMenuItem.Text = "Departamentos";
             this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // artículosToolStripMenuItem
             // 
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             this.artículosToolStripMenuItem.Text = "Artículos";
             this.artículosToolStripMenuItem.Click += new System.EventHandler(this.articulosToolStripMenuItem_Click);
             // 
             // serviciosToolStripMenuItem
             // 
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
@@ -239,28 +246,28 @@ namespace TurismoReal.Presentacion
             this.metroContextMenu3.Name = "metroContextMenu3";
             this.metroContextMenu3.ShowImageMargin = false;
             this.metroContextMenu3.ShowItemToolTips = false;
-            this.metroContextMenu3.Size = new System.Drawing.Size(108, 70);
+            this.metroContextMenu3.Size = new System.Drawing.Size(123, 76);
             this.metroContextMenu3.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroContextMenu3.UseStyleColors = true;
             // 
             // reservasToolStripMenuItem
             // 
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.reservasToolStripMenuItem.Text = "Reservas";
             this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
             // 
             // checkInToolStripMenuItem
             // 
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.checkInToolStripMenuItem.Text = "Check-In";
             this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
             // 
             // checkOutToolStripMenuItem
             // 
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.checkOutToolStripMenuItem.Text = "Check-Out";
             this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
             // 
@@ -274,21 +281,21 @@ namespace TurismoReal.Presentacion
             this.metroContextMenu4.Name = "metroContextMenu4";
             this.metroContextMenu4.ShowImageMargin = false;
             this.metroContextMenu4.ShowItemToolTips = false;
-            this.metroContextMenu4.Size = new System.Drawing.Size(110, 48);
+            this.metroContextMenu4.Size = new System.Drawing.Size(130, 52);
             this.metroContextMenu4.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroContextMenu4.UseStyleColors = true;
             // 
             // transportesToolStripMenuItem
             // 
             this.transportesToolStripMenuItem.Name = "transportesToolStripMenuItem";
-            this.transportesToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.transportesToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
             this.transportesToolStripMenuItem.Text = "Transportes";
             this.transportesToolStripMenuItem.Click += new System.EventHandler(this.transporteToolStripMenuItem_Click);
             // 
             // toursToolStripMenuItem
             // 
             this.toursToolStripMenuItem.Name = "toursToolStripMenuItem";
-            this.toursToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.toursToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
             this.toursToolStripMenuItem.Text = "Tours";
             this.toursToolStripMenuItem.Click += new System.EventHandler(this.tourToolStripMenuItem_Click);
             // 
@@ -307,41 +314,43 @@ namespace TurismoReal.Presentacion
             this.metroContextMenu1.Name = "metroContextMenu1";
             this.metroContextMenu1.ShowImageMargin = false;
             this.metroContextMenu1.ShowItemToolTips = false;
-            this.metroContextMenu1.Size = new System.Drawing.Size(137, 70);
+            this.metroContextMenu1.Size = new System.Drawing.Size(163, 76);
             this.metroContextMenu1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroContextMenu1.UseStyleColors = true;
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // funcionariosToolStripMenuItem
             // 
             this.funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
-            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
             this.funcionariosToolStripMenuItem.Text = "Funcionarios";
             this.funcionariosToolStripMenuItem.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
             // 
             // administradoresToolStripMenuItem
             // 
             this.administradoresToolStripMenuItem.Name = "administradoresToolStripMenuItem";
-            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
             this.administradoresToolStripMenuItem.Text = "Administradores";
             this.administradoresToolStripMenuItem.Click += new System.EventHandler(this.administradoresToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 706);
+            this.ClientSize = new System.Drawing.Size(1199, 869);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.statusStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Turismo Real";
             this.TransparencyKey = System.Drawing.Color.Empty;
