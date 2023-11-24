@@ -56,7 +56,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -174,23 +174,23 @@ namespace TurismoReal.Presentacion
                     }
                     else if (estReserva == "En Proceso")
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "El check-In ya fué realizado para esta reserva, por favor seleccione una reserva válida.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "El check-In ya fué realizado para esta reserva, por favor seleccione una reserva válida.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Esta reserva ya se encuentra finalizada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Esta reserva ya se encuentra finalizada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     
                 }
                 else
                 {
                     // Mostrar un mensaje de error si no se ha seleccionado una reserva
-                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione una reserva para realizar el check-in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, seleccione una reserva para realizar el check-in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -205,7 +205,7 @@ namespace TurismoReal.Presentacion
 
                     if (estReserva == "Reservado")
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Esta reserva aún no ha pasado por el check-in", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Esta reserva aún no ha pasado por el check-in", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else if (estReserva == "En Proceso")
                     {
@@ -218,19 +218,19 @@ namespace TurismoReal.Presentacion
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Esta reserva ya se encuentra finalizada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Esta reserva ya se encuentra finalizada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
                 else
                 {
                     // Mostrar un mensaje de error si no se ha seleccionado una reserva
-                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione una reserva para realizar el check-in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, seleccione una reserva para realizar el check-in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -258,18 +258,18 @@ namespace TurismoReal.Presentacion
 
                 if (resultado)
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Reserva agregada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Reserva agregada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Puedes realizar otras acciones después de agregar la reserva si es necesario
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Error al agregar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al agregar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -292,7 +292,7 @@ namespace TurismoReal.Presentacion
                         !int.TryParse(TxtMontoAbonado.Text, out montoAbonado) ||
                         !int.TryParse(TxtIdDepartamento.Text, out idDepartamento))
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Los valores ingresados no son válidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Los valores ingresados no son válidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return; // Sal del evento si los valores no son válidos
                     }
 
@@ -303,24 +303,24 @@ namespace TurismoReal.Presentacion
                     if (resultado)
                     {
                         // Operación exitosa
-                        MetroFramework.MetroMessageBox.Show(this, "Reserva modificada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Reserva modificada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         // Error
-                        MetroFramework.MetroMessageBox.Show(this, "Error al modificar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al modificar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
                     // Mostrar un mensaje de error si no se ha seleccionado una reserva
-                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione una reserva para modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, seleccione una reserva para modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -348,7 +348,7 @@ namespace TurismoReal.Presentacion
                     int idReserva = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["id_reserva"].Value);
 
                     // Mostrar un mensaje de confirmación
-                    DialogResult opcion = MetroFramework.MetroMessageBox.Show(this, "¿Desea eliminar la reserva?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult opcion = MetroFramework.MetroMessageBox.Show(this.MdiParent, "¿Desea eliminar la reserva?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                     if (opcion == DialogResult.OK)
                     {
@@ -358,26 +358,26 @@ namespace TurismoReal.Presentacion
                         // Verifica el resultado y muestra un mensaje correspondiente
                         if (resultado)
                         {
-                            MetroFramework.MetroMessageBox.Show(this, "Reserva eliminada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MetroFramework.MetroMessageBox.Show(this.MdiParent, "Reserva eliminada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // Puedes realizar otras acciones después de eliminar la reserva si es necesario
                         }
                         else
                         {
-                            MetroFramework.MetroMessageBox.Show(this, "Error al eliminar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al eliminar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 else
                 {
                     // Mostrar un mensaje de error si no se ha seleccionado una reserva
-                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione una reserva para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, seleccione una reserva para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

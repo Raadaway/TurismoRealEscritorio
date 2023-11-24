@@ -106,18 +106,18 @@ namespace TurismoReal.Presentacion
 
                 if (resultado)
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Mantenimiento agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Mantenimiento agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Puedes realizar otras acciones después de agregar el mantenimiento si es necesario
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Error al agregar el mantenimiento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al agregar el mantenimiento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -152,24 +152,24 @@ namespace TurismoReal.Presentacion
                     if (resultado)
                     {
                         // Operación exitosa
-                        MetroFramework.MetroMessageBox.Show(this, "Mantenimiento modificado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Mantenimiento modificado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         // Error
-                        MetroFramework.MetroMessageBox.Show(this, "Error al modificar el mantenimiento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al modificar el mantenimiento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
                     // Mostrar un mensaje de error si no se ha seleccionado un mantenimiento
-                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione un mantenimiento para modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, seleccione un mantenimiento para modificar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -225,7 +225,7 @@ namespace TurismoReal.Presentacion
                     int idMantenimiento = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["IdMantenimiento"].Value);
 
                     // Mostrar un mensaje de confirmación
-                    DialogResult opcion = MetroFramework.MetroMessageBox.Show(this, "¿Desea eliminar el mantenimiento?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult opcion = MetroFramework.MetroMessageBox.Show(this.MdiParent, "¿Desea eliminar el mantenimiento?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                     if (opcion == DialogResult.OK)
                     {
@@ -236,27 +236,27 @@ namespace TurismoReal.Presentacion
                         if (resultado)
                         {
                             // Operación exitosa
-                            MetroFramework.MetroMessageBox.Show(this, "Mantenimiento eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MetroFramework.MetroMessageBox.Show(this.MdiParent, "Mantenimiento eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // Puedes realizar otras acciones después de eliminar el mantenimiento si es necesario
                         }
                         else
                         {
                             // Error
-                            MetroFramework.MetroMessageBox.Show(this, "Error al eliminar el mantenimiento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al eliminar el mantenimiento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 else
                 {
                     // Mostrar un mensaje de error si no se ha seleccionado un mantenimiento
-                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione un mantenimiento para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, seleccione un mantenimiento para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

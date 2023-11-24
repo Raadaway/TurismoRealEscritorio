@@ -86,7 +86,7 @@ namespace TurismoReal.Presentacion
                 catch (Exception ex)
                 {
                     // Manejar la excepción (por ejemplo, mostrar un mensaje al usuario o restaurar la vista original)
-                    MetroFramework.MetroMessageBox.Show(this, "Error al aplicar el filtro: " + ex.Message);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al aplicar el filtro: " + ex.Message);
                 }
             }
             else

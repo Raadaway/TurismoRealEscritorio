@@ -53,7 +53,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
 
@@ -83,7 +83,7 @@ namespace TurismoReal.Presentacion
                 catch (Exception ex)
                 {
                     // Manejar la excepción (por ejemplo, mostrar un mensaje al usuario o restaurar la vista original)
-                    MetroFramework.MetroMessageBox.Show(this, "Error al aplicar el filtro: " + ex.Message);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al aplicar el filtro: " + ex.Message);
                 }
             }
             else
@@ -144,18 +144,18 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
 
         private void MensajeOk(string mensaje)
         {
-            MetroFramework.MetroMessageBox.Show(this, mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroFramework.MetroMessageBox.Show(this.MdiParent, mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void MensajeError(string mensaje)
         {
-            MetroFramework.MetroMessageBox.Show(this, mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MetroFramework.MetroMessageBox.Show(this.MdiParent, mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -174,28 +174,28 @@ namespace TurismoReal.Presentacion
 
                         if (resultado)
                         {
-                            MetroFramework.MetroMessageBox.Show(this, "Inventario agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MetroFramework.MetroMessageBox.Show(this.MdiParent, "Inventario agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             TxtCantidad.Clear();
                             TxtIdDepartamento.Clear();
                         }
                         else
                         {
-                            MetroFramework.MetroMessageBox.Show(this, "Error al agregar inventario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al agregar inventario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Por favor, ingrese valores válidos para ID de departamento y cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, ingrese valores válidos para ID de departamento y cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione un artículo del ComboBox de Articulo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, seleccione un artículo del ComboBox de Articulo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -229,31 +229,31 @@ namespace TurismoReal.Presentacion
 
                             if (resultado)
                             {
-                                MetroFramework.MetroMessageBox.Show(this, "Inventario modificado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Inventario modificado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
-                                MetroFramework.MetroMessageBox.Show(this, "Error al modificar inventario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al modificar inventario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         else
                         {
-                            MetroFramework.MetroMessageBox.Show(this, "Por favor, ingrese valores válidos para ID de departamento y cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, ingrese valores válidos para ID de departamento y cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "La selección de artículo no es válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "La selección de artículo no es válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Por favor, seleccione un artículo del ComboBox", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Por favor, seleccione un artículo del ComboBox", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -270,7 +270,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Seleccione desde la celda nombre");
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Seleccione desde la celda nombre");
             }
         }
 
@@ -279,7 +279,7 @@ namespace TurismoReal.Presentacion
             try
             {
                 DialogResult opcion;
-                opcion = MetroFramework.MetroMessageBox.Show(this, "¿Desea eliminar el inventario?", "Confirmar Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                opcion = MetroFramework.MetroMessageBox.Show(this.MdiParent, "¿Desea eliminar el inventario?", "Confirmar Eliminación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (opcion == DialogResult.OK)
                 {
@@ -313,7 +313,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -344,6 +344,11 @@ namespace TurismoReal.Presentacion
         {
             TxtBuscar.Text = ""; // Borra el contenido del TextBox
             ListarInventario(); // Recarga la lista completa
+        }
+
+        private void FrmInventario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

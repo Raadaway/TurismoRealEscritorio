@@ -75,7 +75,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -203,6 +203,11 @@ namespace TurismoReal.Presentacion
                     this.Hide();
                 }
             }
+        }
+
+        private void FrmChecklist_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

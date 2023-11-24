@@ -211,6 +211,7 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "CheckList";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Load += new System.EventHandler(this.FrmChecklist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

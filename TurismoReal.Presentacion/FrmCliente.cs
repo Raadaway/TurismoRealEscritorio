@@ -40,7 +40,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
 
@@ -70,7 +70,7 @@ namespace TurismoReal.Presentacion
                 catch (Exception ex)
                 {
                     // Manejar la excepción (por ejemplo, mostrar un mensaje al usuario o restaurar la vista original)
-                    MetroFramework.MetroMessageBox.Show(this, "Error al aplicar el filtro: " + ex.Message);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al aplicar el filtro: " + ex.Message);
                 }
             }
             else
@@ -132,12 +132,12 @@ namespace TurismoReal.Presentacion
 
         private void MensajeOk(string mensaje)
         {
-            MetroFramework.MetroMessageBox.Show(this, mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroFramework.MetroMessageBox.Show(this.MdiParent, mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void MensajeError(string mensaje)
         {
-            MetroFramework.MetroMessageBox.Show(this, mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MetroFramework.MetroMessageBox.Show(this.MdiParent, mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void FrmCliente_Load(object sender, EventArgs e)
@@ -167,18 +167,18 @@ namespace TurismoReal.Presentacion
                 if (resultado)
                 {
                     // Operación exitosa
-                    MetroFramework.MetroMessageBox.Show(this, "Cliente agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Cliente agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     // Error
-                    MetroFramework.MetroMessageBox.Show(this, "Error al agregar cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al agregar cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -204,18 +204,18 @@ namespace TurismoReal.Presentacion
                 if (resultado)
                 {
                     // Operación exitosa
-                    MetroFramework.MetroMessageBox.Show(this, "Cliente actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Cliente actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     // Error
-                    MetroFramework.MetroMessageBox.Show(this, "Error al actualizar cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al actualizar cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -239,7 +239,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Seleccione desde la celda nombre");
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Seleccione desde la celda nombre");
             }
         }
 
@@ -262,7 +262,7 @@ namespace TurismoReal.Presentacion
             try
             {
                 DialogResult opcion;
-                opcion = MetroFramework.MetroMessageBox.Show(this, "¿Desea eliminar el cliente?", "Turismo Real", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                opcion = MetroFramework.MetroMessageBox.Show(this.MdiParent, "¿Desea eliminar el cliente?", "Turismo Real", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (opcion == DialogResult.OK)
                 {
@@ -295,7 +295,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

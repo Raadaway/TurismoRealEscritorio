@@ -603,6 +603,7 @@ namespace TurismoReal.Presentacion
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Check Out";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Load += new System.EventHandler(this.FrmCheckOut_Load);
             this.TabGeneral.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);

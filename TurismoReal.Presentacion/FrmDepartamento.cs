@@ -37,7 +37,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
 
@@ -63,7 +63,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
 
@@ -93,7 +93,7 @@ namespace TurismoReal.Presentacion
                 catch (Exception ex)
                 {
                     // Manejar la excepción (por ejemplo, mostrar un mensaje al usuario o restaurar la vista original)
-                    MetroFramework.MetroMessageBox.Show(this, "Error al aplicar el filtro: " + ex.Message);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al aplicar el filtro: " + ex.Message);
                 }
             }
             else
@@ -217,37 +217,37 @@ namespace TurismoReal.Presentacion
                 int idDepa = int.Parse(TxtIdDepa.Text);
                 if (!int.TryParse(TxtPrecio.Text, out int precio))
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "El valor de precio no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El valor de precio no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Sal del evento si el precio no es válido
                 }
 
                 if (!float.TryParse(TxtLatitud.Text, out float latitud))
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "El valor de latitud no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El valor de latitud no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Sal del evento si la latitud no es válida
                 }
 
                 if (!float.TryParse(TxtLongitud.Text, out float longitud))
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "El valor de longitud no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El valor de longitud no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Sal del evento si la longitud no es válida
                 }
 
                 if (!int.TryParse(TxtCapacidad.Text, out int capacidadPersona))
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "El valor de capacidad de personas no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El valor de capacidad de personas no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Sal del evento si la capacidad de personas no es válida
                 }
 
                 if (!int.TryParse(TxtCantImagenes.Text, out int cantidadImagenes))
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "El valor de cantidad de imágenes no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El valor de cantidad de imágenes no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Sal del evento si la cantidad de imágenes no es válida
                 }
 
                 if (!int.TryParse(TxtHabitaciones.Text, out int habitaciones))
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "El valor de cantidad de habitaciones no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El valor de cantidad de habitaciones no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Sal del evento si la cantidad de imágenes no es válida
                 }
 
@@ -258,18 +258,18 @@ namespace TurismoReal.Presentacion
                 if (resultado)
                 {
                     // Operación exitosa
-                    MetroFramework.MetroMessageBox.Show(this, "Departamento modificado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Departamento modificado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     // Error
-                    MetroFramework.MetroMessageBox.Show(this, "Error al modificar el departamento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al modificar el departamento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -296,7 +296,7 @@ namespace TurismoReal.Presentacion
             try
             {
                 DialogResult opcion;
-                opcion = MetroFramework.MetroMessageBox.Show(this, "¿Desea eliminar el departamento?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                opcion = MetroFramework.MetroMessageBox.Show(this.MdiParent, "¿Desea eliminar el departamento?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (opcion == DialogResult.OK)
                 {
@@ -328,18 +328,18 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void MensajeOk(string mensaje)
         {
-            MetroFramework.MetroMessageBox.Show(this, mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroFramework.MetroMessageBox.Show(this.MdiParent, mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void MensajeError(string mensaje)
         {
-            MetroFramework.MetroMessageBox.Show(this, mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MetroFramework.MetroMessageBox.Show(this.MdiParent, mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -366,16 +366,16 @@ namespace TurismoReal.Presentacion
 
                 if (resultado)
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Departamento agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Departamento agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "Error al agregar departamento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al agregar departamento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

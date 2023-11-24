@@ -61,7 +61,7 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message + ex.StackTrace);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
 
@@ -106,21 +106,21 @@ namespace TurismoReal.Presentacion
 
                     if (resultado && nuevoEstado)
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Check-Out realizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-Out realizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(this, "Error al realizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al realizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "La fecha de término de la reserva no coincide con la fecha de hoy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "La fecha de término de la reserva no coincide con la fecha de hoy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -199,18 +199,18 @@ namespace TurismoReal.Presentacion
                 if (resultado)
                 {
                     // Operación exitosa
-                    MetroFramework.MetroMessageBox.Show(this, "Check-Out actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-Out actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     // Error
-                    MetroFramework.MetroMessageBox.Show(this, "Error al actualizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al actualizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -219,7 +219,7 @@ namespace TurismoReal.Presentacion
             try
             {
                 DialogResult opcion;
-                opcion = MetroFramework.MetroMessageBox.Show(this, "¿Desea eliminar el Check-Out?", "Turismo Real", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                opcion = MetroFramework.MetroMessageBox.Show(this.MdiParent, "¿Desea eliminar el Check-Out?", "Turismo Real", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (opcion == DialogResult.OK)
                 {
@@ -236,11 +236,11 @@ namespace TurismoReal.Presentacion
 
                             if (resultado)
                             {
-                                MetroFramework.MetroMessageBox.Show(this, "Se eliminó el registro " + Convert.ToString(DGVListar.CurrentRow.Cells["Id Check-Out"].Value), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Se eliminó el registro " + Convert.ToString(DGVListar.CurrentRow.Cells["Id Check-Out"].Value), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
-                                MetroFramework.MetroMessageBox.Show(this, "Error al eliminar el registro " + Convert.ToString(DGVListar.CurrentRow.Cells["Id Check-Out"].Value), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al eliminar el registro " + Convert.ToString(DGVListar.CurrentRow.Cells["Id Check-Out"].Value), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
@@ -250,9 +250,14 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void FrmCheckOut_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
