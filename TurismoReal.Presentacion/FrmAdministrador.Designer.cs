@@ -363,6 +363,7 @@ namespace TurismoReal.Presentacion
             this.TxtTelefono.WaterMark = "Ingresar n° celular";
             this.TxtTelefono.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtTelefono.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros_KeyPress);
             // 
             // TxtCorreo
             // 
@@ -779,6 +780,7 @@ namespace TurismoReal.Presentacion
             this.TxtRut.WaterMark = "Ingresar Rut sin puntos ni dígito verificador";
             this.TxtRut.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtRut.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TxtRut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros_KeyPress);
             // 
             // FrmAdministrador
             // 
@@ -786,7 +788,9 @@ namespace TurismoReal.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.TabGeneral);
+            this.MaximizeBox = false;
             this.Name = "FrmAdministrador";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Administradores";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

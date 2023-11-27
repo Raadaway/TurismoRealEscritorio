@@ -5,7 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 using TurismoReal.Negocio;
 using TurismoReal.Presentacion.WSportafolio;
@@ -150,7 +152,7 @@ namespace TurismoReal.Presentacion
             try
             {
                 // Obtener los valores ingresados por el usuario desde las TextBox
-                int rut = int.Parse(TxtRut.Text);
+                string rut = TxtRut.Text;
                 string dv = TxtDv.Text;
                 string nombre = TxtNombre.Text;
                 string apellidoPaterno = TxtApellidoP.Text;
@@ -160,8 +162,50 @@ namespace TurismoReal.Presentacion
                 string contrasena = TxtContrasena.Text;
                 string telefono = TxtTelefono.Text;
 
+                if (!ValidarRut(rut, dv))
+                {
+                    return; // Salir del método si el RUT no es válido
+                }
+
+                if (!ValidarNombre(nombre))
+                {
+                    return; // Salir del método si el nombre no es válido
+                }
+
+                if (!ValidarApellidoP(apellidoPaterno))
+                {
+                    return; // Salir del método si el apellido paterno no es válido
+                }
+
+                if (!ValidarApellidoM(apellidoMaterno))
+                {
+                    return; // Salir del método si el apellido materno no es válido
+                }
+
+                if (!ValidarCorreoElectronico(correo))
+                {
+                    return; // Salir del método si el apellido materno no es válido
+                }
+
+                if (string.IsNullOrEmpty(usuario))
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese un nombre de usuario válido.", "Error de nombre de usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(contrasena))
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese una contraseña válida.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!ValidarTelefono(telefono))
+                {
+                    return; // Salir del método si el apellido materno no es válido
+                }
+
                 // Llamar al método de negocio para agregar un cliente
-                bool resultado = NCliente.Insertar(rut, dv, nombre, apellidoPaterno, apellidoMaterno, correo, usuario, contrasena, telefono);
+                bool resultado = NCliente.Insertar(int.Parse(rut), dv, nombre, apellidoPaterno, apellidoMaterno, correo, usuario, contrasena, telefono);
 
                 // Verificar el resultado y mostrar el cuadro de mensaje correspondiente
                 if (resultado)
@@ -187,7 +231,7 @@ namespace TurismoReal.Presentacion
             try
             {
                 // Obtén el valor del rut desde el control TxtRut
-                int rut = int.Parse(TxtRut.Text);
+                string rut = TxtRut.Text;
                 string dv = TxtDv.Text;
                 string nombre = TxtNombre.Text;
                 string apellidoPaterno = TxtApellidoP.Text;
@@ -197,8 +241,50 @@ namespace TurismoReal.Presentacion
                 string contrasena = TxtContrasena.Text;
                 string telefono = TxtTelefono.Text;
 
+                if (!ValidarRut(rut, dv))
+                {
+                    return; // Salir del método si el RUT no es válido
+                }
+
+                if (!ValidarNombre(nombre))
+                {
+                    return; // Salir del método si el nombre no es válido
+                }
+
+                if (!ValidarApellidoP(apellidoPaterno))
+                {
+                    return; // Salir del método si el apellido paterno no es válido
+                }
+
+                if (!ValidarApellidoM(apellidoMaterno))
+                {
+                    return; // Salir del método si el apellido materno no es válido
+                }
+
+                if (!ValidarCorreoElectronico(correo))
+                {
+                    return; // Salir del método si el apellido materno no es válido
+                }
+
+                if (string.IsNullOrEmpty(usuario))
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese un nombre de usuario válido.", "Error de nombre de usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(contrasena))
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese una contraseña válida.", "Error de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!ValidarTelefono(telefono))
+                {
+                    return; // Salir del método si el apellido materno no es válido
+                }
+
                 // Llama al método de negocio para actualizar el cliente
-                bool resultado = NCliente.ModificarCliente(rut, dv, nombre, apellidoPaterno, apellidoMaterno, correo, usuario, contrasena, telefono);
+                bool resultado = NCliente.ModificarCliente(int.Parse(rut), dv, nombre, apellidoPaterno, apellidoMaterno, correo, usuario, contrasena, telefono);
 
                 // Verifica el resultado y muestra un mensaje correspondiente
                 if (resultado)
@@ -280,11 +366,11 @@ namespace TurismoReal.Presentacion
 
                             if (resultado)
                             {
-                                this.MensajeOk("Se eliminó el registro " + Convert.ToString(row.Cells[2].Value));
+                                this.MensajeOk("Se eliminó el registro " + codigo);
                             }
                             else
                             {
-                                this.MensajeError("Error al eliminar el registro " + Convert.ToString(row.Cells[2].Value));
+                                this.MensajeError("Error al eliminar el registro " + codigo);
                             }
                         }
                     }
@@ -314,8 +400,190 @@ namespace TurismoReal.Presentacion
             this.Limpiar();
             TabGeneral.SelectedIndex = 0;
         }
+
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos y la tecla de retroceso
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Ignorar la tecla presionada
+            }
+        }
+
+        private bool ValidarRut(string rut, string dv)
+        {
+            if (string.IsNullOrEmpty(rut))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese un nombre válido.", "Error de nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Validar que el RUT tenga el formato correcto
+            if (!Regex.IsMatch(rut, @"^[0-9]{1,8}$"))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "El RUT debe contener solo números y tener como máximo 8 dígitos.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Validar que el dígito verificador sea válido
+            if (!EsRutValido(rut, dv))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "El RUT ingresado no es válido.", "Error de RUT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool EsRutValido(string rut, string dv)
+        {
+            try
+            {
+                int rutNumerico = int.Parse(rut);
+                int dvCalculado = CalcularDigitoVerificador(rutNumerico);
+
+                return dv == dvCalculado.ToString();
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private int CalcularDigitoVerificador(int rut)
+        {
+            int suma = 0;
+            int multiplicador = 2;
+
+            while (rut > 0)
+            {
+                int digito = rut % 10;
+                suma += digito * multiplicador;
+                rut /= 10;
+                multiplicador = (multiplicador < 7) ? multiplicador + 1 : 2;
+            }
+
+            int resto = suma % 11;
+            int dvCalculado = 11 - resto;
+
+            return (dvCalculado == 11) ? 0 : dvCalculado;
+        }
+
+        private bool ValidarNombre(string nombre)
+        {
+            // Validar que el nombre no esté vacío
+            if (string.IsNullOrEmpty(nombre))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese un nombre válido.", "Error de nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Validar que la primera letra sea mayúscula
+            if (!char.IsUpper(nombre[0]))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "La primera letra del nombre debe ser mayúscula.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]+$");
+
+            if (!regex.IsMatch(nombre))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "El nombre debe contener solo caracteres válidos", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool ValidarApellidoP(string apPaterno)
+        {
+            // Validar que el nombre no esté vacío
+            if (string.IsNullOrEmpty(apPaterno))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese un apellido paterno válido.", "Error de apellido paterno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Validar que la primera letra sea mayúscula
+            if (!char.IsUpper(apPaterno[0]))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "La primera letra del apellido paterno debe ser mayúscula.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]+$");
+
+            if (!regex.IsMatch(apPaterno))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "El apellido paterno debe contener solo caracteres válidos", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool ValidarApellidoM(string apMaterno)
+        {
+            // Validar que el nombre no esté vacío
+            if (string.IsNullOrEmpty(apMaterno))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese un apellido materno válido.", "Error de apellido materno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Validar que la primera letra sea mayúscula
+            if (!char.IsUpper(apMaterno[0]))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "La primera letra del apellido materno debe ser mayúscula.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]+$");
+
+            if (!regex.IsMatch(apMaterno))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "El apellido materno debe contener solo caracteres válidos", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool ValidarCorreoElectronico(string correo)
+        {
+            if (string.IsNullOrEmpty(correo))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese un correo electrónico válido.", "Error de correo electrónico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!Regex.IsMatch(correo, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "El correo electrónico no es válido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Validar la cadena con la expresión regular
+            return true;
+        }
+
+        private bool ValidarTelefono(string telefono)
+        {
+            if (string.IsNullOrEmpty(telefono))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ingrese un número telefónico válido.", "Error de número telefónico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!Regex.IsMatch(telefono, @"^[0-9]{9}$"))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "El número telefónico debe contener solo números y tener 9 dígitos.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Validar la cadena con la expresión regular
+            return true;
+        }
     }
-
-
-
 }

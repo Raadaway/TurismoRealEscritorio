@@ -146,7 +146,6 @@ namespace TurismoReal.Presentacion
             TxtLatitud.Clear();
             TxtLongitud.Clear();
             TxtCapacidad.Clear();
-            TxtCantImagenes.Clear();
             cBoxComuna.SelectedIndex = 0;
             BtnAgregar.Visible = true;
             BtnModificar.Visible = false;
@@ -240,12 +239,6 @@ namespace TurismoReal.Presentacion
                     return; // Sal del evento si la capacidad de personas no es válida
                 }
 
-                if (!int.TryParse(TxtCantImagenes.Text, out int cantidadImagenes))
-                {
-                    MetroMessageBox.Show(this.MdiParent, "El valor de cantidad de imágenes no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Sal del evento si la cantidad de imágenes no es válida
-                }
-
                 if (!int.TryParse(TxtHabitaciones.Text, out int habitaciones))
                 {
                     MetroMessageBox.Show(this.MdiParent, "El valor de cantidad de habitaciones no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -253,7 +246,7 @@ namespace TurismoReal.Presentacion
                 }
 
                 // Llama al método de negocio para modificar el departamento
-                bool resultado = NDepartamento.ModificarDepartamento(idDepa, direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, habitaciones, idComuna);
+                bool resultado = NDepartamento.ModificarDepartamento(idDepa, direccion, descripcion, precio, latitud, longitud, capacidadPersona, 5, habitaciones, idComuna);
 
                 // Verifica el resultado y muestra un mensaje correspondiente
                 if (resultado)
@@ -359,11 +352,10 @@ namespace TurismoReal.Presentacion
                 float latitud = float.Parse(TxtLatitud.Text);
                 float longitud = float.Parse(TxtLongitud.Text);
                 int capacidadPersona = int.Parse(TxtCapacidad.Text);
-                int cantidadImagenes = int.Parse(TxtCantImagenes.Text);
                 int habitaciones = int.Parse (TxtHabitaciones.Text);
                 int idComuna = (int)cBoxComuna.SelectedValue;
 
-                bool resultado = NDepartamento.AgregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidadPersona, cantidadImagenes, habitaciones, idComuna);
+                bool resultado = NDepartamento.AgregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidadPersona, 5, habitaciones, idComuna);
 
                 if (resultado)
                 {
@@ -433,6 +425,15 @@ namespace TurismoReal.Presentacion
             TxtDireccion.Text = direccion;
             TxtLatitud.Text = latitud;
             TxtLongitud.Text = longitud;
+        }
+
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos y la tecla de retroceso
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Ignorar la tecla presionada
+            }
         }
     }
 }

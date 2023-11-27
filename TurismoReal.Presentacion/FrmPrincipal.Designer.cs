@@ -71,9 +71,9 @@ namespace TurismoReal.Presentacion
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(20, 664);
+            this.statusStrip.Location = new System.Drawing.Point(20, 658);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(859, 22);
+            this.statusStrip.Size = new System.Drawing.Size(860, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -96,7 +96,7 @@ namespace TurismoReal.Presentacion
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(859, 37);
+            this.metroPanel1.Size = new System.Drawing.Size(860, 37);
             this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroPanel1.TabIndex = 9;
             this.metroPanel1.UseStyleColors = true;
@@ -108,7 +108,7 @@ namespace TurismoReal.Presentacion
             // 
             this.metroTile5.ActiveControl = null;
             this.metroTile5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.metroTile5.Location = new System.Drawing.Point(758, 0);
+            this.metroTile5.Location = new System.Drawing.Point(759, 0);
             this.metroTile5.Name = "metroTile5";
             this.metroTile5.Size = new System.Drawing.Size(101, 37);
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Orange;
@@ -337,7 +337,8 @@ namespace TurismoReal.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TurismoReal.Presentacion.Properties.Resources.TurismoRealFondo1;
-            this.ClientSize = new System.Drawing.Size(899, 706);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(900, 700);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.statusStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
