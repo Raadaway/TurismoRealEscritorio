@@ -355,10 +355,13 @@ namespace TurismoReal.Presentacion
                 int habitaciones = int.Parse(TxtHabitaciones.Text);
                 int idComuna = (int)cBoxComuna.SelectedValue;
 
-                // Validar que la descripción tenga menos o igual a 10000 caracteres
-                if (descripcion.Length > 10000)
+                // Validar que la descripción tenga entre 500 y 5000 caracteres
+                int longitudMinima = 500;
+                int longitudMaxima = 5000;
+
+                if (descripcion.Length < longitudMinima || descripcion.Length > longitudMaxima)
                 {
-                    MetroMessageBox.Show(this.MdiParent, "La descripción no puede tener más de 10000 caracteres", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this.MdiParent, $"La descripción debe tener entre {longitudMinima} y {longitudMaxima} caracteres", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Salir del método si la validación falla
                 }
 

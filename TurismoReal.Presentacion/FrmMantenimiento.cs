@@ -248,11 +248,14 @@ namespace TurismoReal.Presentacion
                     return; // Salir del método si la validación falla
                 }
 
-                // Validar que la longitud de la descripción sea igual o menor a 10000 caracteres
+                // Validar que la longitud de la descripción sea mayor a 50 y menor a 500 caracteres
                 string descripcion = TxtDescripcion.Text;
-                if (descripcion.Length > 10000)
+                int longitudMinima = 50;
+                int longitudMaxima = 500;
+
+                if (descripcion.Length < longitudMinima || descripcion.Length > longitudMaxima)
                 {
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "La longitud de la descripción no puede ser mayor a 10000 caracteres", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, $"La longitud de la descripción debe estar entre {longitudMinima} y {longitudMaxima} caracteres", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Salir del método si la validación falla
                 }
 
