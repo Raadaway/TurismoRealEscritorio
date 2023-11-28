@@ -350,5 +350,14 @@ namespace TurismoReal.Presentacion
         {
 
         }
+
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos y la tecla de retroceso
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Ignorar la tecla presionada
+            }
+        }
     }
 }

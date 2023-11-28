@@ -102,29 +102,44 @@ namespace TurismoReal.Presentacion
                 // Crear una lista de DepaServicioSimple para almacenar los servicios seleccionados
                 var depaServicios = new List<DepaServicioSimple>();
 
+                // Contar la cantidad de servicios seleccionados
+                int serviciosSeleccionados = 0;
+
                 if (CheckBoxPiscina.Checked)
                 {
                     depaServicios.Add(new DepaServicioSimple { id_servicio = 1, id_depa = idDepartamento });
+                    serviciosSeleccionados++;
                 }
 
                 if (CheckBoxAire.Checked)
                 {
                     depaServicios.Add(new DepaServicioSimple { id_servicio = 2, id_depa = idDepartamento });
+                    serviciosSeleccionados++;
                 }
 
                 if (CheckBoxParking.Checked)
                 {
                     depaServicios.Add(new DepaServicioSimple { id_servicio = 3, id_depa = idDepartamento });
+                    serviciosSeleccionados++;
                 }
 
                 if (CheckBoxLavadora.Checked)
                 {
                     depaServicios.Add(new DepaServicioSimple { id_servicio = 4, id_depa = idDepartamento });
+                    serviciosSeleccionados++;
                 }
 
                 if (CheckBoxWifi.Checked)
                 {
                     depaServicios.Add(new DepaServicioSimple { id_servicio = 5, id_depa = idDepartamento });
+                    serviciosSeleccionados++;
+                }
+
+                // Validar que se hayan seleccionado 2 o menos servicios
+                if (serviciosSeleccionados > 2)
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent,"Debe seleccionar 2 o menos servicios.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
                 }
 
                 // Llamar al método de la capa de negocio para agregar los servicios
@@ -133,24 +148,34 @@ namespace TurismoReal.Presentacion
                 if (resultado)
                 {
                     // La operación se realizó con éxito
-                    MessageBox.Show("Servicios agregados correctamente.");
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Servicios agregados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     // Manejo de errores
-                    MessageBox.Show("Error al agregar servicios de departamento.");
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al agregar servicios de departamento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("ID de departamento no válido.");
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "ID de departamento no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void BtnRefrescar_Click(object sender, EventArgs e)
         {
             TxtBuscar.Text = ""; // Borra el contenido del TextBox
             ListarServicios(); // Recarga la lista completa
+        }
+
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos y la tecla de retroceso
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Ignorar la tecla presionada
+            }
         }
     }
 }

@@ -352,9 +352,31 @@ namespace TurismoReal.Presentacion
                 float latitud = float.Parse(TxtLatitud.Text);
                 float longitud = float.Parse(TxtLongitud.Text);
                 int capacidadPersona = int.Parse(TxtCapacidad.Text);
-                int habitaciones = int.Parse (TxtHabitaciones.Text);
+                int habitaciones = int.Parse(TxtHabitaciones.Text);
                 int idComuna = (int)cBoxComuna.SelectedValue;
 
+                // Validar que la descripción tenga menos o igual a 10000 caracteres
+                if (descripcion.Length > 10000)
+                {
+                    MetroMessageBox.Show(this.MdiParent, "La descripción no puede tener más de 10000 caracteres", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
+                // Validar que el precio de reserva sea mayor o igual a 50000
+                if (precio < 50000)
+                {
+                    MetroMessageBox.Show(this.MdiParent, "El precio debe ser mayor o igual a 50000", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
+                // Validar que la capacidad sea mayor o igual a la cantidad de habitaciones
+                if (capacidadPersona < habitaciones)
+                {
+                    MetroMessageBox.Show(this.MdiParent, "La capacidad debe ser mayor o igual a la cantidad de habitaciones", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
+                // Resto del código para agregar el departamento si la validación pasa
                 bool resultado = NDepartamento.AgregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidadPersona, 5, habitaciones, idComuna);
 
                 if (resultado)

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using TurismoReal.Entidades;
 using TurismoReal.Negocio;
 using TurismoReal.Presentacion.WSportafolio;
+using System.Text.RegularExpressions;
 
 namespace TurismoReal.Presentacion
 {
@@ -180,7 +181,7 @@ namespace TurismoReal.Presentacion
                     {
                         MetroFramework.MetroMessageBox.Show(this.MdiParent, "Esta reserva ya se encuentra finalizada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
+
                 }
                 else
                 {
@@ -240,15 +241,37 @@ namespace TurismoReal.Presentacion
 
             try
             {
+                // Obtener las fechas de inicio y término desde los controles
+                DateTime inicioReserva = DTInicioReserva.Value;
+                DateTime terminoReserva = DTTerminoReserva.Value;
+
+                // Validar que la fecha de término de la reserva no sea anterior a la fecha de inicio
+                if (terminoReserva < inicioReserva)
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "La fecha de término de la reserva no puede ser anterior a la fecha de inicio", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
+                // Obtener los montos desde los controles
+                int montoTotal = int.Parse(TxtMontoTotal.Text);
+                int montoAbonado = int.Parse(TxtMontoAbonado.Text);
+
+                // Validar que el monto abonado sea menor o igual al monto total
+                if (montoAbonado > montoTotal)
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El monto abonado no puede ser mayor al monto total", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
                 // Crear una nueva instancia de la entidad "Reserva" y asignar los valores desde los controles
                 Reserva nuevaReserva = new Reserva
                 {
                     id_reserva = int.Parse(TxtIdReserva.Text),
-                    inicio_reserva = DTInicioReserva.Value,
-                    termino_reserva = DTTerminoReserva.Value,
+                    inicio_reserva = inicioReserva,
+                    termino_reserva = terminoReserva,
                     cant_personas = int.Parse(TxtCantPersonas.Text),
-                    monto_total = int.Parse(TxtMontoTotal.Text),
-                    monto_abonado = int.Parse(TxtMontoAbonado.Text),
+                    monto_total = montoTotal,
+                    monto_abonado = montoAbonado,
                     departamento_id_departamento = int.Parse(TxtIdDepartamento.Text),
                     cliente_rut = int.Parse(TxtRutCliente.Text)
                 };
@@ -395,5 +418,15 @@ namespace TurismoReal.Presentacion
             this.Limpiar();
             TabGeneral.SelectedIndex = 0;
         }
+
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos y la tecla de retroceso
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Ignorar la tecla presionada
+            }
+        }
+
     }
 }

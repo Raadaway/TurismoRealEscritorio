@@ -160,6 +160,11 @@ namespace TurismoReal.Presentacion
                 // Llamar al método de negocio para agregar un administrador
                 bool resultado = NArticulo.Insertar(descripcion, stock, precio);
 
+                if(!ValidarNombreArticulo(descripcion))
+                {
+                    return; //Salir del método si el nombre del artículo no es correcto
+                }
+
                 // Verificar el resultado y mostrar el cuadro de mensaje correspondiente
                 if (resultado)
                 {
@@ -321,6 +326,34 @@ namespace TurismoReal.Presentacion
                 MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos y la tecla de retroceso
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Ignorar la tecla presionada
+            }
+        }
+
+        private bool ValidarNombreArticulo(string descripcion)
+        {
+            // Validar que el nombre de artículo no esté vacío
+            if (string.IsNullOrEmpty(descripcion))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Debe ingresar un nombre de artículo.", "Error de nombre artículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Validar que la primera letra sea mayúscula
+            if (!char.IsUpper(descripcion[0]))
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "La primera letra del nombre del artículo debe ser mayúscula.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
     }
     }

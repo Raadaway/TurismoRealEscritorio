@@ -86,41 +86,6 @@ namespace TurismoReal.Presentacion
             }
         }
 
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            NMantenimiento negocioMantenimiento = new NMantenimiento();
-
-            try
-            {
-                // Crear una nueva instancia de la entidad "Mantenimiento" y asignar los valores desde los controles
-                Entidades.Mantenimiento nuevoMantenimiento = new Entidades.Mantenimiento
-                {
-                    DescMantenimiento = TxtDescripcion.Text,
-                    FechaInicio = DTFechaInicio.Value,
-                    FechaTermino = DTFechaTermino.Value,
-                    IdDepartamento = int.Parse(TxtIdDepartamento.Text)
-                };
-
-                // Llamar al método de la capa de negocio para agregar el mantenimiento
-                bool resultado = negocioMantenimiento.AgregarMantenimiento(nuevoMantenimiento);
-
-                if (resultado)
-                {
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Mantenimiento agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Puedes realizar otras acciones después de agregar el mantenimiento si es necesario
-                }
-                else
-                {
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al agregar el mantenimiento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void BtnModificar_Click(object sender, EventArgs e)
         {
             NMantenimiento negocioMantenimiento = new NMantenimiento();
@@ -264,6 +229,76 @@ namespace TurismoReal.Presentacion
         {
             this.Limpiar();
             TabGeneral.SelectedIndex = 0;
+        }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            NMantenimiento negocioMantenimiento = new NMantenimiento();
+
+            try
+            {
+                // Obtener las fechas de inicio y término desde los controles
+                DateTime fechaInicio = DTFechaInicio.Value;
+                DateTime fechaTermino = DTFechaTermino.Value;
+
+                // Validar que la fecha de término no sea anterior a la fecha de inicio
+                if (fechaTermino < fechaInicio)
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "La fecha de término no puede ser anterior a la fecha de inicio", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
+                // Validar que la longitud de la descripción sea igual o menor a 10000 caracteres
+                string descripcion = TxtDescripcion.Text;
+                if (descripcion.Length > 10000)
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "La longitud de la descripción no puede ser mayor a 10000 caracteres", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
+                // Crear una nueva instancia de la entidad "Mantenimiento" y asignar los valores desde los controles
+                Entidades.Mantenimiento nuevoMantenimiento = new Entidades.Mantenimiento
+                {
+                    DescMantenimiento = descripcion,
+                    FechaInicio = fechaInicio,
+                    FechaTermino = fechaTermino,
+                    IdDepartamento = int.Parse(TxtIdDepartamento.Text)
+                };
+
+                // Llamar al método de la capa de negocio para agregar el mantenimiento
+                bool resultado = negocioMantenimiento.AgregarMantenimiento(nuevoMantenimiento);
+
+                if (resultado)
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Mantenimiento agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Puedes realizar otras acciones después de agregar el mantenimiento si es necesario
+                }
+                else
+                {
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al agregar el mantenimiento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos y la tecla de retroceso
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Ignorar la tecla presionada
+            }
+        }
+
+
+        private void BtnRefrescar_Click(object sender, EventArgs e)
+        {
+            TxtBuscar.Text = ""; // Borra el contenido del TextBox
+            ListarMantenimientos(); // Recarga la lista completa
         }
     }
 }
