@@ -237,6 +237,11 @@ namespace TurismoReal.Presentacion
             metroContextMenu4.Show(metroTile4, 0, metroTile4.Height);
         }
 
-        
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+            FrmReportes frm = new FrmReportes();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

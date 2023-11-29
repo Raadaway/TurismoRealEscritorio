@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="WSPortafolio" targetNamespace="http://ws/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSPortafolio" targetNamespace="http://ws/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
       <xsd:import schemaLocation="http://localhost:8080/WebServicePortafolio/WSPortafolio?xsd=1" namespace="http://ws/" />
@@ -23,53 +23,11 @@
   <message name="loginResponse">
     <part name="parameters" element="tns:loginResponse" />
   </message>
-  <message name="agregarFuncionario">
-    <part name="parameters" element="tns:agregarFuncionario" />
-  </message>
-  <message name="agregarFuncionarioResponse">
-    <part name="parameters" element="tns:agregarFuncionarioResponse" />
-  </message>
-  <message name="eliminarDepartamento">
-    <part name="parameters" element="tns:eliminarDepartamento" />
-  </message>
-  <message name="eliminarDepartamentoResponse">
-    <part name="parameters" element="tns:eliminarDepartamentoResponse" />
-  </message>
-  <message name="modificarAdministrador">
-    <part name="parameters" element="tns:modificarAdministrador" />
-  </message>
-  <message name="modificarAdministradorResponse">
-    <part name="parameters" element="tns:modificarAdministradorResponse" />
-  </message>
   <message name="modificarFuncionario">
     <part name="parameters" element="tns:modificarFuncionario" />
   </message>
   <message name="modificarFuncionarioResponse">
     <part name="parameters" element="tns:modificarFuncionarioResponse" />
-  </message>
-  <message name="modificarDepartamento">
-    <part name="parameters" element="tns:modificarDepartamento" />
-  </message>
-  <message name="modificarDepartamentoResponse">
-    <part name="parameters" element="tns:modificarDepartamentoResponse" />
-  </message>
-  <message name="agregarAdministrador">
-    <part name="parameters" element="tns:agregarAdministrador" />
-  </message>
-  <message name="agregarAdministradorResponse">
-    <part name="parameters" element="tns:agregarAdministradorResponse" />
-  </message>
-  <message name="eliminarAdministrador">
-    <part name="parameters" element="tns:eliminarAdministrador" />
-  </message>
-  <message name="eliminarAdministradorResponse">
-    <part name="parameters" element="tns:eliminarAdministradorResponse" />
-  </message>
-  <message name="eliminarFuncionario">
-    <part name="parameters" element="tns:eliminarFuncionario" />
-  </message>
-  <message name="eliminarFuncionarioResponse">
-    <part name="parameters" element="tns:eliminarFuncionarioResponse" />
   </message>
   <message name="agregarDepartamento">
     <part name="parameters" element="tns:agregarDepartamento" />
@@ -77,95 +35,11 @@
   <message name="agregarDepartamentoResponse">
     <part name="parameters" element="tns:agregarDepartamentoResponse" />
   </message>
-  <message name="agregarReservaTransporte">
-    <part name="parameters" element="tns:agregarReservaTransporte" />
+  <message name="modificarDepartamento">
+    <part name="parameters" element="tns:modificarDepartamento" />
   </message>
-  <message name="agregarReservaTransporteResponse">
-    <part name="parameters" element="tns:agregarReservaTransporteResponse" />
-  </message>
-  <message name="eliminarReservaTransporte">
-    <part name="parameters" element="tns:eliminarReservaTransporte" />
-  </message>
-  <message name="eliminarReservaTransporteResponse">
-    <part name="parameters" element="tns:eliminarReservaTransporteResponse" />
-  </message>
-  <message name="agregarCondicionDepa">
-    <part name="parameters" element="tns:agregarCondicionDepa" />
-  </message>
-  <message name="agregarCondicionDepaResponse">
-    <part name="parameters" element="tns:agregarCondicionDepaResponse" />
-  </message>
-  <message name="agregarDepaServicio">
-    <part name="parameters" element="tns:agregarDepaServicio" />
-  </message>
-  <message name="agregarDepaServicioResponse">
-    <part name="parameters" element="tns:agregarDepaServicioResponse" />
-  </message>
-  <message name="modificarMantenimiento">
-    <part name="parameters" element="tns:modificarMantenimiento" />
-  </message>
-  <message name="modificarMantenimientoResponse">
-    <part name="parameters" element="tns:modificarMantenimientoResponse" />
-  </message>
-  <message name="eliminarMantenimiento">
-    <part name="parameters" element="tns:eliminarMantenimiento" />
-  </message>
-  <message name="eliminarMantenimientoResponse">
-    <part name="parameters" element="tns:eliminarMantenimientoResponse" />
-  </message>
-  <message name="modificarInventario">
-    <part name="parameters" element="tns:modificarInventario" />
-  </message>
-  <message name="modificarInventarioResponse">
-    <part name="parameters" element="tns:modificarInventarioResponse" />
-  </message>
-  <message name="modificarReservaTour">
-    <part name="parameters" element="tns:modificarReservaTour" />
-  </message>
-  <message name="modificarReservaTourResponse">
-    <part name="parameters" element="tns:modificarReservaTourResponse" />
-  </message>
-  <message name="eliminarInventario">
-    <part name="parameters" element="tns:eliminarInventario" />
-  </message>
-  <message name="eliminarInventarioResponse">
-    <part name="parameters" element="tns:eliminarInventarioResponse" />
-  </message>
-  <message name="modificarArticulo">
-    <part name="parameters" element="tns:modificarArticulo" />
-  </message>
-  <message name="modificarArticuloResponse">
-    <part name="parameters" element="tns:modificarArticuloResponse" />
-  </message>
-  <message name="modificarReservaTransporte">
-    <part name="parameters" element="tns:modificarReservaTransporte" />
-  </message>
-  <message name="modificarReservaTransporteResponse">
-    <part name="parameters" element="tns:modificarReservaTransporteResponse" />
-  </message>
-  <message name="modificarCondicionDepa">
-    <part name="parameters" element="tns:modificarCondicionDepa" />
-  </message>
-  <message name="modificarCondicionDepaResponse">
-    <part name="parameters" element="tns:modificarCondicionDepaResponse" />
-  </message>
-  <message name="agregarReservaTour">
-    <part name="parameters" element="tns:agregarReservaTour" />
-  </message>
-  <message name="agregarReservaTourResponse">
-    <part name="parameters" element="tns:agregarReservaTourResponse" />
-  </message>
-  <message name="eliminarCondicionDepa">
-    <part name="parameters" element="tns:eliminarCondicionDepa" />
-  </message>
-  <message name="eliminarCondicionDepaResponse">
-    <part name="parameters" element="tns:eliminarCondicionDepaResponse" />
-  </message>
-  <message name="agregarInventario">
-    <part name="parameters" element="tns:agregarInventario" />
-  </message>
-  <message name="agregarInventarioResponse">
-    <part name="parameters" element="tns:agregarInventarioResponse" />
+  <message name="modificarDepartamentoResponse">
+    <part name="parameters" element="tns:modificarDepartamentoResponse" />
   </message>
   <message name="agregarMantenimiento">
     <part name="parameters" element="tns:agregarMantenimiento" />
@@ -173,11 +47,35 @@
   <message name="agregarMantenimientoResponse">
     <part name="parameters" element="tns:agregarMantenimientoResponse" />
   </message>
-  <message name="eliminarReservaTour">
-    <part name="parameters" element="tns:eliminarReservaTour" />
+  <message name="eliminarAdministrador">
+    <part name="parameters" element="tns:eliminarAdministrador" />
   </message>
-  <message name="eliminarReservaTourResponse">
-    <part name="parameters" element="tns:eliminarReservaTourResponse" />
+  <message name="eliminarAdministradorResponse">
+    <part name="parameters" element="tns:eliminarAdministradorResponse" />
+  </message>
+  <message name="modificarMantenimiento">
+    <part name="parameters" element="tns:modificarMantenimiento" />
+  </message>
+  <message name="modificarMantenimientoResponse">
+    <part name="parameters" element="tns:modificarMantenimientoResponse" />
+  </message>
+  <message name="agregarFuncionario">
+    <part name="parameters" element="tns:agregarFuncionario" />
+  </message>
+  <message name="agregarFuncionarioResponse">
+    <part name="parameters" element="tns:agregarFuncionarioResponse" />
+  </message>
+  <message name="modificarArticulo">
+    <part name="parameters" element="tns:modificarArticulo" />
+  </message>
+  <message name="modificarArticuloResponse">
+    <part name="parameters" element="tns:modificarArticuloResponse" />
+  </message>
+  <message name="agregarDepaServicio">
+    <part name="parameters" element="tns:agregarDepaServicio" />
+  </message>
+  <message name="agregarDepaServicioResponse">
+    <part name="parameters" element="tns:agregarDepaServicioResponse" />
   </message>
   <message name="modificarCheckOut">
     <part name="parameters" element="tns:modificarCheckOut" />
@@ -185,23 +83,59 @@
   <message name="modificarCheckOutResponse">
     <part name="parameters" element="tns:modificarCheckOutResponse" />
   </message>
-  <message name="listarFuncionario">
-    <part name="parameters" element="tns:listarFuncionario" />
+  <message name="eliminarFuncionario">
+    <part name="parameters" element="tns:eliminarFuncionario" />
   </message>
-  <message name="listarFuncionarioResponse">
-    <part name="parameters" element="tns:listarFuncionarioResponse" />
+  <message name="eliminarFuncionarioResponse">
+    <part name="parameters" element="tns:eliminarFuncionarioResponse" />
   </message>
-  <message name="listarAdministradorPorRut">
-    <part name="parameters" element="tns:listarAdministradorPorRut" />
+  <message name="agregarAdministrador">
+    <part name="parameters" element="tns:agregarAdministrador" />
   </message>
-  <message name="listarAdministradorPorRutResponse">
-    <part name="parameters" element="tns:listarAdministradorPorRutResponse" />
+  <message name="agregarAdministradorResponse">
+    <part name="parameters" element="tns:agregarAdministradorResponse" />
   </message>
-  <message name="listarCondicionDepaPorParametro">
-    <part name="parameters" element="tns:listarCondicionDepaPorParametro" />
+  <message name="modificarAdministrador">
+    <part name="parameters" element="tns:modificarAdministrador" />
   </message>
-  <message name="listarCondicionDepaPorParametroResponse">
-    <part name="parameters" element="tns:listarCondicionDepaPorParametroResponse" />
+  <message name="modificarAdministradorResponse">
+    <part name="parameters" element="tns:modificarAdministradorResponse" />
+  </message>
+  <message name="modificarDepaServicio">
+    <part name="parameters" element="tns:modificarDepaServicio" />
+  </message>
+  <message name="modificarDepaServicioResponse">
+    <part name="parameters" element="tns:modificarDepaServicioResponse" />
+  </message>
+  <message name="eliminarMantenimiento">
+    <part name="parameters" element="tns:eliminarMantenimiento" />
+  </message>
+  <message name="eliminarMantenimientoResponse">
+    <part name="parameters" element="tns:eliminarMantenimientoResponse" />
+  </message>
+  <message name="eliminarDepaServicio">
+    <part name="parameters" element="tns:eliminarDepaServicio" />
+  </message>
+  <message name="eliminarDepaServicioResponse">
+    <part name="parameters" element="tns:eliminarDepaServicioResponse" />
+  </message>
+  <message name="eliminarDepartamento">
+    <part name="parameters" element="tns:eliminarDepartamento" />
+  </message>
+  <message name="eliminarDepartamentoResponse">
+    <part name="parameters" element="tns:eliminarDepartamentoResponse" />
+  </message>
+  <message name="agregarReservaTour">
+    <part name="parameters" element="tns:agregarReservaTour" />
+  </message>
+  <message name="agregarReservaTourResponse">
+    <part name="parameters" element="tns:agregarReservaTourResponse" />
+  </message>
+  <message name="agregarInventario">
+    <part name="parameters" element="tns:agregarInventario" />
+  </message>
+  <message name="agregarInventarioResponse">
+    <part name="parameters" element="tns:agregarInventarioResponse" />
   </message>
   <message name="listarReservaPorId">
     <part name="parameters" element="tns:listarReservaPorId" />
@@ -209,17 +143,41 @@
   <message name="listarReservaPorIdResponse">
     <part name="parameters" element="tns:listarReservaPorIdResponse" />
   </message>
-  <message name="listarDepartamento">
-    <part name="parameters" element="tns:listarDepartamento" />
+  <message name="listarMantenimiento">
+    <part name="parameters" element="tns:listarMantenimiento" />
   </message>
-  <message name="listarDepartamentoResponse">
-    <part name="parameters" element="tns:listarDepartamentoResponse" />
+  <message name="listarMantenimientoResponse">
+    <part name="parameters" element="tns:listarMantenimientoResponse" />
   </message>
-  <message name="listarReservaTransporte">
-    <part name="parameters" element="tns:listarReservaTransporte" />
+  <message name="modificarReservaTransporte">
+    <part name="parameters" element="tns:modificarReservaTransporte" />
   </message>
-  <message name="listarReservaTransporteResponse">
-    <part name="parameters" element="tns:listarReservaTransporteResponse" />
+  <message name="modificarReservaTransporteResponse">
+    <part name="parameters" element="tns:modificarReservaTransporteResponse" />
+  </message>
+  <message name="eliminarReservaTransporte">
+    <part name="parameters" element="tns:eliminarReservaTransporte" />
+  </message>
+  <message name="eliminarReservaTransporteResponse">
+    <part name="parameters" element="tns:eliminarReservaTransporteResponse" />
+  </message>
+  <message name="listarAdministradorPorRut">
+    <part name="parameters" element="tns:listarAdministradorPorRut" />
+  </message>
+  <message name="listarAdministradorPorRutResponse">
+    <part name="parameters" element="tns:listarAdministradorPorRutResponse" />
+  </message>
+  <message name="modificarInventario">
+    <part name="parameters" element="tns:modificarInventario" />
+  </message>
+  <message name="modificarInventarioResponse">
+    <part name="parameters" element="tns:modificarInventarioResponse" />
+  </message>
+  <message name="eliminarInventario">
+    <part name="parameters" element="tns:eliminarInventario" />
+  </message>
+  <message name="eliminarInventarioResponse">
+    <part name="parameters" element="tns:eliminarInventarioResponse" />
   </message>
   <message name="listarClientePorRut">
     <part name="parameters" element="tns:listarClientePorRut" />
@@ -227,23 +185,29 @@
   <message name="listarClientePorRutResponse">
     <part name="parameters" element="tns:listarClientePorRutResponse" />
   </message>
-  <message name="listarAdministrador">
-    <part name="parameters" element="tns:listarAdministrador" />
-  </message>
-  <message name="listarAdministradorResponse">
-    <part name="parameters" element="tns:listarAdministradorResponse" />
-  </message>
   <message name="listarReservaPorRut">
     <part name="parameters" element="tns:listarReservaPorRut" />
   </message>
   <message name="listarReservaPorRutResponse">
     <part name="parameters" element="tns:listarReservaPorRutResponse" />
   </message>
-  <message name="listarMantenimiento">
-    <part name="parameters" element="tns:listarMantenimiento" />
+  <message name="actualizarReservaCancelado">
+    <part name="parameters" element="tns:actualizarReservaCancelado" />
   </message>
-  <message name="listarMantenimientoResponse">
-    <part name="parameters" element="tns:listarMantenimientoResponse" />
+  <message name="actualizarReservaCanceladoResponse">
+    <part name="parameters" element="tns:actualizarReservaCanceladoResponse" />
+  </message>
+  <message name="listarFuncionario">
+    <part name="parameters" element="tns:listarFuncionario" />
+  </message>
+  <message name="listarFuncionarioResponse">
+    <part name="parameters" element="tns:listarFuncionarioResponse" />
+  </message>
+  <message name="eliminarReservaTour">
+    <part name="parameters" element="tns:eliminarReservaTour" />
+  </message>
+  <message name="eliminarReservaTourResponse">
+    <part name="parameters" element="tns:eliminarReservaTourResponse" />
   </message>
   <message name="listarArticuloPorId">
     <part name="parameters" element="tns:listarArticuloPorId" />
@@ -251,47 +215,17 @@
   <message name="listarArticuloPorIdResponse">
     <part name="parameters" element="tns:listarArticuloPorIdResponse" />
   </message>
-  <message name="listarReservaTour">
-    <part name="parameters" element="tns:listarReservaTour" />
+  <message name="modificarReservaTour">
+    <part name="parameters" element="tns:modificarReservaTour" />
   </message>
-  <message name="listarReservaTourResponse">
-    <part name="parameters" element="tns:listarReservaTourResponse" />
+  <message name="modificarReservaTourResponse">
+    <part name="parameters" element="tns:modificarReservaTourResponse" />
   </message>
-  <message name="listarDepaServicio">
-    <part name="parameters" element="tns:listarDepaServicio" />
+  <message name="listarDepartamento">
+    <part name="parameters" element="tns:listarDepartamento" />
   </message>
-  <message name="listarDepaServicioResponse">
-    <part name="parameters" element="tns:listarDepaServicioResponse" />
-  </message>
-  <message name="listarReservaTransporteIdReserva">
-    <part name="parameters" element="tns:listarReservaTransporteIdReserva" />
-  </message>
-  <message name="listarReservaTransporteIdReservaResponse">
-    <part name="parameters" element="tns:listarReservaTransporteIdReservaResponse" />
-  </message>
-  <message name="listarCondicionDepa">
-    <part name="parameters" element="tns:listarCondicionDepa" />
-  </message>
-  <message name="listarCondicionDepaResponse">
-    <part name="parameters" element="tns:listarCondicionDepaResponse" />
-  </message>
-  <message name="estadoDepaOcupado">
-    <part name="parameters" element="tns:estadoDepaOcupado" />
-  </message>
-  <message name="estadoDepaOcupadoResponse">
-    <part name="parameters" element="tns:estadoDepaOcupadoResponse" />
-  </message>
-  <message name="listarInventarioPorIdDepa">
-    <part name="parameters" element="tns:listarInventarioPorIdDepa" />
-  </message>
-  <message name="listarInventarioPorIdDepaResponse">
-    <part name="parameters" element="tns:listarInventarioPorIdDepaResponse" />
-  </message>
-  <message name="listarReservaTourIdReserva">
-    <part name="parameters" element="tns:listarReservaTourIdReserva" />
-  </message>
-  <message name="listarReservaTourIdReservaResponse">
-    <part name="parameters" element="tns:listarReservaTourIdReservaResponse" />
+  <message name="listarDepartamentoResponse">
+    <part name="parameters" element="tns:listarDepartamentoResponse" />
   </message>
   <message name="listarFuncionarioPorRut">
     <part name="parameters" element="tns:listarFuncionarioPorRut" />
@@ -299,17 +233,95 @@
   <message name="listarFuncionarioPorRutResponse">
     <part name="parameters" element="tns:listarFuncionarioPorRutResponse" />
   </message>
+  <message name="agregarReservaTransporte">
+    <part name="parameters" element="tns:agregarReservaTransporte" />
+  </message>
+  <message name="agregarReservaTransporteResponse">
+    <part name="parameters" element="tns:agregarReservaTransporteResponse" />
+  </message>
+  <message name="listarAdministrador">
+    <part name="parameters" element="tns:listarAdministrador" />
+  </message>
+  <message name="listarAdministradorResponse">
+    <part name="parameters" element="tns:listarAdministradorResponse" />
+  </message>
+  <message name="listarDepaServicio">
+    <part name="parameters" element="tns:listarDepaServicio" />
+  </message>
+  <message name="listarDepaServicioResponse">
+    <part name="parameters" element="tns:listarDepaServicioResponse" />
+  </message>
+  <message name="listarInventarioPorIdDepa">
+    <part name="parameters" element="tns:listarInventarioPorIdDepa" />
+  </message>
+  <message name="listarInventarioPorIdDepaResponse">
+    <part name="parameters" element="tns:listarInventarioPorIdDepaResponse" />
+  </message>
+  <message name="listarReservaTransporte">
+    <part name="parameters" element="tns:listarReservaTransporte" />
+  </message>
+  <message name="listarReservaTransporteResponse">
+    <part name="parameters" element="tns:listarReservaTransporteResponse" />
+  </message>
   <message name="estadoDepaMantenimiento">
     <part name="parameters" element="tns:estadoDepaMantenimiento" />
   </message>
   <message name="estadoDepaMantenimientoResponse">
     <part name="parameters" element="tns:estadoDepaMantenimientoResponse" />
   </message>
-  <message name="eliminarCliente">
-    <part name="parameters" element="tns:eliminarCliente" />
+  <message name="estadoDepaOcupado">
+    <part name="parameters" element="tns:estadoDepaOcupado" />
   </message>
-  <message name="eliminarClienteResponse">
-    <part name="parameters" element="tns:eliminarClienteResponse" />
+  <message name="estadoDepaOcupadoResponse">
+    <part name="parameters" element="tns:estadoDepaOcupadoResponse" />
+  </message>
+  <message name="reportesInventarios">
+    <part name="parameters" element="tns:reportesInventarios" />
+  </message>
+  <message name="reportesInventariosResponse">
+    <part name="parameters" element="tns:reportesInventariosResponse" />
+  </message>
+  <message name="reportesReservasCanceladas">
+    <part name="parameters" element="tns:reportesReservasCanceladas" />
+  </message>
+  <message name="reportesReservasCanceladasResponse">
+    <part name="parameters" element="tns:reportesReservasCanceladasResponse" />
+  </message>
+  <message name="listarReservaTourIdReserva">
+    <part name="parameters" element="tns:listarReservaTourIdReserva" />
+  </message>
+  <message name="listarReservaTourIdReservaResponse">
+    <part name="parameters" element="tns:listarReservaTourIdReservaResponse" />
+  </message>
+  <message name="reportesArticulos">
+    <part name="parameters" element="tns:reportesArticulos" />
+  </message>
+  <message name="reportesArticulosResponse">
+    <part name="parameters" element="tns:reportesArticulosResponse" />
+  </message>
+  <message name="listarReservaTransporteIdReserva">
+    <part name="parameters" element="tns:listarReservaTransporteIdReserva" />
+  </message>
+  <message name="listarReservaTransporteIdReservaResponse">
+    <part name="parameters" element="tns:listarReservaTransporteIdReservaResponse" />
+  </message>
+  <message name="reportesGanancias">
+    <part name="parameters" element="tns:reportesGanancias" />
+  </message>
+  <message name="reportesGananciasResponse">
+    <part name="parameters" element="tns:reportesGananciasResponse" />
+  </message>
+  <message name="listarFormaPagoPorId">
+    <part name="parameters" element="tns:listarFormaPagoPorId" />
+  </message>
+  <message name="listarFormaPagoPorIdResponse">
+    <part name="parameters" element="tns:listarFormaPagoPorIdResponse" />
+  </message>
+  <message name="listarReservaTour">
+    <part name="parameters" element="tns:listarReservaTour" />
+  </message>
+  <message name="listarReservaTourResponse">
+    <part name="parameters" element="tns:listarReservaTourResponse" />
   </message>
   <message name="agregarReserva">
     <part name="parameters" element="tns:agregarReserva" />
@@ -317,47 +329,11 @@
   <message name="agregarReservaResponse">
     <part name="parameters" element="tns:agregarReservaResponse" />
   </message>
-  <message name="modificarReserva">
-    <part name="parameters" element="tns:modificarReserva" />
-  </message>
-  <message name="modificarReservaResponse">
-    <part name="parameters" element="tns:modificarReservaResponse" />
-  </message>
   <message name="eliminarReserva">
     <part name="parameters" element="tns:eliminarReserva" />
   </message>
   <message name="eliminarReservaResponse">
     <part name="parameters" element="tns:eliminarReservaResponse" />
-  </message>
-  <message name="agregarCliente">
-    <part name="parameters" element="tns:agregarCliente" />
-  </message>
-  <message name="agregarClienteResponse">
-    <part name="parameters" element="tns:agregarClienteResponse" />
-  </message>
-  <message name="modificarCliente">
-    <part name="parameters" element="tns:modificarCliente" />
-  </message>
-  <message name="modificarClienteResponse">
-    <part name="parameters" element="tns:modificarClienteResponse" />
-  </message>
-  <message name="agregarArticulo">
-    <part name="parameters" element="tns:agregarArticulo" />
-  </message>
-  <message name="agregarArticuloResponse">
-    <part name="parameters" element="tns:agregarArticuloResponse" />
-  </message>
-  <message name="listarDepaPorId">
-    <part name="parameters" element="tns:listarDepaPorId" />
-  </message>
-  <message name="listarDepaPorIdResponse">
-    <part name="parameters" element="tns:listarDepaPorIdResponse" />
-  </message>
-  <message name="listarCliente">
-    <part name="parameters" element="tns:listarCliente" />
-  </message>
-  <message name="listarClienteResponse">
-    <part name="parameters" element="tns:listarClienteResponse" />
   </message>
   <message name="eliminarCheckIn">
     <part name="parameters" element="tns:eliminarCheckIn" />
@@ -365,11 +341,29 @@
   <message name="eliminarCheckInResponse">
     <part name="parameters" element="tns:eliminarCheckInResponse" />
   </message>
-  <message name="eliminarArticulo">
-    <part name="parameters" element="tns:eliminarArticulo" />
+  <message name="modificarCliente">
+    <part name="parameters" element="tns:modificarCliente" />
   </message>
-  <message name="eliminarArticuloResponse">
-    <part name="parameters" element="tns:eliminarArticuloResponse" />
+  <message name="modificarClienteResponse">
+    <part name="parameters" element="tns:modificarClienteResponse" />
+  </message>
+  <message name="agregarCliente">
+    <part name="parameters" element="tns:agregarCliente" />
+  </message>
+  <message name="agregarClienteResponse">
+    <part name="parameters" element="tns:agregarClienteResponse" />
+  </message>
+  <message name="modificarReserva">
+    <part name="parameters" element="tns:modificarReserva" />
+  </message>
+  <message name="modificarReservaResponse">
+    <part name="parameters" element="tns:modificarReservaResponse" />
+  </message>
+  <message name="agregarCheckIn">
+    <part name="parameters" element="tns:agregarCheckIn" />
+  </message>
+  <message name="agregarCheckInResponse">
+    <part name="parameters" element="tns:agregarCheckInResponse" />
   </message>
   <message name="modificarCheckIn">
     <part name="parameters" element="tns:modificarCheckIn" />
@@ -377,11 +371,29 @@
   <message name="modificarCheckInResponse">
     <part name="parameters" element="tns:modificarCheckInResponse" />
   </message>
-  <message name="agregarCheckIn">
-    <part name="parameters" element="tns:agregarCheckIn" />
+  <message name="eliminarCliente">
+    <part name="parameters" element="tns:eliminarCliente" />
   </message>
-  <message name="agregarCheckInResponse">
-    <part name="parameters" element="tns:agregarCheckInResponse" />
+  <message name="eliminarClienteResponse">
+    <part name="parameters" element="tns:eliminarClienteResponse" />
+  </message>
+  <message name="agregarArticulo">
+    <part name="parameters" element="tns:agregarArticulo" />
+  </message>
+  <message name="agregarArticuloResponse">
+    <part name="parameters" element="tns:agregarArticuloResponse" />
+  </message>
+  <message name="agregarPago">
+    <part name="parameters" element="tns:agregarPago" />
+  </message>
+  <message name="agregarPagoResponse">
+    <part name="parameters" element="tns:agregarPagoResponse" />
+  </message>
+  <message name="listarCliente">
+    <part name="parameters" element="tns:listarCliente" />
+  </message>
+  <message name="listarClienteResponse">
+    <part name="parameters" element="tns:listarClienteResponse" />
   </message>
   <message name="agregarCheckOut">
     <part name="parameters" element="tns:agregarCheckOut" />
@@ -401,35 +413,23 @@
   <message name="eliminarCheckOutResponse">
     <part name="parameters" element="tns:eliminarCheckOutResponse" />
   </message>
+  <message name="eliminarArticulo">
+    <part name="parameters" element="tns:eliminarArticulo" />
+  </message>
+  <message name="eliminarArticuloResponse">
+    <part name="parameters" element="tns:eliminarArticuloResponse" />
+  </message>
+  <message name="listarDepaPorId">
+    <part name="parameters" element="tns:listarDepaPorId" />
+  </message>
+  <message name="listarDepaPorIdResponse">
+    <part name="parameters" element="tns:listarDepaPorIdResponse" />
+  </message>
   <message name="listarCheckIn">
     <part name="parameters" element="tns:listarCheckIn" />
   </message>
   <message name="listarCheckInResponse">
     <part name="parameters" element="tns:listarCheckInResponse" />
-  </message>
-  <message name="listarReserva">
-    <part name="parameters" element="tns:listarReserva" />
-  </message>
-  <message name="listarReservaResponse">
-    <part name="parameters" element="tns:listarReservaResponse" />
-  </message>
-  <message name="listarTransporte">
-    <part name="parameters" element="tns:listarTransporte" />
-  </message>
-  <message name="listarTransporteResponse">
-    <part name="parameters" element="tns:listarTransporteResponse" />
-  </message>
-  <message name="listarInventario">
-    <part name="parameters" element="tns:listarInventario" />
-  </message>
-  <message name="listarInventarioResponse">
-    <part name="parameters" element="tns:listarInventarioResponse" />
-  </message>
-  <message name="listarCheckOut">
-    <part name="parameters" element="tns:listarCheckOut" />
-  </message>
-  <message name="listarCheckOutResponse">
-    <part name="parameters" element="tns:listarCheckOutResponse" />
   </message>
   <message name="listarComuna">
     <part name="parameters" element="tns:listarComuna" />
@@ -437,17 +437,53 @@
   <message name="listarComunaResponse">
     <part name="parameters" element="tns:listarComunaResponse" />
   </message>
+  <message name="listarInventario">
+    <part name="parameters" element="tns:listarInventario" />
+  </message>
+  <message name="listarInventarioResponse">
+    <part name="parameters" element="tns:listarInventarioResponse" />
+  </message>
   <message name="listarTour">
     <part name="parameters" element="tns:listarTour" />
   </message>
   <message name="listarTourResponse">
     <part name="parameters" element="tns:listarTourResponse" />
   </message>
+  <message name="listarFormaPago">
+    <part name="parameters" element="tns:listarFormaPago" />
+  </message>
+  <message name="listarFormaPagoResponse">
+    <part name="parameters" element="tns:listarFormaPagoResponse" />
+  </message>
+  <message name="listarCheckOut">
+    <part name="parameters" element="tns:listarCheckOut" />
+  </message>
+  <message name="listarCheckOutResponse">
+    <part name="parameters" element="tns:listarCheckOutResponse" />
+  </message>
   <message name="listarArticulo">
     <part name="parameters" element="tns:listarArticulo" />
   </message>
   <message name="listarArticuloResponse">
     <part name="parameters" element="tns:listarArticuloResponse" />
+  </message>
+  <message name="listarTransporte">
+    <part name="parameters" element="tns:listarTransporte" />
+  </message>
+  <message name="listarTransporteResponse">
+    <part name="parameters" element="tns:listarTransporteResponse" />
+  </message>
+  <message name="listarReserva">
+    <part name="parameters" element="tns:listarReserva" />
+  </message>
+  <message name="listarReservaResponse">
+    <part name="parameters" element="tns:listarReservaResponse" />
+  </message>
+  <message name="reportesReservas">
+    <part name="parameters" element="tns:reportesReservas" />
+  </message>
+  <message name="reportesReservasResponse">
+    <part name="parameters" element="tns:reportesReservasResponse" />
   </message>
   <portType name="WSPortafolio">
     <operation name="estadoDepaDisponibleTerminoReserva">
@@ -462,245 +498,253 @@
       <input wsam:Action="http://ws/WSPortafolio/loginRequest" message="tns:login" />
       <output wsam:Action="http://ws/WSPortafolio/loginResponse" message="tns:loginResponse" />
     </operation>
-    <operation name="agregarFuncionario">
-      <input wsam:Action="http://ws/WSPortafolio/agregarFuncionarioRequest" message="tns:agregarFuncionario" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarFuncionarioResponse" message="tns:agregarFuncionarioResponse" />
-    </operation>
-    <operation name="eliminarDepartamento">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarDepartamentoRequest" message="tns:eliminarDepartamento" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarDepartamentoResponse" message="tns:eliminarDepartamentoResponse" />
-    </operation>
-    <operation name="modificarAdministrador">
-      <input wsam:Action="http://ws/WSPortafolio/modificarAdministradorRequest" message="tns:modificarAdministrador" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarAdministradorResponse" message="tns:modificarAdministradorResponse" />
-    </operation>
     <operation name="modificarFuncionario">
       <input wsam:Action="http://ws/WSPortafolio/modificarFuncionarioRequest" message="tns:modificarFuncionario" />
       <output wsam:Action="http://ws/WSPortafolio/modificarFuncionarioResponse" message="tns:modificarFuncionarioResponse" />
-    </operation>
-    <operation name="modificarDepartamento">
-      <input wsam:Action="http://ws/WSPortafolio/modificarDepartamentoRequest" message="tns:modificarDepartamento" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarDepartamentoResponse" message="tns:modificarDepartamentoResponse" />
-    </operation>
-    <operation name="agregarAdministrador">
-      <input wsam:Action="http://ws/WSPortafolio/agregarAdministradorRequest" message="tns:agregarAdministrador" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarAdministradorResponse" message="tns:agregarAdministradorResponse" />
-    </operation>
-    <operation name="eliminarAdministrador">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
-    </operation>
-    <operation name="eliminarFuncionario">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarFuncionarioRequest" message="tns:eliminarFuncionario" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarFuncionarioResponse" message="tns:eliminarFuncionarioResponse" />
     </operation>
     <operation name="agregarDepartamento">
       <input wsam:Action="http://ws/WSPortafolio/agregarDepartamentoRequest" message="tns:agregarDepartamento" />
       <output wsam:Action="http://ws/WSPortafolio/agregarDepartamentoResponse" message="tns:agregarDepartamentoResponse" />
     </operation>
-    <operation name="agregarReservaTransporte">
-      <input wsam:Action="http://ws/WSPortafolio/agregarReservaTransporteRequest" message="tns:agregarReservaTransporte" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarReservaTransporteResponse" message="tns:agregarReservaTransporteResponse" />
-    </operation>
-    <operation name="eliminarReservaTransporte">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarReservaTransporteRequest" message="tns:eliminarReservaTransporte" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarReservaTransporteResponse" message="tns:eliminarReservaTransporteResponse" />
-    </operation>
-    <operation name="agregarCondicionDepa">
-      <input wsam:Action="http://ws/WSPortafolio/agregarCondicionDepaRequest" message="tns:agregarCondicionDepa" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarCondicionDepaResponse" message="tns:agregarCondicionDepaResponse" />
-    </operation>
-    <operation name="agregarDepaServicio">
-      <input wsam:Action="http://ws/WSPortafolio/agregarDepaServicioRequest" message="tns:agregarDepaServicio" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarDepaServicioResponse" message="tns:agregarDepaServicioResponse" />
-    </operation>
-    <operation name="modificarMantenimiento">
-      <input wsam:Action="http://ws/WSPortafolio/modificarMantenimientoRequest" message="tns:modificarMantenimiento" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarMantenimientoResponse" message="tns:modificarMantenimientoResponse" />
-    </operation>
-    <operation name="eliminarMantenimiento">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarMantenimientoRequest" message="tns:eliminarMantenimiento" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarMantenimientoResponse" message="tns:eliminarMantenimientoResponse" />
-    </operation>
-    <operation name="modificarInventario">
-      <input wsam:Action="http://ws/WSPortafolio/modificarInventarioRequest" message="tns:modificarInventario" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarInventarioResponse" message="tns:modificarInventarioResponse" />
-    </operation>
-    <operation name="modificarReservaTour">
-      <input wsam:Action="http://ws/WSPortafolio/modificarReservaTourRequest" message="tns:modificarReservaTour" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarReservaTourResponse" message="tns:modificarReservaTourResponse" />
-    </operation>
-    <operation name="eliminarInventario">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarInventarioRequest" message="tns:eliminarInventario" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarInventarioResponse" message="tns:eliminarInventarioResponse" />
-    </operation>
-    <operation name="modificarArticulo">
-      <input wsam:Action="http://ws/WSPortafolio/modificarArticuloRequest" message="tns:modificarArticulo" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarArticuloResponse" message="tns:modificarArticuloResponse" />
-    </operation>
-    <operation name="modificarReservaTransporte">
-      <input wsam:Action="http://ws/WSPortafolio/modificarReservaTransporteRequest" message="tns:modificarReservaTransporte" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarReservaTransporteResponse" message="tns:modificarReservaTransporteResponse" />
-    </operation>
-    <operation name="modificarCondicionDepa">
-      <input wsam:Action="http://ws/WSPortafolio/modificarCondicionDepaRequest" message="tns:modificarCondicionDepa" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarCondicionDepaResponse" message="tns:modificarCondicionDepaResponse" />
-    </operation>
-    <operation name="agregarReservaTour">
-      <input wsam:Action="http://ws/WSPortafolio/agregarReservaTourRequest" message="tns:agregarReservaTour" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarReservaTourResponse" message="tns:agregarReservaTourResponse" />
-    </operation>
-    <operation name="eliminarCondicionDepa">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarCondicionDepaRequest" message="tns:eliminarCondicionDepa" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarCondicionDepaResponse" message="tns:eliminarCondicionDepaResponse" />
-    </operation>
-    <operation name="agregarInventario">
-      <input wsam:Action="http://ws/WSPortafolio/agregarInventarioRequest" message="tns:agregarInventario" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarInventarioResponse" message="tns:agregarInventarioResponse" />
+    <operation name="modificarDepartamento">
+      <input wsam:Action="http://ws/WSPortafolio/modificarDepartamentoRequest" message="tns:modificarDepartamento" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarDepartamentoResponse" message="tns:modificarDepartamentoResponse" />
     </operation>
     <operation name="agregarMantenimiento">
       <input wsam:Action="http://ws/WSPortafolio/agregarMantenimientoRequest" message="tns:agregarMantenimiento" />
       <output wsam:Action="http://ws/WSPortafolio/agregarMantenimientoResponse" message="tns:agregarMantenimientoResponse" />
     </operation>
-    <operation name="eliminarReservaTour">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarReservaTourRequest" message="tns:eliminarReservaTour" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarReservaTourResponse" message="tns:eliminarReservaTourResponse" />
+    <operation name="eliminarAdministrador">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
+    </operation>
+    <operation name="modificarMantenimiento">
+      <input wsam:Action="http://ws/WSPortafolio/modificarMantenimientoRequest" message="tns:modificarMantenimiento" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarMantenimientoResponse" message="tns:modificarMantenimientoResponse" />
+    </operation>
+    <operation name="agregarFuncionario">
+      <input wsam:Action="http://ws/WSPortafolio/agregarFuncionarioRequest" message="tns:agregarFuncionario" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarFuncionarioResponse" message="tns:agregarFuncionarioResponse" />
+    </operation>
+    <operation name="modificarArticulo">
+      <input wsam:Action="http://ws/WSPortafolio/modificarArticuloRequest" message="tns:modificarArticulo" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarArticuloResponse" message="tns:modificarArticuloResponse" />
+    </operation>
+    <operation name="agregarDepaServicio">
+      <input wsam:Action="http://ws/WSPortafolio/agregarDepaServicioRequest" message="tns:agregarDepaServicio" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarDepaServicioResponse" message="tns:agregarDepaServicioResponse" />
     </operation>
     <operation name="modificarCheckOut">
       <input wsam:Action="http://ws/WSPortafolio/modificarCheckOutRequest" message="tns:modificarCheckOut" />
       <output wsam:Action="http://ws/WSPortafolio/modificarCheckOutResponse" message="tns:modificarCheckOutResponse" />
     </operation>
-    <operation name="listarFuncionario">
-      <input wsam:Action="http://ws/WSPortafolio/listarFuncionarioRequest" message="tns:listarFuncionario" />
-      <output wsam:Action="http://ws/WSPortafolio/listarFuncionarioResponse" message="tns:listarFuncionarioResponse" />
+    <operation name="eliminarFuncionario">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarFuncionarioRequest" message="tns:eliminarFuncionario" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarFuncionarioResponse" message="tns:eliminarFuncionarioResponse" />
     </operation>
-    <operation name="listarAdministradorPorRut">
-      <input wsam:Action="http://ws/WSPortafolio/listarAdministradorPorRutRequest" message="tns:listarAdministradorPorRut" />
-      <output wsam:Action="http://ws/WSPortafolio/listarAdministradorPorRutResponse" message="tns:listarAdministradorPorRutResponse" />
+    <operation name="agregarAdministrador">
+      <input wsam:Action="http://ws/WSPortafolio/agregarAdministradorRequest" message="tns:agregarAdministrador" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarAdministradorResponse" message="tns:agregarAdministradorResponse" />
     </operation>
-    <operation name="listarCondicionDepaPorParametro">
-      <input wsam:Action="http://ws/WSPortafolio/listarCondicionDepaPorParametroRequest" message="tns:listarCondicionDepaPorParametro" />
-      <output wsam:Action="http://ws/WSPortafolio/listarCondicionDepaPorParametroResponse" message="tns:listarCondicionDepaPorParametroResponse" />
+    <operation name="modificarAdministrador">
+      <input wsam:Action="http://ws/WSPortafolio/modificarAdministradorRequest" message="tns:modificarAdministrador" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarAdministradorResponse" message="tns:modificarAdministradorResponse" />
+    </operation>
+    <operation name="modificarDepaServicio">
+      <input wsam:Action="http://ws/WSPortafolio/modificarDepaServicioRequest" message="tns:modificarDepaServicio" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarDepaServicioResponse" message="tns:modificarDepaServicioResponse" />
+    </operation>
+    <operation name="eliminarMantenimiento">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarMantenimientoRequest" message="tns:eliminarMantenimiento" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarMantenimientoResponse" message="tns:eliminarMantenimientoResponse" />
+    </operation>
+    <operation name="eliminarDepaServicio">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarDepaServicioRequest" message="tns:eliminarDepaServicio" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarDepaServicioResponse" message="tns:eliminarDepaServicioResponse" />
+    </operation>
+    <operation name="eliminarDepartamento">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarDepartamentoRequest" message="tns:eliminarDepartamento" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarDepartamentoResponse" message="tns:eliminarDepartamentoResponse" />
+    </operation>
+    <operation name="agregarReservaTour">
+      <input wsam:Action="http://ws/WSPortafolio/agregarReservaTourRequest" message="tns:agregarReservaTour" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarReservaTourResponse" message="tns:agregarReservaTourResponse" />
+    </operation>
+    <operation name="agregarInventario">
+      <input wsam:Action="http://ws/WSPortafolio/agregarInventarioRequest" message="tns:agregarInventario" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarInventarioResponse" message="tns:agregarInventarioResponse" />
     </operation>
     <operation name="listarReservaPorId">
       <input wsam:Action="http://ws/WSPortafolio/listarReservaPorIdRequest" message="tns:listarReservaPorId" />
       <output wsam:Action="http://ws/WSPortafolio/listarReservaPorIdResponse" message="tns:listarReservaPorIdResponse" />
     </operation>
-    <operation name="listarDepartamento">
-      <input wsam:Action="http://ws/WSPortafolio/listarDepartamentoRequest" message="tns:listarDepartamento" />
-      <output wsam:Action="http://ws/WSPortafolio/listarDepartamentoResponse" message="tns:listarDepartamentoResponse" />
+    <operation name="listarMantenimiento">
+      <input wsam:Action="http://ws/WSPortafolio/listarMantenimientoRequest" message="tns:listarMantenimiento" />
+      <output wsam:Action="http://ws/WSPortafolio/listarMantenimientoResponse" message="tns:listarMantenimientoResponse" />
     </operation>
-    <operation name="listarReservaTransporte">
-      <input wsam:Action="http://ws/WSPortafolio/listarReservaTransporteRequest" message="tns:listarReservaTransporte" />
-      <output wsam:Action="http://ws/WSPortafolio/listarReservaTransporteResponse" message="tns:listarReservaTransporteResponse" />
+    <operation name="modificarReservaTransporte">
+      <input wsam:Action="http://ws/WSPortafolio/modificarReservaTransporteRequest" message="tns:modificarReservaTransporte" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarReservaTransporteResponse" message="tns:modificarReservaTransporteResponse" />
+    </operation>
+    <operation name="eliminarReservaTransporte">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarReservaTransporteRequest" message="tns:eliminarReservaTransporte" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarReservaTransporteResponse" message="tns:eliminarReservaTransporteResponse" />
+    </operation>
+    <operation name="listarAdministradorPorRut">
+      <input wsam:Action="http://ws/WSPortafolio/listarAdministradorPorRutRequest" message="tns:listarAdministradorPorRut" />
+      <output wsam:Action="http://ws/WSPortafolio/listarAdministradorPorRutResponse" message="tns:listarAdministradorPorRutResponse" />
+    </operation>
+    <operation name="modificarInventario">
+      <input wsam:Action="http://ws/WSPortafolio/modificarInventarioRequest" message="tns:modificarInventario" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarInventarioResponse" message="tns:modificarInventarioResponse" />
+    </operation>
+    <operation name="eliminarInventario">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarInventarioRequest" message="tns:eliminarInventario" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarInventarioResponse" message="tns:eliminarInventarioResponse" />
     </operation>
     <operation name="listarClientePorRut">
       <input wsam:Action="http://ws/WSPortafolio/listarClientePorRutRequest" message="tns:listarClientePorRut" />
       <output wsam:Action="http://ws/WSPortafolio/listarClientePorRutResponse" message="tns:listarClientePorRutResponse" />
     </operation>
-    <operation name="listarAdministrador">
-      <input wsam:Action="http://ws/WSPortafolio/listarAdministradorRequest" message="tns:listarAdministrador" />
-      <output wsam:Action="http://ws/WSPortafolio/listarAdministradorResponse" message="tns:listarAdministradorResponse" />
-    </operation>
     <operation name="listarReservaPorRut">
       <input wsam:Action="http://ws/WSPortafolio/listarReservaPorRutRequest" message="tns:listarReservaPorRut" />
       <output wsam:Action="http://ws/WSPortafolio/listarReservaPorRutResponse" message="tns:listarReservaPorRutResponse" />
     </operation>
-    <operation name="listarMantenimiento">
-      <input wsam:Action="http://ws/WSPortafolio/listarMantenimientoRequest" message="tns:listarMantenimiento" />
-      <output wsam:Action="http://ws/WSPortafolio/listarMantenimientoResponse" message="tns:listarMantenimientoResponse" />
+    <operation name="actualizarReservaCancelado">
+      <input wsam:Action="http://ws/WSPortafolio/actualizarReservaCanceladoRequest" message="tns:actualizarReservaCancelado" />
+      <output wsam:Action="http://ws/WSPortafolio/actualizarReservaCanceladoResponse" message="tns:actualizarReservaCanceladoResponse" />
+    </operation>
+    <operation name="listarFuncionario">
+      <input wsam:Action="http://ws/WSPortafolio/listarFuncionarioRequest" message="tns:listarFuncionario" />
+      <output wsam:Action="http://ws/WSPortafolio/listarFuncionarioResponse" message="tns:listarFuncionarioResponse" />
+    </operation>
+    <operation name="eliminarReservaTour">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarReservaTourRequest" message="tns:eliminarReservaTour" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarReservaTourResponse" message="tns:eliminarReservaTourResponse" />
     </operation>
     <operation name="listarArticuloPorId">
       <input wsam:Action="http://ws/WSPortafolio/listarArticuloPorIdRequest" message="tns:listarArticuloPorId" />
       <output wsam:Action="http://ws/WSPortafolio/listarArticuloPorIdResponse" message="tns:listarArticuloPorIdResponse" />
     </operation>
-    <operation name="listarReservaTour">
-      <input wsam:Action="http://ws/WSPortafolio/listarReservaTourRequest" message="tns:listarReservaTour" />
-      <output wsam:Action="http://ws/WSPortafolio/listarReservaTourResponse" message="tns:listarReservaTourResponse" />
+    <operation name="modificarReservaTour">
+      <input wsam:Action="http://ws/WSPortafolio/modificarReservaTourRequest" message="tns:modificarReservaTour" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarReservaTourResponse" message="tns:modificarReservaTourResponse" />
     </operation>
-    <operation name="listarDepaServicio">
-      <input wsam:Action="http://ws/WSPortafolio/listarDepaServicioRequest" message="tns:listarDepaServicio" />
-      <output wsam:Action="http://ws/WSPortafolio/listarDepaServicioResponse" message="tns:listarDepaServicioResponse" />
-    </operation>
-    <operation name="listarReservaTransporteIdReserva">
-      <input wsam:Action="http://ws/WSPortafolio/listarReservaTransporteIdReservaRequest" message="tns:listarReservaTransporteIdReserva" />
-      <output wsam:Action="http://ws/WSPortafolio/listarReservaTransporteIdReservaResponse" message="tns:listarReservaTransporteIdReservaResponse" />
-    </operation>
-    <operation name="listarCondicionDepa">
-      <input wsam:Action="http://ws/WSPortafolio/listarCondicionDepaRequest" message="tns:listarCondicionDepa" />
-      <output wsam:Action="http://ws/WSPortafolio/listarCondicionDepaResponse" message="tns:listarCondicionDepaResponse" />
-    </operation>
-    <operation name="estadoDepaOcupado">
-      <input wsam:Action="http://ws/WSPortafolio/estadoDepaOcupadoRequest" message="tns:estadoDepaOcupado" />
-      <output wsam:Action="http://ws/WSPortafolio/estadoDepaOcupadoResponse" message="tns:estadoDepaOcupadoResponse" />
-    </operation>
-    <operation name="listarInventarioPorIdDepa">
-      <input wsam:Action="http://ws/WSPortafolio/listarInventarioPorIdDepaRequest" message="tns:listarInventarioPorIdDepa" />
-      <output wsam:Action="http://ws/WSPortafolio/listarInventarioPorIdDepaResponse" message="tns:listarInventarioPorIdDepaResponse" />
-    </operation>
-    <operation name="listarReservaTourIdReserva">
-      <input wsam:Action="http://ws/WSPortafolio/listarReservaTourIdReservaRequest" message="tns:listarReservaTourIdReserva" />
-      <output wsam:Action="http://ws/WSPortafolio/listarReservaTourIdReservaResponse" message="tns:listarReservaTourIdReservaResponse" />
+    <operation name="listarDepartamento">
+      <input wsam:Action="http://ws/WSPortafolio/listarDepartamentoRequest" message="tns:listarDepartamento" />
+      <output wsam:Action="http://ws/WSPortafolio/listarDepartamentoResponse" message="tns:listarDepartamentoResponse" />
     </operation>
     <operation name="listarFuncionarioPorRut">
       <input wsam:Action="http://ws/WSPortafolio/listarFuncionarioPorRutRequest" message="tns:listarFuncionarioPorRut" />
       <output wsam:Action="http://ws/WSPortafolio/listarFuncionarioPorRutResponse" message="tns:listarFuncionarioPorRutResponse" />
     </operation>
+    <operation name="agregarReservaTransporte">
+      <input wsam:Action="http://ws/WSPortafolio/agregarReservaTransporteRequest" message="tns:agregarReservaTransporte" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarReservaTransporteResponse" message="tns:agregarReservaTransporteResponse" />
+    </operation>
+    <operation name="listarAdministrador">
+      <input wsam:Action="http://ws/WSPortafolio/listarAdministradorRequest" message="tns:listarAdministrador" />
+      <output wsam:Action="http://ws/WSPortafolio/listarAdministradorResponse" message="tns:listarAdministradorResponse" />
+    </operation>
+    <operation name="listarDepaServicio">
+      <input wsam:Action="http://ws/WSPortafolio/listarDepaServicioRequest" message="tns:listarDepaServicio" />
+      <output wsam:Action="http://ws/WSPortafolio/listarDepaServicioResponse" message="tns:listarDepaServicioResponse" />
+    </operation>
+    <operation name="listarInventarioPorIdDepa">
+      <input wsam:Action="http://ws/WSPortafolio/listarInventarioPorIdDepaRequest" message="tns:listarInventarioPorIdDepa" />
+      <output wsam:Action="http://ws/WSPortafolio/listarInventarioPorIdDepaResponse" message="tns:listarInventarioPorIdDepaResponse" />
+    </operation>
+    <operation name="listarReservaTransporte">
+      <input wsam:Action="http://ws/WSPortafolio/listarReservaTransporteRequest" message="tns:listarReservaTransporte" />
+      <output wsam:Action="http://ws/WSPortafolio/listarReservaTransporteResponse" message="tns:listarReservaTransporteResponse" />
+    </operation>
     <operation name="estadoDepaMantenimiento">
       <input wsam:Action="http://ws/WSPortafolio/estadoDepaMantenimientoRequest" message="tns:estadoDepaMantenimiento" />
       <output wsam:Action="http://ws/WSPortafolio/estadoDepaMantenimientoResponse" message="tns:estadoDepaMantenimientoResponse" />
     </operation>
-    <operation name="eliminarCliente">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarClienteRequest" message="tns:eliminarCliente" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarClienteResponse" message="tns:eliminarClienteResponse" />
+    <operation name="estadoDepaOcupado">
+      <input wsam:Action="http://ws/WSPortafolio/estadoDepaOcupadoRequest" message="tns:estadoDepaOcupado" />
+      <output wsam:Action="http://ws/WSPortafolio/estadoDepaOcupadoResponse" message="tns:estadoDepaOcupadoResponse" />
+    </operation>
+    <operation name="reportesInventarios">
+      <input wsam:Action="http://ws/WSPortafolio/reportesInventariosRequest" message="tns:reportesInventarios" />
+      <output wsam:Action="http://ws/WSPortafolio/reportesInventariosResponse" message="tns:reportesInventariosResponse" />
+    </operation>
+    <operation name="reportesReservasCanceladas">
+      <input wsam:Action="http://ws/WSPortafolio/reportesReservasCanceladasRequest" message="tns:reportesReservasCanceladas" />
+      <output wsam:Action="http://ws/WSPortafolio/reportesReservasCanceladasResponse" message="tns:reportesReservasCanceladasResponse" />
+    </operation>
+    <operation name="listarReservaTourIdReserva">
+      <input wsam:Action="http://ws/WSPortafolio/listarReservaTourIdReservaRequest" message="tns:listarReservaTourIdReserva" />
+      <output wsam:Action="http://ws/WSPortafolio/listarReservaTourIdReservaResponse" message="tns:listarReservaTourIdReservaResponse" />
+    </operation>
+    <operation name="reportesArticulos">
+      <input wsam:Action="http://ws/WSPortafolio/reportesArticulosRequest" message="tns:reportesArticulos" />
+      <output wsam:Action="http://ws/WSPortafolio/reportesArticulosResponse" message="tns:reportesArticulosResponse" />
+    </operation>
+    <operation name="listarReservaTransporteIdReserva">
+      <input wsam:Action="http://ws/WSPortafolio/listarReservaTransporteIdReservaRequest" message="tns:listarReservaTransporteIdReserva" />
+      <output wsam:Action="http://ws/WSPortafolio/listarReservaTransporteIdReservaResponse" message="tns:listarReservaTransporteIdReservaResponse" />
+    </operation>
+    <operation name="reportesGanancias">
+      <input wsam:Action="http://ws/WSPortafolio/reportesGananciasRequest" message="tns:reportesGanancias" />
+      <output wsam:Action="http://ws/WSPortafolio/reportesGananciasResponse" message="tns:reportesGananciasResponse" />
+    </operation>
+    <operation name="listarFormaPagoPorId">
+      <input wsam:Action="http://ws/WSPortafolio/listarFormaPagoPorIdRequest" message="tns:listarFormaPagoPorId" />
+      <output wsam:Action="http://ws/WSPortafolio/listarFormaPagoPorIdResponse" message="tns:listarFormaPagoPorIdResponse" />
+    </operation>
+    <operation name="listarReservaTour">
+      <input wsam:Action="http://ws/WSPortafolio/listarReservaTourRequest" message="tns:listarReservaTour" />
+      <output wsam:Action="http://ws/WSPortafolio/listarReservaTourResponse" message="tns:listarReservaTourResponse" />
     </operation>
     <operation name="agregarReserva">
       <input wsam:Action="http://ws/WSPortafolio/agregarReservaRequest" message="tns:agregarReserva" />
       <output wsam:Action="http://ws/WSPortafolio/agregarReservaResponse" message="tns:agregarReservaResponse" />
     </operation>
-    <operation name="modificarReserva">
-      <input wsam:Action="http://ws/WSPortafolio/modificarReservaRequest" message="tns:modificarReserva" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarReservaResponse" message="tns:modificarReservaResponse" />
-    </operation>
     <operation name="eliminarReserva">
       <input wsam:Action="http://ws/WSPortafolio/eliminarReservaRequest" message="tns:eliminarReserva" />
       <output wsam:Action="http://ws/WSPortafolio/eliminarReservaResponse" message="tns:eliminarReservaResponse" />
-    </operation>
-    <operation name="agregarCliente">
-      <input wsam:Action="http://ws/WSPortafolio/agregarClienteRequest" message="tns:agregarCliente" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarClienteResponse" message="tns:agregarClienteResponse" />
-    </operation>
-    <operation name="modificarCliente">
-      <input wsam:Action="http://ws/WSPortafolio/modificarClienteRequest" message="tns:modificarCliente" />
-      <output wsam:Action="http://ws/WSPortafolio/modificarClienteResponse" message="tns:modificarClienteResponse" />
-    </operation>
-    <operation name="agregarArticulo">
-      <input wsam:Action="http://ws/WSPortafolio/agregarArticuloRequest" message="tns:agregarArticulo" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarArticuloResponse" message="tns:agregarArticuloResponse" />
-    </operation>
-    <operation name="listarDepaPorId">
-      <input wsam:Action="http://ws/WSPortafolio/listarDepaPorIdRequest" message="tns:listarDepaPorId" />
-      <output wsam:Action="http://ws/WSPortafolio/listarDepaPorIdResponse" message="tns:listarDepaPorIdResponse" />
-    </operation>
-    <operation name="listarCliente">
-      <input wsam:Action="http://ws/WSPortafolio/listarClienteRequest" message="tns:listarCliente" />
-      <output wsam:Action="http://ws/WSPortafolio/listarClienteResponse" message="tns:listarClienteResponse" />
     </operation>
     <operation name="eliminarCheckIn">
       <input wsam:Action="http://ws/WSPortafolio/eliminarCheckInRequest" message="tns:eliminarCheckIn" />
       <output wsam:Action="http://ws/WSPortafolio/eliminarCheckInResponse" message="tns:eliminarCheckInResponse" />
     </operation>
-    <operation name="eliminarArticulo">
-      <input wsam:Action="http://ws/WSPortafolio/eliminarArticuloRequest" message="tns:eliminarArticulo" />
-      <output wsam:Action="http://ws/WSPortafolio/eliminarArticuloResponse" message="tns:eliminarArticuloResponse" />
+    <operation name="modificarCliente">
+      <input wsam:Action="http://ws/WSPortafolio/modificarClienteRequest" message="tns:modificarCliente" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarClienteResponse" message="tns:modificarClienteResponse" />
+    </operation>
+    <operation name="agregarCliente">
+      <input wsam:Action="http://ws/WSPortafolio/agregarClienteRequest" message="tns:agregarCliente" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarClienteResponse" message="tns:agregarClienteResponse" />
+    </operation>
+    <operation name="modificarReserva">
+      <input wsam:Action="http://ws/WSPortafolio/modificarReservaRequest" message="tns:modificarReserva" />
+      <output wsam:Action="http://ws/WSPortafolio/modificarReservaResponse" message="tns:modificarReservaResponse" />
+    </operation>
+    <operation name="agregarCheckIn">
+      <input wsam:Action="http://ws/WSPortafolio/agregarCheckInRequest" message="tns:agregarCheckIn" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarCheckInResponse" message="tns:agregarCheckInResponse" />
     </operation>
     <operation name="modificarCheckIn">
       <input wsam:Action="http://ws/WSPortafolio/modificarCheckInRequest" message="tns:modificarCheckIn" />
       <output wsam:Action="http://ws/WSPortafolio/modificarCheckInResponse" message="tns:modificarCheckInResponse" />
     </operation>
-    <operation name="agregarCheckIn">
-      <input wsam:Action="http://ws/WSPortafolio/agregarCheckInRequest" message="tns:agregarCheckIn" />
-      <output wsam:Action="http://ws/WSPortafolio/agregarCheckInResponse" message="tns:agregarCheckInResponse" />
+    <operation name="eliminarCliente">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarClienteRequest" message="tns:eliminarCliente" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarClienteResponse" message="tns:eliminarClienteResponse" />
+    </operation>
+    <operation name="agregarArticulo">
+      <input wsam:Action="http://ws/WSPortafolio/agregarArticuloRequest" message="tns:agregarArticulo" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarArticuloResponse" message="tns:agregarArticuloResponse" />
+    </operation>
+    <operation name="agregarPago">
+      <input wsam:Action="http://ws/WSPortafolio/agregarPagoRequest" message="tns:agregarPago" />
+      <output wsam:Action="http://ws/WSPortafolio/agregarPagoResponse" message="tns:agregarPagoResponse" />
+    </operation>
+    <operation name="listarCliente">
+      <input wsam:Action="http://ws/WSPortafolio/listarClienteRequest" message="tns:listarCliente" />
+      <output wsam:Action="http://ws/WSPortafolio/listarClienteResponse" message="tns:listarClienteResponse" />
     </operation>
     <operation name="agregarCheckOut">
       <input wsam:Action="http://ws/WSPortafolio/agregarCheckOutRequest" message="tns:agregarCheckOut" />
@@ -714,37 +758,53 @@
       <input wsam:Action="http://ws/WSPortafolio/eliminarCheckOutRequest" message="tns:eliminarCheckOut" />
       <output wsam:Action="http://ws/WSPortafolio/eliminarCheckOutResponse" message="tns:eliminarCheckOutResponse" />
     </operation>
+    <operation name="eliminarArticulo">
+      <input wsam:Action="http://ws/WSPortafolio/eliminarArticuloRequest" message="tns:eliminarArticulo" />
+      <output wsam:Action="http://ws/WSPortafolio/eliminarArticuloResponse" message="tns:eliminarArticuloResponse" />
+    </operation>
+    <operation name="listarDepaPorId">
+      <input wsam:Action="http://ws/WSPortafolio/listarDepaPorIdRequest" message="tns:listarDepaPorId" />
+      <output wsam:Action="http://ws/WSPortafolio/listarDepaPorIdResponse" message="tns:listarDepaPorIdResponse" />
+    </operation>
     <operation name="listarCheckIn">
       <input wsam:Action="http://ws/WSPortafolio/listarCheckInRequest" message="tns:listarCheckIn" />
       <output wsam:Action="http://ws/WSPortafolio/listarCheckInResponse" message="tns:listarCheckInResponse" />
-    </operation>
-    <operation name="listarReserva">
-      <input wsam:Action="http://ws/WSPortafolio/listarReservaRequest" message="tns:listarReserva" />
-      <output wsam:Action="http://ws/WSPortafolio/listarReservaResponse" message="tns:listarReservaResponse" />
-    </operation>
-    <operation name="listarTransporte">
-      <input wsam:Action="http://ws/WSPortafolio/listarTransporteRequest" message="tns:listarTransporte" />
-      <output wsam:Action="http://ws/WSPortafolio/listarTransporteResponse" message="tns:listarTransporteResponse" />
-    </operation>
-    <operation name="listarInventario">
-      <input wsam:Action="http://ws/WSPortafolio/listarInventarioRequest" message="tns:listarInventario" />
-      <output wsam:Action="http://ws/WSPortafolio/listarInventarioResponse" message="tns:listarInventarioResponse" />
-    </operation>
-    <operation name="listarCheckOut">
-      <input wsam:Action="http://ws/WSPortafolio/listarCheckOutRequest" message="tns:listarCheckOut" />
-      <output wsam:Action="http://ws/WSPortafolio/listarCheckOutResponse" message="tns:listarCheckOutResponse" />
     </operation>
     <operation name="listarComuna">
       <input wsam:Action="http://ws/WSPortafolio/listarComunaRequest" message="tns:listarComuna" />
       <output wsam:Action="http://ws/WSPortafolio/listarComunaResponse" message="tns:listarComunaResponse" />
     </operation>
+    <operation name="listarInventario">
+      <input wsam:Action="http://ws/WSPortafolio/listarInventarioRequest" message="tns:listarInventario" />
+      <output wsam:Action="http://ws/WSPortafolio/listarInventarioResponse" message="tns:listarInventarioResponse" />
+    </operation>
     <operation name="listarTour">
       <input wsam:Action="http://ws/WSPortafolio/listarTourRequest" message="tns:listarTour" />
       <output wsam:Action="http://ws/WSPortafolio/listarTourResponse" message="tns:listarTourResponse" />
     </operation>
+    <operation name="listarFormaPago">
+      <input wsam:Action="http://ws/WSPortafolio/listarFormaPagoRequest" message="tns:listarFormaPago" />
+      <output wsam:Action="http://ws/WSPortafolio/listarFormaPagoResponse" message="tns:listarFormaPagoResponse" />
+    </operation>
+    <operation name="listarCheckOut">
+      <input wsam:Action="http://ws/WSPortafolio/listarCheckOutRequest" message="tns:listarCheckOut" />
+      <output wsam:Action="http://ws/WSPortafolio/listarCheckOutResponse" message="tns:listarCheckOutResponse" />
+    </operation>
     <operation name="listarArticulo">
       <input wsam:Action="http://ws/WSPortafolio/listarArticuloRequest" message="tns:listarArticulo" />
       <output wsam:Action="http://ws/WSPortafolio/listarArticuloResponse" message="tns:listarArticuloResponse" />
+    </operation>
+    <operation name="listarTransporte">
+      <input wsam:Action="http://ws/WSPortafolio/listarTransporteRequest" message="tns:listarTransporte" />
+      <output wsam:Action="http://ws/WSPortafolio/listarTransporteResponse" message="tns:listarTransporteResponse" />
+    </operation>
+    <operation name="listarReserva">
+      <input wsam:Action="http://ws/WSPortafolio/listarReservaRequest" message="tns:listarReserva" />
+      <output wsam:Action="http://ws/WSPortafolio/listarReservaResponse" message="tns:listarReservaResponse" />
+    </operation>
+    <operation name="reportesReservas">
+      <input wsam:Action="http://ws/WSPortafolio/reportesReservasRequest" message="tns:reportesReservas" />
+      <output wsam:Action="http://ws/WSPortafolio/reportesReservasResponse" message="tns:reportesReservasResponse" />
     </operation>
   </portType>
   <binding name="WSPortafolioPortBinding" type="tns:WSPortafolio">
@@ -776,70 +836,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="agregarFuncionario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarDepartamento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarAdministrador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="modificarFuncionario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarDepartamento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agregarAdministrador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarAdministrador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarFuncionario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -857,133 +854,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="agregarReservaTransporte">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarReservaTransporte">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agregarCondicionDepa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agregarDepaServicio">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarMantenimiento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarMantenimiento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarInventario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarReservaTour">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarInventario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarArticulo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarReservaTransporte">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarCondicionDepa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agregarReservaTour">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarCondicionDepa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agregarInventario">
+    <operation name="modificarDepartamento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1001,7 +872,43 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarReservaTour">
+    <operation name="eliminarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarMantenimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarFuncionario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarArticulo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarDepaServicio">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1019,7 +926,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarFuncionario">
+    <operation name="eliminarFuncionario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1028,7 +935,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarAdministradorPorRut">
+    <operation name="agregarAdministrador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1037,7 +944,61 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarCondicionDepaPorParametro">
+    <operation name="modificarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarDepaServicio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarMantenimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarDepaServicio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarDepartamento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarReservaTour">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarInventario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1055,7 +1016,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarDepartamento">
+    <operation name="listarMantenimiento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1064,7 +1025,43 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarReservaTransporte">
+    <operation name="modificarReservaTransporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarReservaTransporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAdministradorPorRut">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarInventario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarInventario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1082,15 +1079,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarAdministrador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarReservaPorRut">
       <soap:operation soapAction="" />
       <input>
@@ -1100,7 +1088,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarMantenimiento">
+    <operation name="actualizarReservaCancelado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarFuncionario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarReservaTour">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1118,7 +1124,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarReservaTour">
+    <operation name="modificarReservaTour">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1127,52 +1133,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarDepaServicio">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarReservaTransporteIdReserva">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCondicionDepa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="estadoDepaOcupado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarInventarioPorIdDepa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarReservaTourIdReserva">
+    <operation name="listarDepartamento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1190,6 +1151,51 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="agregarReservaTransporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDepaServicio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarInventarioPorIdDepa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReservaTransporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="estadoDepaMantenimiento">
       <soap:operation soapAction="" />
       <input>
@@ -1199,7 +1205,79 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCliente">
+    <operation name="estadoDepaOcupado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reportesInventarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reportesReservasCanceladas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReservaTourIdReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reportesArticulos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReservaTransporteIdReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reportesGanancias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarFormaPagoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReservaTour">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1217,61 +1295,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarReserva">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarReserva">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agregarCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="agregarArticulo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarDepaPorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1289,7 +1313,34 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarArticulo">
+    <operation name="modificarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarCheckIn">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1307,7 +1358,34 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="agregarCheckIn">
+    <operation name="eliminarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarArticulo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarPago">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1343,43 +1421,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="eliminarArticulo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDepaPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarCheckIn">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarReserva">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTransporte">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarInventario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCheckOut">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1397,6 +1457,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listarInventario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarTour">
       <soap:operation soapAction="" />
       <input>
@@ -1406,7 +1475,52 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listarFormaPago">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCheckOut">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarArticulo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTransporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reportesReservas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

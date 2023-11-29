@@ -35,6 +35,7 @@ namespace TurismoReal.Presentacion
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
@@ -45,6 +46,7 @@ namespace TurismoReal.Presentacion
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroContextMenu3 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +59,6 @@ namespace TurismoReal.Presentacion
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.metroContextMenu2.SuspendLayout();
@@ -86,6 +87,7 @@ namespace TurismoReal.Presentacion
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.metroTile6);
             this.metroPanel1.Controls.Add(this.metroTile5);
             this.metroPanel1.Controls.Add(this.metroTile4);
             this.metroPanel1.Controls.Add(this.metroTile3);
@@ -104,6 +106,22 @@ namespace TurismoReal.Presentacion
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroTile6
+            // 
+            this.metroTile6.ActiveControl = null;
+            this.metroTile6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.metroTile6.Location = new System.Drawing.Point(371, 0);
+            this.metroTile6.Name = "metroTile6";
+            this.metroTile6.Size = new System.Drawing.Size(87, 37);
+            this.metroTile6.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile6.TabIndex = 7;
+            this.metroTile6.Text = "Reportes";
+            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile6.UseSelectable = true;
+            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
             // 
             // metroTile5
             // 
@@ -198,37 +216,44 @@ namespace TurismoReal.Presentacion
             this.metroContextMenu2.Name = "metroContextMenu2";
             this.metroContextMenu2.ShowImageMargin = false;
             this.metroContextMenu2.ShowItemToolTips = false;
-            this.metroContextMenu2.Size = new System.Drawing.Size(156, 136);
+            this.metroContextMenu2.Size = new System.Drawing.Size(132, 114);
             this.metroContextMenu2.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroContextMenu2.UseStyleColors = true;
             // 
             // departamentosToolStripMenuItem
             // 
             this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
-            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.departamentosToolStripMenuItem.Text = "Departamentos";
             this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // artículosToolStripMenuItem
             // 
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.artículosToolStripMenuItem.Text = "Artículos";
             this.artículosToolStripMenuItem.Click += new System.EventHandler(this.articulosToolStripMenuItem_Click);
             // 
             // serviciosToolStripMenuItem
             // 
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
+            // 
+            // mantenimientoToolStripMenuItem
+            // 
+            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
             // metroContextMenu3
             // 
@@ -334,13 +359,6 @@ namespace TurismoReal.Presentacion
             this.administradoresToolStripMenuItem.Text = "Administradores";
             this.administradoresToolStripMenuItem.Click += new System.EventHandler(this.administradoresToolStripMenuItem_Click);
             // 
-            // mantenimientoToolStripMenuItem
-            // 
-            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
-            this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,6 +415,7 @@ namespace TurismoReal.Presentacion
         private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administradoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
+        private MetroFramework.Controls.MetroTile metroTile6;
     }
 }
 
