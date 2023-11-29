@@ -56,5 +56,29 @@ namespace TurismoReal.Datos
             }
             return ward;
         }
+
+        public bool ActualizarEstadoDepaAMantenimiento(int idDepa)
+        {
+            WSPortafolioClient cliente = null;
+            bool ward = false;
+            try
+            {
+                cliente = new WSPortafolioClient();
+                ward = cliente.estadoDepaMantenimiento(idDepa);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones o registro de errores
+                throw ex;
+            }
+            finally
+            {
+                if (cliente != null)
+                {
+                    cliente.Close();
+                }
+            }
+            return ward;
+        }
     }
 }

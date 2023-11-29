@@ -16,6 +16,8 @@ namespace TurismoReal.Presentacion
 {
     public partial class FrmMantenimiento : MetroFramework.Forms.MetroForm
     {
+        private int idDepartamento;
+
         public FrmMantenimiento()
         {
             InitializeComponent();
@@ -96,6 +98,8 @@ namespace TurismoReal.Presentacion
                 if (DGVListar.SelectedRows.Count > 0)
                 {
                     int idMantenimiento = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["IdMantenimiento"].Value);
+
+                    bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaAMantenimiento(idDepartamento);
 
                     // Recopila los datos de los controles en tu formulario
                     DateTime fechaInicio = DTFechaInicio.Value;

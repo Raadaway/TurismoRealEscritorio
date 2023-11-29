@@ -24,5 +24,12 @@ namespace TurismoReal.Negocio
             bool resultado = datos.ActualizarEstadoDepaADisponibleReserva(idDepa);
             return resultado;
         }
+
+        public static bool ActualizarEstadoDepaAMantenimiento(int idDepa)
+        {
+            DDActualizarEstados datos = new DDActualizarEstados();
+            bool resultado = datos.ActualizarEstadoDepaAMantenimiento(idDepa);
+            return resultado;
+        }
     }
 }
