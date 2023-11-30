@@ -166,6 +166,7 @@
             this.dtInicio.Style = MetroFramework.MetroColorStyle.Orange;
             this.dtInicio.TabIndex = 6;
             this.dtInicio.Value = new System.DateTime(2023, 11, 1, 0, 0, 0, 0);
+            this.dtInicio.ValueChanged += new System.EventHandler(this.dtInicio_ValueChanged);
             // 
             // dtTermino
             // 
@@ -178,6 +179,7 @@
             this.dtTermino.Style = MetroFramework.MetroColorStyle.Orange;
             this.dtTermino.TabIndex = 7;
             this.dtTermino.Value = new System.DateTime(2023, 11, 30, 0, 0, 0, 0);
+            this.dtTermino.ValueChanged += new System.EventHandler(this.dtTermino_ValueChanged);
             // 
             // metroLabel1
             // 

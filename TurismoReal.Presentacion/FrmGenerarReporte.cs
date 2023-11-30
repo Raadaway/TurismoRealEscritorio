@@ -67,7 +67,7 @@ namespace TurismoReal.Presentacion
 
                 reportViewer1.LocalReport.SetParameters(parametros);
             }
-            else if (repReservasCanceladas.Any())
+            else
             {
                 reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", repReservasCanceladas));
 

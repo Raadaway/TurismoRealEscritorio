@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data;
 using TurismoReal.Datos.WSportafolio;
 using TurismoReal.Entidades;
-using TurismoReal.Entidades.WSportafolio;
 
 namespace TurismoReal.Datos
 {
@@ -14,15 +13,15 @@ namespace TurismoReal.Datos
     {
         public DataTable ListarInventario()
         {
-            WSportafolio.WSPortafolioClient client = null;
+            WSPortafolioClient client = null;
             DataTable dataTable = new DataTable();
 
             try
             {
-                client = new WSportafolio.WSPortafolioClient();
+                client = new WSPortafolioClient();
 
                 // Llamamos al método del servicio web para obtener una lista de inventario
-                WSportafolio.inventario[] lista = client.listarInventario();
+                inventario[] lista = client.listarInventario();
 
                 // Verificar si hay registros antes de continuar
                 if (lista != null && lista.Length > 0)
@@ -65,14 +64,69 @@ namespace TurismoReal.Datos
             }
         }
 
+        public DataTable ListarInventarioPorIdDepaDT(int idDepa)
+        {
+            WSPortafolioClient client = null;
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                client = new WSPortafolioClient();
+
+                // Llamamos al método del servicio web para obtener una lista de inventario
+                inventario[] lista = client.listarInventarioPorIdDepa(idDepa);
+
+                // Verificar si hay registros antes de continuar
+                if (lista != null && lista.Length > 0)
+                {
+                    // Configurar las columnas del DataTable
+                    dataTable.Columns.Add("Id Articulo", typeof(int));
+                    dataTable.Columns.Add("Id Departamento", typeof(int));
+                    dataTable.Columns.Add("Cantidad", typeof(int));
+                    dataTable.Columns.Add("Articulo", typeof(string));
+                    dataTable.Columns.Add("Precio", typeof(int));
+
+                    foreach (var inv in lista)
+                    {
+                        // Crear una nueva fila en el DataTable
+                        DataRow row = dataTable.NewRow();
+
+                        // Asignar los valores del inventario a las columnas correspondientes
+                        row["Id Articulo"] = inv.id_articulo;
+                        row["Id Departamento"] = inv.id_departamento;
+                        row["Cantidad"] = inv.cantidad;
+                        row["Articulo"] = inv.nom_articulo;
+                        row["Precio"] = inv.precio;
+
+                        // Agregar la fila al DataTable
+                        dataTable.Rows.Add(row);
+                    }
+                }
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones o registro de errores
+                throw ex;
+            }
+            finally
+            {
+                if (client != null)
+                {
+                    client.Close();
+                }
+            }
+        }
+
         public List<Inventario> ListarInventarioPorIdDepa(int idDepa)
         {
-            WSportafolio.WSPortafolioClient client = null;
+            WSPortafolioClient client = null;
             List<Inventario> lista = new List<Inventario>();
 
             try
             {
-                client = new WSportafolio.WSPortafolioClient();
+                client = new WSPortafolioClient();
                 var inventarioWS = client.listarInventarioPorIdDepa(idDepa);
 
                 if (inventarioWS != null)
@@ -113,7 +167,7 @@ namespace TurismoReal.Datos
         {
             try
             {
-                WSportafolio.WSPortafolioClient client = new WSportafolio.WSPortafolioClient(); // Suponiendo que tienes una instancia del cliente proxy
+                WSPortafolioClient client = new WSPortafolioClient(); // Suponiendo que tienes una instancia del cliente proxy
 
                 // Llamar al procedimiento agregarInventario del servicio web, pasando los IDs del artículo y departamento
                 return client.agregarInventario(idArticulo, idDepartamento, cantidad);
@@ -127,11 +181,11 @@ namespace TurismoReal.Datos
 
         public bool ModificarInventario(int idDepartamento, int idArticulo, int cantidad)
         {
-            WSportafolio.WSPortafolioClient client = null;
+            WSPortafolioClient client = null;
 
             try
             {
-                client = new WSportafolio.WSPortafolioClient();
+                client = new WSPortafolioClient();
 
                 // Llama al procedimiento para modificar el inventario
                 bool success = client.modificarInventario(idDepartamento, idArticulo, cantidad);
@@ -155,11 +209,11 @@ namespace TurismoReal.Datos
         public bool EliminarInventario(int id_depa, int id_art)
         {
             bool ward = false;
-            WSportafolio.WSPortafolioClient client = null;
+            WSPortafolioClient client = null;
 
             try
             {
-                client = new WSportafolio.WSPortafolioClient();
+                client = new WSPortafolioClient();
 
                 // Llama al procedimiento eliminarInventario del servicio web
                 ward = client.eliminarInventario(id_depa, id_art);
@@ -190,15 +244,15 @@ namespace TurismoReal.Datos
 
         public DataTable ListarArticulo()
         {
-            WSportafolio.WSPortafolioClient client = null;
+            WSPortafolioClient client = null;
             DataTable dataTable = new DataTable();
 
             try
             {
-                client = new WSportafolio.WSPortafolioClient();
+                client = new WSPortafolioClient();
 
                 // Llamamos al método del servicio web para obtener una lista de administradores
-                WSportafolio.articulo[] lista = client.listarArticulo();
+                articulo[] lista = client.listarArticulo();
 
                 // Verificar si hay registros antes de continuar
                 if (lista != null && lista.Length > 0)

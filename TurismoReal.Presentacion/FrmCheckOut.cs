@@ -25,6 +25,7 @@ namespace TurismoReal.Presentacion
             InitializeComponent();
             Limpiar();
             ListarCheckOut();
+            CargarFormaPago();
         }
 
         public FrmCheckOut(int idRes, int rut, int idDepa) : this ()
@@ -39,6 +40,22 @@ namespace TurismoReal.Presentacion
             {
                 txtIdReserva.Text = IdReserva.ToString();
                 TxtRutFunc.Text = RutUsuario.ToString();
+            }
+        }
+
+        private void CargarFormaPago()
+        {
+            try
+            {
+                List<FormaPago> lista = NFormaPago.ListarFormaPago();
+
+                cboxFormaPago.DisplayMember = "nombre";
+                cboxFormaPago.ValueMember = "idFormaPago";
+                cboxFormaPago.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
 
@@ -70,7 +87,7 @@ namespace TurismoReal.Presentacion
             TxtBuscar.Clear();
             txtIdReserva.Clear();
             txtMulta.Clear();
-            txtFirma.Clear();
+            cbConformidad.Checked = false;
             TxtRutFunc.Clear();
             BtnAgregar.Visible = true;
             BtnModificar.Visible = false;
@@ -89,19 +106,27 @@ namespace TurismoReal.Presentacion
         {
             try
             {
-                string firma = txtFirma.Text;
                 int multa = int.Parse(txtMulta.Text);
 
-                Reserva reserva = NReserva.ListarReservaPorId(IdReserva);
-                if (reserva.termino_reserva == DateTime.Now.Date)
+                if (cbConformidad.Checked)
                 {
-                    bool resultado = NCheckOut.AgregarCheckOut(multa, multa, firma, IdReserva, RutUsuario);
+                    //Reserva reserva = NReserva.ListarReservaPorId(int.Parse(txtIdReserva.Text));
+
+                    //string fechaActual = DateTime.Now.ToString("yyyyMMdd");
+                    //string fechaTermino = reserva.termino_reserva.ToString("yyyyMMdd");
+                    //metroLabel4.Text = fechaActual;
+
+                    //if (fechaTermino == fechaActual)
+                    //{
+                    bool resultado = NCheckOut.AgregarCheckOut(multa, multa, "Cliente de Acuerdo", IdReserva, RutUsuario);
                     bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaADisponibleReserva(IdDepartamento);
+                    bool agregarPago = NFormaPago.AgregarPago(multa, IdReserva, (int)cboxFormaPago.SelectedIndex);
+
                     FrmChecklist frmChecklist = Application.OpenForms.OfType<FrmChecklist>().FirstOrDefault();
+
                     if (frmChecklist != null)
                     {
-                        // Puedes usar Close() para cerrar el formulario o Hide() para ocultarlo
-                        frmChecklist.Close(); // O frmChecklist.Hide();
+                        frmChecklist.Close();
                     }
 
                     if (resultado && nuevoEstado)
@@ -112,11 +137,17 @@ namespace TurismoReal.Presentacion
                     {
                         MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al realizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    //}
+                    //else
+                    //{
+                    //    MetroFramework.MetroMessageBox.Show(this.MdiParent, "La fecha de término de la reserva no coincide con la fecha de hoy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "La fecha de término de la reserva no coincide con la fecha de hoy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El cliente debe estar conforme con la realización del Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
             }
             catch (Exception ex)
             {
@@ -174,7 +205,15 @@ namespace TurismoReal.Presentacion
             txtIdCheckOut.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Check-Out"].Value);
             txtIdReserva.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Reserva"].Value);
             txtMulta.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Pago Cliente"].Value);
-            txtFirma.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Firma Cliente"].Value);
+            string conforme = Convert.ToString(DGVListar.CurrentRow.Cells["Firma Cliente"].Value);
+            if (!string.IsNullOrEmpty(conforme))
+            {
+                cbConformidad.Checked = true;
+            }
+            else
+            {
+                cbConformidad.Checked = false;
+            }
             TxtRutFunc.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Rut Funcionario"].Value);
             TabGeneral.SelectedIndex = 1;
             txtIdReserva.ReadOnly = true;
@@ -187,29 +226,29 @@ namespace TurismoReal.Presentacion
         {
             try
             {
-                // Obtén el valor del rut desde el control TxtRut
                 int idCheckOut = int.Parse(txtIdCheckOut.Text);
-                string firma = txtFirma.Text;
                 int pago = int.Parse(txtMulta.Text);
 
-                // Llama al método de negocio para actualizar el administrador
-                bool resultado = NCheckOut.ModificarCheckOut(idCheckOut, pago, pago, firma);
-
-                // Verifica el resultado y muestra un mensaje correspondiente
-                if (resultado)
+                if (cbConformidad.Checked)
                 {
-                    // Operación exitosa
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-Out actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bool resultado = NCheckOut.ModificarCheckOut(idCheckOut, pago, pago, "Cliente de Acuerdo");
+
+                    if (resultado)
+                    {
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-Out actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al actualizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    // Error
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al actualizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El cliente debe estar conforme con la realización del Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 MetroFramework.MetroMessageBox.Show(this.MdiParent, "Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

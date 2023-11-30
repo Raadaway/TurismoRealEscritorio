@@ -159,11 +159,10 @@ namespace TurismoReal.Presentacion
         {
             try
             {
-                // Verificar si se ha seleccionado una fila en el DataGridView
                 if (DGVListar.SelectedRows.Count > 0)
                 {
                     String estReserva = Convert.ToString(DGVListar.SelectedRows[0].Cells["estado_reserva"].Value);
-
+                    
                     if (estReserva == "Reservado")
                     {
                         int idReserva = Convert.ToInt32(DGVListar.SelectedRows[0].Cells["id_reserva"].Value);

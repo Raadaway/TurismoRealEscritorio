@@ -355,7 +355,6 @@ namespace TurismoReal.Presentacion
                 int habitaciones = int.Parse(TxtHabitaciones.Text);
                 int idComuna = (int)cBoxComuna.SelectedValue;
 
-                // Validar que la descripción tenga entre 500 y 5000 caracteres
                 int longitudMinima = 500;
                 int longitudMaxima = 5000;
 

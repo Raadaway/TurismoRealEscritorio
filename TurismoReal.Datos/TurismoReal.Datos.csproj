@@ -146,6 +146,7 @@
     <Compile Include="DDComuna.cs" />
     <Compile Include="DDDepartamento.cs" />
     <Compile Include="DDDepartamentoServicio.cs" />
+    <Compile Include="DDFormaPago.cs" />
     <Compile Include="DDFuncionario.cs" />
     <Compile Include="DDInventario.cs" />
     <Compile Include="DDMantenimiento.cs" />

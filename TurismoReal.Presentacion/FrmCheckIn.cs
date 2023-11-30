@@ -27,6 +27,7 @@ namespace TurismoReal.Presentacion
             InitializeComponent();
             Limpiar();
             ListarCheckIns();
+            CargarFormaPago();
         }
 
         public FrmCheckIn(int idRes, int rut, int idDepa) : this()
@@ -42,6 +43,22 @@ namespace TurismoReal.Presentacion
                 txtIdReserva.Text = idRes.ToString();
                 txtPago.Text = (reserva.monto_total - reserva.monto_abonado).ToString();
                 TxtRutFunc.Text = RutUsuario.ToString();
+            }
+        }
+
+        private void CargarFormaPago()
+        {
+            try
+            {
+                List<FormaPago> lista = NFormaPago.ListarFormaPago();
+
+                cboxFormaPago.DisplayMember = "nombre";
+                cboxFormaPago.ValueMember = "idFormaPago";
+                cboxFormaPago.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
 
@@ -73,7 +90,7 @@ namespace TurismoReal.Presentacion
             TxtBuscar.Clear();
             txtIdReserva.Clear();
             txtPago.Clear();
-            txtFirma.Clear();
+            cbConformidad.Checked = false;
             TxtRutFunc.Clear();
             BtnAgregar.Visible = true;
             BtnModificar.Visible = false;
@@ -86,20 +103,28 @@ namespace TurismoReal.Presentacion
         {
             try
             {
-                string firma = txtFirma.Text;
                 int pago = int.Parse(txtPago.Text);
 
-                bool resultado = NCheckIn.AgregarCheckIn(firma, pago, IdReserva, RutUsuario);
-                bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaAOcupado(IdDepartamento);
-
-                if (resultado && nuevoEstado)
+                if (cbConformidad.Checked)
                 {
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-In realizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bool resultado = NCheckIn.AgregarCheckIn("Cliente de acuerdo", pago, IdReserva, RutUsuario);
+                    bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaAOcupado(IdDepartamento);
+                    bool agregarPago = NFormaPago.AgregarPago(pago, IdReserva, (int)cboxFormaPago.SelectedIndex);
+
+                    if (resultado && nuevoEstado)
+                    {
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-In realizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al realizar Check-In", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al realizar Check-In", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El cliente debe estar conforme con la realización del Check-In", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                
             }
             catch (Exception ex)
             {
@@ -157,7 +182,15 @@ namespace TurismoReal.Presentacion
             txtIdCheckIn.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Check-In"].Value);
             txtIdReserva.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Reserva"].Value);
             txtPago.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Pago Cliente"].Value);
-            txtFirma.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Firma Cliente"].Value);
+            string conforme = Convert.ToString(DGVListar.CurrentRow.Cells["Firma Cliente"].Value);
+            if (!string.IsNullOrEmpty(conforme))
+            {
+                cbConformidad.Checked = true;
+            }
+            else
+            {
+                cbConformidad.Checked = false;
+            }
             TxtRutFunc.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Rut Funcionario"].Value);
             TabGeneral.SelectedIndex = 1;
             txtIdReserva.ReadOnly = true;
@@ -170,24 +203,27 @@ namespace TurismoReal.Presentacion
         {
             try
             {
-                // Obtén el valor del rut desde el control TxtRut
                 int idCheckIn = int.Parse(txtIdCheckIn.Text);
-                string firma = txtFirma.Text;
                 int pago = int.Parse(txtPago.Text);
 
-                // Llama al método de negocio para actualizar el administrador
-                bool resultado = NCheckIn.ModificarCheckIn(idCheckIn, firma, pago);
-
-                // Verifica el resultado y muestra un mensaje correspondiente
-                if (resultado)
+                if (cbConformidad.Checked)
                 {
-                    // Operación exitosa
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-In actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bool resultado = NCheckIn.ModificarCheckIn(idCheckIn, "Cliente de acuerdo", pago);
+
+                    if (resultado)
+                    {
+                        // Operación exitosa
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-In actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Error
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al actualizar Check-In", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    // Error
-                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al actualizar Check-In", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this.MdiParent, "El cliente debe estar conforme con la realización del Check-In", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

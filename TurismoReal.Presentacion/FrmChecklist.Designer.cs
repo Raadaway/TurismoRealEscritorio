@@ -32,14 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.dgvInventario = new MetroFramework.Controls.MetroGrid();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.LblTotal = new MetroFramework.Controls.MetroLabel();
             this.lblPrecio = new MetroFramework.Controls.MetroLabel();
             this.BtnAgregar = new MetroFramework.Controls.MetroTile();
             this.cbSeleccionar = new MetroFramework.Controls.MetroCheckBox();
             this.btnSuma = new MetroFramework.Controls.MetroButton();
             this.btnResta = new MetroFramework.Controls.MetroButton();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgvInventario = new MetroFramework.Controls.MetroGrid();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +52,90 @@
             this.metroLabel1.Size = new System.Drawing.Size(315, 19);
             this.metroLabel1.TabIndex = 13;
             this.metroLabel1.Text = "Por favor, verifique el inventario del departamento";
+            // 
+            // LblTotal
+            // 
+            this.LblTotal.AutoSize = true;
+            this.LblTotal.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.LblTotal.Location = new System.Drawing.Point(416, 430);
+            this.LblTotal.Name = "LblTotal";
+            this.LblTotal.Size = new System.Drawing.Size(41, 19);
+            this.LblTotal.Style = MetroFramework.MetroColorStyle.Orange;
+            this.LblTotal.TabIndex = 15;
+            this.LblTotal.Text = "Total:";
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblPrecio.Location = new System.Drawing.Point(463, 430);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(46, 19);
+            this.lblPrecio.Style = MetroFramework.MetroColorStyle.Orange;
+            this.lblPrecio.TabIndex = 16;
+            this.lblPrecio.Text = "Precio";
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.ActiveControl = null;
+            this.BtnAgregar.Location = new System.Drawing.Point(251, 430);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(99, 44);
+            this.BtnAgregar.Style = MetroFramework.MetroColorStyle.Orange;
+            this.BtnAgregar.TabIndex = 21;
+            this.BtnAgregar.Text = "Registrar";
+            this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnAgregar.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.BtnAgregar.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.BtnAgregar.UseSelectable = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // cbSeleccionar
+            // 
+            this.cbSeleccionar.AutoSize = true;
+            this.cbSeleccionar.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
+            this.cbSeleccionar.Location = new System.Drawing.Point(23, 430);
+            this.cbSeleccionar.Name = "cbSeleccionar";
+            this.cbSeleccionar.Size = new System.Drawing.Size(92, 19);
+            this.cbSeleccionar.Style = MetroFramework.MetroColorStyle.Orange;
+            this.cbSeleccionar.TabIndex = 22;
+            this.cbSeleccionar.Text = "Seleccionar";
+            this.cbSeleccionar.UseSelectable = true;
+            this.cbSeleccionar.CheckedChanged += new System.EventHandler(this.cbSeleccionar_CheckedChanged);
+            // 
+            // btnSuma
+            // 
+            this.btnSuma.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnSuma.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnSuma.Location = new System.Drawing.Point(123, 430);
+            this.btnSuma.Name = "btnSuma";
+            this.btnSuma.Size = new System.Drawing.Size(23, 23);
+            this.btnSuma.TabIndex = 23;
+            this.btnSuma.Text = "+";
+            this.btnSuma.UseSelectable = true;
+            this.btnSuma.Click += new System.EventHandler(this.btnSuma_Click);
+            // 
+            // btnResta
+            // 
+            this.btnResta.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnResta.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnResta.Location = new System.Drawing.Point(152, 430);
+            this.btnResta.Name = "btnResta";
+            this.btnResta.Size = new System.Drawing.Size(23, 23);
+            this.btnResta.TabIndex = 24;
+            this.btnResta.Text = "-";
+            this.btnResta.UseSelectable = true;
+            this.btnResta.Click += new System.EventHandler(this.btnResta_Click);
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.MinimumWidth = 6;
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Seleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Seleccionar.Width = 70;
             // 
             // dgvInventario
             // 
@@ -101,7 +185,6 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvInventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvInventario.RowHeadersWidth = 50;
             this.dgvInventario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(554, 318);
@@ -109,95 +192,12 @@
             this.dgvInventario.TabIndex = 14;
             this.dgvInventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellContentClick);
             // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.MinimumWidth = 6;
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            this.Seleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Seleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Seleccionar.Width = 70;
-            // 
-            // LblTotal
-            // 
-            this.LblTotal.AutoSize = true;
-            this.LblTotal.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblTotal.Location = new System.Drawing.Point(416, 430);
-            this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(41, 19);
-            this.LblTotal.Style = MetroFramework.MetroColorStyle.Orange;
-            this.LblTotal.TabIndex = 15;
-            this.LblTotal.Text = "Total:";
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblPrecio.Location = new System.Drawing.Point(463, 430);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(46, 19);
-            this.lblPrecio.Style = MetroFramework.MetroColorStyle.Orange;
-            this.lblPrecio.TabIndex = 16;
-            this.lblPrecio.Text = "Precio";
-            // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.ActiveControl = null;
-            this.BtnAgregar.Location = new System.Drawing.Point(239, 430);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(99, 44);
-            this.BtnAgregar.Style = MetroFramework.MetroColorStyle.Orange;
-            this.BtnAgregar.TabIndex = 21;
-            this.BtnAgregar.Text = "Registrar";
-            this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnAgregar.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.BtnAgregar.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.BtnAgregar.UseSelectable = true;
-            this.BtnAgregar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // cbSeleccionar
-            // 
-            this.cbSeleccionar.AutoSize = true;
-            this.cbSeleccionar.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
-            this.cbSeleccionar.Location = new System.Drawing.Point(23, 430);
-            this.cbSeleccionar.Name = "cbSeleccionar";
-            this.cbSeleccionar.Size = new System.Drawing.Size(92, 19);
-            this.cbSeleccionar.Style = MetroFramework.MetroColorStyle.Orange;
-            this.cbSeleccionar.TabIndex = 22;
-            this.cbSeleccionar.Text = "Seleccionar";
-            this.cbSeleccionar.UseSelectable = true;
-            this.cbSeleccionar.CheckedChanged += new System.EventHandler(this.cbSeleccionar_CheckedChanged);
-            // 
-            // btnSuma
-            // 
-            this.btnSuma.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnSuma.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.btnSuma.Location = new System.Drawing.Point(123, 430);
-            this.btnSuma.Name = "btnSuma";
-            this.btnSuma.Size = new System.Drawing.Size(23, 23);
-            this.btnSuma.TabIndex = 23;
-            this.btnSuma.Text = "+";
-            this.btnSuma.UseSelectable = true;
-            this.btnSuma.Click += new System.EventHandler(this.btnSuma_Click);
-            // 
-            // btnResta
-            // 
-            this.btnResta.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnResta.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.btnResta.Location = new System.Drawing.Point(152, 430);
-            this.btnResta.Name = "btnResta";
-            this.btnResta.Size = new System.Drawing.Size(23, 23);
-            this.btnResta.TabIndex = 24;
-            this.btnResta.Text = "-";
-            this.btnResta.UseSelectable = true;
-            this.btnResta.Click += new System.EventHandler(this.btnResta_Click);
-            // 
             // FrmChecklist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 500);
+            this.ControlBox = false;
             this.Controls.Add(this.btnResta);
             this.Controls.Add(this.btnSuma);
             this.Controls.Add(this.cbSeleccionar);
@@ -220,13 +220,13 @@
 
         #endregion
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroGrid dgvInventario;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
         private MetroFramework.Controls.MetroLabel LblTotal;
         private MetroFramework.Controls.MetroLabel lblPrecio;
         private MetroFramework.Controls.MetroTile BtnAgregar;
         private MetroFramework.Controls.MetroCheckBox cbSeleccionar;
         private MetroFramework.Controls.MetroButton btnSuma;
         private MetroFramework.Controls.MetroButton btnResta;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
+        private MetroFramework.Controls.MetroGrid dgvInventario;
     }
 }

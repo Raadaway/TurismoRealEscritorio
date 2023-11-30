@@ -24,21 +24,15 @@ namespace TurismoReal.Presentacion
         public FrmReportes()
         {
             InitializeComponent();
-            InicializarDatos();
-        }
-
-        private void InicializarDatos()
-        {
-            
         }
 
         private void FrmReportes_Load(object sender, EventArgs e)
         {
             datable1 = NReportes.ReporteInventario();
             datable2 = NReportes.ReporteArticulos();
-            datable3 = NReportes.ReporteGanancias(dtInicio.Value, dtTermino.Value);
-            datable4 = NReportes.ReporteReservas(dtInicio.Value, dtTermino.Value);
-            datable5 = NReportes.ReporteReservasCanceladas(dtInicio.Value, dtTermino.Value);
+            ActualizarReporteGanancias();
+            ActualizarReporteReservas();
+            ActualizarReporteReservasCanceladas();
 
             rbGanancias.Checked = true;
         }
@@ -83,14 +77,14 @@ namespace TurismoReal.Presentacion
                     List<ReporteInventario> lista = new List<ReporteInventario>();
                     lista = ListaInventario();
                     frm.repInventario.AddRange(lista);
-                    frm.ShowDialog();
+                    frm.Show();
                 }
                 else if (rbArticulo.Checked)
                 {
                     List<ReporteArticulo> lista = new List<ReporteArticulo>();
                     lista = ListaArticulos();
                     frm.repArticulo.AddRange(lista);
-                    frm.ShowDialog();
+                    frm.Show();
                 }
                 else if (rbGanancias.Checked) 
                 {
@@ -99,7 +93,7 @@ namespace TurismoReal.Presentacion
                     frm.repGanancias.AddRange(lista);
                     frm.fechaInicio = dtInicio.Value.ToString();
                     frm.fechaTermino = dtTermino.Value.ToString();
-                    frm.ShowDialog();
+                    frm.Show();
                 }
                 else if (rbReservas.Checked)
                 {
@@ -108,7 +102,7 @@ namespace TurismoReal.Presentacion
                     frm.repReservas.AddRange(lista);
                     frm.fechaInicio = dtInicio.Value.ToString();
                     frm.fechaTermino = dtTermino.Value.ToString();
-                    frm.ShowDialog();
+                    frm.Show();
                 }
                 else if (rbResCanceladas.Checked)
                 {
@@ -117,7 +111,7 @@ namespace TurismoReal.Presentacion
                     frm.repReservasCanceladas.AddRange(lista);
                     frm.fechaInicio = dtInicio.Value.ToString();
                     frm.fechaTermino = dtTermino.Value.ToString();
-                    frm.ShowDialog();
+                    frm.Show();
                 }
                 else
                 {
@@ -127,6 +121,50 @@ namespace TurismoReal.Presentacion
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar el informe: " + ex.Message);
+            }
+        }
+
+        private void dtInicio_ValueChanged(object sender, EventArgs e)
+        {
+            ActualizarReporteGanancias();
+            ActualizarReporteReservas();
+            ActualizarReporteReservasCanceladas();
+        }
+
+        private void dtTermino_ValueChanged(object sender, EventArgs e)
+        {
+            ActualizarReporteGanancias();
+            ActualizarReporteReservas();
+            ActualizarReporteReservasCanceladas();
+        }
+
+        private void ActualizarReporteGanancias()
+        {
+            datable3 = NReportes.ReporteGanancias(dtInicio.Value, dtTermino.Value);
+            if (rbGanancias.Checked)
+            {
+                metroLabel3.Text = "Se están visualizando los registros entre las fechas " + dtInicio.Value.ToString("dd/MM/yyyy") + " y " + dtTermino.Value.ToString("dd/MM/yyyy");
+                metroGrid1.DataSource = datable3;
+            }
+        }
+
+        private void ActualizarReporteReservas()
+        {
+            datable4 = NReportes.ReporteReservas(dtInicio.Value, dtTermino.Value);
+            if (rbReservas.Checked)
+            {
+                metroLabel3.Text = "Se están visualizando los registros entre las fechas " + dtInicio.Value.ToString("dd/MM/yyyy") + " y " + dtTermino.Value.ToString("dd/MM/yyyy");
+                metroGrid1.DataSource = datable4;
+            }
+        }
+
+        private void ActualizarReporteReservasCanceladas()
+        {
+            datable5 = NReportes.ReporteReservasCanceladas(dtInicio.Value, dtTermino.Value);
+            if (rbResCanceladas.Checked)
+            {
+                metroLabel3.Text = "Se están visualizando los registros entre las fechas " + dtInicio.Value.ToString("dd/MM/yyyy") + " y " + dtTermino.Value.ToString("dd/MM/yyyy");
+                metroGrid1.DataSource = datable5;
             }
         }
 

@@ -139,6 +139,7 @@
     <Compile Include="NComuna.cs" />
     <Compile Include="NDepartamento.cs" />
     <Compile Include="NDepartamentoServicio.cs" />
+    <Compile Include="NFormaPago.cs" />
     <Compile Include="NFuncionario.cs" />
     <Compile Include="NInventario.cs" />
     <Compile Include="NMantenimiento.cs" />

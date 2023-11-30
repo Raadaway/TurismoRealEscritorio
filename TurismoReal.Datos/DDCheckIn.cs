@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using TurismoReal.Datos.WSportafolio;
-using TurismoReal.Entidades;
+using TurismoReal.Entidades.WSportafolio;
 using System.Linq;
 
 namespace TurismoReal.Datos

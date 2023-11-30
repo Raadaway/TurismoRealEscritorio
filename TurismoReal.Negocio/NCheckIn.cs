@@ -27,7 +27,7 @@ namespace TurismoReal.Negocio
             }
         }
 
-        public static bool AgregarCheckIn(String firma, int pago, int idRes, int rutFunc)
+        public static bool AgregarCheckIn(string firma, int pago, int idRes, int rutFunc)
         {
             DDCheckIn Datos = new DDCheckIn();
             bool exito = Datos.AgregarCheckIn(firma, pago, idRes, rutFunc);

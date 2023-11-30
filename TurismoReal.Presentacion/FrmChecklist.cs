@@ -23,10 +23,7 @@ namespace TurismoReal.Presentacion
         public FrmChecklist()
         {
             InitializeComponent();
-            Formato();
-            ListarInventarioPorIdDepa(IdDepartamento);
             lblPrecio.Text = Total.ToString();
-            
         }
 
         public FrmChecklist(int idDepa, bool checkIn) : this()
@@ -75,8 +72,13 @@ namespace TurismoReal.Presentacion
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FrmChecklist_Load(object sender, EventArgs e)
+        {
+            ListarInventarioPorIdDepa(IdDepartamento);
         }
 
         private void Formato()
@@ -84,7 +86,7 @@ namespace TurismoReal.Presentacion
             // Verifica si hay suficientes columnas antes de intentar configurarlas
             if (dgvInventario.Columns.Count > 1)
             {
-                dgvInventario.Columns["clmnSeleccionar"].Visible = false;
+                dgvInventario.Columns["Seleccionar"].Visible = false;
             }
         }
 
@@ -92,13 +94,13 @@ namespace TurismoReal.Presentacion
         {
             if (cbSeleccionar.Checked)
             {
-                dgvInventario.Columns["clmnSeleccionar"].Visible = true;
+                dgvInventario.Columns["Seleccionar"].Visible = true;
                 btnSuma.Visible = true;
                 btnResta.Visible = true;
             }
             else
             {
-                dgvInventario.Columns["clmnSeleccionar"].Visible = false;
+                dgvInventario.Columns["Seleccionar"].Visible = false;
                 btnSuma.Visible = false;
                 btnResta.Visible = false;
             }
@@ -106,9 +108,9 @@ namespace TurismoReal.Presentacion
 
         private void dgvInventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dgvInventario.Columns["clmnSeleccionar"].Index)
+            if (e.ColumnIndex == dgvInventario.Columns["Seleccionar"].Index)
             {
-                DataGridViewCheckBoxCell seleccion = (DataGridViewCheckBoxCell)dgvInventario.Rows[e.RowIndex].Cells["clmnSeleccionar"];
+                DataGridViewCheckBoxCell seleccion = (DataGridViewCheckBoxCell)dgvInventario.Rows[e.RowIndex].Cells["Seleccionar"];
                 seleccion.Value = !Convert.ToBoolean(seleccion.Value);
             }
         }
@@ -203,11 +205,6 @@ namespace TurismoReal.Presentacion
                     this.Hide();
                 }
             }
-        }
-
-        private void FrmChecklist_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

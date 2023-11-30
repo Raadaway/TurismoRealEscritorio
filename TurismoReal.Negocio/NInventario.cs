@@ -27,6 +27,20 @@ namespace TurismoReal.Negocio
             }
         }
 
+        public static DataTable ListarInventarioPorIdDepaDT(int idDepa)
+        {
+            DDInventario Datos = new DDInventario();
+
+            try
+            {
+                return Datos.ListarInventarioPorIdDepaDT(idDepa);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public static List<Inventario> ListarInventarioPorId(int idDepa)
         {
             DDInventario datos = new DDInventario();

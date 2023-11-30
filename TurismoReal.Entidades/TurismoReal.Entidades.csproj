@@ -138,6 +138,7 @@
     </Compile>
     <Compile Include="Departamento.cs" />
     <Compile Include="DepaServicioSimple.cs" />
+    <Compile Include="FormaPago.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="Inventario.cs" />
     <Compile Include="Login.cs" />
