@@ -81,7 +81,7 @@ namespace TurismoReal.Presentacion
             this.TabGeneral.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.TabGeneral.Location = new System.Drawing.Point(20, 60);
             this.TabGeneral.Name = "TabGeneral";
-            this.TabGeneral.SelectedIndex = 0;
+            this.TabGeneral.SelectedIndex = 1;
             this.TabGeneral.Size = new System.Drawing.Size(760, 470);
             this.TabGeneral.Style = MetroFramework.MetroColorStyle.Orange;
             this.TabGeneral.TabIndex = 2;
@@ -451,7 +451,7 @@ namespace TurismoReal.Presentacion
             this.TxtContrasena.Location = new System.Drawing.Point(506, 193);
             this.TxtContrasena.MaxLength = 32767;
             this.TxtContrasena.Name = "TxtContrasena";
-            this.TxtContrasena.PasswordChar = '\0';
+            this.TxtContrasena.PasswordChar = '*';
             this.TxtContrasena.PromptText = "Ingresar contraseña";
             this.TxtContrasena.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtContrasena.SelectedText = "";

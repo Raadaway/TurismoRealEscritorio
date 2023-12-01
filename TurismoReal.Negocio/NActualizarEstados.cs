@@ -18,10 +18,10 @@ namespace TurismoReal.Negocio
             return resultado;
         }
 
-        public static bool ActualizarEstadoDepaADisponibleReserva(int idDepa)
+        public static bool ActualizarEstadoDepaADisponibleReserva(int idReserva)
         {
             DDActualizarEstados datos = new DDActualizarEstados();
-            bool resultado = datos.ActualizarEstadoDepaADisponibleReserva(idDepa);
+            bool resultado = datos.ActualizarEstadoDepaADisponibleReserva(idReserva);
             return resultado;
         }
 

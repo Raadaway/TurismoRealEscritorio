@@ -33,14 +33,14 @@ namespace TurismoReal.Datos
             return ward;
         }
 
-        public bool ActualizarEstadoDepaADisponibleReserva(int idDepa)
+        public bool ActualizarEstadoDepaADisponibleReserva(int idReserva)
         {
             WSPortafolioClient cliente = null;
             bool ward = false;
             try
             {
                 cliente = new WSPortafolioClient();
-                ward = cliente.estadoDepaDisponibleTerminoReserva(idDepa);
+                ward = cliente.estadoDepaDisponibleTerminoReserva(idReserva);
             }
             catch (Exception ex)
             {

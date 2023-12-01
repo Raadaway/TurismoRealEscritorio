@@ -12,6 +12,7 @@ namespace TurismoReal.Presentacion
     {
         class Program
         {
+            [STAThread]
             static void Main()
             {
                 Application.EnableVisualStyles();

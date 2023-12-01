@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TurismoReal.Negocio;
-using TurismoReal.Presentacion.WSportafolio;
 using TurismoReal.Entidades;
 
 namespace TurismoReal.Presentacion
@@ -47,7 +46,15 @@ namespace TurismoReal.Presentacion
         {
             try
             {
+                // Obtener la lista de formas de pago desde la capa de negocios
                 List<FormaPago> lista = NFormaPago.ListarFormaPago();
+
+                // Filtrar y ocultar la forma de pago con idFormaPago igual a 1
+                var formaPagoOcultar = lista.FirstOrDefault(fp => fp.idFormaPago == 1);
+                if (formaPagoOcultar != null)
+                {
+                    lista.Remove(formaPagoOcultar);
+                }
 
                 cboxFormaPago.DisplayMember = "nombre";
                 cboxFormaPago.ValueMember = "idFormaPago";
@@ -58,6 +65,7 @@ namespace TurismoReal.Presentacion
                 MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
+
 
         private void ListarCheckOut()
         {
@@ -119,7 +127,7 @@ namespace TurismoReal.Presentacion
                     //if (fechaTermino == fechaActual)
                     //{
                     bool resultado = NCheckOut.AgregarCheckOut(multa, multa, "Cliente de Acuerdo", IdReserva, RutUsuario);
-                    bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaADisponibleReserva(IdDepartamento);
+                    bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaADisponibleReserva(IdReserva);
                     bool agregarPago = NFormaPago.AgregarPago(multa, IdReserva, (int)cboxFormaPago.SelectedIndex);
 
                     FrmChecklist frmChecklist = Application.OpenForms.OfType<FrmChecklist>().FirstOrDefault();

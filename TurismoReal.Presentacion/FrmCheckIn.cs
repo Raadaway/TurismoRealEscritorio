@@ -12,6 +12,7 @@ using TurismoReal.Presentacion.WSportafolio;
 using TurismoReal.Entidades;
 using System.Windows.Media.TextFormatting;
 using System.ServiceModel.Channels;
+using TurismoReal.Datos;
 
 namespace TurismoReal.Presentacion
 {
@@ -50,7 +51,15 @@ namespace TurismoReal.Presentacion
         {
             try
             {
+                // Obtener la lista de formas de pago desde la capa de negocios
                 List<FormaPago> lista = NFormaPago.ListarFormaPago();
+
+                // Filtrar y ocultar la forma de pago con idFormaPago igual a 1
+                var formaPagoOcultar = lista.FirstOrDefault(fp => fp.idFormaPago == 1);
+                if (formaPagoOcultar != null)
+                {
+                    lista.Remove(formaPagoOcultar);
+                }
 
                 cboxFormaPago.DisplayMember = "nombre";
                 cboxFormaPago.ValueMember = "idFormaPago";
@@ -61,6 +70,8 @@ namespace TurismoReal.Presentacion
                 MetroFramework.MetroMessageBox.Show(this.MdiParent, ex.Message + ex.StackTrace);
             }
         }
+
+
 
         private void ListarCheckIns()
         {

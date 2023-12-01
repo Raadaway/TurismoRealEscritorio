@@ -127,7 +127,7 @@ namespace TurismoReal.Presentacion
                 DGVListar.Columns[5].Width = 100;
                 DGVListar.Columns[6].Width = 100;
                 DGVListar.Columns[7].Width = 100;
-                DGVListar.Columns[8].Width = 100;
+                DGVListar.Columns[8].Visible = false;
                 DGVListar.Columns[9].Width = 100;
             }
         }
