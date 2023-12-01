@@ -789,6 +789,7 @@ namespace TurismoReal.Presentacion
             this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.TabGeneral);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAdministrador";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;

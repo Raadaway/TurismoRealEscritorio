@@ -734,6 +734,15 @@ namespace TurismoReal.Datos.WSportafolio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/listarMantenimientoRequest", ReplyAction="http://ws/WSPortafolio/listarMantenimientoResponse")]
         System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarMantenimientoResponse> listarMantenimientoAsync(TurismoReal.Datos.WSportafolio.listarMantenimientoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/obtenerSiguienteIdDepaRequest", ReplyAction="http://ws/WSPortafolio/obtenerSiguienteIdDepaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaResponse obtenerSiguienteIdDepa(TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WSPortafolio/obtenerSiguienteIdDepaRequest", ReplyAction="http://ws/WSPortafolio/obtenerSiguienteIdDepaResponse")]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaResponse> obtenerSiguienteIdDepaAsync(TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6669,6 +6678,34 @@ namespace TurismoReal.Datos.WSportafolio {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerSiguienteIdDepa", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class obtenerSiguienteIdDepaRequest {
+        
+        public obtenerSiguienteIdDepaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerSiguienteIdDepaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class obtenerSiguienteIdDepaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public obtenerSiguienteIdDepaResponse() {
+        }
+        
+        public obtenerSiguienteIdDepaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WSPortafolioChannel : TurismoReal.Datos.WSportafolio.WSPortafolio, System.ServiceModel.IClientChannel {
     }
@@ -8762,6 +8799,27 @@ namespace TurismoReal.Datos.WSportafolio {
         public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.listarMantenimientoResponse> listarMantenimientoAsync() {
             TurismoReal.Datos.WSportafolio.listarMantenimientoRequest inValue = new TurismoReal.Datos.WSportafolio.listarMantenimientoRequest();
             return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).listarMantenimientoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaResponse TurismoReal.Datos.WSportafolio.WSPortafolio.obtenerSiguienteIdDepa(TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaRequest request) {
+            return base.Channel.obtenerSiguienteIdDepa(request);
+        }
+        
+        public int obtenerSiguienteIdDepa() {
+            TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaRequest inValue = new TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaRequest();
+            TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaResponse retVal = ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).obtenerSiguienteIdDepa(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaResponse> TurismoReal.Datos.WSportafolio.WSPortafolio.obtenerSiguienteIdDepaAsync(TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaRequest request) {
+            return base.Channel.obtenerSiguienteIdDepaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaResponse> obtenerSiguienteIdDepaAsync() {
+            TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaRequest inValue = new TurismoReal.Datos.WSportafolio.obtenerSiguienteIdDepaRequest();
+            return ((TurismoReal.Datos.WSportafolio.WSPortafolio)(this)).obtenerSiguienteIdDepaAsync(inValue);
         }
     }
 }

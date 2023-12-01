@@ -246,6 +246,7 @@
             this.Controls.Add(this.rbArticulo);
             this.Controls.Add(this.rbInventario);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmReportes";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;

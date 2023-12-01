@@ -51,16 +51,19 @@ namespace TurismoReal.Presentacion
             }
             else if (rbGanancias.Checked)
             {
+                metroLabel3.Visible = true;
                 metroLabel3.Text = "Se están visualizando los registros entre las fechas " + dtInicio.Value.ToString("dd/MM/yyyy") + " y " + dtTermino.Value.ToString("dd/MM/yyyy");
                 metroGrid1.DataSource = datable3;
             }
             else if (rbReservas.Checked)
             {
+                metroLabel3.Visible = true;
                 metroLabel3.Text = "Se están visualizando los registros entre las fechas " + dtInicio.Value.ToString("dd/MM/yyyy") + " y " + dtTermino.Value.ToString("dd/MM/yyyy");
                 metroGrid1.DataSource = datable4;
             }
             else
             {
+                metroLabel3.Visible = true;
                 metroLabel3.Text = "Se están visualizando los registros entre las fechas " + dtInicio.Value.ToString("dd/MM/yyyy") + " y " + dtTermino.Value.ToString("dd/MM/yyyy");
                 metroGrid1.DataSource = datable5;
             }

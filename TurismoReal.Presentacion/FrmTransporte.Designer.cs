@@ -241,7 +241,10 @@ namespace TurismoReal.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.TabGeneral);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmTransporte";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Transportes";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

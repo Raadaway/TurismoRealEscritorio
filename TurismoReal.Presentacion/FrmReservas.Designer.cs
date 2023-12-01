@@ -359,7 +359,7 @@ namespace TurismoReal.Presentacion
             // 
             this.DTTerminoReserva.Location = new System.Drawing.Point(140, 112);
             this.DTTerminoReserva.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
-            this.DTTerminoReserva.MinimumSize = new System.Drawing.Size(4, 29);
+            this.DTTerminoReserva.MinimumSize = new System.Drawing.Size(0, 29);
             this.DTTerminoReserva.Name = "DTTerminoReserva";
             this.DTTerminoReserva.Size = new System.Drawing.Size(212, 29);
             this.DTTerminoReserva.Style = MetroFramework.MetroColorStyle.Orange;
@@ -369,7 +369,7 @@ namespace TurismoReal.Presentacion
             // 
             this.DTInicioReserva.Location = new System.Drawing.Point(140, 54);
             this.DTInicioReserva.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
-            this.DTInicioReserva.MinimumSize = new System.Drawing.Size(4, 29);
+            this.DTInicioReserva.MinimumSize = new System.Drawing.Size(0, 29);
             this.DTInicioReserva.Name = "DTInicioReserva";
             this.DTInicioReserva.Size = new System.Drawing.Size(212, 29);
             this.DTInicioReserva.Style = MetroFramework.MetroColorStyle.Orange;
@@ -482,9 +482,6 @@ namespace TurismoReal.Presentacion
             // BtnModificar
             // 
             this.BtnModificar.ActiveControl = null;
-            this.BtnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnModificar.Location = new System.Drawing.Point(327, 337);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(99, 44);
@@ -500,7 +497,6 @@ namespace TurismoReal.Presentacion
             // BtnCancelar
             // 
             this.BtnCancelar.ActiveControl = null;
-            this.BtnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCancelar.Location = new System.Drawing.Point(432, 337);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(99, 44);
@@ -692,7 +688,7 @@ namespace TurismoReal.Presentacion
             this.TxtIdReserva.Enabled = false;
             this.TxtIdReserva.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TxtIdReserva.Lines = new string[0];
-            this.TxtIdReserva.Location = new System.Drawing.Point(384, 387);
+            this.TxtIdReserva.Location = new System.Drawing.Point(3, 402);
             this.TxtIdReserva.MaxLength = 32767;
             this.TxtIdReserva.Name = "TxtIdReserva";
             this.TxtIdReserva.PasswordChar = '\0';
@@ -718,7 +714,10 @@ namespace TurismoReal.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.TabGeneral);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmReservas";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Reservas";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

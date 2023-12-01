@@ -150,6 +150,8 @@
   <xs:element name="modificarReservaTourResponse" type="tns:modificarReservaTourResponse" />
   <xs:element name="modificarReservaTransporte" type="tns:modificarReservaTransporte" />
   <xs:element name="modificarReservaTransporteResponse" type="tns:modificarReservaTransporteResponse" />
+  <xs:element name="obtenerSiguienteIdDepa" type="tns:obtenerSiguienteIdDepa" />
+  <xs:element name="obtenerSiguienteIdDepaResponse" type="tns:obtenerSiguienteIdDepaResponse" />
   <xs:element name="reportesArticulos" type="tns:reportesArticulos" />
   <xs:element name="reportesArticulosResponse" type="tns:reportesArticulosResponse" />
   <xs:element name="reportesGanancias" type="tns:reportesGanancias" />
@@ -176,6 +178,14 @@
   <xs:complexType name="agregarFuncionarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerSiguienteIdDepa">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerSiguienteIdDepaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarCheckOut">

@@ -69,6 +69,33 @@ namespace TurismoReal.Datos
             return dataTable;
         }
 
+        public int ObtenerSiguienteIdDepa()
+        {
+            WSPortafolioClient cliente = null;
+            int idDepa = -1;
+            try
+            {
+                cliente = new WSPortafolioClient();
+                int idDepaWS = cliente.obtenerSiguienteIdDepa();
+                if (idDepaWS >= 1)
+                {
+                    idDepa = idDepaWS;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (cliente != null)
+                {
+                    cliente.Close();
+                }
+            }
+            return idDepa;
+        }
+
         public bool AgregarDepartamento(string direccion, string descripcion, int precio, float latitud, float longitud, int capacidad_persona, int cantidad_img, int habitaciones, int id_comuna)
         {
             bool ward = false;

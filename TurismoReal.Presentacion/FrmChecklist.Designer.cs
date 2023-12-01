@@ -50,6 +50,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(23, 84);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(315, 19);
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabel1.TabIndex = 13;
             this.metroLabel1.Text = "Por favor, verifique el inventario del departamento";
             // 
@@ -110,6 +111,7 @@
             this.btnSuma.Location = new System.Drawing.Point(123, 430);
             this.btnSuma.Name = "btnSuma";
             this.btnSuma.Size = new System.Drawing.Size(23, 23);
+            this.btnSuma.Style = MetroFramework.MetroColorStyle.Orange;
             this.btnSuma.TabIndex = 23;
             this.btnSuma.Text = "+";
             this.btnSuma.UseSelectable = true;
@@ -122,6 +124,7 @@
             this.btnResta.Location = new System.Drawing.Point(152, 430);
             this.btnResta.Name = "btnResta";
             this.btnResta.Size = new System.Drawing.Size(23, 23);
+            this.btnResta.Style = MetroFramework.MetroColorStyle.Orange;
             this.btnResta.TabIndex = 24;
             this.btnResta.Text = "-";
             this.btnResta.UseSelectable = true;
@@ -207,7 +210,10 @@
             this.Controls.Add(this.dgvInventario);
             this.Controls.Add(this.metroLabel1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmChecklist";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "CheckList";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

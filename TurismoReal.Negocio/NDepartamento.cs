@@ -26,15 +26,17 @@ namespace TurismoReal.Negocio
             }
         }
 
+        public static int ObtenerSiguienteIdDepa()
+        {
+            DDDepartamento datos = new DDDepartamento();
+            return datos.ObtenerSiguienteIdDepa();
+        }
+
         public static bool AgregarDepartamento(string direccion, string descripcion, int precio, float latitud, float longitud, int capacidad_persona, int cantidad_img, int habitaciones, int id_comuna)
         {
             Datos.DDDepartamento datos = new Datos.DDDepartamento();
             return datos.AgregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidad_persona, cantidad_img, habitaciones, id_comuna);
         }
-
-
-
-
 
         public static bool ModificarDepartamento(int id_departamento, string direccion, string descripcion, int precio, float latitud, float longitud, int capacidadPersona, int cantidadImagenes, int habitaciones, int idComuna)
         {

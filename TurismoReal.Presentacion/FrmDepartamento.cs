@@ -1,6 +1,7 @@
 ﻿using MetroFramework;
 using MetroFramework.Controls;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,9 @@ namespace TurismoReal.Presentacion
     {
 
         private NComuna nComuna = new NComuna();
+        private List<string> selectedImages = new List<string>();
+        private int x = 0;
+        private int y = 0;
 
         public FrmDepartamento()
         {
@@ -378,6 +382,29 @@ namespace TurismoReal.Presentacion
                     return; // Salir del método si la validación falla
                 }
 
+                if (selectedImages.Count != 5)
+                {
+                    MetroMessageBox.Show(this.MdiParent, $"Seleccione exactamente {5} imágenes.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int siguienteIdDepa = (NDepartamento.ObtenerSiguienteIdDepa()) + 1;
+                int nroIncremento = 1;
+
+                foreach (string img in selectedImages)
+                {
+                    string nombreImagen = $"Dep{siguienteIdDepa}_{nroIncremento}";
+                    string extension = Path.GetExtension(img);
+                    string nuevoNombre = $"{nombreImagen}{extension}";
+
+                    string nuevoImagePath = Path.Combine(@"D:\Proyectos\Portafolio\DataBase\TurismoReal\static\img\GaleriaImagenes", nuevoNombre);
+
+                    File.Copy(img, nuevoImagePath, true);
+
+                    // Incrementar el número autoincrementable para la siguiente imagen
+                    nroIncremento++;
+                }
+
                 // Resto del código para agregar el departamento si la validación pasa
                 bool resultado = NDepartamento.AgregarDepartamento(direccion, descripcion, precio, latitud, longitud, capacidadPersona, 5, habitaciones, idComuna);
 
@@ -457,6 +484,62 @@ namespace TurismoReal.Presentacion
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true; // Ignorar la tecla presionada
+            }
+        }
+
+        private void btnImagenes_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Seleccione las imágenes para el departamento";
+            ofd.Multiselect = true;
+            ofd.Filter = "JPG|*.jpg";
+            DialogResult dr = ofd.ShowDialog();
+
+            if (dr == DialogResult.OK)
+            {
+                string[] files = ofd.FileNames;
+
+                foreach (string img in files)
+                {
+                    // Verifica si la imagen ya ha sido seleccionada
+                    if (!selectedImages.Contains(img))
+                    {
+                        // Verifica si ya se han seleccionado el máximo de 5 imágenes
+                        if (selectedImages.Count < 5)
+                        {
+                            selectedImages.Add(img);
+
+                            PictureBox pb = new PictureBox();
+                            pb.Image = Image.FromFile(img);
+                            pb.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                            // Establece el ancho fijo y ajusta la altura proporcionalmente
+                            pb.Width = 100;
+                            pb.Height = 47;
+
+                            pb.Location = new Point(x, y);
+                            this.flowLayoutPanel.Controls.Add(pb);
+
+                            // Agrega un manejador de eventos para hacer clic derecho y eliminar la imagen
+                            pb.MouseClick += (s, ev) =>
+                            {
+                                if (ev.Button == MouseButtons.Right)
+                                {
+                                    selectedImages.Remove(img);
+                                    this.flowLayoutPanel.Controls.Remove(pb);
+                                }
+                            };
+                        }
+                        else
+                        {
+                            MetroMessageBox.Show(this, "Solo se pueden agregar hasta 5 imágenes.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MetroMessageBox.Show(this, "La imagen ya ha sido seleccionada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
         }
     }

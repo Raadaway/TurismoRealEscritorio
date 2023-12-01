@@ -13,7 +13,7 @@ namespace TurismoReal.Presentacion
     public partial class FrmPrincipal : MetroFramework.Forms.MetroForm
     {
         private int childFormNumber = 0;
-        private String TipoUsuario;
+        private string TipoUsuario;
         private int Rut;
 
         public FrmPrincipal(string tipoUsuario, int rut)
@@ -27,6 +27,7 @@ namespace TurismoReal.Presentacion
                 metroTile1.Visible = false;
                 metroTile2.Visible = false;
                 metroTile4.Visible = false;
+                metroTile6.Visible = false;
             }
         }
 
