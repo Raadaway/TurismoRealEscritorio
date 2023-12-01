@@ -179,7 +179,7 @@ namespace TurismoReal.Datos
             }
         }
 
-        public bool ModificarInventario(int idDepartamento, int idArticulo, int cantidad)
+        public bool ModificarInventario(int idDepartamento, int idArticulo, int nuevoArticulo, int nuevaCantidad)
         {
             WSPortafolioClient client = null;
 
@@ -188,7 +188,7 @@ namespace TurismoReal.Datos
                 client = new WSPortafolioClient();
 
                 // Llama al procedimiento para modificar el inventario
-                bool success = client.modificarInventario(idDepartamento, idArticulo, cantidad);
+                bool success = client.modificarInventario(idDepartamento, idArticulo, nuevoArticulo, nuevaCantidad);
 
                 return success;
             }

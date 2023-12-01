@@ -207,6 +207,7 @@ namespace TurismoReal.Presentacion
                 {
                     // Obtén el artículo seleccionado
                     Articulo articuloSeleccionado = (Articulo)ComboBoxArticulo.SelectedItem;
+                    int idArtAntiguo = int.Parse(txtIDArticulo.Text);
 
                     // Verifica que la selección sea válida
                     if (articuloSeleccionado != null)
@@ -216,16 +217,9 @@ namespace TurismoReal.Presentacion
                         if (int.TryParse(TxtIdDepartamento.Text, out int idDepartamento) &&
                             int.TryParse(TxtCantidad.Text, out int cantidad))
                         {
-                            // Crear un objeto Inventario con los datos del formulario
-                            Inventario inv = new Inventario
-                            {
-                                id_articulo = idArticulo,
-                                id_departamento = idDepartamento,
-                                cantidad = cantidad
-                            };
 
                             // Llamar al método de negocio para modificar el inventario
-                            bool resultado = NInventario.ModificarInventario(inv.id_departamento, inv.id_articulo, inv.cantidad);
+                            bool resultado = NInventario.ModificarInventario(idDepartamento, idArtAntiguo, idArticulo, cantidad);
 
                             if (resultado)
                             {
@@ -266,6 +260,7 @@ namespace TurismoReal.Presentacion
                 BtnAgregar.Visible = false;
                 TxtIdDepartamento.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Departamento"].Value);
                 TxtCantidad.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Cantidad"].Value);
+                txtIDArticulo.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Articulo"].Value);
                 TabGeneral.SelectedIndex = 1;
             }
             catch (Exception)

@@ -165,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.actualizarReservaCanceladoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -183,9 +186,6 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.agregarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.agregarCondicionDepaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.agregarDepartamentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -199,6 +199,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.agregarMantenimientoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.agregarPagoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.agregarReservaResponse.datasource">
@@ -225,9 +228,6 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.comuna.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.condicionDepa.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.departamentoDetalle.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -249,10 +249,10 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.eliminarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.eliminarCondicionDepaResponse.datasource">
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.eliminarDepartamentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.eliminarDepartamentoResponse.datasource">
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.eliminarDepaServicioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.eliminarFuncionarioResponse.datasource">
@@ -283,6 +283,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.estadoDepaOcupadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.formaPago.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.funcionario.datasource">
@@ -318,12 +321,6 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarComunaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarCondicionDepaPorParametroResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarCondicionDepaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarDepaPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -331,6 +328,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarDepaServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarFormaPagoPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarFormaPagoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.listarFuncionarioPorRutResponse.datasource">
@@ -402,10 +405,10 @@
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.modificarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.modificarCondicionDepaResponse.datasource">
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.modificarDepartamentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.modificarDepartamentoResponse.datasource">
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.modificarDepaServicioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.modificarFuncionarioResponse.datasource">
@@ -424,6 +427,36 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.modificarReservaTransporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reporteArticulos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reporteCancelaciones.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reporteGanancias.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reporteInventario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reporteReservas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reportesArticulosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reportesGananciasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reportesInventariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reportesReservasCanceladasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reportesReservasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WSportafolio\TurismoReal.Negocio.WSportafolio.reserva.datasource">

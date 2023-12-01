@@ -5,6 +5,11 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
+<<<<<<< HEAD:TurismoReal.Datos/Connected Services/WSportafolio/TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse.datasource
 <GenericObjectDataSource DisplayName="modificarFuncionarioResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
    <TypeInfo>TurismoReal.Datos.WSportafolio.modificarFuncionarioResponse, Connected Services.WSportafolio.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+=======
+<GenericObjectDataSource DisplayName="eliminarDepaServicioResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>TurismoReal.Negocio.WSportafolio.eliminarDepaServicioResponse, Connected Services.WSportafolio.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+>>>>>>> Modificar inventario arreglado:TurismoReal.Negocio/Connected Services/WSportafolio/TurismoReal.Negocio.WSportafolio.eliminarDepaServicioResponse.datasource
 </GenericObjectDataSource>

@@ -182,7 +182,7 @@ namespace TurismoReal.Presentacion
                     int idArticulo = Convert.ToInt32(row.Cells["id_articulo"].Value);
                     int cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
 
-                    NInventario.ModificarInventario(IdDepartamento, idArticulo, cantidad);
+                    NInventario.ModificarInventario(IdDepartamento, idArticulo, idArticulo, cantidad);
                 }
                 this.Close();
             }
@@ -197,7 +197,7 @@ namespace TurismoReal.Presentacion
                         int idArticulo = Convert.ToInt32(row.Cells["id_articulo"].Value);
                         int cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
 
-                        NInventario.ModificarInventario(IdDepartamento, idArticulo, cantidad);
+                        NInventario.ModificarInventario(IdDepartamento, idArticulo, idArticulo, cantidad);
 
                         int precio = Convert.ToInt32(lblPrecio.Text);
                         frmCheckOut.ActualizarPrecio(precio);

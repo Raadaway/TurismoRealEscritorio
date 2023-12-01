@@ -72,14 +72,14 @@ namespace TurismoReal.Negocio
             }
         }
 
-        public static bool ModificarInventario(int idDepartamento, int idArticulo, int cantidad)
+        public static bool ModificarInventario(int idDepartamento, int idArticulo, int nuevoArticulo, int cantidad)
         {
             try
             {
                 DDInventario datosInventario = new DDInventario();
 
                 // Llama al método de la capa de datos para modificar el inventario
-                return datosInventario.ModificarInventario(idDepartamento, idArticulo, cantidad);
+                return datosInventario.ModificarInventario(idDepartamento, idArticulo, nuevoArticulo, cantidad);
             }
             catch (Exception ex)
             {

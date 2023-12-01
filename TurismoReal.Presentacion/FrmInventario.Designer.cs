@@ -53,6 +53,7 @@ namespace TurismoReal.Presentacion
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.TxtCantidad = new MetroFramework.Controls.MetroTextBox();
             this.TxtIdDepartamento = new MetroFramework.Controls.MetroTextBox();
+            this.txtIDArticulo = new MetroFramework.Controls.MetroTextBox();
             this.TabGeneral.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -285,6 +286,7 @@ namespace TurismoReal.Presentacion
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.txtIDArticulo);
             this.metroTabPage2.Controls.Add(this.ComboBoxArticulo);
             this.metroTabPage2.Controls.Add(this.metroLabel1);
             this.metroTabPage2.Controls.Add(this.BtnModificar);
@@ -471,6 +473,43 @@ namespace TurismoReal.Presentacion
             this.TxtIdDepartamento.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.TxtIdDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros_KeyPress);
             // 
+            // txtIDArticulo
+            // 
+            // 
+            // 
+            // 
+            this.txtIDArticulo.CustomButton.Image = null;
+            this.txtIDArticulo.CustomButton.Location = new System.Drawing.Point(125, 1);
+            this.txtIDArticulo.CustomButton.Name = "";
+            this.txtIDArticulo.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtIDArticulo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtIDArticulo.CustomButton.TabIndex = 1;
+            this.txtIDArticulo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtIDArticulo.CustomButton.UseSelectable = true;
+            this.txtIDArticulo.CustomButton.Visible = false;
+            this.txtIDArticulo.Enabled = false;
+            this.txtIDArticulo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtIDArticulo.Lines = new string[0];
+            this.txtIDArticulo.Location = new System.Drawing.Point(3, 402);
+            this.txtIDArticulo.MaxLength = 32767;
+            this.txtIDArticulo.Name = "txtIDArticulo";
+            this.txtIDArticulo.PasswordChar = '\0';
+            this.txtIDArticulo.PromptText = "ID Articulo invisible";
+            this.txtIDArticulo.ReadOnly = true;
+            this.txtIDArticulo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtIDArticulo.SelectedText = "";
+            this.txtIDArticulo.SelectionLength = 0;
+            this.txtIDArticulo.SelectionStart = 0;
+            this.txtIDArticulo.ShortcutsEnabled = true;
+            this.txtIDArticulo.Size = new System.Drawing.Size(147, 23);
+            this.txtIDArticulo.Style = MetroFramework.MetroColorStyle.Orange;
+            this.txtIDArticulo.TabIndex = 31;
+            this.txtIDArticulo.UseSelectable = true;
+            this.txtIDArticulo.Visible = false;
+            this.txtIDArticulo.WaterMark = "ID Articulo invisible";
+            this.txtIDArticulo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtIDArticulo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // FrmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,5 +556,6 @@ namespace TurismoReal.Presentacion
         private MetroFramework.Controls.MetroTextBox TxtIdDepartamento;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroComboBox ComboBoxArticulo;
+        private MetroFramework.Controls.MetroTextBox txtIDArticulo;
     }
 }
