@@ -407,7 +407,6 @@
                             <rd:FormatSymbolCulture>es-CL</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -436,7 +435,7 @@
             <Top>4.2471cm</Top>
             <Left>1.5cm</Left>
             <Height>1.72917cm</Height>
-            <Width>17.55162cm</Width>
+            <Width>17.55164cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -525,10 +524,10 @@
         </PageFooter>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
-        <LeftMargin>2cm</LeftMargin>
-        <RightMargin>2cm</RightMargin>
-        <TopMargin>2cm</TopMargin>
-        <BottomMargin>2cm</BottomMargin>
+        <LeftMargin>0cm</LeftMargin>
+        <RightMargin>0cm</RightMargin>
+        <TopMargin>0cm</TopMargin>
+        <BottomMargin>0cm</BottomMargin>
         <ColumnSpacing>0.13cm</ColumnSpacing>
         <Style />
       </Page>

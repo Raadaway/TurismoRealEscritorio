@@ -338,7 +338,7 @@
         <Top>4.2471cm</Top>
         <Left>1.5cm</Left>
         <Height>1.64979cm</Height>
-        <Width>18.5835cm</Width>
+        <Width>18.58348cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -383,7 +383,7 @@
     <Height>28cm</Height>
     <Style />
   </Body>
-  <Width>22cm</Width>
+  <Width>21cm</Width>
   <Page>
     <PageHeader>
       <Height>3cm</Height>
@@ -458,10 +458,10 @@
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
