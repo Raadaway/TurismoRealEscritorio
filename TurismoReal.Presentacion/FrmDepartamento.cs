@@ -368,6 +368,27 @@ namespace TurismoReal.Presentacion
                     return; // Salir del método si la validación falla
                 }
 
+                // Validar que la cantidad de habitaciones no sea más de 10
+                if (habitaciones > 10)
+                {
+                    MetroMessageBox.Show(this.MdiParent, "La cantidad de habitaciones no puede ser más de 10", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
+                // Validar que la capacidad sea igual o menor al doble de la cantidad de habitaciones
+                if (capacidadPersona > 2 * habitaciones)
+                {
+                    MetroMessageBox.Show(this.MdiParent, "La capacidad debe ser igual o menor al doble de la cantidad de habitaciones", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
+                // Validar que la capacidad no sea más de 10
+                if (capacidadPersona > 10)
+                {
+                    MetroMessageBox.Show(this.MdiParent, "La capacidad no puede ser más de 15", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si la validación falla
+                }
+
                 // Validar que el precio de reserva sea mayor o igual a 50000
                 if (precio < 50000)
                 {
@@ -375,12 +396,6 @@ namespace TurismoReal.Presentacion
                     return; // Salir del método si la validación falla
                 }
 
-                // Validar que la capacidad sea mayor o igual a la cantidad de habitaciones
-                if (capacidadPersona < habitaciones)
-                {
-                    MetroMessageBox.Show(this.MdiParent, "La capacidad debe ser mayor o igual a la cantidad de habitaciones", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Salir del método si la validación falla
-                }
 
                 if (selectedImages.Count != 5)
                 {

@@ -29,9 +29,9 @@ namespace TurismoReal.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabGeneral = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
@@ -46,6 +46,8 @@ namespace TurismoReal.Presentacion
             this.DGVListar = new MetroFramework.Controls.MetroGrid();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.btnImagenes = new MetroFramework.Controls.MetroTile();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnMapa = new MetroFramework.Controls.MetroTile();
             this.BtnModificar = new MetroFramework.Controls.MetroTile();
             this.BtnCancelar = new MetroFramework.Controls.MetroTile();
@@ -65,8 +67,6 @@ namespace TurismoReal.Presentacion
             this.TxtLatitud = new MetroFramework.Controls.MetroTextBox();
             this.TxtPrecio = new MetroFramework.Controls.MetroTextBox();
             this.TxtDireccion = new MetroFramework.Controls.MetroTextBox();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnImagenes = new MetroFramework.Controls.MetroTile();
             this.TabGeneral.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -277,25 +277,25 @@ namespace TurismoReal.Presentacion
             this.DGVListar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVListar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVListar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVListar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seleccionar});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVListar.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVListar.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVListar.EnableHeadersVisualStyles = false;
             this.DGVListar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DGVListar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -303,14 +303,14 @@ namespace TurismoReal.Presentacion
             this.DGVListar.Name = "DGVListar";
             this.DGVListar.ReadOnly = true;
             this.DGVListar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(133)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVListar.RowHeadersWidth = 51;
             this.DGVListar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -364,6 +364,29 @@ namespace TurismoReal.Presentacion
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // btnImagenes
+            // 
+            this.btnImagenes.ActiveControl = null;
+            this.btnImagenes.Location = new System.Drawing.Point(31, 302);
+            this.btnImagenes.Name = "btnImagenes";
+            this.btnImagenes.Size = new System.Drawing.Size(105, 44);
+            this.btnImagenes.Style = MetroFramework.MetroColorStyle.Orange;
+            this.btnImagenes.TabIndex = 41;
+            this.btnImagenes.Text = "Subir Imagenes";
+            this.btnImagenes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnImagenes.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.btnImagenes.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnImagenes.UseSelectable = true;
+            this.btnImagenes.Click += new System.EventHandler(this.btnImagenes_Click);
+            // 
+            // flowLayoutPanel
+            // 
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(142, 302);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(585, 44);
+            this.flowLayoutPanel.TabIndex = 40;
             // 
             // btnMapa
             // 
@@ -790,29 +813,6 @@ namespace TurismoReal.Presentacion
             this.TxtDireccion.WaterMark = "Ingresar dirección";
             this.TxtDireccion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtDireccion.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // flowLayoutPanel
-            // 
-            this.flowLayoutPanel.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(142, 302);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(585, 44);
-            this.flowLayoutPanel.TabIndex = 40;
-            // 
-            // btnImagenes
-            // 
-            this.btnImagenes.ActiveControl = null;
-            this.btnImagenes.Location = new System.Drawing.Point(31, 302);
-            this.btnImagenes.Name = "btnImagenes";
-            this.btnImagenes.Size = new System.Drawing.Size(105, 44);
-            this.btnImagenes.Style = MetroFramework.MetroColorStyle.Orange;
-            this.btnImagenes.TabIndex = 41;
-            this.btnImagenes.Text = "Subir Imagenes";
-            this.btnImagenes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnImagenes.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.btnImagenes.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btnImagenes.UseSelectable = true;
-            this.btnImagenes.Click += new System.EventHandler(this.btnImagenes_Click);
             // 
             // FrmDepartamento
             // 
