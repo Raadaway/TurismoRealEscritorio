@@ -73,6 +73,73 @@ namespace TurismoReal.Datos
             }
         }
 
+        public DataTable ListarAdministradorFiltrado(int rutUsuario)
+        {
+            WSPortafolioClient client = null;
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                client = new WSPortafolioClient();
+
+                // Llamamos al método del servicio web para obtener una lista de administradores
+                administrador[] lista = client.listarAdministrador();
+
+                // Verificar si hay registros antes de continuar
+                if (lista != null && lista.Length > 0)
+                {
+                    // Configurar las columnas del DataTable
+                    dataTable.Columns.Add("RUT", typeof(int));
+                    dataTable.Columns.Add("DV", typeof(string));
+                    dataTable.Columns.Add("Nombre", typeof(string));
+                    dataTable.Columns.Add("ApellidoPaterno", typeof(string));
+                    dataTable.Columns.Add("ApellidoMaterno", typeof(string));
+                    dataTable.Columns.Add("Correo", typeof(string));
+                    dataTable.Columns.Add("Usuario", typeof(string));
+                    dataTable.Columns.Add("Contrasena", typeof(string));
+                    dataTable.Columns.Add("Telefono", typeof(string));
+
+                    foreach (var adm in lista)
+                    {
+                        if (adm.rut != rutUsuario)
+                        {
+                            // Crear una nueva fila en el DataTable
+                            DataRow row = dataTable.NewRow();
+
+                            // Asignar los valores del administrador a las columnas correspondientes
+                            row["RUT"] = adm.rut;
+                            row["DV"] = adm.dv;
+                            row["Nombre"] = adm.nombre;
+                            row["ApellidoPaterno"] = adm.apellido_paterno;
+                            row["ApellidoMaterno"] = adm.apellido_materno;
+                            row["Correo"] = adm.correo;
+                            row["Usuario"] = adm.usuario;
+                            row["Contrasena"] = adm.contrasena;
+                            row["Telefono"] = adm.telefono;
+                            // Agregar más propiedades según las columnas que hayas definido.
+
+                            // Agregar la fila al DataTable
+                            dataTable.Rows.Add(row);
+                        }
+                    }
+                }
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones o registro de errores
+                throw ex;
+            }
+            finally
+            {
+                if (client != null)
+                {
+                    client.Close();
+                }
+            }
+        }
+
 
         public bool AgregarAdministrador(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno,
                                  string correo, string usuario, string contrasena, string telefono)

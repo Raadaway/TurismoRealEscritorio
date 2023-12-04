@@ -16,16 +16,23 @@ namespace TurismoReal.Presentacion
 {
     public partial class FrmAdministrador : MetroFramework.Forms.MetroForm
     {
+        private int RutUsuario;
+
         public FrmAdministrador()
         {
             InitializeComponent();
+        }
+
+        public FrmAdministrador(int rutUser) : this()
+        {
+            RutUsuario = rutUser;
         }
 
         private void Listar()
         {
             try
             {
-                DataTable dataTable = NAdministrador.Listar();
+                DataTable dataTable = NAdministrador.ListarFiltrado(RutUsuario);
 
                 if (dataTable != null)
                 {
@@ -238,19 +245,19 @@ namespace TurismoReal.Presentacion
 
         private void DGVListar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-                this.Limpiar();
-                BtnModificar.Visible = true;
-                BtnAgregar.Visible = false;
-                TxtRut.Text = Convert.ToString(DGVListar.CurrentRow.Cells["RUT"].Value);
-                TxtDv.Text = Convert.ToString(DGVListar.CurrentRow.Cells["DV"].Value);
-                TxtNombre.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Nombre"].Value);
-                TxtApellidoP.Text = Convert.ToString(DGVListar.CurrentRow.Cells["ApellidoPaterno"].Value);
-                TxtApellidoM.Text = Convert.ToString(DGVListar.CurrentRow.Cells["ApellidoMaterno"].Value);
-                TxtTelefono.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Telefono"].Value);
-                TxtCorreo.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Correo"].Value);
-                TxtUsuario.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Usuario"].Value);
-                TxtContrasena.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Contrasena"].Value);
-                TabGeneral.SelectedIndex = 1;
+            this.Limpiar();
+            BtnModificar.Visible = true;
+            BtnAgregar.Visible = false;
+            TxtRut.Text = Convert.ToString(DGVListar.CurrentRow.Cells["RUT"].Value);
+            TxtDv.Text = Convert.ToString(DGVListar.CurrentRow.Cells["DV"].Value);
+            TxtNombre.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Nombre"].Value);
+            TxtApellidoP.Text = Convert.ToString(DGVListar.CurrentRow.Cells["ApellidoPaterno"].Value);
+            TxtApellidoM.Text = Convert.ToString(DGVListar.CurrentRow.Cells["ApellidoMaterno"].Value);
+            TxtTelefono.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Telefono"].Value);
+            TxtCorreo.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Correo"].Value);
+            TxtUsuario.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Usuario"].Value);
+            TxtContrasena.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Contrasena"].Value);
+            TabGeneral.SelectedIndex = 1;
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)

@@ -27,7 +27,7 @@ namespace TurismoReal.Presentacion
             CargarFormaPago();
         }
 
-        public FrmCheckOut(int idRes, int rut, int idDepa) : this ()
+        public FrmCheckOut(int idRes, int rut, int idDepa) : this()
         {
             IdReserva = idRes;
             RutUsuario = rut;
@@ -35,6 +35,7 @@ namespace TurismoReal.Presentacion
             TabGeneral.SelectedIndex = 1;
 
             Reserva reserva = NReserva.ListarReservaPorId(IdReserva);
+
             if (reserva != null)
             {
                 txtIdReserva.Text = IdReserva.ToString();
@@ -118,38 +119,37 @@ namespace TurismoReal.Presentacion
 
                 if (cbConformidad.Checked)
                 {
-                    //Reserva reserva = NReserva.ListarReservaPorId(int.Parse(txtIdReserva.Text));
+                    Reserva reserva = NReserva.ListarReservaPorId(int.Parse(txtIdReserva.Text));
 
-                    //string fechaActual = DateTime.Now.ToString("yyyyMMdd");
-                    //string fechaTermino = reserva.termino_reserva.ToString("yyyyMMdd");
-                    //metroLabel4.Text = fechaActual;
+                    string fechaActual = DateTime.Now.ToString("yyyyMMdd");
+                    string fechaTermino = reserva.termino_reserva.ToString("yyyyMMdd");
 
-                    //if (fechaTermino == fechaActual)
-                    //{
-                    bool resultado = NCheckOut.AgregarCheckOut(multa, multa, "Cliente de Acuerdo", IdReserva, RutUsuario);
-                    bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaADisponibleReserva(IdReserva);
-                    bool agregarPago = NFormaPago.AgregarPago(multa, IdReserva, (int)cboxFormaPago.SelectedIndex);
-
-                    FrmChecklist frmChecklist = Application.OpenForms.OfType<FrmChecklist>().FirstOrDefault();
-
-                    if (frmChecklist != null)
+                    if (fechaTermino == fechaActual)
                     {
-                        frmChecklist.Close();
-                    }
+                        bool resultado = NCheckOut.AgregarCheckOut(multa, multa, "Cliente de Acuerdo", IdReserva, RutUsuario);
+                        bool nuevoEstado = NActualizarEstados.ActualizarEstadoDepaADisponibleReserva(IdReserva);
+                        bool agregarPago = NFormaPago.AgregarPago(multa, IdReserva, (int)cboxFormaPago.SelectedIndex);
 
-                    if (resultado && nuevoEstado)
-                    {
-                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-Out realizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmChecklist frmChecklist = Application.OpenForms.OfType<FrmChecklist>().FirstOrDefault();
+
+                        if (frmChecklist != null)
+                        {
+                            frmChecklist.Close();
+                        }
+
+                        if (resultado && nuevoEstado)
+                        {
+                            MetroFramework.MetroMessageBox.Show(this.MdiParent, "Check-Out realizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al realizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "Error al realizar Check-Out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this.MdiParent, "La fecha de término de la reserva no coincide con la fecha de hoy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    //}
-                    //else
-                    //{
-                    //    MetroFramework.MetroMessageBox.Show(this.MdiParent, "La fecha de término de la reserva no coincide con la fecha de hoy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //}
                 }
                 else
                 {

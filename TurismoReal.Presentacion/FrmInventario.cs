@@ -176,7 +176,6 @@ namespace TurismoReal.Presentacion
                         {
                             MetroFramework.MetroMessageBox.Show(this.MdiParent, "Inventario agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             TxtCantidad.Clear();
-                            TxtIdDepartamento.Clear();
                         }
                         else
                         {

@@ -37,18 +37,21 @@ namespace TurismoReal.Datos
 
                     foreach (var dep in lista)
                     {
-                        DataRow row = dataTable.NewRow();
-                        row["ID"] = dep.id_depa;
-                        row["Direccion"] = dep.direccion;
-                        row["Descripcion"] = dep.descripcion;
-                        row["Precio"] = dep.precio;
-                        row["Latitud"] = dep.latitud;
-                        row["Longitud"] = dep.longitud;
-                        row["Capacidad"] = dep.cap_personas;
-                        row["Habitaciones"] = dep.habitaciones;
-                        row["Comuna"] = dep.nom_comuna;
-                        row["Estado"] = dep.desc_estado;
-                        dataTable.Rows.Add(row);
+                        if (dep.desc_estado != "Desuso")
+                        {
+                            DataRow row = dataTable.NewRow();
+                            row["ID"] = dep.id_depa;
+                            row["Direccion"] = dep.direccion;
+                            row["Descripcion"] = dep.descripcion;
+                            row["Precio"] = dep.precio;
+                            row["Latitud"] = dep.latitud;
+                            row["Longitud"] = dep.longitud;
+                            row["Capacidad"] = dep.cap_personas;
+                            row["Habitaciones"] = dep.habitaciones;
+                            row["Comuna"] = dep.nom_comuna;
+                            row["Estado"] = dep.desc_estado;
+                            dataTable.Rows.Add(row);
+                        }
                     }
                 }
             }

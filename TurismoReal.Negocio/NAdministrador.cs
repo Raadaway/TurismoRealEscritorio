@@ -26,6 +26,21 @@ namespace TurismoReal.Negocio
             }
         }
 
+        public static DataTable ListarFiltrado(int rutUsuario)
+        {
+            DDAdministrador Datos = new DDAdministrador();
+
+            try
+            {
+                return Datos.ListarAdministradorFiltrado(rutUsuario);
+            }
+            catch (Exception ex)
+            {
+                // Puedes manejar la excepción, registrar el error o mostrar un mensaje de error si es necesario
+                return null; // Puedes devolver un DataTable vacío o null en caso de error
+            }
+        }
+
         public static bool Insertar(int rut, string dv, string nombre, string apellido_paterno, string apellido_materno, string correo,
                               string usuario, string contrasena, string telefono)
         {
