@@ -149,8 +149,8 @@ namespace TurismoReal.Presentacion
                 this.Limpiar();
                 BtnModificar.Visible = true;
                 BtnAgregar.Visible = false;
-                TxtDescripcion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Descripcion"].Value);
-                TxtIdDepartamento.Text = Convert.ToString(DGVListar.CurrentRow.Cells["Id Departamento"].Value);
+                TxtDescripcion.Text = Convert.ToString(DGVListar.CurrentRow.Cells["DescMantenimiento"].Value);
+                TxtIdDepartamento.Text = Convert.ToString(DGVListar.CurrentRow.Cells["IdDepartamento"].Value);
                 TabGeneral.SelectedIndex = 1;
             }
             catch (Exception ex)

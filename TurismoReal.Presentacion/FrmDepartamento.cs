@@ -383,9 +383,9 @@ namespace TurismoReal.Presentacion
                 }
 
                 // Validar que la capacidad no sea más de 10
-                if (capacidadPersona > 10)
+                if (capacidadPersona > 20)
                 {
-                    MetroMessageBox.Show(this.MdiParent, "La capacidad no puede ser más de 15", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this.MdiParent, "La capacidad no puede ser más de 20", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // Salir del método si la validación falla
                 }
 
@@ -412,7 +412,7 @@ namespace TurismoReal.Presentacion
                     string extension = Path.GetExtension(img);
                     string nuevoNombre = $"{nombreImagen}{extension}";
 
-                    string nuevoImagePath = Path.Combine(@"D:\Proyectos\Portafolio\DataBase\TurismoReal\static\img\GaleriaImagenes", nuevoNombre);
+                    string nuevoImagePath = Path.Combine(@"C:\Users\Felipe\Pictures\weas", nuevoNombre);
 
                     File.Copy(img, nuevoImagePath, true);
 
