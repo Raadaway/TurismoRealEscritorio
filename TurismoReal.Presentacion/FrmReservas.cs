@@ -132,11 +132,6 @@ namespace TurismoReal.Presentacion
             }
         }
 
-        private void metroDateTime1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CbSeleccionar_CheckedChanged(object sender, EventArgs e)
         {
             if (CbSeleccionar.Checked)
@@ -281,8 +276,6 @@ namespace TurismoReal.Presentacion
                 if (resultado)
                 {
                     MetroFramework.MetroMessageBox.Show(this.MdiParent, "Reserva agregada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Puedes realizar otras acciones después de agregar la reserva si es necesario
                 }
                 else
                 {

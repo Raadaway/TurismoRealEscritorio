@@ -21,6 +21,7 @@ namespace TurismoReal.Presentacion
         public FrmServicio()
         {
             InitializeComponent();
+            BtnModificar.Visible = false;
         }
 
         // Constructor que acepta el ID del departamento como argumento

@@ -33,6 +33,7 @@ namespace TurismoReal.Presentacion
             RutUsuario = rut;
             IdDepartamento = idDepa;
             TabGeneral.SelectedIndex = 1;
+            txtMulta.Text = "0";
 
             Reserva reserva = NReserva.ListarReservaPorId(IdReserva);
 

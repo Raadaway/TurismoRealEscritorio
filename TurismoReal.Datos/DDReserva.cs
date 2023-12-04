@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using TurismoReal.Entidades;
 using System.Linq;
-using TurismoReal.Entidades.WSportafolio;
+using TurismoReal.Datos.WSportafolio;
 
 namespace TurismoReal.Datos
 {
@@ -11,12 +11,12 @@ namespace TurismoReal.Datos
     {
         public List<Reserva> ListarReservas()
         {
-            WSportafolio.WSPortafolioClient client = null;
+            WSPortafolioClient client = null;
             List<Reserva> reservas = new List<Reserva>();
 
             try
             {
-                client = new WSportafolio.WSPortafolioClient();
+                client = new WSPortafolioClient();
                 var reservasWebService = client.listarReserva();
 
                 if (reservasWebService != null)
@@ -58,11 +58,11 @@ namespace TurismoReal.Datos
 
         public Reserva ListarReservaPorId(int idRes)
         {
-            WSportafolio.WSPortafolioClient client = null;
+            WSPortafolioClient client = null;
             Reserva res = new Reserva();
             try
             {
-                client = new WSportafolio.WSPortafolioClient();
+                client = new WSPortafolioClient();
                 var reservaWebService = client.listarReservaPorId(idRes);
 
                 if (reservaWebService != null)

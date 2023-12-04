@@ -152,6 +152,7 @@
     <Compile Include="DDMantenimiento.cs" />
     <Compile Include="DDReportes.cs" />
     <Compile Include="DDReserva.cs" />
+    <Compile Include="DDReservaUpdate.cs" />
     <Compile Include="DDTour.cs" />
     <Compile Include="DDTransporte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

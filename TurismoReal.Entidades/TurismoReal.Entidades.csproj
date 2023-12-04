@@ -150,6 +150,7 @@
     <Compile Include="ReporteReservas.cs" />
     <Compile Include="ReporteReservasCanceladas.cs" />
     <Compile Include="Reserva.cs" />
+    <Compile Include="ReservaUpdate.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Tour.cs" />
     <Compile Include="Transporte.cs" />

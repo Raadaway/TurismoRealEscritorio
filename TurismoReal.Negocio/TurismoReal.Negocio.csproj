@@ -145,6 +145,7 @@
     <Compile Include="NMantenimiento.cs" />
     <Compile Include="NReportes.cs" />
     <Compile Include="NReserva.cs" />
+    <Compile Include="NReservaUpdate.cs" />
     <Compile Include="NTour.cs" />
     <Compile Include="NTransporte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
